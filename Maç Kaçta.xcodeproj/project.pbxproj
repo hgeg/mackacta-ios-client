@@ -357,6 +357,7 @@
 				DC928AD316B32275009B6014 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
