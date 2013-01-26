@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
+    </dependencies>
+    <scenes>
+        <!--First View Controller - First-->
+        <scene sceneID="11">
+            <objects>
+                <viewController title="First" id="2" customClass="MKFirstViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="16">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="besiktas_bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dkH-4a-1me"/>
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKI-hN-Sly">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Galatasaray-Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="s2e-sh-zsd">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="117" id="6iP-1O-uLb"/>
+                                            <constraint firstAttribute="width" constant="87" id="cVH-HT-UGZ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Besiktas_JK_Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="EdI-5O-4aO">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="117" id="4UC-Ty-It2"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Galatasaray" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Tl-Ze-gLA">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="8Yl-F3-Ikr"/>
+                                            <constraint firstAttribute="width" constant="113" id="pvU-OV-zeg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Beşiktaş" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sN-RE-OvX">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="DXq-pq-SEc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="19. Hafta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmJ-xW-HJ2">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="151" id="Bia-q3-p3J"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="27 Ocak Pazar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nue-ZX-FLu">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="138" id="bMM-qz-wPK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="20.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2L-bK-X6k">
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Türk Telekom Arena" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bzk-yi-AFP">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lig TV" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhC-GZ-E8v">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.086599042338709686" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="EdI-5O-4aO" secondAttribute="trailing" constant="6" id="5Rr-Dn-Bbk"/>
+                                    <constraint firstItem="Y2L-bK-X6k" firstAttribute="centerX" secondItem="pmJ-xW-HJ2" secondAttribute="centerX" type="default" id="7Fa-eV-bIX"/>
+                                    <constraint firstItem="s2e-sh-zsd" firstAttribute="top" secondItem="eKI-hN-Sly" secondAttribute="top" constant="44" id="CHf-rJ-5yT"/>
+                                    <constraint firstItem="2sN-RE-OvX" firstAttribute="top" secondItem="EdI-5O-4aO" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ExJ-PR-mPv"/>
+                                    <constraint firstItem="nue-ZX-FLu" firstAttribute="trailing" secondItem="Bzk-yi-AFP" secondAttribute="trailing" type="default" id="Fgz-TG-yZ1"/>
+                                    <constraint firstItem="s2e-sh-zsd" firstAttribute="leading" secondItem="eKI-hN-Sly" secondAttribute="leading" constant="19" id="HbI-RH-r72"/>
+                                    <constraint firstItem="lhC-GZ-E8v" firstAttribute="leading" secondItem="Y2L-bK-X6k" secondAttribute="leading" type="default" id="IQy-u7-Msn"/>
+                                    <constraint firstItem="Y2L-bK-X6k" firstAttribute="top" secondItem="nue-ZX-FLu" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Pb9-Dn-R3W"/>
+                                    <constraint firstItem="pmJ-xW-HJ2" firstAttribute="top" secondItem="eKI-hN-Sly" secondAttribute="top" constant="13" id="Pdo-wf-7O2"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bzk-yi-AFP" secondAttribute="bottom" constant="96" id="QG8-Rd-xUc"/>
+                                    <constraint firstItem="2sN-RE-OvX" firstAttribute="baseline" secondItem="7Tl-Ze-gLA" secondAttribute="baseline" type="user" id="SVB-yP-0r5"/>
+                                    <constraint firstAttribute="trailing" secondItem="2sN-RE-OvX" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="UNe-43-2S1"/>
+                                    <constraint firstItem="EdI-5O-4aO" firstAttribute="top" secondItem="s2e-sh-zsd" secondAttribute="top" type="default" id="VnF-iR-9rZ"/>
+                                    <constraint firstItem="Y2L-bK-X6k" firstAttribute="centerX" secondItem="Bzk-yi-AFP" secondAttribute="centerX" type="default" id="XRa-Aa-eNu"/>
+                                    <constraint firstItem="lhC-GZ-E8v" firstAttribute="centerX" secondItem="eKI-hN-Sly" secondAttribute="centerX" type="default" id="YYM-nx-U60"/>
+                                    <constraint firstItem="7Tl-Ze-gLA" firstAttribute="leading" secondItem="eKI-hN-Sly" secondAttribute="leading" constant="12" id="aBh-qY-Yww"/>
+                                    <constraint firstAttribute="bottom" secondItem="Y2L-bK-X6k" secondAttribute="bottom" constant="128" id="gme-ZY-7aO"/>
+                                    <constraint firstItem="2sN-RE-OvX" firstAttribute="top" secondItem="7Tl-Ze-gLA" secondAttribute="top" type="default" id="hEq-XU-mHc"/>
+                                    <constraint firstAttribute="bottom" secondItem="lhC-GZ-E8v" secondAttribute="bottom" constant="71" id="lOb-xY-Xq0"/>
+                                    <constraint firstItem="7Tl-Ze-gLA" firstAttribute="top" secondItem="s2e-sh-zsd" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="rus-CX-rrD"/>
+                                    <constraint firstItem="Bzk-yi-AFP" firstAttribute="leading" secondItem="eKI-hN-Sly" secondAttribute="leading" constant="62" id="t95-8X-Kqb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eKI-hN-Sly" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="7Pb-gE-K9w"/>
+                            <constraint firstItem="dkH-4a-1me" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="A8d-p8-LqX"/>
+                            <constraint firstItem="dkH-4a-1me" firstAttribute="bottom" secondItem="16" secondAttribute="bottom" type="default" id="BXc-Rp-09P"/>
+                            <constraint firstItem="dkH-4a-1me" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="aSf-ww-4dp"/>
+                            <constraint firstItem="eKI-hN-Sly" firstAttribute="top" secondItem="16" secondAttribute="top" constant="39" id="bVC-cU-gLL"/>
+                            <constraint firstItem="dkH-4a-1me" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="ozq-jN-2VQ"/>
+                            <constraint firstAttribute="bottom" secondItem="eKI-hN-Sly" secondAttribute="bottom" constant="49" id="qpc-22-bTw"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Maç Kaçta" image="first" id="7"/>
+                    <connections>
+                        <outlet property="awayLogo" destination="EdI-5O-4aO" id="fhi-r2-CVi"/>
+                        <outlet property="awayName" destination="SVB-yP-0r5" id="TjS-VX-5qk"/>
+                        <outlet property="backgroundImage" destination="dkH-4a-1me" id="EXp-Xw-74L"/>
+                        <outlet property="channel" destination="lhC-GZ-E8v" id="4en-TL-h1V"/>
+                        <outlet property="date" destination="nue-ZX-FLu" id="ZFP-lw-5Er"/>
+                        <outlet property="homeLogo" destination="s2e-sh-zsd" id="Nm3-bd-oTx"/>
+                        <outlet property="homeName" destination="SVB-yP-0r5" id="Q0C-Oj-wM0"/>
+                        <outlet property="stadium" destination="Bzk-yi-AFP" id="IlM-xg-yry"/>
+                        <outlet property="time" destination="Y2L-bK-X6k" id="psx-BR-46X"/>
+                        <outlet property="week" destination="pmJ-xW-HJ2" id="elY-GE-LDh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-68" y="-374"/>
+        </scene>
+        <!--Settings View Controller - Ayarlar-->
+        <scene sceneID="aeL-2e-PaK">
+            <objects>
+                <viewController id="LxU-aE-YqT" customClass="MKSettingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R7O-Fp-YgP">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Ayarlar" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="vgn-gB-EoH">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vgn-gB-EoH" firstAttribute="leading" secondItem="R7O-Fp-YgP" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="2PQ-zb-Q0W"/>
+                            <constraint firstAttribute="trailing" secondItem="vgn-gB-EoH" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Unh-0Q-8FT"/>
+                            <constraint firstItem="vgn-gB-EoH" firstAttribute="top" secondItem="R7O-Fp-YgP" secondAttribute="top" constant="99" id="sGO-Qo-K1x"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Ayarlar" image="first" id="rKj-gZ-TLE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gRC-Fm-xrS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-68" y="895"/>
+        </scene>
+        <!--Second View Controller - Second-->
+        <scene sceneID="13">
+            <objects>
+                <viewController title="Second" id="3" customClass="MKSecondViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="17">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Puan Durumu" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="22">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" text="Loaded by the second view controller — an instance of MKSecondViewController — specified in the app delegate." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="23">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="cQR-IW-sY8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" size="system"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="22" firstAttribute="leading" secondItem="17" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="0q6-IA-e8m"/>
+                            <constraint firstAttribute="trailing" secondItem="23" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="fR4-wH-Ih7"/>
+                            <constraint firstItem="23" firstAttribute="leading" secondItem="17" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="fzb-YA-SeR"/>
+                            <constraint firstAttribute="centerY" secondItem="23" secondAttribute="centerY" type="user" id="llH-eD-iPS"/>
+                            <constraint firstAttribute="trailing" secondItem="22" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pc3-9Y-W42"/>
+                            <constraint firstItem="23" firstAttribute="top" secondItem="22" secondAttribute="bottom" constant="40" type="user" id="yUx-Ee-KEk"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Puan Durumu" image="second" id="6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-68" y="230"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="15">
+            <objects>
+                <tabBarController id="4" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="viewControllers" id="26"/>
+                        <segue destination="3" kind="relationship" relationship="viewControllers" id="27"/>
+                        <segue destination="LxU-aE-YqT" kind="relationship" relationship="viewControllers" id="t4r-Rd-THO"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-631" y="206"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Besiktas_JK_Logo.png" width="500" height="500"/>
+        <image name="Galatasaray-Logo.png" width="449" height="600"/>
+        <image name="besiktas_bg.jpg" width="640" height="1136"/>
+        <image name="first" width="16" height="16"/>
+        <image name="second" width="16" height="16"/>
+    </resources>
+    <classes>
+        <class className="MKFirstViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MKFirstViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="awayLogo" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="awayName" candidateClass="NSLayoutConstraint"/>
+                <relationship kind="outlet" name="backgroundImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="channel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="date" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="homeLogo" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="homeName" candidateClass="NSLayoutConstraint"/>
+                <relationship kind="outlet" name="stadium" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="time" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="week" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="MKSecondViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MKSecondViewController.h"/>
+        </class>
+        <class className="MKSettingsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MKSettingsViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
