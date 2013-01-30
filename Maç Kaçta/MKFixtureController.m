@@ -64,6 +64,58 @@
     [scroller addGestureRecognizer:sliderTap];
 }
 
+-(void) viewDidAppear:(BOOL)animated {
+    if([[NSUserDefaults standardUserDefaults] valueForKey:@"invalid"] && [[NSUserDefaults standardUserDefaults] valueForKey:@"invalid"] == @"invalid") {
+        [self.scroller removeFromSuperview];
+        
+        sliderShown = false;
+        sLock = false;
+        self.sliderBar.alpha=0;
+        self.sliderBar.layer.masksToBounds = true;
+        self.sliderBar.layer.cornerRadius = 4.0f;
+        self.sliderBar.frame = CGRectMake(68, self.view.frame.size.height-70, 196, 36);
+        self.slider.value = 0;
+        
+        // Do any additional setup after loading the view, typically from a nib.
+        CGSize mySize = self.view.frame.size;
+        self.scroller = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, mySize.width, mySize.height)];
+        self.scroller.delegate = self;
+        self.scroller.pagingEnabled = true;
+        self.scroller.contentSize = CGSizeMake(mySize.width*weeks, mySize.height);
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
+        for (int i = 0; i<weeks; i++) {
+            NSString* escapedUrlString =
+            [[NSString stringWithFormat:@"http://54.235.244.172/match/%@/%u/",[[NSUserDefaults standardUserDefaults] valueForKey:@"selectedTeam"],i+1] stringByAddingPercentEscapesUsingEncoding:
+             NSUTF8StringEncoding];
+            NSURL *URL = [NSURL URLWithString:escapedUrlString];
+            NSLog(@"url: %@",URL);
+            NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+            
+            dispatch_async(queue, ^{
+                NSURLResponse *response = nil;
+                NSError *error = nil;
+                
+                NSData *receivedData = [NSURLConnection sendSynchronousRequest:request
+                                                             returningResponse:&response
+                                                                         error:&error];
+                NSDictionary *json = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:nil];
+                NSLog(@"adding view...");
+                [self performSelectorOnMainThread:@selector(generateView:) withObject:@{@"json":json,@"mySize":@[[NSString stringWithFormat:@"%f",mySize.width],[NSString stringWithFormat:@"%f",mySize.height+49]],@"i":[NSString stringWithFormat:@"%d",i ],@"scroller":scroller} waitUntilDone:NO];
+                NSLog(@"adding view...");
+                
+            });
+        }
+        [self.matchView removeFromSuperview];
+        [self.view addSubview:self.scroller];
+        [self.view bringSubviewToFront:self.sliderBar];
+        
+        UITapGestureRecognizer *sliderTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleSlider)];
+        [self.scroller addGestureRecognizer:sliderTap];
+        self.scroller.showsHorizontalScrollIndicator = false;
+        [[NSUserDefaults standardUserDefaults] setValue:@"valid" forKey:@"invalid"];
+    }
+}
+
 -(IBAction)sliderChanged:(id)sender {
     [scroller setContentOffset:CGPointMake((int)(self.slider.value*320*(weeks-1)/320)*320, 0) animated:false];
 }

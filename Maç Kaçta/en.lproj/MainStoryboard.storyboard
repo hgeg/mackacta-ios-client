@@ -205,6 +205,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="TAf-CT-cbn"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="LxU-aE-YqT" id="nMd-xL-SbR"/>
+                                    <outlet property="delegate" destination="LxU-aE-YqT" id="fs2-ez-FOb"/>
+                                </connections>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

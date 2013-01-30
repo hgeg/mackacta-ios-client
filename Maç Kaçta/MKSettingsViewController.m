@@ -38,7 +38,22 @@
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)thePickerView {
+    return 1;
+}
+
+- (NSString *)pickerView:(UIPickerView *)thePickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    return [teams objectAtIndex:row];
+}
+
+- (NSInteger)pickerView:(UIPickerView *)thePickerView numberOfRowsInComponent:(NSInteger)component {
+    
     return [teams count];
+}
+
+- (void)pickerView:(UIPickerView *)thePickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    
+    [[NSUserDefaults standardUserDefaults] setValue:[teams objectAtIndex:row] forKey:@"selectedTeam"];
+    [[NSUserDefaults standardUserDefaults] setValue:@"invalid" forKey:@"invalid"];
 }
 
 
