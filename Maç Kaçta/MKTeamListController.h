@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MKTeamListController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface MKTeamListController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property (strong, nonatomic) IBOutlet UITableView *table;
+@property (strong, nonatomic) UITableViewCell *selected;
 
 
 @end

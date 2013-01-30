@@ -316,10 +316,10 @@
             </objects>
             <point key="canvasLocation" x="337" y="1055"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Team List Controller-->
         <scene sceneID="2Pw-9A-sc2">
             <objects>
-                <tableViewController id="Dgi-37-F4E" sceneMemberID="viewController">
+                <tableViewController id="Dgi-37-F4E" customClass="MKTeamListController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="static" style="plain" rowHeight="54" sectionHeaderHeight="22" sectionFooterHeight="22" id="g3Q-6y-Lic">
                         <rect key="frame" x="0.0" y="0.0" width="258" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1207,6 +1207,9 @@
                             <outlet property="delegate" destination="Dgi-37-F4E" id="AUI-1s-MC6"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="table" destination="g3Q-6y-Lic" id="xhA-lm-Gmf"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Q1-0O-QH2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1502,6 +1505,12 @@
         </class>
         <class className="MKStandingsController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MKStandingsController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="table" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="MKTeamListController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MKTeamListController.h"/>
             <relationships>
                 <relationship kind="outlet" name="table" candidateClass="UITableView"/>
             </relationships>
