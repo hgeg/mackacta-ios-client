@@ -29,6 +29,8 @@
     self.slider.value = 0;
     gLock = 2;
     
+    [gnLoadingView showOnView:self.view];
+    
     self.matches = [[NSMutableArray alloc] initWithCapacity:34];
     for (int p=0; p<34; p++) {
         self.matches[p] = @"";
@@ -106,8 +108,9 @@
 }
 
 -(void) viewDidAppear:(BOOL)animated {
-    [gnLoadingView showOnView:self.view];
     if([[NSUserDefaults standardUserDefaults] valueForKey:@"invalid"] && [[NSUserDefaults standardUserDefaults] valueForKey:@"invalid"] == @"invalid") {
+        
+        [gnLoadingView showOnView:self.view];
         [self.scroller removeFromSuperview];
         
         sliderShown = false;
