@@ -68,6 +68,10 @@
 		DC1DC55816B9708F00159CB5 /* Eskişehirspor-bg-568h@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC1DC55716B9708F00159CB5 /* Eskişehirspor-bg-568h@2x.jpg */; };
 		DC1DC55A16B9715300159CB5 /* Eskişehirspor-bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC1DC55916B9715300159CB5 /* Eskişehirspor-bg@2x.jpg */; };
 		DC1DC55C16B9715D00159CB5 /* Eskişehirspor-bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC1DC55B16B9715D00159CB5 /* Eskişehirspor-bg.jpg */; };
+		DC1DC55E16B986E100159CB5 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = DC1DC55D16B986E100159CB5 /* background.png */; };
+		DC1DC56016B987FE00159CB5 /* ust_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = DC1DC55F16B987FE00159CB5 /* ust_bar.png */; };
+		DC1DC56216B98D3200159CB5 /* bilgi.png in Resources */ = {isa = PBXBuildFile; fileRef = DC1DC56116B98D3200159CB5 /* bilgi.png */; };
+		DC1DC56416B98D8900159CB5 /* cell_arkaplan.png in Resources */ = {isa = PBXBuildFile; fileRef = DC1DC56316B98D8900159CB5 /* cell_arkaplan.png */; };
 		DC7DF06C16B9392200079BEA /* Kasımpaşa-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7DF06A16B9392200079BEA /* Kasımpaşa-logo.png */; };
 		DC7DF06D16B9392200079BEA /* MP Antalyaspor-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7DF06B16B9392200079BEA /* MP Antalyaspor-logo.png */; };
 		DC7FE2B316B933D200C6C30A /* Akhisar Belediye-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7FE2A116B933D200C6C30A /* Akhisar Belediye-logo.png */; };
@@ -175,6 +179,10 @@
 		DC1DC55716B9708F00159CB5 /* Eskişehirspor-bg-568h@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Eskişehirspor-bg-568h@2x.jpg"; sourceTree = "<group>"; };
 		DC1DC55916B9715300159CB5 /* Eskişehirspor-bg@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Eskişehirspor-bg@2x.jpg"; sourceTree = "<group>"; };
 		DC1DC55B16B9715D00159CB5 /* Eskişehirspor-bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Eskişehirspor-bg.jpg"; sourceTree = "<group>"; };
+		DC1DC55D16B986E100159CB5 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		DC1DC55F16B987FE00159CB5 /* ust_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ust_bar.png; sourceTree = "<group>"; };
+		DC1DC56116B98D3200159CB5 /* bilgi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bilgi.png; sourceTree = "<group>"; };
+		DC1DC56316B98D8900159CB5 /* cell_arkaplan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_arkaplan.png; sourceTree = "<group>"; };
 		DC7DF06A16B9392200079BEA /* Kasımpaşa-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Kasımpaşa-logo.png"; sourceTree = "<group>"; };
 		DC7DF06B16B9392200079BEA /* MP Antalyaspor-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MP Antalyaspor-logo.png"; sourceTree = "<group>"; };
 		DC7FE2A116B933D200C6C30A /* Akhisar Belediye-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Akhisar Belediye-logo.png"; sourceTree = "<group>"; };
@@ -299,6 +307,10 @@
 		DC928AAD16B32274009B6014 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DC1DC56316B98D8900159CB5 /* cell_arkaplan.png */,
+				DC1DC56116B98D3200159CB5 /* bilgi.png */,
+				DC1DC55F16B987FE00159CB5 /* ust_bar.png */,
+				DC1DC55D16B986E100159CB5 /* background.png */,
 				DC1DC55B16B9715D00159CB5 /* Eskişehirspor-bg.jpg */,
 				DC1DC55916B9715300159CB5 /* Eskişehirspor-bg@2x.jpg */,
 				DC1DC55716B9708F00159CB5 /* Eskişehirspor-bg-568h@2x.jpg */,
@@ -532,6 +544,10 @@
 				DC1DC55816B9708F00159CB5 /* Eskişehirspor-bg-568h@2x.jpg in Resources */,
 				DC1DC55A16B9715300159CB5 /* Eskişehirspor-bg@2x.jpg in Resources */,
 				DC1DC55C16B9715D00159CB5 /* Eskişehirspor-bg.jpg in Resources */,
+				DC1DC55E16B986E100159CB5 /* background.png in Resources */,
+				DC1DC56016B987FE00159CB5 /* ust_bar.png in Resources */,
+				DC1DC56216B98D3200159CB5 /* bilgi.png in Resources */,
+				DC1DC56416B98D8900159CB5 /* cell_arkaplan.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

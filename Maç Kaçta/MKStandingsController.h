@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MKStandingsController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface MKStandingsController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 {
     NSArray *teams;
     BOOL loading;
 }
-@property (weak, nonatomic) IBOutlet UICollectionView *table;
+@property (weak, nonatomic) IBOutlet UITableView *table;
 @end
