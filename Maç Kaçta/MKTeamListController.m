@@ -38,8 +38,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *sel = [tableView cellForRowAtIndexPath:indexPath];
     sel.selectionStyle = UITableViewCellSelectionStyleNone;
-    [[NSUserDefaults standardUserDefaults] setValue:((UILabel *)[sel viewWithTag:1]).text forKey:@"selectedTeam"];
-    [[NSUserDefaults standardUserDefaults] setValue:@"invalid" forKey:@"flag"];
+    if(sel != self.selected){
+        [[NSUserDefaults standardUserDefaults] setValue:((UILabel *)[sel viewWithTag:1]).text forKey:@"selectedTeam"];
+        [[NSUserDefaults standardUserDefaults] setValue:@"invalid" forKey:@"flag"];
     [self.selected viewWithTag:2].alpha = 1;
     [sel viewWithTag:2].alpha = 0;
     [sel viewWithTag:2].hidden = false;
@@ -50,6 +51,7 @@
         [self.selected viewWithTag:2].hidden = true;
         self.selected = sel;
     }];
+    }
 }
 
 @end
