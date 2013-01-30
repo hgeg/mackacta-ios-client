@@ -32,32 +32,68 @@
     scroller = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, mySize.width, mySize.height)];
     scroller.delegate = self;
     scroller.pagingEnabled = true;
-    scroller.contentSize = CGSizeMake(mySize.width*weeks, mySize.height);
+    scroller.contentSize = CGSizeMake(mySize.width*34, mySize.height);
+    
+    NSURLResponse *response = nil;
+    NSError *error = nil;
+    NSString* escapedUrlString =
+    [@"http://54.235.244.172/globals/Beşiktaş/" stringByAddingPercentEscapesUsingEncoding:
+     NSUTF8StringEncoding];
+    NSURL *URL = [NSURL URLWithString:escapedUrlString];
+    NSLog(@"url: %@",URL);
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    NSData *receivedData = [NSURLConnection sendSynchronousRequest:request
+                                                 returningResponse:&response
+                                                             error:&error];
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:nil];
+    int nextweek = [json[@"week"] integerValue];
+    NSLog(@"next: %d",nextweek);
+    
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
-    for (int i = 0; i<weeks; i++) {
-        NSString* escapedUrlString =
-        [[NSString stringWithFormat:@"http://54.235.244.172/match/Beşiktaş/%u/",i+1] stringByAddingPercentEscapesUsingEncoding:
-         NSUTF8StringEncoding];
-        NSURL *URL = [NSURL URLWithString:escapedUrlString];
-        NSLog(@"url: %@",URL);
-        NSURLRequest *request = [NSURLRequest requestWithURL:URL];
-        
-        dispatch_async(queue, ^{
-            NSURLResponse *response = nil;
-            NSError *error = nil;
+    for (int i = 0; i<=34; i++) {
+        if(nextweek-i<1 && nextweek+i+1>34) break;
+        else if(nextweek-i>0){
+            NSString* escapedUrlString =
+            [[NSString stringWithFormat:@"http://54.235.244.172/match/Beşiktaş/%u/",nextweek-i] stringByAddingPercentEscapesUsingEncoding:
+             NSUTF8StringEncoding];
+            URL = [NSURL URLWithString:escapedUrlString];
+            request = [NSURLRequest requestWithURL:URL];
             
-            NSData *receivedData = [NSURLConnection sendSynchronousRequest:request
-                                                         returningResponse:&response
-                                                                     error:&error];
-            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:nil];
-            NSLog(@"adding view...");
-            [self performSelectorOnMainThread:@selector(generateView:) withObject:@{@"json":json,@"mySize":@[[NSString stringWithFormat:@"%f",mySize.width],[NSString stringWithFormat:@"%f",mySize.height]],@"i":[NSString stringWithFormat:@"%d",i ],@"scroller":scroller} waitUntilDone:NO];
-            NSLog(@"adding view...");
+            dispatch_async(queue, ^{
+                NSURLResponse *response = nil;
+                NSError *error = nil;
+                
+                NSData *receivedData = [NSURLConnection sendSynchronousRequest:request
+                                                             returningResponse:&response
+                                                                         error:&error];
+                NSDictionary *json = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:nil];
+                [self performSelectorOnMainThread:@selector(generateView:) withObject:@{@"json":json[@"data"],@"mySize":@[[NSString stringWithFormat:@"%f",mySize.width],[NSString stringWithFormat:@"%f",mySize.height]],@"i":[NSString stringWithFormat:@"%d",nextweek-i-1 ],@"scroller":scroller} waitUntilDone:NO];
+                NSLog(@"json:%@",json);
+            });
+        }
+        if(nextweek+i+1<35){
+            NSString* escapedUrlString =
+            [[NSString stringWithFormat:@"http://54.235.244.172/match/Beşiktaş/%u/",nextweek+i+1] stringByAddingPercentEscapesUsingEncoding:
+             NSUTF8StringEncoding];
+            URL = [NSURL URLWithString:escapedUrlString];
+            request = [NSURLRequest requestWithURL:URL];
             
-        });
+            dispatch_async(queue, ^{
+                NSURLResponse *response = nil;
+                NSError *error = nil;
+                
+                NSData *receivedData = [NSURLConnection sendSynchronousRequest:request
+                                                             returningResponse:&response
+                                                                         error:&error];
+                NSDictionary *json = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:nil];
+                [self performSelectorOnMainThread:@selector(generateView:) withObject:@{@"json":json[@"data"],@"mySize":@[[NSString stringWithFormat:@"%f",mySize.width],[NSString stringWithFormat:@"%f",mySize.height]],@"i":[NSString stringWithFormat:@"%d",nextweek+i],@"scroller":scroller} waitUntilDone:NO];
+                NSLog(@"json:%@",json);
+            });
+        }
     }
     [self.matchView removeFromSuperview];
-    [self.view addSubview:scroller];
+    [self.view addSubview:self.scroller];
+    self.scroller.contentOffset = CGPointMake((nextweek-1)*320, 0);
     [self.view bringSubviewToFront:self.sliderBar];
     
     UITapGestureRecognizer *sliderTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleSlider)];
@@ -155,7 +191,7 @@
 
 - (void) scrollViewDidScroll:(UIScrollView *)scrollView {
     if(!sLock) {
-        self.slider.value = scrollView.contentOffset.x*1.0/((weeks-1)*320);
+        self.slider.value = scrollView.contentOffset.x*1.0/((34-1)*320);
     } 
 }
 
