@@ -14,5 +14,6 @@
 @property (strong, nonatomic) NSArray *teams;
 @property (weak, nonatomic) IBOutlet UIView *teamView;
 @property (weak, nonatomic) IBOutlet UIView *settingsView;
+@property (weak, nonatomic) IBOutlet UIButton *devam;
 
 @end

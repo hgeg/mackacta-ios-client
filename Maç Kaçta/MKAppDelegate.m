@@ -13,6 +13,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil];
+    if(![[NSUserDefaults standardUserDefaults] valueForKey:@"selectedTeam"]){
+        UIViewController* mainViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"selection"];
+        self.window.rootViewController = mainViewController;
+    }else{
+        UIViewController* mainViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"main"];
+        self.window.rootViewController = mainViewController;
+    }
     return YES;
 }
 							

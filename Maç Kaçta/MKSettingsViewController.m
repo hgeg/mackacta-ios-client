@@ -32,6 +32,15 @@
     self.settingsView.layer.masksToBounds = YES;
     self.settingsView.layer.cornerRadius = 8.0f;
 	// Do any additional setup after loading the view.
+    @try {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enable) name:@"selected" object:nil];
+    }
+    @catch (NSException *exception) {}
+    
+}
+
+- (void) enable {
+    self.devam.enabled = true;
 }
 
 - (void)didReceiveMemoryWarning
