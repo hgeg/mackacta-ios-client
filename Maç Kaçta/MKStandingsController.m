@@ -64,6 +64,7 @@
         NSDictionary *team = teams[indexPath.row];
         cell = [cv dequeueReusableCellWithReuseIdentifier:@"teamdata" forIndexPath:indexPath];
         ((UILabel *)[cell viewWithTag:1]).text = team[@"name"];
+        ((UILabel *)[cell viewWithTag:10]).text = [NSString stringWithFormat:@"%@-logo",team[@"name"]];
         ((UILabel *)[cell viewWithTag:2]).text = team[@"p"];
         ((UILabel *)[cell viewWithTag:3]).text = team[@"w"];
         ((UILabel *)[cell viewWithTag:4]).text = team[@"d"];

@@ -35,11 +35,11 @@
     {
         NSLog(@"dict: %@",dict);
         UIImageView *homeTeamBrand = [[UIImageView alloc] initWithFrame:CGRectMake(20, 46, 90, 117)];
-        homeTeamBrand.image = [UIImage imageNamed:@"Galatasaray-Logo.png"];
+        homeTeamBrand.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@-logo.png",dict[@"home"]]];
         [newView addSubview:homeTeamBrand];
         
         UIImageView *awayTeamBrand = [[UIImageView alloc] initWithFrame:CGRectMake(170, 46, 90, 117)];
-        awayTeamBrand.image = [UIImage imageNamed:@"Galatasaray-Logo.png"];
+        awayTeamBrand.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@-logo.png",dict[@"away"]]];
         [newView addSubview:awayTeamBrand];
     
         UILabel *homeTeamName = [[UILabel alloc] initWithFrame:CGRectMake(10, 147, 111, 66)];
