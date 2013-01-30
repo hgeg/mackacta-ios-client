@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C2034" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Fixture Controller - First-->
@@ -175,7 +175,7 @@
                             <constraint firstItem="eKI-hN-Sly" firstAttribute="top" secondItem="16" secondAttribute="top" constant="20" symbolic="YES" type="default" id="yWY-b4-e00"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Maç Kaçta" image="first" id="7"/>
+                    <tabBarItem key="tabBarItem" title="Maç Kaçta" image="alarm.png" id="7"/>
                     <connections>
                         <outlet property="backgroundImage" destination="dkH-4a-1me" id="UhZ-h6-WDy"/>
                         <outlet property="matchView" destination="eKI-hN-Sly" id="1XP-H0-iry"/>
@@ -221,7 +221,7 @@
                             <constraint firstItem="vgn-gB-EoH" firstAttribute="top" secondItem="R7O-Fp-YgP" secondAttribute="top" constant="99" id="sGO-Qo-K1x"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Ayarlar" image="first" id="rKj-gZ-TLE"/>
+                    <tabBarItem key="tabBarItem" title="Ayarlar" image="cog_02.png" id="rKj-gZ-TLE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gRC-Fm-xrS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -393,7 +393,7 @@
                             <constraint firstItem="9kW-RA-aPC" firstAttribute="bottom" secondItem="17" secondAttribute="bottom" type="default" id="pPR-7W-Tan"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Puan Durumu" image="second" id="6"/>
+                    <tabBarItem key="tabBarItem" title="Puan Durumu" image="graph_bar_trend.png" id="6"/>
                     <connections>
                         <outlet property="table" destination="9kW-RA-aPC" id="Y3N-1u-037"/>
                     </connections>
@@ -426,9 +426,10 @@
     <resources>
         <image name="Besiktas_JK_Logo.png" width="16" height="16"/>
         <image name="Galatasaray-Logo.png" width="16" height="16"/>
+        <image name="alarm.png" width="26" height="26"/>
         <image name="besiktas_bg.jpg" width="640" height="1136"/>
-        <image name="first" width="16" height="16"/>
-        <image name="second" width="16" height="16"/>
+        <image name="cog_02.png" width="26" height="26"/>
+        <image name="graph_bar_trend.png" width="26" height="26"/>
     </resources>
     <classes>
         <class className="MKFixtureController" superclassName="UIViewController">
