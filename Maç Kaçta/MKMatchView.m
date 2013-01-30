@@ -64,30 +64,6 @@
         awayTeamName.text = dict[@"away"];
         [newView addSubview:awayTeamName];
         
-        UILabel *homeTeamScore = [[UILabel alloc] initWithFrame:CGRectMake(43, 270, 37, 38)];
-        homeTeamScore.font = [UIFont boldSystemFontOfSize:43];
-        homeTeamScore.backgroundColor = [UIColor clearColor];
-        homeTeamScore.textColor = [UIColor whiteColor];
-        homeTeamScore.textAlignment = UITextAlignmentCenter;
-        homeTeamScore.text = dict[@"sh"];
-        [newView addSubview:homeTeamScore];
-        
-        UILabel *awayTeamScore = [[UILabel alloc] initWithFrame:CGRectMake(196, 270, 37, 38)];
-        awayTeamScore.font = [UIFont boldSystemFontOfSize:43];
-        awayTeamScore.backgroundColor = [UIColor clearColor];
-        awayTeamScore.textColor = [UIColor whiteColor];
-        awayTeamScore.textAlignment = UITextAlignmentCenter;
-        awayTeamScore.text =dict[@"sa"];
-        [newView addSubview:awayTeamScore];
-        
-        UILabel *dash = [[UILabel alloc] initWithFrame:CGRectMake(123, 263, 34, 51)];
-        dash.font = [UIFont systemFontOfSize:45];
-        dash.backgroundColor = [UIColor clearColor];
-        dash.textColor = [UIColor whiteColor];
-        dash.textAlignment = UITextAlignmentCenter;
-        dash.text = @"-";
-        [newView addSubview:dash];
-        
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
         [dateFormat setDateFormat:@"dd/MM/yy HH:mm"];
         NSDate *d = [dateFormat dateFromString:dict[@"d"]];
@@ -119,6 +95,32 @@
         time.textAlignment = UITextAlignmentCenter;
         time.text = timeString;
         [newView addSubview:time];
+        
+        if([d timeIntervalSinceNow]>5400){
+            UILabel *homeTeamScore = [[UILabel alloc] initWithFrame:CGRectMake(43, 270, 37, 38)];
+            homeTeamScore.font = [UIFont boldSystemFontOfSize:43];
+            homeTeamScore.backgroundColor = [UIColor clearColor];
+            homeTeamScore.textColor = [UIColor whiteColor];
+            homeTeamScore.textAlignment = UITextAlignmentCenter;
+            homeTeamScore.text = dict[@"sh"];
+            [newView addSubview:homeTeamScore];
+            
+            UILabel *awayTeamScore = [[UILabel alloc] initWithFrame:CGRectMake(196, 270, 37, 38)];
+            awayTeamScore.font = [UIFont boldSystemFontOfSize:43];
+            awayTeamScore.backgroundColor = [UIColor clearColor];
+            awayTeamScore.textColor = [UIColor whiteColor];
+            awayTeamScore.textAlignment = UITextAlignmentCenter;
+            awayTeamScore.text =dict[@"sa"];
+            [newView addSubview:awayTeamScore];
+            
+            UILabel *dash = [[UILabel alloc] initWithFrame:CGRectMake(123, 263, 34, 51)];
+            dash.font = [UIFont systemFontOfSize:45];
+            dash.backgroundColor = [UIColor clearColor];
+            dash.textColor = [UIColor whiteColor];
+            dash.textAlignment = UITextAlignmentCenter;
+            dash.text = @"-";
+            [newView addSubview:dash];
+        }
         
         UILabel *week = [[UILabel alloc] initWithFrame:CGRectMake(64, 11, 151, 21)];
         week.font = [UIFont systemFontOfSize:17];
