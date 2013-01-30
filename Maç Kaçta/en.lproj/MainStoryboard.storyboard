@@ -310,13 +310,13 @@
                                             <constraint firstItem="54E-Ns-Nd0" firstAttribute="baseline" secondItem="q2D-ZB-sA4" secondAttribute="baseline" type="default" id="EBU-sb-gHI"/>
                                             <constraint firstAttribute="trailing" secondItem="0cM-4J-9cr" secondAttribute="trailing" constant="20" type="default" id="HPo-yv-wDW"/>
                                             <constraint firstItem="qWx-98-5EZ" firstAttribute="baseline" secondItem="54E-Ns-Nd0" secondAttribute="baseline" type="default" id="Hkr-Ci-13c"/>
+                                            <constraint firstItem="BGu-pp-rSP" firstAttribute="top" secondItem="5Zh-mc-qvq" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="JE4-wa-g3M"/>
                                             <constraint firstItem="BGu-pp-rSP" firstAttribute="leading" secondItem="ytj-te-zTa" secondAttribute="leading" constant="20" type="default" id="Js3-80-VhO"/>
                                             <constraint firstItem="5Zh-mc-qvq" firstAttribute="leading" secondItem="ytj-te-zTa" secondAttribute="leading" constant="12" id="Mp7-7p-4a9"/>
                                             <constraint firstAttribute="trailing" secondItem="Job-UP-lJU" secondAttribute="trailing" constant="61" id="My6-Wu-pJV"/>
                                             <constraint firstItem="54E-Ns-Nd0" firstAttribute="leading" secondItem="ytj-te-zTa" secondAttribute="leading" constant="112" id="OxU-x5-9D5"/>
                                             <constraint firstAttribute="trailing" secondItem="qWx-98-5EZ" secondAttribute="trailing" constant="116" id="Q1m-G5-3dX"/>
                                             <constraint firstItem="4ni-Nr-opI" firstAttribute="leading" secondItem="ytj-te-zTa" secondAttribute="leading" constant="53" id="Ry8-Vn-xo3"/>
-                                            <constraint firstAttribute="bottom" secondItem="BGu-pp-rSP" secondAttribute="bottom" constant="14" id="YqU-Ah-SvT"/>
                                             <constraint firstItem="q2D-ZB-sA4" firstAttribute="leading" secondItem="ytj-te-zTa" secondAttribute="leading" constant="68" id="bQR-Xj-Mmx"/>
                                             <constraint firstItem="BGu-pp-rSP" firstAttribute="baseline" secondItem="q2D-ZB-sA4" secondAttribute="baseline" type="default" id="dDW-W1-PE1"/>
                                             <constraint firstItem="Job-UP-lJU" firstAttribute="baseline" secondItem="0cM-4J-9cr" secondAttribute="baseline" type="default" id="imk-E1-Mr0"/>
@@ -404,8 +404,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Besiktas_JK_Logo.png" width="500" height="500"/>
-        <image name="Galatasaray-Logo.png" width="449" height="600"/>
+        <image name="Besiktas_JK_Logo.png" width="16" height="16"/>
+        <image name="Galatasaray-Logo.png" width="16" height="16"/>
         <image name="besiktas_bg.jpg" width="640" height="1136"/>
         <image name="first" width="16" height="16"/>
         <image name="second" width="16" height="16"/>
