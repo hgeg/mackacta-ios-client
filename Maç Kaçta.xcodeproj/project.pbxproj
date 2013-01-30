@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3623C72E16B3F6F1007E5986 /* MKMatchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3623C72D16B3F6F1007E5986 /* MKMatchView.m */; };
 		DC928AA716B32274009B6014 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC928AA616B32274009B6014 /* UIKit.framework */; };
 		DC928AA916B32274009B6014 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC928AA816B32274009B6014 /* Foundation.framework */; };
 		DC928AAB16B32274009B6014 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC928AAA16B32274009B6014 /* CoreGraphics.framework */; };
@@ -17,10 +18,10 @@
 		DC928ABB16B32274009B6014 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC928ABA16B32274009B6014 /* Default@2x.png */; };
 		DC928ABD16B32275009B6014 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC928ABC16B32275009B6014 /* Default-568h@2x.png */; };
 		DC928AC016B32275009B6014 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC928ABE16B32275009B6014 /* MainStoryboard.storyboard */; };
-		DC928AC316B32275009B6014 /* MKFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC928AC216B32275009B6014 /* MKFirstViewController.m */; };
+		DC928AC316B32275009B6014 /* MKFixtureController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC928AC216B32275009B6014 /* MKFixtureController.m */; };
 		DC928AC516B32275009B6014 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = DC928AC416B32275009B6014 /* first.png */; };
 		DC928AC716B32275009B6014 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC928AC616B32275009B6014 /* first@2x.png */; };
-		DC928ACA16B32275009B6014 /* MKSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC928AC916B32275009B6014 /* MKSecondViewController.m */; };
+		DC928ACA16B32275009B6014 /* MKStandingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC928AC916B32275009B6014 /* MKStandingsController.m */; };
 		DC928ACC16B32275009B6014 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = DC928ACB16B32275009B6014 /* second.png */; };
 		DC928ACE16B32275009B6014 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC928ACD16B32275009B6014 /* second@2x.png */; };
 		DC928AD616B32D05009B6014 /* MKSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC928AD516B32D05009B6014 /* MKSettingsViewController.m */; };
@@ -36,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3623C72C16B3F6F1007E5986 /* MKMatchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMatchView.h; sourceTree = "<group>"; };
+		3623C72D16B3F6F1007E5986 /* MKMatchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMatchView.m; sourceTree = "<group>"; };
 		DC928AA216B32274009B6014 /* Maç Kaçta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Maç Kaçta.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC928AA616B32274009B6014 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DC928AA816B32274009B6014 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -50,12 +53,12 @@
 		DC928ABA16B32274009B6014 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		DC928ABC16B32275009B6014 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DC928ABF16B32275009B6014 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		DC928AC116B32275009B6014 /* MKFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKFirstViewController.h; sourceTree = "<group>"; };
-		DC928AC216B32275009B6014 /* MKFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKFirstViewController.m; sourceTree = "<group>"; };
+		DC928AC116B32275009B6014 /* MKFixtureController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKFixtureController.h; sourceTree = "<group>"; };
+		DC928AC216B32275009B6014 /* MKFixtureController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKFixtureController.m; sourceTree = "<group>"; };
 		DC928AC416B32275009B6014 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		DC928AC616B32275009B6014 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		DC928AC816B32275009B6014 /* MKSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKSecondViewController.h; sourceTree = "<group>"; };
-		DC928AC916B32275009B6014 /* MKSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKSecondViewController.m; sourceTree = "<group>"; };
+		DC928AC816B32275009B6014 /* MKStandingsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKStandingsController.h; sourceTree = "<group>"; };
+		DC928AC916B32275009B6014 /* MKStandingsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKStandingsController.m; sourceTree = "<group>"; };
 		DC928ACB16B32275009B6014 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		DC928ACD16B32275009B6014 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		DC928AD416B32D05009B6014 /* MKSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSettingsViewController.h; sourceTree = "<group>"; };
@@ -123,16 +126,18 @@
 				DC928AB516B32274009B6014 /* MKAppDelegate.h */,
 				DC928AB616B32274009B6014 /* MKAppDelegate.m */,
 				DC928ABE16B32275009B6014 /* MainStoryboard.storyboard */,
-				DC928AC116B32275009B6014 /* MKFirstViewController.h */,
-				DC928AC216B32275009B6014 /* MKFirstViewController.m */,
-				DC928AC416B32275009B6014 /* first.png */,
-				DC928AC616B32275009B6014 /* first@2x.png */,
-				DC928AC816B32275009B6014 /* MKSecondViewController.h */,
-				DC928AC916B32275009B6014 /* MKSecondViewController.m */,
+				DC928AC116B32275009B6014 /* MKFixtureController.h */,
+				DC928AC216B32275009B6014 /* MKFixtureController.m */,
+				DC928AC816B32275009B6014 /* MKStandingsController.h */,
+				DC928AC916B32275009B6014 /* MKStandingsController.m */,
 				DC928AD416B32D05009B6014 /* MKSettingsViewController.h */,
 				DC928AD516B32D05009B6014 /* MKSettingsViewController.m */,
+				DC928AC416B32275009B6014 /* first.png */,
+				DC928AC616B32275009B6014 /* first@2x.png */,
 				DC928ACB16B32275009B6014 /* second.png */,
 				DC928ACD16B32275009B6014 /* second@2x.png */,
+				3623C72C16B3F6F1007E5986 /* MKMatchView.h */,
+				3623C72D16B3F6F1007E5986 /* MKMatchView.m */,
 				DC928AAD16B32274009B6014 /* Supporting Files */,
 			);
 			path = "Maç Kaçta";
@@ -238,9 +243,10 @@
 			files = (
 				DC928AB316B32274009B6014 /* main.m in Sources */,
 				DC928AB716B32274009B6014 /* MKAppDelegate.m in Sources */,
-				DC928AC316B32275009B6014 /* MKFirstViewController.m in Sources */,
-				DC928ACA16B32275009B6014 /* MKSecondViewController.m in Sources */,
+				DC928AC316B32275009B6014 /* MKFixtureController.m in Sources */,
+				DC928ACA16B32275009B6014 /* MKStandingsController.m in Sources */,
 				DC928AD616B32D05009B6014 /* MKSettingsViewController.m in Sources */,
+				3623C72E16B3F6F1007E5986 /* MKMatchView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
