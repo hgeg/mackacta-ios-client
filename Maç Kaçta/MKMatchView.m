@@ -96,7 +96,7 @@
         time.text = timeString;
         [newView addSubview:time];
         
-        if([d timeIntervalSinceNow]>5400){
+        if([d timeIntervalSinceNow]<-5400){
             UILabel *homeTeamScore = [[UILabel alloc] initWithFrame:CGRectMake(43, 270, 37, 38)];
             homeTeamScore.font = [UIFont boldSystemFontOfSize:43];
             homeTeamScore.backgroundColor = [UIColor clearColor];
