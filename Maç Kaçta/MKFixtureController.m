@@ -24,6 +24,7 @@
     self.sliderBar.alpha=0;
     self.sliderBar.layer.masksToBounds = true;
     self.sliderBar.layer.cornerRadius = 4.0f;
+    self.sliderBar.frame = CGRectMake(68, self.view.frame.size.height-70, 196, 36);
     self.slider.value = 0;
     
 	// Do any additional setup after loading the view, typically from a nib.

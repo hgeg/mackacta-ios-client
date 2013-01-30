@@ -295,10 +295,10 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Zh-mc-qvq">
+                                                <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="5Zh-mc-qvq">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="36" id="8aX-ZX-n7r"/>
                                                         <constraint firstAttribute="height" constant="40" id="AA1-wg-Sbb"/>
+                                                        <constraint firstAttribute="width" constant="46" id="dgO-LR-xal"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
@@ -312,13 +312,13 @@
                                             <constraint firstItem="qWx-98-5EZ" firstAttribute="baseline" secondItem="54E-Ns-Nd0" secondAttribute="baseline" type="default" id="Hkr-Ci-13c"/>
                                             <constraint firstItem="BGu-pp-rSP" firstAttribute="top" secondItem="5Zh-mc-qvq" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="JE4-wa-g3M"/>
                                             <constraint firstItem="BGu-pp-rSP" firstAttribute="leading" secondItem="ytj-te-zTa" secondAttribute="leading" constant="20" type="default" id="Js3-80-VhO"/>
-                                            <constraint firstItem="5Zh-mc-qvq" firstAttribute="leading" secondItem="ytj-te-zTa" secondAttribute="leading" constant="12" id="Mp7-7p-4a9"/>
                                             <constraint firstAttribute="trailing" secondItem="Job-UP-lJU" secondAttribute="trailing" constant="61" id="My6-Wu-pJV"/>
                                             <constraint firstItem="54E-Ns-Nd0" firstAttribute="leading" secondItem="ytj-te-zTa" secondAttribute="leading" constant="112" id="OxU-x5-9D5"/>
                                             <constraint firstAttribute="trailing" secondItem="qWx-98-5EZ" secondAttribute="trailing" constant="116" id="Q1m-G5-3dX"/>
                                             <constraint firstItem="4ni-Nr-opI" firstAttribute="leading" secondItem="ytj-te-zTa" secondAttribute="leading" constant="53" id="Ry8-Vn-xo3"/>
                                             <constraint firstItem="q2D-ZB-sA4" firstAttribute="leading" secondItem="ytj-te-zTa" secondAttribute="leading" constant="68" id="bQR-Xj-Mmx"/>
                                             <constraint firstItem="BGu-pp-rSP" firstAttribute="baseline" secondItem="q2D-ZB-sA4" secondAttribute="baseline" type="default" id="dDW-W1-PE1"/>
+                                            <constraint firstItem="5Zh-mc-qvq" firstAttribute="leading" secondItem="ytj-te-zTa" secondAttribute="leading" constant="6" id="g6T-Aa-4Q2"/>
                                             <constraint firstItem="Job-UP-lJU" firstAttribute="baseline" secondItem="0cM-4J-9cr" secondAttribute="baseline" type="default" id="imk-E1-Mr0"/>
                                             <constraint firstItem="5Zh-mc-qvq" firstAttribute="top" secondItem="ytj-te-zTa" secondAttribute="top" constant="3" id="x4X-CU-qNU"/>
                                             <constraint firstItem="4ni-Nr-opI" firstAttribute="top" secondItem="ytj-te-zTa" secondAttribute="top" constant="10" id="zXW-Gv-Hvd"/>
@@ -447,6 +447,9 @@
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
