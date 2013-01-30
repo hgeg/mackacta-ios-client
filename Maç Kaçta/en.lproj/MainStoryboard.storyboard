@@ -17,13 +17,13 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" image="Galatasaray-Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="s2e-sh-zsd">
                                         <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="24D-py-dzr"/>
                                             <constraint firstAttribute="height" constant="117" id="6iP-1O-uLb"/>
-                                            <constraint firstAttribute="width" constant="90" id="Ohp-Ij-dbO"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" image="Besiktas_JK_Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="EdI-5O-4aO">
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="88" id="D5g-Oh-uLj"/>
+                                            <constraint firstAttribute="width" constant="120" id="RWg-Ft-qNr"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="19. Hafta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmJ-xW-HJ2">
@@ -112,25 +112,25 @@
                                     <constraint firstItem="uwB-cW-4RC" firstAttribute="centerY" secondItem="lpN-6q-VvN" secondAttribute="centerY" type="default" id="AKf-Y4-E74"/>
                                     <constraint firstAttribute="bottom" secondItem="Bzk-yi-AFP" secondAttribute="bottom" constant="32" id="BrX-TF-HWr"/>
                                     <constraint firstItem="4rP-Ct-0tT" firstAttribute="baseline" secondItem="lpN-6q-VvN" secondAttribute="baseline" type="default" id="Cbb-aa-aVn"/>
+                                    <constraint firstItem="f49-Os-dLz" firstAttribute="centerX" secondItem="lpN-6q-VvN" secondAttribute="centerX" type="default" id="FYR-Ae-SqO"/>
                                     <constraint firstItem="rlJ-Wm-q5W" firstAttribute="top" secondItem="eKI-hN-Sly" secondAttribute="top" constant="167" id="H8R-bG-5PQ"/>
                                     <constraint firstItem="f49-Os-dLz" firstAttribute="centerX" secondItem="EdI-5O-4aO" secondAttribute="centerX" type="default" id="IlN-Bp-Njq"/>
                                     <constraint firstItem="Y2L-bK-X6k" firstAttribute="trailing" secondItem="nue-ZX-FLu" secondAttribute="trailing" type="default" id="LrG-tW-fHZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="EdI-5O-4aO" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Nbe-Ed-JNs"/>
                                     <constraint firstItem="f49-Os-dLz" firstAttribute="top" secondItem="rlJ-Wm-q5W" secondAttribute="top" type="default" id="OhE-0y-kdL"/>
-                                    <constraint firstItem="s2e-sh-zsd" firstAttribute="centerX" secondItem="rlJ-Wm-q5W" secondAttribute="centerX" type="default" id="U6I-dN-kQG"/>
+                                    <constraint firstAttribute="trailing" secondItem="EdI-5O-4aO" secondAttribute="trailing" constant="5" id="P6H-J9-Rcp"/>
                                     <constraint firstItem="Y2L-bK-X6k" firstAttribute="leading" secondItem="nue-ZX-FLu" secondAttribute="leading" type="default" id="W23-1C-iG3"/>
                                     <constraint firstItem="f49-Os-dLz" firstAttribute="bottom" secondItem="rlJ-Wm-q5W" secondAttribute="bottom" type="default" id="Yez-wf-vI0"/>
-                                    <constraint firstItem="s2e-sh-zsd" firstAttribute="leading" secondItem="eKI-hN-Sly" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Z3m-nW-g0T"/>
                                     <constraint firstItem="Bzk-yi-AFP" firstAttribute="leading" secondItem="eKI-hN-Sly" secondAttribute="leading" type="default" id="buG-Ke-5LT"/>
-                                    <constraint firstAttribute="trailing" secondItem="lpN-6q-VvN" secondAttribute="trailing" constant="46" id="c8r-y3-6jY"/>
                                     <constraint firstItem="s2e-sh-zsd" firstAttribute="bottom" secondItem="EdI-5O-4aO" secondAttribute="bottom" type="default" id="jgc-R9-hXX"/>
                                     <constraint firstItem="pmJ-xW-HJ2" firstAttribute="centerX" secondItem="uwB-cW-4RC" secondAttribute="centerX" type="default" id="jlR-bw-rmq"/>
                                     <constraint firstItem="pmJ-xW-HJ2" firstAttribute="top" secondItem="eKI-hN-Sly" secondAttribute="top" constant="11" id="mea-Z2-WHg"/>
                                     <constraint firstAttribute="bottom" secondItem="Y2L-bK-X6k" secondAttribute="bottom" constant="66" id="nWv-h7-mOi"/>
                                     <constraint firstItem="lhC-GZ-E8v" firstAttribute="leading" secondItem="eKI-hN-Sly" secondAttribute="leading" type="default" id="pRA-Or-Ieh"/>
+                                    <constraint firstItem="s2e-sh-zsd" firstAttribute="leading" secondItem="eKI-hN-Sly" secondAttribute="leading" constant="5" id="rAP-Sw-6IP"/>
                                     <constraint firstItem="Bzk-yi-AFP" firstAttribute="trailing" secondItem="eKI-hN-Sly" secondAttribute="trailing" type="default" id="tgH-jq-ar2"/>
                                     <constraint firstItem="lhC-GZ-E8v" firstAttribute="trailing" secondItem="eKI-hN-Sly" secondAttribute="trailing" type="default" id="tpy-H0-jED"/>
                                     <constraint firstItem="4rP-Ct-0tT" firstAttribute="leading" secondItem="eKI-hN-Sly" secondAttribute="leading" constant="43" id="wJq-lF-gPr"/>
+                                    <constraint firstItem="s2e-sh-zsd" firstAttribute="centerX" secondItem="rlJ-Wm-q5W" secondAttribute="centerX" type="default" id="wMg-H5-OSw"/>
                                     <constraint firstAttribute="bottom" secondItem="uwB-cW-4RC" secondAttribute="bottom" constant="145" id="xKR-Hj-dRC"/>
                                     <constraint firstItem="nue-ZX-FLu" firstAttribute="centerX" secondItem="uwB-cW-4RC" secondAttribute="centerX" type="default" id="xfK-JK-DTu"/>
                                 </constraints>

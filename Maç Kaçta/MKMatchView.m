@@ -34,13 +34,15 @@
     @try
     {
         NSLog(@"dict: %@",dict);
-        UIImageView *homeTeamBrand = [[UIImageView alloc] initWithFrame:CGRectMake(20, 46, 90, 117)];
+        UIImageView *homeTeamBrand = [[UIImageView alloc] initWithFrame:CGRectMake(5, 46, 120, 117)];
         homeTeamBrand.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@-logo.png",dict[@"home"]]];
         [newView addSubview:homeTeamBrand];
+        homeTeamBrand.contentMode = UIViewContentModeScaleAspectFit;
         
-        UIImageView *awayTeamBrand = [[UIImageView alloc] initWithFrame:CGRectMake(170, 46, 90, 117)];
+        UIImageView *awayTeamBrand = [[UIImageView alloc] initWithFrame:CGRectMake(155, 46, 120, 117)];
         awayTeamBrand.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@-logo.png",dict[@"away"]]];
         [newView addSubview:awayTeamBrand];
+        awayTeamBrand.contentMode = UIViewContentModeScaleAspectFit;
     
         UILabel *homeTeamName = [[UILabel alloc] initWithFrame:CGRectMake(10, 147, 111, 66)];
         homeTeamName.userInteractionEnabled = false;

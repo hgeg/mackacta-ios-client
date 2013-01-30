@@ -61,7 +61,7 @@
 }
 
 -(IBAction)sliderChanged:(id)sender {
-    [scroller setContentOffset:CGPointMake((int)(self.slider.value*320*(weeks-1)/320)*320, 0) animated:true];
+    [scroller setContentOffset:CGPointMake((int)(self.slider.value*320*(weeks-1)/320)*320, 0) animated:false];
 }
 
 -(IBAction)lockSlider:(id)sender {sLock = true;}
