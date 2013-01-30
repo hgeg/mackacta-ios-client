@@ -16,12 +16,14 @@
 {
     int sliderShown;
     BOOL sLock;
+    int gLock;
 }
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 @property (weak, nonatomic) IBOutlet MKMatchView *matchView;
 @property (weak, nonatomic) IBOutlet UIView *sliderBar;
 @property (weak, nonatomic) IBOutlet UISlider *slider;
 @property (strong, nonatomic) IBOutlet UIScrollView *scroller;
+@property (strong, nonatomic) IBOutlet NSMutableArray *matches;
 @property (weak, nonatomic) IBOutlet UIImageView *background;
 
 -(IBAction)sliderChanged:(id)sender;

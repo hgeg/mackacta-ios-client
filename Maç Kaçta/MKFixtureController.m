@@ -26,7 +26,12 @@
     self.sliderBar.layer.cornerRadius = 4.0f;
     self.sliderBar.frame = CGRectMake(68, self.view.frame.size.height-70, 196, 36);
     self.slider.value = 0;
+    gLock = 2;
     
+    self.matches = [[NSMutableArray alloc] initWithCapacity:34];
+    for (int p=0; p<34; p++) {
+        self.matches[p] = @"";
+    }
 	// Do any additional setup after loading the view, typically from a nib.
     CGSize mySize = self.view.frame.size;
     scroller = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, mySize.width, mySize.height)];
@@ -69,7 +74,6 @@
                                                                          error:&error];
                 NSDictionary *json = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:nil];
                 [self performSelectorOnMainThread:@selector(generateView:) withObject:@{@"json":json[@"data"],@"mySize":@[[NSString stringWithFormat:@"%f",mySize.width],[NSString stringWithFormat:@"%f",mySize.height]],@"i":[NSString stringWithFormat:@"%d",nextweek-i-1 ],@"scroller":scroller} waitUntilDone:NO];
-                NSLog(@"json:%@",json);
             });
         }
         if(nextweek+i+1<35){
@@ -88,17 +92,16 @@
                                                                          error:&error];
                 NSDictionary *json = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:nil];
                 [self performSelectorOnMainThread:@selector(generateView:) withObject:@{@"json":json[@"data"],@"mySize":@[[NSString stringWithFormat:@"%f",mySize.width],[NSString stringWithFormat:@"%f",mySize.height]],@"i":[NSString stringWithFormat:@"%d",nextweek+i],@"scroller":scroller} waitUntilDone:NO];
-                NSLog(@"json:%@",json);
             });
         }
     }
     [self.matchView removeFromSuperview];
     [self.view addSubview:self.scroller];
     self.scroller.contentOffset = CGPointMake((nextweek-1)*320, 0);
-    [self.view bringSubviewToFront:self.sliderBar];
-    
     UITapGestureRecognizer *sliderTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleSlider)];
     [scroller addGestureRecognizer:sliderTap];
+    
+    [self.view bringSubviewToFront:self.sliderBar];
 }
 
 -(void) viewDidAppear:(BOOL)animated {
@@ -116,7 +119,6 @@
         NSURLResponse *response = nil;
         NSError *error = nil;
         NSString *selectedTeam = [[NSUserDefaults standardUserDefaults] valueForKey:@"selectedTeam"];
-        self.background.image = [UIImage imageNamed:[NSString stringWithFormat:@"Beşiktaş-bg.jpg"]];
         NSString* escapedUrlString =
         [[NSString stringWithFormat:@"http://54.235.244.172/globals/%@/",selectedTeam] stringByAddingPercentEscapesUsingEncoding:
          NSUTF8StringEncoding];
@@ -136,8 +138,9 @@
         self.scroller.delegate = self;
         self.scroller.pagingEnabled = true;
         self.scroller.contentSize = CGSizeMake(mySize.width*34, mySize.height);
-        self.background.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@-bg.jpg",[[NSUserDefaults standardUserDefaults] valueForKey:@"selectedTeam"]]];
-        
+        [UIView animateWithDuration:0.3 animations:^{
+            self.background.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@-bg.jpg",[[NSUserDefaults standardUserDefaults] valueForKey:@"selectedTeam"]]];
+        }];
         dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
         for (int i = 0; i<=34; i++) {
             if(nextweek-i<1 && nextweek+i+1>34) break;
@@ -193,7 +196,7 @@
 }
 
 -(IBAction)sliderChanged:(id)sender {
-    [scroller setContentOffset:CGPointMake((int)(self.slider.value*320*(weeks-1)/320)*320, 0) animated:false];
+    [scroller setContentOffset:CGPointMake((int)(self.slider.value*320*(33)/320)*320, 0) animated:false];
 }
 
 -(IBAction)lockSlider:(id)sender {sLock = true;}
@@ -220,7 +223,15 @@
 - (void)generateView:(NSObject *)pobj {
     NSDictionary *params = (NSDictionary *)pobj;
     MKMatchView *newView = [MKMatchView generateWithObject:params[@"json"] size:CGSizeMake([params[@"mySize"][0] floatValue], [params[@"mySize"][1] floatValue]) andOffset:[params[@"i"] intValue]];
+    NSLog(@"at index:%@",params[@"i"]);
+    [self.matches insertObject:newView atIndex:[params[@"i"] intValue]];
+    newView.alpha=0;
     [params[@"scroller"] addSubview:newView];
+    //if(gLock>0){
+        [UIView animateWithDuration:0.3 animations:^{
+        newView.alpha = 1;}];
+        gLock--;
+    //}
 }
 
 - (void)didReceiveMemoryWarning
@@ -232,7 +243,12 @@
 - (void) scrollViewDidScroll:(UIScrollView *)scrollView {
     if(!sLock) {
         self.slider.value = scrollView.contentOffset.x*1.0/((34-1)*320);
-    } 
+    }
+    /*if(gLock==0)
+        [UIView animateWithDuration:0.3 animations:^{
+            NSLog(@"at index:%d",(int)(scrollView.contentOffset.x/320));
+            ((UIView *)self.matches[(int)(scrollView.contentOffset.x/320)]).alpha = 1;
+        }];*/
 }
 
 @end
