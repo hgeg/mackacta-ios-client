@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		3623C72E16B3F6F1007E5986 /* MKMatchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3623C72D16B3F6F1007E5986 /* MKMatchView.m */; };
+		364AB6E916B9BC21003E93F5 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 364AB6E816B9BC21003E93F5 /* check.png */; };
+		364AB6ED16B9BE04003E93F5 /* MKTeamListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 364AB6EC16B9BE04003E93F5 /* MKTeamListController.m */; };
 		369C1AE416B9888A005AFE0E /* gnLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 369C1AE216B9876F005AFE0E /* gnLoadingView.m */; };
 		369C1AEB16B99C91005AFE0E /* Galatasaray-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 369C1AEA16B99C91005AFE0E /* Galatasaray-logo.png */; };
+		369C1AEF16B9B489005AFE0E /* cell_arkaplan_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 369C1AEE16B9B489005AFE0E /* cell_arkaplan_settings.png */; };
 		DC1DC4E916B9644700159CB5 /* alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = DC1DC4E316B9644700159CB5 /* alarm.png */; };
 		DC1DC4EA16B9644700159CB5 /* alarm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC1DC4E416B9644700159CB5 /* alarm@2x.png */; };
 		DC1DC4EB16B9644700159CB5 /* cog_02.png in Resources */ = {isa = PBXBuildFile; fileRef = DC1DC4E516B9644700159CB5 /* cog_02.png */; };
@@ -100,11 +103,7 @@
 		DC928ABD16B32275009B6014 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC928ABC16B32275009B6014 /* Default-568h@2x.png */; };
 		DC928AC016B32275009B6014 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC928ABE16B32275009B6014 /* MainStoryboard.storyboard */; };
 		DC928AC316B32275009B6014 /* MKFixtureController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC928AC216B32275009B6014 /* MKFixtureController.m */; };
-		DC928AC516B32275009B6014 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = DC928AC416B32275009B6014 /* first.png */; };
-		DC928AC716B32275009B6014 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC928AC616B32275009B6014 /* first@2x.png */; };
 		DC928ACA16B32275009B6014 /* MKStandingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC928AC916B32275009B6014 /* MKStandingsController.m */; };
-		DC928ACC16B32275009B6014 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = DC928ACB16B32275009B6014 /* second.png */; };
-		DC928ACE16B32275009B6014 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC928ACD16B32275009B6014 /* second@2x.png */; };
 		DC928AD616B32D05009B6014 /* MKSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC928AD516B32D05009B6014 /* MKSettingsViewController.m */; };
 		DC928AD816B33BD2009B6014 /* besiktas_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC928AD716B33BD2009B6014 /* besiktas_bg.jpg */; };
 		DC928ADE16B34F6E009B6014 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC928ADD16B34F6E009B6014 /* Default-568h@2x.png */; };
@@ -118,9 +117,15 @@
 /* Begin PBXFileReference section */
 		3623C72C16B3F6F1007E5986 /* MKMatchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMatchView.h; sourceTree = "<group>"; };
 		3623C72D16B3F6F1007E5986 /* MKMatchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMatchView.m; sourceTree = "<group>"; };
+		364AB6E816B9BC21003E93F5 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
+		364AB6EB16B9BE04003E93F5 /* MKTeamListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKTeamListController.h; sourceTree = "<group>"; };
+		364AB6EC16B9BE04003E93F5 /* MKTeamListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKTeamListController.m; sourceTree = "<group>"; };
 		369C1AE116B9876F005AFE0E /* gnLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gnLoadingView.h; sourceTree = "<group>"; };
 		369C1AE216B9876F005AFE0E /* gnLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gnLoadingView.m; sourceTree = "<group>"; };
 		369C1AEA16B99C91005AFE0E /* Galatasaray-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Galatasaray-logo.png"; sourceTree = "<group>"; };
+		369C1AEC16B9B399005AFE0E /* MyriadPro-Cond.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Cond.otf"; sourceTree = "<group>"; };
+		369C1AED16B9B399005AFE0E /* MyriadPro-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Semibold.otf"; sourceTree = "<group>"; };
+		369C1AEE16B9B489005AFE0E /* cell_arkaplan_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_arkaplan_settings.png; sourceTree = "<group>"; };
 		DC1DC4E316B9644700159CB5 /* alarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm.png; sourceTree = "<group>"; };
 		DC1DC4E416B9644700159CB5 /* alarm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm@2x.png"; sourceTree = "<group>"; };
 		DC1DC4E516B9644700159CB5 /* cog_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cog_02.png; sourceTree = "<group>"; };
@@ -216,12 +221,8 @@
 		DC928ABF16B32275009B6014 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		DC928AC116B32275009B6014 /* MKFixtureController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKFixtureController.h; sourceTree = "<group>"; };
 		DC928AC216B32275009B6014 /* MKFixtureController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKFixtureController.m; sourceTree = "<group>"; };
-		DC928AC416B32275009B6014 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		DC928AC616B32275009B6014 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		DC928AC816B32275009B6014 /* MKStandingsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKStandingsController.h; sourceTree = "<group>"; };
 		DC928AC916B32275009B6014 /* MKStandingsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKStandingsController.m; sourceTree = "<group>"; };
-		DC928ACB16B32275009B6014 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		DC928ACD16B32275009B6014 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		DC928AD416B32D05009B6014 /* MKSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSettingsViewController.h; sourceTree = "<group>"; };
 		DC928AD516B32D05009B6014 /* MKSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSettingsViewController.m; sourceTree = "<group>"; };
 		DC928AD716B33BD2009B6014 /* besiktas_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = besiktas_bg.jpg; sourceTree = "<group>"; };
@@ -291,14 +292,12 @@
 				DC928AC916B32275009B6014 /* MKStandingsController.m */,
 				DC928AD416B32D05009B6014 /* MKSettingsViewController.h */,
 				DC928AD516B32D05009B6014 /* MKSettingsViewController.m */,
-				DC928AC416B32275009B6014 /* first.png */,
-				DC928AC616B32275009B6014 /* first@2x.png */,
-				DC928ACB16B32275009B6014 /* second.png */,
-				DC928ACD16B32275009B6014 /* second@2x.png */,
 				3623C72C16B3F6F1007E5986 /* MKMatchView.h */,
 				3623C72D16B3F6F1007E5986 /* MKMatchView.m */,
 				369C1AE116B9876F005AFE0E /* gnLoadingView.h */,
 				369C1AE216B9876F005AFE0E /* gnLoadingView.m */,
+				364AB6EB16B9BE04003E93F5 /* MKTeamListController.h */,
+				364AB6EC16B9BE04003E93F5 /* MKTeamListController.m */,
 				DC928AAD16B32274009B6014 /* Supporting Files */,
 			);
 			path = "Maç Kaçta";
@@ -307,6 +306,8 @@
 		DC928AAD16B32274009B6014 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				364AB6E816B9BC21003E93F5 /* check.png */,
+				369C1AEE16B9B489005AFE0E /* cell_arkaplan_settings.png */,
 				DC1DC56316B98D8900159CB5 /* cell_arkaplan.png */,
 				DC1DC56116B98D3200159CB5 /* bilgi.png */,
 				DC1DC55F16B987FE00159CB5 /* ust_bar.png */,
@@ -396,6 +397,8 @@
 				DC928AB816B32274009B6014 /* Default.png */,
 				DC928ABA16B32274009B6014 /* Default@2x.png */,
 				DC928ABC16B32275009B6014 /* Default-568h@2x.png */,
+				369C1AEC16B9B399005AFE0E /* MyriadPro-Cond.otf */,
+				369C1AED16B9B399005AFE0E /* MyriadPro-Semibold.otf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -457,10 +460,6 @@
 				DC928ABB16B32274009B6014 /* Default@2x.png in Resources */,
 				DC928ABD16B32275009B6014 /* Default-568h@2x.png in Resources */,
 				DC928AC016B32275009B6014 /* MainStoryboard.storyboard in Resources */,
-				DC928AC516B32275009B6014 /* first.png in Resources */,
-				DC928AC716B32275009B6014 /* first@2x.png in Resources */,
-				DC928ACC16B32275009B6014 /* second.png in Resources */,
-				DC928ACE16B32275009B6014 /* second@2x.png in Resources */,
 				DC928AD816B33BD2009B6014 /* besiktas_bg.jpg in Resources */,
 				DC928ADE16B34F6E009B6014 /* Default-568h@2x.png in Resources */,
 				DC928AE416B35340009B6014 /* mackacta@2x.png in Resources */,
@@ -548,6 +547,8 @@
 				DC1DC56216B98D3200159CB5 /* bilgi.png in Resources */,
 				DC1DC56416B98D8900159CB5 /* cell_arkaplan.png in Resources */,
 				369C1AEB16B99C91005AFE0E /* Galatasaray-logo.png in Resources */,
+				369C1AEF16B9B489005AFE0E /* cell_arkaplan_settings.png in Resources */,
+				364AB6E916B9BC21003E93F5 /* check.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +566,7 @@
 				DC928ACA16B32275009B6014 /* MKStandingsController.m in Sources */,
 				DC928AD616B32D05009B6014 /* MKSettingsViewController.m in Sources */,
 				3623C72E16B3F6F1007E5986 /* MKMatchView.m in Sources */,
+				364AB6ED16B9BE04003E93F5 /* MKTeamListController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

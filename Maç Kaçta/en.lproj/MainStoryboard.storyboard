@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C2034" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
         <!--Fixture Controller - First-->
@@ -197,20 +197,12 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="wSq-hf-9kq"/>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3eN-Mi-JoE">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ayarlar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEX-oJ-qxj">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="216" id="TAf-CT-cbn"/>
+                                    <constraint firstAttribute="width" constant="73" id="L5e-Ii-eVe"/>
+                                    <constraint firstAttribute="height" constant="39" id="zD0-2S-3yD"/>
                                 </constraints>
-                                <connections>
-                                    <outlet property="dataSource" destination="LxU-aE-YqT" id="nMd-xL-SbR"/>
-                                    <outlet property="delegate" destination="LxU-aE-YqT" id="fs2-ez-FOb"/>
-                                </connections>
-                            </pickerView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ayarlar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEX-oJ-qxj">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="87" id="3m7-8Q-as3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -220,25 +212,47 @@
                                     <segue destination="jtw-je-jVC" kind="embed" id="2fr-hC-joQ"/>
                                 </connections>
                             </containerView>
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tgs-4m-M32">
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="Dgi-37-F4E" kind="embed" id="iyi-aJ-kfV"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Takım Seç" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRv-7y-U6M">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="KOn-0i-Qa2"/>
+                                    <constraint firstAttribute="width" constant="110" id="Kp8-je-pCp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="3eN-Mi-JoE" firstAttribute="trailing" secondItem="R7O-Fp-YgP" secondAttribute="trailing" type="default" id="AAc-j1-bz2"/>
+                            <constraint firstItem="Tgs-4m-M32" firstAttribute="leading" secondItem="VRv-7y-U6M" secondAttribute="leading" type="default" id="5d3-yb-HGm"/>
+                            <constraint firstItem="Fpc-1d-fhD" firstAttribute="trailing" secondItem="Tgs-4m-M32" secondAttribute="trailing" type="default" id="8Sl-kg-a4S"/>
                             <constraint firstItem="wSq-hf-9kq" firstAttribute="trailing" secondItem="R7O-Fp-YgP" secondAttribute="trailing" type="default" id="D6X-dT-NLY"/>
-                            <constraint firstItem="3eN-Mi-JoE" firstAttribute="bottom" secondItem="R7O-Fp-YgP" secondAttribute="bottom" type="default" id="MNw-X3-c0i"/>
-                            <constraint firstItem="3eN-Mi-JoE" firstAttribute="leading" secondItem="R7O-Fp-YgP" secondAttribute="leading" type="default" id="Pd6-61-Vtr"/>
-                            <constraint firstItem="Fpc-1d-fhD" firstAttribute="leading" secondItem="R7O-Fp-YgP" secondAttribute="leading" constant="31" id="RTU-GW-1RI"/>
-                            <constraint firstItem="Fpc-1d-fhD" firstAttribute="top" secondItem="R7O-Fp-YgP" secondAttribute="top" constant="64" id="WEh-SR-FOv"/>
-                            <constraint firstItem="Fpc-1d-fhD" firstAttribute="centerX" secondItem="zEX-oJ-qxj" secondAttribute="centerX" type="default" id="YPe-Sa-GhS"/>
-                            <constraint firstAttribute="bottom" secondItem="Fpc-1d-fhD" secondAttribute="bottom" constant="253" id="bJ7-uW-IcY"/>
+                            <constraint firstItem="zEX-oJ-qxj" firstAttribute="leading" secondItem="R7O-Fp-YgP" secondAttribute="leading" constant="31" id="DcL-to-eEh"/>
+                            <constraint firstAttribute="bottom" secondItem="Tgs-4m-M32" secondAttribute="bottom" constant="3" id="FXY-H7-Ehy"/>
+                            <constraint firstItem="Fpc-1d-fhD" firstAttribute="top" secondItem="zEX-oJ-qxj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Fbd-ze-jId"/>
+                            <constraint firstItem="Tgs-4m-M32" firstAttribute="centerX" secondItem="wSq-hf-9kq" secondAttribute="centerX" type="default" id="Icc-4w-mUf"/>
+                            <constraint firstItem="Tgs-4m-M32" firstAttribute="top" secondItem="VRv-7y-U6M" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Ukp-e5-u8x"/>
                             <constraint firstItem="wSq-hf-9kq" firstAttribute="leading" secondItem="R7O-Fp-YgP" secondAttribute="leading" type="default" id="ekk-hs-28S"/>
-                            <constraint firstItem="zEX-oJ-qxj" firstAttribute="top" secondItem="R7O-Fp-YgP" secondAttribute="top" constant="25" id="jRw-rd-2o0"/>
+                            <constraint firstItem="zEX-oJ-qxj" firstAttribute="leading" secondItem="Fpc-1d-fhD" secondAttribute="leading" type="default" id="gey-KE-yRA"/>
+                            <constraint firstAttribute="bottom" secondItem="Fpc-1d-fhD" secondAttribute="bottom" constant="375" id="hKG-bT-fRU"/>
+                            <constraint firstItem="Fpc-1d-fhD" firstAttribute="leading" secondItem="VRv-7y-U6M" secondAttribute="leading" type="default" id="mHG-Df-eaV"/>
                             <constraint firstItem="wSq-hf-9kq" firstAttribute="top" secondItem="R7O-Fp-YgP" secondAttribute="top" type="default" id="p3l-6y-5Od"/>
-                            <constraint firstItem="Fpc-1d-fhD" firstAttribute="centerX" secondItem="3eN-Mi-JoE" secondAttribute="centerX" type="default" id="pQ5-Z6-Ife"/>
+                            <constraint firstItem="VRv-7y-U6M" firstAttribute="top" secondItem="R7O-Fp-YgP" secondAttribute="top" constant="149" id="rtq-ap-alQ"/>
                             <constraint firstItem="wSq-hf-9kq" firstAttribute="bottom" secondItem="R7O-Fp-YgP" secondAttribute="bottom" type="default" id="tYa-Ec-fX8"/>
+                            <constraint firstItem="zEX-oJ-qxj" firstAttribute="top" secondItem="R7O-Fp-YgP" secondAttribute="top" constant="17" id="wiu-WV-CzX"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ayarlar" image="cog_02.png" id="rKj-gZ-TLE"/>
+                    <connections>
+                        <outlet property="settingsView" destination="Fpc-1d-fhD" id="7m0-Op-2hq"/>
+                        <outlet property="teamView" destination="Tgs-4m-M32" id="gLG-2R-WhF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gRC-Fm-xrS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -248,47 +262,32 @@
         <scene sceneID="sRu-4s-TkJ">
             <objects>
                 <tableViewController id="jtw-je-jVC" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="PAV-kU-Ddf">
-                        <rect key="frame" x="0.0" y="0.0" width="259" height="182"/>
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="PAV-kU-Ddf">
+                        <rect key="frame" x="0.0" y="0.0" width="258" height="60"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
                             <tableViewSection id="V15-cr-0Uc">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Jgs-mq-Q39" style="IBUITableViewCellStyleDefault" id="Ce9-Wv-qiH">
-                                        <rect key="frame" x="0.0" y="0.0" width="259" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" shouldIndentWhileEditing="NO" rowHeight="60" id="ymS-u2-crc">
+                                        <rect key="frame" x="0.0" y="0.0" width="258" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="259" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="258" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Takım Değiştir" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jgs-mq-Q39">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ymS-u2-crc">
-                                        <rect key="frame" x="0.0" y="44" width="259" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="259" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cell_arkaplan_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="oE3-Wi-ype">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="260" id="1Y5-35-TNJ"/>
+                                                        <constraint firstAttribute="height" constant="58" id="jx4-ij-AFq"/>
+                                                    </constraints>
+                                                </imageView>
                                                 <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KOq-pW-fOP">
-                                                    <color key="onTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="onTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </switch>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Milli Maçları Göster" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAh-Gd-vp6">
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="146" id="yIr-5k-iIp"/>
-                                                        <constraint firstAttribute="height" constant="21" id="zBp-t1-BXo"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.050638686131386862" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                             </subviews>
@@ -296,10 +295,12 @@
                                         </view>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="eAh-Gd-vp6" firstAttribute="centerY" secondItem="KOq-pW-fOP" secondAttribute="centerY" type="default" id="0CY-ai-BF9"/>
                                             <constraint firstItem="eAh-Gd-vp6" firstAttribute="leading" secondItem="ymS-u2-crc" secondAttribute="leading" constant="10" id="8zZ-FW-yee"/>
-                                            <constraint firstItem="KOq-pW-fOP" firstAttribute="top" secondItem="ymS-u2-crc" secondAttribute="top" constant="8" id="HHZ-wu-1aG"/>
-                                            <constraint firstAttribute="trailing" secondItem="KOq-pW-fOP" secondAttribute="trailing" constant="11" id="dyX-Ie-Z15"/>
+                                            <constraint firstAttribute="trailing" secondItem="KOq-pW-fOP" secondAttribute="trailing" constant="10" id="AKG-Nx-Vsr"/>
+                                            <constraint firstItem="oE3-Wi-ype" firstAttribute="centerY" secondItem="eAh-Gd-vp6" secondAttribute="centerY" type="default" id="N0q-9J-jAa"/>
+                                            <constraint firstItem="KOq-pW-fOP" firstAttribute="centerY" secondItem="eAh-Gd-vp6" secondAttribute="centerY" type="default" id="nra-Zf-Etd"/>
+                                            <constraint firstItem="oE3-Wi-ype" firstAttribute="leading" secondItem="ymS-u2-crc" secondAttribute="leading" type="default" id="vHq-NE-Jr1"/>
+                                            <constraint firstItem="eAh-Gd-vp6" firstAttribute="top" secondItem="ymS-u2-crc" secondAttribute="top" constant="20" type="default" id="wc5-BW-L0l"/>
                                         </constraints>
                                     </tableViewCell>
                                 </cells>
@@ -313,7 +314,903 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ldq-d2-m2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="338" y="1080"/>
+            <point key="canvasLocation" x="337" y="1055"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="2Pw-9A-sc2">
+            <objects>
+                <tableViewController id="Dgi-37-F4E" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="static" style="plain" rowHeight="54" sectionHeaderHeight="22" sectionFooterHeight="22" id="g3Q-6y-Lic">
+                        <rect key="frame" x="0.0" y="0.0" width="258" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="OPk-N7-qeo">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="pcf-V6-zfK">
+                                        <rect key="frame" x="0.0" y="0.0" width="258" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cell_arkaplan_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="jDv-Az-U1s">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="53" id="apG-Bv-pPB"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="Akhisar Belediye" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OE-kU-gAR">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="185" id="Dme-UE-gdh"/>
+                                                        <constraint firstAttribute="height" constant="36" id="fPa-Sw-smu"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Akhisar Belediye-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="0bZ-6T-ZNe">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="hfy-lI-Ags"/>
+                                                        <constraint firstAttribute="width" constant="50" id="k0E-gK-9YD"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="9dG-1B-pi1">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="QcQ-Ov-B0C"/>
+                                                        <constraint firstAttribute="width" constant="32" id="r8B-eS-hrH"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="jDv-Az-U1s" firstAttribute="leading" secondItem="pcf-V6-zfK" secondAttribute="leading" type="default" id="4T4-mY-jkT"/>
+                                            <constraint firstItem="9dG-1B-pi1" firstAttribute="centerY" secondItem="3OE-kU-gAR" secondAttribute="centerY" type="default" id="VZp-ob-MMK"/>
+                                            <constraint firstItem="0bZ-6T-ZNe" firstAttribute="top" secondItem="pcf-V6-zfK" secondAttribute="top" constant="3" id="jOr-a5-anv"/>
+                                            <constraint firstItem="0bZ-6T-ZNe" firstAttribute="leading" secondItem="pcf-V6-zfK" secondAttribute="leading" constant="4" id="jSF-tV-2Or"/>
+                                            <constraint firstItem="3OE-kU-gAR" firstAttribute="leading" secondItem="pcf-V6-zfK" secondAttribute="leading" constant="58" id="sOz-wc-BZR"/>
+                                            <constraint firstItem="9dG-1B-pi1" firstAttribute="trailing" secondItem="3OE-kU-gAR" secondAttribute="trailing" type="default" id="tzK-sJ-1f1"/>
+                                            <constraint firstItem="jDv-Az-U1s" firstAttribute="top" secondItem="pcf-V6-zfK" secondAttribute="top" type="default" id="vlH-O4-c7t"/>
+                                            <constraint firstItem="jDv-Az-U1s" firstAttribute="trailing" secondItem="pcf-V6-zfK" secondAttribute="trailing" type="default" id="ytm-MG-XBw"/>
+                                            <constraint firstItem="9dG-1B-pi1" firstAttribute="centerY" secondItem="pcf-V6-zfK" secondAttribute="centerY" type="default" id="zHb-X0-FS3"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="blZ-RW-H34">
+                                        <rect key="frame" x="0.0" y="54" width="258" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cell_arkaplan_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="460-ee-Yf4">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="53" id="QtK-ag-jrf"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="MP Antalyaspor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2c-f1-Ncu">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="185" id="3oV-JX-heu"/>
+                                                        <constraint firstAttribute="height" constant="36" id="3qj-JF-E43"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="MP Antalyaspor-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="WKg-Wh-z4N">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="drE-7y-C9f"/>
+                                                        <constraint firstAttribute="height" constant="45" id="lkQ-07-nhr"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="aN6-7T-MuY">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="bWM-XF-MXt"/>
+                                                        <constraint firstAttribute="height" constant="32" id="wti-BT-NJQ"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="WKg-Wh-z4N" firstAttribute="leading" secondItem="blZ-RW-H34" secondAttribute="leading" constant="4" id="9J5-ok-88G"/>
+                                            <constraint firstItem="aN6-7T-MuY" firstAttribute="trailing" secondItem="u2c-f1-Ncu" secondAttribute="trailing" type="default" id="Ejb-gj-FOy"/>
+                                            <constraint firstItem="460-ee-Yf4" firstAttribute="trailing" secondItem="blZ-RW-H34" secondAttribute="trailing" type="default" id="Icd-5b-jig"/>
+                                            <constraint firstItem="460-ee-Yf4" firstAttribute="leading" secondItem="blZ-RW-H34" secondAttribute="leading" type="default" id="PO7-yu-tSy"/>
+                                            <constraint firstItem="aN6-7T-MuY" firstAttribute="centerY" secondItem="u2c-f1-Ncu" secondAttribute="centerY" type="default" id="Uov-bq-jmN"/>
+                                            <constraint firstItem="WKg-Wh-z4N" firstAttribute="top" secondItem="blZ-RW-H34" secondAttribute="top" constant="3" id="Z5C-pf-ve9"/>
+                                            <constraint firstItem="u2c-f1-Ncu" firstAttribute="leading" secondItem="blZ-RW-H34" secondAttribute="leading" constant="58" id="hA6-ul-9ZY"/>
+                                            <constraint firstItem="u2c-f1-Ncu" firstAttribute="centerY" secondItem="blZ-RW-H34" secondAttribute="centerY" type="default" id="kqs-l2-rbK"/>
+                                            <constraint firstItem="460-ee-Yf4" firstAttribute="top" secondItem="blZ-RW-H34" secondAttribute="top" type="default" id="x6k-aO-0wj"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="Zhq-lg-FLu">
+                                        <rect key="frame" x="0.0" y="108" width="258" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cell_arkaplan_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vk1-4T-H0f">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="53" id="Bsq-HV-3pV"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="Beşiktaş" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ak3-Nz-UVt">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="185" id="ug2-YL-zoP"/>
+                                                        <constraint firstAttribute="height" constant="36" id="zej-zH-4u3"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Beşiktaş-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="45e-Yc-9Pe">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="bEz-WB-9vR"/>
+                                                        <constraint firstAttribute="width" constant="50" id="p7p-f5-UOp"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="fSc-VV-FBN">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="29a-pm-D5b"/>
+                                                        <constraint firstAttribute="width" constant="32" id="2dy-4q-3fq"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="45e-Yc-9Pe" firstAttribute="top" secondItem="Zhq-lg-FLu" secondAttribute="top" constant="3" id="7rm-oA-tMU"/>
+                                            <constraint firstItem="45e-Yc-9Pe" firstAttribute="leading" secondItem="Zhq-lg-FLu" secondAttribute="leading" constant="4" id="ETa-Og-7zZ"/>
+                                            <constraint firstItem="ak3-Nz-UVt" firstAttribute="centerY" secondItem="Zhq-lg-FLu" secondAttribute="centerY" type="default" id="EfL-c3-gSA"/>
+                                            <constraint firstItem="fSc-VV-FBN" firstAttribute="centerY" secondItem="Vk1-4T-H0f" secondAttribute="centerY" type="default" id="Nzn-pR-CJZ"/>
+                                            <constraint firstItem="Vk1-4T-H0f" firstAttribute="trailing" secondItem="Zhq-lg-FLu" secondAttribute="trailing" type="default" id="RJL-9q-APT"/>
+                                            <constraint firstItem="Vk1-4T-H0f" firstAttribute="top" secondItem="Zhq-lg-FLu" secondAttribute="top" type="default" id="XT9-z4-vqC"/>
+                                            <constraint firstItem="ak3-Nz-UVt" firstAttribute="trailing" secondItem="fSc-VV-FBN" secondAttribute="trailing" type="default" id="rRF-YI-ePO"/>
+                                            <constraint firstItem="Vk1-4T-H0f" firstAttribute="leading" secondItem="Zhq-lg-FLu" secondAttribute="leading" type="default" id="stV-s7-Xpe"/>
+                                            <constraint firstItem="ak3-Nz-UVt" firstAttribute="leading" secondItem="Zhq-lg-FLu" secondAttribute="leading" constant="58" id="z1l-nx-RE0"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="9ec-sK-7Ve">
+                                        <rect key="frame" x="0.0" y="162" width="258" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cell_arkaplan_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jzo-uV-JAY">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="258" id="pjZ-8k-aBN"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="Bursaspor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIG-g7-xRu">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="36" id="hLM-c6-t9s"/>
+                                                        <constraint firstAttribute="width" constant="185" id="lVm-JP-q0y"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="qd6-hA-NtG">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="Cum-Dx-3Gw"/>
+                                                        <constraint firstAttribute="width" constant="32" id="N14-6L-lOB"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Bursaspor-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="cb7-Z4-gk5">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="8VZ-J8-jxh"/>
+                                                        <constraint firstAttribute="height" constant="45" id="W6E-Rw-Bs2"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="cb7-Z4-gk5" firstAttribute="top" secondItem="9ec-sK-7Ve" secondAttribute="top" constant="3" id="BhO-K0-QSB"/>
+                                            <constraint firstItem="Jzo-uV-JAY" firstAttribute="top" secondItem="9ec-sK-7Ve" secondAttribute="top" type="default" id="Dga-Qb-XJq"/>
+                                            <constraint firstItem="qd6-hA-NtG" firstAttribute="top" secondItem="9ec-sK-7Ve" secondAttribute="top" constant="10" id="J6b-dy-5M6"/>
+                                            <constraint firstItem="JIG-g7-xRu" firstAttribute="trailing" secondItem="qd6-hA-NtG" secondAttribute="trailing" type="default" id="Tj7-0l-eVd"/>
+                                            <constraint firstItem="cb7-Z4-gk5" firstAttribute="leading" secondItem="9ec-sK-7Ve" secondAttribute="leading" constant="4" id="lro-3r-Mw3"/>
+                                            <constraint firstItem="JIG-g7-xRu" firstAttribute="leading" secondItem="9ec-sK-7Ve" secondAttribute="leading" constant="58" id="mMh-XQ-Ck8"/>
+                                            <constraint firstItem="JIG-g7-xRu" firstAttribute="centerY" secondItem="9ec-sK-7Ve" secondAttribute="centerY" type="default" id="mne-SL-gPt"/>
+                                            <constraint firstItem="qd6-hA-NtG" firstAttribute="centerY" secondItem="Jzo-uV-JAY" secondAttribute="centerY" type="default" id="otn-dD-Hkx"/>
+                                            <constraint firstItem="Jzo-uV-JAY" firstAttribute="leading" secondItem="9ec-sK-7Ve" secondAttribute="leading" type="default" id="qst-Cb-6WA"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="TNm-b5-WDw">
+                                        <rect key="frame" x="0.0" y="216" width="258" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cell_arkaplan_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="31l-ny-Orj">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="258" id="Pfl-6T-EeD"/>
+                                                        <constraint firstAttribute="height" constant="53" id="ilC-p7-Y5j"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="S.B. Elazığspor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQ5-Qi-f6S">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="36" id="Daz-yb-E7M"/>
+                                                        <constraint firstAttribute="width" constant="185" id="I26-RR-5hx"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="cn5-TC-EAl">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="dDM-Zb-obm"/>
+                                                        <constraint firstAttribute="width" constant="32" id="dyD-Ot-biR"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="S.B. Elazığspor-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="WG6-l6-xgC">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="Say-ht-P3r"/>
+                                                        <constraint firstAttribute="width" constant="50" id="rsK-vl-kRs"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="31l-ny-Orj" firstAttribute="top" secondItem="TNm-b5-WDw" secondAttribute="top" type="default" id="J2C-IJ-cjG"/>
+                                            <constraint firstItem="WG6-l6-xgC" firstAttribute="leading" secondItem="TNm-b5-WDw" secondAttribute="leading" constant="4" id="a0t-CX-Yvu"/>
+                                            <constraint firstItem="cn5-TC-EAl" firstAttribute="centerY" secondItem="31l-ny-Orj" secondAttribute="centerY" type="default" id="abU-V4-aJO"/>
+                                            <constraint firstItem="xQ5-Qi-f6S" firstAttribute="centerY" secondItem="TNm-b5-WDw" secondAttribute="centerY" type="default" id="dYV-yI-wp3"/>
+                                            <constraint firstItem="xQ5-Qi-f6S" firstAttribute="leading" secondItem="TNm-b5-WDw" secondAttribute="leading" constant="58" id="hQp-It-GLa"/>
+                                            <constraint firstItem="cn5-TC-EAl" firstAttribute="centerY" secondItem="WG6-l6-xgC" secondAttribute="centerY" type="default" id="lz3-FF-ALe"/>
+                                            <constraint firstItem="xQ5-Qi-f6S" firstAttribute="trailing" secondItem="cn5-TC-EAl" secondAttribute="trailing" type="default" id="nP5-8J-Chm"/>
+                                            <constraint firstItem="31l-ny-Orj" firstAttribute="leading" secondItem="TNm-b5-WDw" secondAttribute="leading" type="default" id="xzd-HE-XMt"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="ieA-zY-wPZ">
+                                        <rect key="frame" x="0.0" y="270" width="258" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cell_arkaplan_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="U25-Km-4bo">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="258" id="Rkj-3b-qEH"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="Eskişehirspor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uce-uf-10Q">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="185" id="Axf-WT-4Ku"/>
+                                                        <constraint firstAttribute="height" constant="36" id="MJt-e2-iFV"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q4H-36-NMo">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="PPM-gV-AQX"/>
+                                                        <constraint firstAttribute="height" constant="32" id="mA7-mf-j4y"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Eskişehirspor-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="5j3-BE-vjL">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="B7V-X5-1qw"/>
+                                                        <constraint firstAttribute="height" constant="45" id="Evz-SF-0Uw"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="U25-Km-4bo" firstAttribute="leading" secondItem="ieA-zY-wPZ" secondAttribute="leading" type="default" id="8Ua-ic-mro"/>
+                                            <constraint firstItem="Uce-uf-10Q" firstAttribute="centerY" secondItem="ieA-zY-wPZ" secondAttribute="centerY" type="default" id="HNT-Rg-kzK"/>
+                                            <constraint firstItem="Q4H-36-NMo" firstAttribute="top" secondItem="ieA-zY-wPZ" secondAttribute="top" constant="10" id="PAp-ij-bg7"/>
+                                            <constraint firstItem="Uce-uf-10Q" firstAttribute="leading" secondItem="ieA-zY-wPZ" secondAttribute="leading" constant="58" id="Saq-Lb-SB6"/>
+                                            <constraint firstItem="Q4H-36-NMo" firstAttribute="trailing" secondItem="Uce-uf-10Q" secondAttribute="trailing" type="default" id="bZn-YI-p1e"/>
+                                            <constraint firstItem="Q4H-36-NMo" firstAttribute="centerY" secondItem="U25-Km-4bo" secondAttribute="centerY" type="default" id="hZD-VI-z8H"/>
+                                            <constraint firstItem="U25-Km-4bo" firstAttribute="top" secondItem="ieA-zY-wPZ" secondAttribute="top" type="default" id="mBJ-yc-r5z"/>
+                                            <constraint firstItem="5j3-BE-vjL" firstAttribute="leading" secondItem="ieA-zY-wPZ" secondAttribute="leading" constant="4" id="oX0-08-EWp"/>
+                                            <constraint firstItem="5j3-BE-vjL" firstAttribute="top" secondItem="ieA-zY-wPZ" secondAttribute="top" constant="3" id="uT9-j8-87i"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="EoA-n3-9TQ">
+                                        <rect key="frame" x="0.0" y="324" width="258" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cell_arkaplan_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="i72-gg-bRf">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="53" id="Ldl-m8-dId"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="Fenerbahçe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aoi-zU-JsX">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="36" id="8Zw-FC-Fzu"/>
+                                                        <constraint firstAttribute="width" constant="185" id="otk-MT-lTc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Fenerbahçe-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="qJZ-kE-53p">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="KEz-p0-s13"/>
+                                                        <constraint firstAttribute="height" constant="45" id="bLx-GG-A1z"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="eDQ-f8-UHS">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="6k4-EA-Vrb"/>
+                                                        <constraint firstAttribute="width" constant="32" id="Xn0-3B-HEa"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="i72-gg-bRf" firstAttribute="leading" secondItem="EoA-n3-9TQ" secondAttribute="leading" type="default" id="3yN-n1-pN5"/>
+                                            <constraint firstItem="qJZ-kE-53p" firstAttribute="leading" secondItem="EoA-n3-9TQ" secondAttribute="leading" constant="4" id="Dhg-aD-Dbb"/>
+                                            <constraint firstItem="eDQ-f8-UHS" firstAttribute="centerY" secondItem="EoA-n3-9TQ" secondAttribute="centerY" type="default" id="WHK-7s-Fso"/>
+                                            <constraint firstItem="i72-gg-bRf" firstAttribute="trailing" secondItem="EoA-n3-9TQ" secondAttribute="trailing" type="default" id="Wg7-0K-Blx"/>
+                                            <constraint firstItem="i72-gg-bRf" firstAttribute="top" secondItem="EoA-n3-9TQ" secondAttribute="top" type="default" id="XHo-yR-sic"/>
+                                            <constraint firstItem="qJZ-kE-53p" firstAttribute="top" secondItem="EoA-n3-9TQ" secondAttribute="top" constant="3" id="XNd-xd-p1V"/>
+                                            <constraint firstAttribute="trailing" secondItem="eDQ-f8-UHS" secondAttribute="trailing" constant="15" id="ZkD-wM-ocQ"/>
+                                            <constraint firstItem="eDQ-f8-UHS" firstAttribute="trailing" secondItem="Aoi-zU-JsX" secondAttribute="trailing" type="default" id="b5Q-9M-Ama"/>
+                                            <constraint firstItem="eDQ-f8-UHS" firstAttribute="centerY" secondItem="Aoi-zU-JsX" secondAttribute="centerY" type="default" id="dg8-Aa-TJw"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="4cc-ie-3DO">
+                                        <rect key="frame" x="0.0" y="378" width="258" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cell_arkaplan_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="k7a-mR-m5q">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="258" id="CbF-5C-Gsp"/>
+                                                        <constraint firstAttribute="height" constant="53" id="oHs-RN-IDE"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="Galatasaray" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKD-ub-Ine">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="36" id="LKb-I6-tKK"/>
+                                                        <constraint firstAttribute="width" constant="185" id="Tt4-ql-FO2"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="NUB-89-Tdb">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="6js-wA-76d"/>
+                                                        <constraint firstAttribute="width" constant="32" id="lgQ-eh-z0e"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Galatasaray-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="4o3-LL-Mg9">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="9ox-7c-UXS"/>
+                                                        <constraint firstAttribute="height" constant="45" id="PZz-5s-D82"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="k7a-mR-m5q" firstAttribute="top" secondItem="4cc-ie-3DO" secondAttribute="top" type="default" id="EPz-Yz-vix"/>
+                                            <constraint firstItem="NUB-89-Tdb" firstAttribute="centerY" secondItem="qKD-ub-Ine" secondAttribute="centerY" type="default" id="Kot-WK-74W"/>
+                                            <constraint firstItem="4o3-LL-Mg9" firstAttribute="leading" secondItem="4cc-ie-3DO" secondAttribute="leading" constant="4" id="Nmz-Eb-zVb"/>
+                                            <constraint firstItem="NUB-89-Tdb" firstAttribute="centerY" secondItem="4cc-ie-3DO" secondAttribute="centerY" type="default" id="WMh-Kx-4Pl"/>
+                                            <constraint firstItem="qKD-ub-Ine" firstAttribute="leading" secondItem="4cc-ie-3DO" secondAttribute="leading" constant="58" id="cbm-ho-yin"/>
+                                            <constraint firstItem="4o3-LL-Mg9" firstAttribute="top" secondItem="4cc-ie-3DO" secondAttribute="top" constant="3" id="hGo-up-cJh"/>
+                                            <constraint firstItem="NUB-89-Tdb" firstAttribute="trailing" secondItem="qKD-ub-Ine" secondAttribute="trailing" type="default" id="oId-dO-sZK"/>
+                                            <constraint firstItem="k7a-mR-m5q" firstAttribute="leading" secondItem="4cc-ie-3DO" secondAttribute="leading" type="default" id="omY-PQ-VfL"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="tMV-Lb-boT">
+                                        <rect key="frame" x="0.0" y="432" width="258" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cell_arkaplan_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="gq5-oy-mPv">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="258" id="1hh-J7-Khn"/>
+                                                        <constraint firstAttribute="height" constant="53" id="VjK-ka-AMm"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="Gaziantepspor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0H-S0-tbG">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="185" id="F1Q-bJ-RBF"/>
+                                                        <constraint firstAttribute="height" constant="36" id="uqn-Gb-wtQ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="PeW-9s-XtR">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="F8r-Ov-rB5"/>
+                                                        <constraint firstAttribute="height" constant="32" id="bxy-hA-olT"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Gaziantepspor-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="PMO-Dy-krl">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="8qk-oD-pGr"/>
+                                                        <constraint firstAttribute="width" constant="50" id="cbp-NP-ioS"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="C0H-S0-tbG" firstAttribute="centerY" secondItem="tMV-Lb-boT" secondAttribute="centerY" type="default" id="D82-Bh-ODa"/>
+                                            <constraint firstItem="PeW-9s-XtR" firstAttribute="trailing" secondItem="C0H-S0-tbG" secondAttribute="trailing" type="default" id="EKt-uI-12i"/>
+                                            <constraint firstItem="gq5-oy-mPv" firstAttribute="top" secondItem="tMV-Lb-boT" secondAttribute="top" type="default" id="SQY-oV-yo6"/>
+                                            <constraint firstItem="PeW-9s-XtR" firstAttribute="centerY" secondItem="C0H-S0-tbG" secondAttribute="centerY" type="default" id="Shw-qb-lQj"/>
+                                            <constraint firstItem="PMO-Dy-krl" firstAttribute="top" secondItem="tMV-Lb-boT" secondAttribute="top" constant="3" id="ccF-it-NTy"/>
+                                            <constraint firstItem="C0H-S0-tbG" firstAttribute="leading" secondItem="tMV-Lb-boT" secondAttribute="leading" constant="58" id="n90-TA-Qmj"/>
+                                            <constraint firstItem="PMO-Dy-krl" firstAttribute="leading" secondItem="tMV-Lb-boT" secondAttribute="leading" constant="4" id="sDc-kT-kjT"/>
+                                            <constraint firstItem="gq5-oy-mPv" firstAttribute="leading" secondItem="tMV-Lb-boT" secondAttribute="leading" type="default" id="t6y-lg-FAW"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="rQk-qn-Hfm">
+                                        <rect key="frame" x="0.0" y="486" width="258" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cell_arkaplan_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="bRE-Xv-uW4">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="53" id="r4s-KY-x5k"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="Gençlerbirliği" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1LL-1y-snh">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="36" id="P3l-X7-Qd3"/>
+                                                        <constraint firstAttribute="width" constant="185" id="jfa-Ws-yJU"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Gençlerbirliği-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jf7-Df-pFq">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="DvA-bE-1xD"/>
+                                                        <constraint firstAttribute="height" constant="45" id="U2Y-Vc-BfE"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="tVE-Bt-12a">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="J5k-NK-Nag"/>
+                                                        <constraint firstAttribute="height" constant="32" id="Rmz-H5-v8g"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Jf7-Df-pFq" firstAttribute="leading" secondItem="rQk-qn-Hfm" secondAttribute="leading" constant="4" id="37l-Kc-ah0"/>
+                                            <constraint firstItem="tVE-Bt-12a" firstAttribute="centerY" secondItem="rQk-qn-Hfm" secondAttribute="centerY" type="default" id="9fT-CX-Q9Y"/>
+                                            <constraint firstItem="Jf7-Df-pFq" firstAttribute="top" secondItem="rQk-qn-Hfm" secondAttribute="top" constant="3" id="Hf6-Uc-lmf"/>
+                                            <constraint firstItem="bRE-Xv-uW4" firstAttribute="top" secondItem="rQk-qn-Hfm" secondAttribute="top" type="default" id="Lfq-aA-j4K"/>
+                                            <constraint firstAttribute="trailing" secondItem="tVE-Bt-12a" secondAttribute="trailing" constant="15" id="RBX-C2-Tyt"/>
+                                            <constraint firstItem="tVE-Bt-12a" firstAttribute="trailing" secondItem="1LL-1y-snh" secondAttribute="trailing" type="default" id="Zf9-BY-JYY"/>
+                                            <constraint firstItem="bRE-Xv-uW4" firstAttribute="trailing" secondItem="rQk-qn-Hfm" secondAttribute="trailing" type="default" id="ekO-eb-o1D"/>
+                                            <constraint firstItem="tVE-Bt-12a" firstAttribute="centerY" secondItem="1LL-1y-snh" secondAttribute="centerY" type="default" id="gGY-g4-d6E"/>
+                                            <constraint firstItem="bRE-Xv-uW4" firstAttribute="leading" secondItem="rQk-qn-Hfm" secondAttribute="leading" type="default" id="xIV-EQ-aOJ"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="iZn-y8-Qh4">
+                                        <rect key="frame" x="0.0" y="540" width="258" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cell_arkaplan_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="dxR-xN-GBx">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="53" id="Hfc-Vx-0q6"/>
+                                                        <constraint firstAttribute="width" constant="258" id="PR5-xK-pdk"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="İstanbul BŞB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnl-Dn-aC7">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="185" id="Cxg-Ty-YKp"/>
+                                                        <constraint firstAttribute="height" constant="36" id="YXP-DE-WfB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y6S-l7-G5L">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="Cfq-sz-sMk"/>
+                                                        <constraint firstAttribute="height" constant="32" id="kCl-2f-QsY"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="İstanbul BŞB-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="EZj-BW-lpy">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="dPr-c4-7Gy"/>
+                                                        <constraint firstAttribute="height" constant="45" id="qL0-5P-7xR"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="pnl-Dn-aC7" firstAttribute="leading" secondItem="iZn-y8-Qh4" secondAttribute="leading" constant="58" id="HdS-37-xFd"/>
+                                            <constraint firstItem="EZj-BW-lpy" firstAttribute="top" secondItem="iZn-y8-Qh4" secondAttribute="top" constant="3" id="WQz-HT-OUX"/>
+                                            <constraint firstItem="Y6S-l7-G5L" firstAttribute="centerY" secondItem="iZn-y8-Qh4" secondAttribute="centerY" type="default" id="Xgf-we-6ie"/>
+                                            <constraint firstItem="dxR-xN-GBx" firstAttribute="leading" secondItem="iZn-y8-Qh4" secondAttribute="leading" type="default" id="a86-ad-yKf"/>
+                                            <constraint firstItem="Y6S-l7-G5L" firstAttribute="centerY" secondItem="pnl-Dn-aC7" secondAttribute="centerY" type="default" id="p7w-OM-Zf8"/>
+                                            <constraint firstItem="Y6S-l7-G5L" firstAttribute="trailing" secondItem="pnl-Dn-aC7" secondAttribute="trailing" type="default" id="ugr-ZB-loK"/>
+                                            <constraint firstItem="EZj-BW-lpy" firstAttribute="leading" secondItem="iZn-y8-Qh4" secondAttribute="leading" constant="4" id="vJb-Gg-YL1"/>
+                                            <constraint firstItem="dxR-xN-GBx" firstAttribute="top" secondItem="iZn-y8-Qh4" secondAttribute="top" type="default" id="yp2-W3-zFs"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="CoN-Kk-NAt">
+                                        <rect key="frame" x="0.0" y="594" width="258" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cell_arkaplan_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="Lfh-ru-DFR">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="53" id="AzZ-Bx-cB7"/>
+                                                        <constraint firstAttribute="width" constant="258" id="Cdd-Ev-Cba"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="K.Karabükspor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKT-Zj-UB1">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="185" id="6Tp-fo-TFz"/>
+                                                        <constraint firstAttribute="height" constant="36" id="J5y-sf-dj9"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="Op6-To-HYS">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="YbH-ic-Bkx"/>
+                                                        <constraint firstAttribute="height" constant="32" id="ipf-7H-kB0"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="K.Karabükspor-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="U2C-1r-WXf">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="AAa-z1-WpW"/>
+                                                        <constraint firstAttribute="height" constant="45" id="HLJ-5r-ald"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="U2C-1r-WXf" firstAttribute="top" secondItem="CoN-Kk-NAt" secondAttribute="top" constant="3" id="1BT-Hy-dgL"/>
+                                            <constraint firstItem="Lfh-ru-DFR" firstAttribute="top" secondItem="CoN-Kk-NAt" secondAttribute="top" type="default" id="Gag-C6-lmc"/>
+                                            <constraint firstItem="Op6-To-HYS" firstAttribute="centerY" secondItem="CoN-Kk-NAt" secondAttribute="centerY" type="default" id="Jrz-0T-PDB"/>
+                                            <constraint firstItem="Lfh-ru-DFR" firstAttribute="leading" secondItem="CoN-Kk-NAt" secondAttribute="leading" type="default" id="QeW-21-8B7"/>
+                                            <constraint firstItem="Op6-To-HYS" firstAttribute="trailing" secondItem="MKT-Zj-UB1" secondAttribute="trailing" type="default" id="cH4-uI-paC"/>
+                                            <constraint firstItem="U2C-1r-WXf" firstAttribute="leading" secondItem="CoN-Kk-NAt" secondAttribute="leading" constant="4" id="gxo-5o-xdC"/>
+                                            <constraint firstItem="MKT-Zj-UB1" firstAttribute="leading" secondItem="CoN-Kk-NAt" secondAttribute="leading" constant="58" id="mS6-Ut-dyr"/>
+                                            <constraint firstItem="Op6-To-HYS" firstAttribute="centerY" secondItem="MKT-Zj-UB1" secondAttribute="centerY" type="default" id="vo6-46-8uk"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="Brp-VB-Iee">
+                                        <rect key="frame" x="0.0" y="648" width="258" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cell_arkaplan_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="etS-qL-gWM">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="258" id="bdb-cW-If3"/>
+                                                        <constraint firstAttribute="height" constant="53" id="dTs-OK-ovk"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="Kasımpaşa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnF-2g-dq1">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="36" id="27E-uR-hyo"/>
+                                                        <constraint firstAttribute="width" constant="185" id="LxV-YP-ViU"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="aW0-ed-J3b">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="4xt-kt-jZW"/>
+                                                        <constraint firstAttribute="height" constant="32" id="FOM-lR-VPH"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="1bX-DH-ZpE">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="OBm-IE-24G"/>
+                                                        <constraint firstAttribute="height" constant="32" id="sS6-s3-lgD"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Kasımpaşa-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="SjM-5o-iKp">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="Jnd-If-fPM"/>
+                                                        <constraint firstAttribute="width" constant="50" id="sSf-Ns-MMn"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="etS-qL-gWM" firstAttribute="leading" secondItem="Brp-VB-Iee" secondAttribute="leading" type="default" id="1m0-b4-gWP"/>
+                                            <constraint firstItem="1bX-DH-ZpE" firstAttribute="top" secondItem="Brp-VB-Iee" secondAttribute="top" constant="72" id="8rt-s2-ZKs"/>
+                                            <constraint firstItem="KnF-2g-dq1" firstAttribute="leading" secondItem="Brp-VB-Iee" secondAttribute="leading" constant="58" id="Ffv-ZE-tMK"/>
+                                            <constraint firstItem="SjM-5o-iKp" firstAttribute="leading" secondItem="Brp-VB-Iee" secondAttribute="leading" constant="4" id="Vay-pq-1qv"/>
+                                            <constraint firstItem="aW0-ed-J3b" firstAttribute="trailing" secondItem="KnF-2g-dq1" secondAttribute="trailing" type="default" id="W12-Wh-eea"/>
+                                            <constraint firstItem="SjM-5o-iKp" firstAttribute="top" secondItem="Brp-VB-Iee" secondAttribute="top" constant="3" id="Wo9-R8-f0I"/>
+                                            <constraint firstItem="aW0-ed-J3b" firstAttribute="centerY" secondItem="Brp-VB-Iee" secondAttribute="centerY" type="default" id="Yjg-dN-bgk"/>
+                                            <constraint firstItem="KnF-2g-dq1" firstAttribute="centerY" secondItem="aW0-ed-J3b" secondAttribute="centerY" type="default" id="bl1-cd-3h3"/>
+                                            <constraint firstItem="1bX-DH-ZpE" firstAttribute="leading" secondItem="Brp-VB-Iee" secondAttribute="leading" constant="221" id="kgt-Ty-NE4"/>
+                                            <constraint firstItem="etS-qL-gWM" firstAttribute="top" secondItem="Brp-VB-Iee" secondAttribute="top" type="default" id="nBB-e3-oRc"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="M8O-DV-WUo">
+                                        <rect key="frame" x="0.0" y="702" width="258" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cell_arkaplan_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="i95-Zh-ofa">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="53" id="KPE-u0-0vc"/>
+                                                        <constraint firstAttribute="width" constant="258" id="N1o-tx-8hj"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="Kayserispor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYQ-SK-eQ7">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="36" id="Rrn-Lm-sq4"/>
+                                                        <constraint firstAttribute="width" constant="185" id="dCg-Ee-9LS"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="KCL-0p-rod">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="Fo0-Cs-eSF"/>
+                                                        <constraint firstAttribute="width" constant="32" id="KhH-bZ-mra"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Kayserispor-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rgk-Du-6xp">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="Kyt-fY-K3H"/>
+                                                        <constraint firstAttribute="height" constant="45" id="zOS-d0-iJE"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Rgk-Du-6xp" firstAttribute="leading" secondItem="M8O-DV-WUo" secondAttribute="leading" constant="4" id="7qP-aM-WWX"/>
+                                            <constraint firstItem="KCL-0p-rod" firstAttribute="trailing" secondItem="PYQ-SK-eQ7" secondAttribute="trailing" type="default" id="bPG-vW-B1j"/>
+                                            <constraint firstItem="PYQ-SK-eQ7" firstAttribute="centerY" secondItem="M8O-DV-WUo" secondAttribute="centerY" type="default" id="bjf-bX-dWy"/>
+                                            <constraint firstItem="Rgk-Du-6xp" firstAttribute="top" secondItem="M8O-DV-WUo" secondAttribute="top" constant="3" id="dVc-uB-bTl"/>
+                                            <constraint firstItem="PYQ-SK-eQ7" firstAttribute="centerY" secondItem="KCL-0p-rod" secondAttribute="centerY" type="default" id="i1t-7e-f1M"/>
+                                            <constraint firstItem="i95-Zh-ofa" firstAttribute="top" secondItem="M8O-DV-WUo" secondAttribute="top" type="default" id="pAZ-Cy-tOv"/>
+                                            <constraint firstItem="PYQ-SK-eQ7" firstAttribute="leading" secondItem="M8O-DV-WUo" secondAttribute="leading" constant="58" id="pMo-yR-bmx"/>
+                                            <constraint firstItem="i95-Zh-ofa" firstAttribute="leading" secondItem="M8O-DV-WUo" secondAttribute="leading" type="default" id="sni-WL-Nby"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="DSz-Sz-1vb">
+                                        <rect key="frame" x="0.0" y="756" width="258" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cell_arkaplan_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="bTX-BN-kcS">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="53" id="8n5-Hp-U6s"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="Mersin İY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57N-HY-2GE">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="36" id="BDa-pr-A7c"/>
+                                                        <constraint firstAttribute="width" constant="185" id="JLq-A9-n2R"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Mersin İY-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Aex-yy-h7C">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="l4i-kP-5Wt"/>
+                                                        <constraint firstAttribute="width" constant="50" id="q4L-r2-S95"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="koM-FX-znJ">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="cSe-4H-dtx"/>
+                                                        <constraint firstAttribute="width" constant="32" id="qLO-2Z-7jf"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="koM-FX-znJ" firstAttribute="centerY" secondItem="57N-HY-2GE" secondAttribute="centerY" type="default" id="9oU-zV-emy"/>
+                                            <constraint firstItem="Aex-yy-h7C" firstAttribute="leading" secondItem="DSz-Sz-1vb" secondAttribute="leading" constant="4" id="Ikz-dK-qvI"/>
+                                            <constraint firstItem="bTX-BN-kcS" firstAttribute="top" secondItem="DSz-Sz-1vb" secondAttribute="top" type="default" id="Kjy-p3-N3N"/>
+                                            <constraint firstItem="Aex-yy-h7C" firstAttribute="top" secondItem="DSz-Sz-1vb" secondAttribute="top" constant="3" id="Lf6-7X-B90"/>
+                                            <constraint firstItem="bTX-BN-kcS" firstAttribute="leading" secondItem="DSz-Sz-1vb" secondAttribute="leading" type="default" id="O9R-ZL-93J"/>
+                                            <constraint firstItem="bTX-BN-kcS" firstAttribute="trailing" secondItem="DSz-Sz-1vb" secondAttribute="trailing" type="default" id="Qnm-MP-z2T"/>
+                                            <constraint firstItem="57N-HY-2GE" firstAttribute="leading" secondItem="DSz-Sz-1vb" secondAttribute="leading" constant="58" id="a8R-Tq-cyB"/>
+                                            <constraint firstItem="koM-FX-znJ" firstAttribute="trailing" secondItem="57N-HY-2GE" secondAttribute="trailing" type="default" id="eYQ-XC-bga"/>
+                                            <constraint firstItem="koM-FX-znJ" firstAttribute="centerY" secondItem="DSz-Sz-1vb" secondAttribute="centerY" type="default" id="oKq-SY-ERS"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="6XZ-0s-2BN">
+                                        <rect key="frame" x="0.0" y="810" width="258" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cell_arkaplan_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="DnA-b5-gCg">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="258" id="0ZT-oc-h6d"/>
+                                                        <constraint firstAttribute="height" constant="53" id="e9B-cS-uHp"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="Orduspor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MuI-df-52p">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="185" id="iYj-T0-yS5"/>
+                                                        <constraint firstAttribute="height" constant="36" id="pVr-yG-2D4"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="irb-Am-Lyf">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="aMy-kC-4d4"/>
+                                                        <constraint firstAttribute="height" constant="32" id="z2Z-g2-s7s"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Orduspor-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="tCR-ME-UKe">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="6h3-ca-d9L"/>
+                                                        <constraint firstAttribute="height" constant="45" id="hEt-dr-p0n"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="irb-Am-Lyf" firstAttribute="centerY" secondItem="MuI-df-52p" secondAttribute="centerY" type="default" id="AsY-pz-ei0"/>
+                                            <constraint firstItem="MuI-df-52p" firstAttribute="centerY" secondItem="6XZ-0s-2BN" secondAttribute="centerY" type="default" id="G9w-ZQ-VZH"/>
+                                            <constraint firstItem="MuI-df-52p" firstAttribute="leading" secondItem="6XZ-0s-2BN" secondAttribute="leading" constant="58" id="R1L-BU-EKR"/>
+                                            <constraint firstItem="tCR-ME-UKe" firstAttribute="top" secondItem="6XZ-0s-2BN" secondAttribute="top" constant="3" id="gvt-hQ-B2v"/>
+                                            <constraint firstItem="DnA-b5-gCg" firstAttribute="top" secondItem="6XZ-0s-2BN" secondAttribute="top" type="default" id="mHR-jd-XzL"/>
+                                            <constraint firstItem="irb-Am-Lyf" firstAttribute="trailing" secondItem="MuI-df-52p" secondAttribute="trailing" type="default" id="pfV-pZ-bt7"/>
+                                            <constraint firstItem="DnA-b5-gCg" firstAttribute="leading" secondItem="6XZ-0s-2BN" secondAttribute="leading" type="default" id="w2c-iU-UsR"/>
+                                            <constraint firstItem="tCR-ME-UKe" firstAttribute="leading" secondItem="6XZ-0s-2BN" secondAttribute="leading" constant="4" id="wT3-yd-wEg"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="XpY-RO-okO">
+                                        <rect key="frame" x="0.0" y="864" width="258" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cell_arkaplan_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="rBc-DM-MkM">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="258" id="lBg-MU-4GB"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="Sivasspor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhY-xi-SMx">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="185" id="1h5-s7-9sP"/>
+                                                        <constraint firstAttribute="height" constant="36" id="nNd-kX-Y8s"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Sivasspor-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fgd-xs-UyT">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="FP3-iy-Ylt"/>
+                                                        <constraint firstAttribute="width" constant="50" id="Vct-B7-zMB"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="3lK-qT-5rB">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="Wq7-AJ-38v"/>
+                                                        <constraint firstAttribute="height" constant="32" id="fSR-st-f6x"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="3lK-qT-5rB" firstAttribute="trailing" secondItem="bhY-xi-SMx" secondAttribute="trailing" type="default" id="JII-rF-eW4"/>
+                                            <constraint firstItem="bhY-xi-SMx" firstAttribute="centerY" secondItem="XpY-RO-okO" secondAttribute="centerY" type="default" id="Pgs-pJ-EsF"/>
+                                            <constraint firstItem="Fgd-xs-UyT" firstAttribute="leading" secondItem="XpY-RO-okO" secondAttribute="leading" constant="4" id="QR4-w0-CXO"/>
+                                            <constraint firstItem="bhY-xi-SMx" firstAttribute="leading" secondItem="XpY-RO-okO" secondAttribute="leading" constant="58" id="ZTl-ab-PZP"/>
+                                            <constraint firstItem="Fgd-xs-UyT" firstAttribute="top" secondItem="XpY-RO-okO" secondAttribute="top" constant="3" id="bR2-1f-h7o"/>
+                                            <constraint firstItem="3lK-qT-5rB" firstAttribute="top" secondItem="XpY-RO-okO" secondAttribute="top" constant="10" id="hbm-Lm-ltu"/>
+                                            <constraint firstItem="rBc-DM-MkM" firstAttribute="leading" secondItem="XpY-RO-okO" secondAttribute="leading" type="default" id="hwo-ea-b7l"/>
+                                            <constraint firstItem="3lK-qT-5rB" firstAttribute="centerY" secondItem="rBc-DM-MkM" secondAttribute="centerY" type="default" id="lE3-em-gwO"/>
+                                            <constraint firstItem="rBc-DM-MkM" firstAttribute="top" secondItem="XpY-RO-okO" secondAttribute="top" type="default" id="zHC-aB-6sz"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="cCy-rG-D5y">
+                                        <rect key="frame" x="0.0" y="918" width="258" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cell_arkaplan_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="TXJ-ee-Lux">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="258" id="NSk-H2-bTd"/>
+                                                        <constraint firstAttribute="height" constant="53" id="UYD-Bf-yHN"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="Trabzonspor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqz-ud-DxX">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="36" id="PeV-H5-ckQ"/>
+                                                        <constraint firstAttribute="width" constant="185" id="ng2-0s-qff"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="eLN-w8-csJ">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="J7g-u7-fk2"/>
+                                                        <constraint firstAttribute="height" constant="32" id="cPx-C9-eME"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Trabzonspor-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="zoy-Ft-zWm">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="KPn-Pz-SS9"/>
+                                                        <constraint firstAttribute="width" constant="50" id="LuH-VM-9OX"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="TXJ-ee-Lux" firstAttribute="top" secondItem="cCy-rG-D5y" secondAttribute="top" type="default" id="2Zn-Fn-lKS"/>
+                                            <constraint firstItem="Mqz-ud-DxX" firstAttribute="centerY" secondItem="cCy-rG-D5y" secondAttribute="centerY" type="default" id="LFe-U6-JaV"/>
+                                            <constraint firstItem="eLN-w8-csJ" firstAttribute="trailing" secondItem="Mqz-ud-DxX" secondAttribute="trailing" type="default" id="WuN-5p-Xgg"/>
+                                            <constraint firstItem="Mqz-ud-DxX" firstAttribute="leading" secondItem="cCy-rG-D5y" secondAttribute="leading" constant="58" id="ddj-TN-S1z"/>
+                                            <constraint firstItem="zoy-Ft-zWm" firstAttribute="top" secondItem="cCy-rG-D5y" secondAttribute="top" constant="3" id="eli-1Y-hds"/>
+                                            <constraint firstItem="zoy-Ft-zWm" firstAttribute="leading" secondItem="cCy-rG-D5y" secondAttribute="leading" constant="4" id="l5b-qH-enx"/>
+                                            <constraint firstItem="eLN-w8-csJ" firstAttribute="centerY" secondItem="Mqz-ud-DxX" secondAttribute="centerY" type="default" id="pHw-fV-H5T"/>
+                                            <constraint firstItem="TXJ-ee-Lux" firstAttribute="leading" secondItem="cCy-rG-D5y" secondAttribute="leading" type="default" id="vOP-3G-0HE"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Dgi-37-F4E" id="frh-Vm-fti"/>
+                            <outlet property="delegate" destination="Dgi-37-F4E" id="AUI-1s-MC6"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Q1-0O-QH2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="337" y="1238"/>
         </scene>
         <!--Standings Controller - Second-->
         <scene sceneID="13">
@@ -547,13 +1444,32 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Akhisar Belediye-logo.png" width="500" height="268"/>
         <image name="Besiktas_JK_Logo.png" width="16" height="16"/>
         <image name="Beşiktaş-logo.png" width="500" height="500"/>
+        <image name="Bursaspor-logo.png" width="500" height="500"/>
+        <image name="Eskişehirspor-logo.png" width="400" height="400"/>
+        <image name="Fenerbahçe-logo.png" width="400" height="400"/>
         <image name="Galatasaray-Logo.png" width="16" height="16"/>
+        <image name="Galatasaray-logo.png" width="300" height="374"/>
+        <image name="Gaziantepspor-logo.png" width="500" height="500"/>
+        <image name="Gençlerbirliği-logo.png" width="500" height="500"/>
+        <image name="İstanbul BŞB-logo.png" width="500" height="500"/>
+        <image name="K.Karabükspor-logo.png" width="500" height="500"/>
+        <image name="Kasımpaşa-logo.png" width="400" height="400"/>
+        <image name="Kayserispor-logo.png" width="500" height="500"/>
+        <image name="MP Antalyaspor-logo.png" width="325" height="338"/>
+        <image name="Mersin İY-logo.png" width="500" height="500"/>
+        <image name="Orduspor-logo.png" width="356" height="400"/>
+        <image name="S.B. Elazığspor-logo.png" width="500" height="500"/>
+        <image name="Sivasspor-logo.png" width="500" height="500"/>
+        <image name="Trabzonspor-logo.png" width="274" height="479"/>
         <image name="alarm.png" width="26" height="26"/>
         <image name="background.png" width="640" height="1136"/>
         <image name="bilgi.png" width="76" height="48"/>
         <image name="cell_arkaplan.png" width="640" height="118"/>
+        <image name="cell_arkaplan_settings.png" width="600" height="90"/>
+        <image name="check.png" width="28" height="22"/>
         <image name="cog_02.png" width="26" height="26"/>
         <image name="graph_bar_trend.png" width="26" height="26"/>
         <image name="ust_bar.png" width="640" height="51"/>
@@ -579,6 +1495,10 @@
         </class>
         <class className="MKSettingsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MKSettingsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="settingsView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="teamView" candidateClass="UIView"/>
+            </relationships>
         </class>
         <class className="MKStandingsController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MKStandingsController.h"/>
@@ -588,6 +1508,9 @@
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NSMutableArray" superclassName="NSArray">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSMutableArray.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

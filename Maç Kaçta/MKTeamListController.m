@@ -1,19 +1,18 @@
 //
-//  MKSettingsViewController.m
+//  MKTeamListController.m
 //  Maç Kaçta
 //
-//  Created by  on 25.01.2013.
+//  Created by Ali Can Bülbül on 1/30/13.
 //  Copyright (c) 2013 Orkestra. All rights reserved.
 //
 
-#import "MKSettingsViewController.h"
+#import "MKTeamListController.h"
 
-@interface MKSettingsViewController ()
+@interface MKTeamListController ()
 
 @end
 
-@implementation MKSettingsViewController
-@synthesize teams;
+@implementation MKTeamListController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,10 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.teamView.layer.masksToBounds = YES;
-    self.teamView.layer.cornerRadius = 8.0f;
-    self.settingsView.layer.masksToBounds = YES;
-    self.settingsView.layer.cornerRadius = 8.0f;
 	// Do any additional setup after loading the view.
 }
 
@@ -40,6 +35,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+//- (UITableViewCell)
 
 @end

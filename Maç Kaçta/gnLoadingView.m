@@ -25,7 +25,7 @@ static gnLoadingView *_default = nil;
 {
     self = [super initWithFrame:frame];
     if (self) {
-        innerFrame = [[UIView alloc] initWithFrame:CGRectMake(140, 180, 60, 60)];
+        innerFrame = [[UIView alloc] initWithFrame:CGRectMake(130, 180, 60, 60)];
         innerFrame.backgroundColor = [UIColor colorWithRed:0.25 green:0.3 blue:0.35 alpha:0.8];
         innerFrame.layer.masksToBounds = YES;
         innerFrame.layer.cornerRadius = 10.0f;

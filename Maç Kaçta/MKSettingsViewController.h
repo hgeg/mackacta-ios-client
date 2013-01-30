@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface MKSettingsViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
 @property (strong, nonatomic) NSArray *teams;
+@property (weak, nonatomic) IBOutlet UIView *teamView;
+@property (weak, nonatomic) IBOutlet UIView *settingsView;
 
 @end
