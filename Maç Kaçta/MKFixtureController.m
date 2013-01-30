@@ -36,6 +36,7 @@
     
     NSURLResponse *response = nil;
     NSError *error = nil;
+    self.background.image = [UIImage imageNamed:[NSString stringWithFormat:@"Beşiktaş-bg.jpg"]];
     NSString* escapedUrlString =
     [@"http://54.235.244.172/globals/Beşiktaş/" stringByAddingPercentEscapesUsingEncoding:
      NSUTF8StringEncoding];
@@ -112,37 +113,76 @@
         self.sliderBar.frame = CGRectMake(68, self.view.frame.size.height-70, 196, 36);
         self.slider.value = 0;
         
+        NSURLResponse *response = nil;
+        NSError *error = nil;
+        NSString *selectedTeam = [[NSUserDefaults standardUserDefaults] valueForKey:@"selectedTeam"];
+        self.background.image = [UIImage imageNamed:[NSString stringWithFormat:@"Beşiktaş-bg.jpg"]];
+        NSString* escapedUrlString =
+        [[NSString stringWithFormat:@"http://54.235.244.172/globals/%@/",selectedTeam] stringByAddingPercentEscapesUsingEncoding:
+         NSUTF8StringEncoding];
+        NSURL *URL = [NSURL URLWithString:escapedUrlString];
+        NSLog(@"url: %@",URL);
+        NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+        NSData *receivedData = [NSURLConnection sendSynchronousRequest:request
+                                                     returningResponse:&response
+                                                                 error:&error];
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:nil];
+        int nextweek = [json[@"week"] integerValue];
+        NSLog(@"next: %d",nextweek);
+        
         // Do any additional setup after loading the view, typically from a nib.
         CGSize mySize = self.view.frame.size;
         self.scroller = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, mySize.width, mySize.height)];
         self.scroller.delegate = self;
         self.scroller.pagingEnabled = true;
-        self.scroller.contentSize = CGSizeMake(mySize.width*weeks, mySize.height);
+        self.scroller.contentSize = CGSizeMake(mySize.width*34, mySize.height);
+        self.background.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@-bg.jpg",[[NSUserDefaults standardUserDefaults] valueForKey:@"selectedTeam"]]];
+        
         dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
-        for (int i = 0; i<weeks; i++) {
-            NSString* escapedUrlString =
-            [[NSString stringWithFormat:@"http://54.235.244.172/match/%@/%u/",[[NSUserDefaults standardUserDefaults] valueForKey:@"selectedTeam"],i+1] stringByAddingPercentEscapesUsingEncoding:
-             NSUTF8StringEncoding];
-            NSURL *URL = [NSURL URLWithString:escapedUrlString];
-            NSLog(@"url: %@",URL);
-            NSURLRequest *request = [NSURLRequest requestWithURL:URL];
-            
-            dispatch_async(queue, ^{
-                NSURLResponse *response = nil;
-                NSError *error = nil;
+        for (int i = 0; i<=34; i++) {
+            if(nextweek-i<1 && nextweek+i+1>34) break;
+            else if(nextweek-i>0){
+                NSString* escapedUrlString =
+                [[NSString stringWithFormat:@"http://54.235.244.172/match/%@/%u/", selectedTeam,nextweek-i] stringByAddingPercentEscapesUsingEncoding:
+                 NSUTF8StringEncoding];
+                URL = [NSURL URLWithString:escapedUrlString];
+                request = [NSURLRequest requestWithURL:URL];
                 
-                NSData *receivedData = [NSURLConnection sendSynchronousRequest:request
-                                                             returningResponse:&response
-                                                                         error:&error];
-                NSDictionary *json = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:nil];
-                NSLog(@"adding view...");
-                [self performSelectorOnMainThread:@selector(generateView:) withObject:@{@"json":json,@"mySize":@[[NSString stringWithFormat:@"%f",mySize.width],[NSString stringWithFormat:@"%f",mySize.height+49]],@"i":[NSString stringWithFormat:@"%d",i ],@"scroller":scroller} waitUntilDone:NO];
-                NSLog(@"adding view...");
+                dispatch_async(queue, ^{
+                    NSURLResponse *response = nil;
+                    NSError *error = nil;
+                    
+                    NSData *receivedData = [NSURLConnection sendSynchronousRequest:request
+                                                                 returningResponse:&response
+                                                                             error:&error];
+                    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:nil];
+                    [self performSelectorOnMainThread:@selector(generateView:) withObject:@{@"json":json[@"data"],@"mySize":@[[NSString stringWithFormat:@"%f",mySize.width],[NSString stringWithFormat:@"%f",mySize.height+49]],@"i":[NSString stringWithFormat:@"%d",nextweek-i-1 ],@"scroller":scroller} waitUntilDone:NO];
+                    NSLog(@"json:%@",json);
+                });
+            }
+            if(nextweek+i+1<35){
+                NSString* escapedUrlString =
+                [[NSString stringWithFormat:@"http://54.235.244.172/match/%@/%u/",selectedTeam,nextweek+i+1] stringByAddingPercentEscapesUsingEncoding:
+                 NSUTF8StringEncoding];
+                URL = [NSURL URLWithString:escapedUrlString];
+                request = [NSURLRequest requestWithURL:URL];
                 
-            });
+                dispatch_async(queue, ^{
+                    NSURLResponse *response = nil;
+                    NSError *error = nil;
+                    
+                    NSData *receivedData = [NSURLConnection sendSynchronousRequest:request
+                                                                 returningResponse:&response
+                                                                             error:&error];
+                    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:nil];
+                    [self performSelectorOnMainThread:@selector(generateView:) withObject:@{@"json":json[@"data"],@"mySize":@[[NSString stringWithFormat:@"%f",mySize.width],[NSString stringWithFormat:@"%f",mySize.height+49]],@"i":[NSString stringWithFormat:@"%d",nextweek+i],@"scroller":scroller} waitUntilDone:NO];
+                    NSLog(@"json:%@",json);
+                });
+            }
         }
         [self.matchView removeFromSuperview];
         [self.view addSubview:self.scroller];
+        self.scroller.contentOffset = CGPointMake((nextweek-1)*320, 0);
         [self.view bringSubviewToFront:self.sliderBar];
         
         UITapGestureRecognizer *sliderTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleSlider)];

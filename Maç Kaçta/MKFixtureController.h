@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIView *sliderBar;
 @property (weak, nonatomic) IBOutlet UISlider *slider;
 @property (strong, nonatomic) IBOutlet UIScrollView *scroller;
+@property (weak, nonatomic) IBOutlet UIImageView *background;
 
 -(IBAction)sliderChanged:(id)sender;
 -(IBAction)lockSlider:(id)sender;
