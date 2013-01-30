@@ -53,7 +53,7 @@
 - (void)pickerView:(UIPickerView *)thePickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     
     [[NSUserDefaults standardUserDefaults] setValue:[teams objectAtIndex:row] forKey:@"selectedTeam"];
-    [[NSUserDefaults standardUserDefaults] setValue:@"invalid" forKey:@"invalid"];
+    [[NSUserDefaults standardUserDefaults] setValue:@"invalid" forKey:@"flag"];
 }
 
 

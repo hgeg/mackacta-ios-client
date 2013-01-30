@@ -29,7 +29,6 @@
 + (MKMatchView *) generateWithObject:(NSDictionary *)dict size:(CGSize) mySize andOffset:(NSUInteger) i {
     int yOffset = 11;
     int yhOffset = 0;
-    NSLog(@"generating view...");
     MKMatchView * newView = [[MKMatchView alloc] initWithFrame:CGRectMake(20+i*mySize.width, 20, mySize.width-40, mySize.height-90)];
     newView.backgroundColor = [UIColor colorWithRed:0.1 green:0.12 blue:0.12 alpha:0.7];
     newView.layer.masksToBounds = YES;
@@ -114,7 +113,6 @@
         if(!IPHONE_5) yOffset -= 20;
         
         NSLocale *tr = [[NSLocale alloc] initWithLocaleIdentifier:@"tr_TR"];
-        NSLog(@"locale:%@",[tr displayNameForKey:NSLocaleIdentifier value:tr.localeIdentifier]);
         NSString *formatString = [NSDateFormatter dateFormatFromTemplate:@"EEEE, dd MMMM yyyy" options:0 locale:tr];
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
