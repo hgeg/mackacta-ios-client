@@ -35,7 +35,10 @@
     scroller.contentSize = CGSizeMake(mySize.width*weeks, mySize.height);
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
     for (int i = 0; i<weeks; i++) {
-        NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"http://54.235.244.172/match/Galatasaray/%u/",i+1]];
+        NSString* escapedUrlString =
+        [[NSString stringWithFormat:@"http://54.235.244.172/match/Beşiktaş/%u/",i+1] stringByAddingPercentEscapesUsingEncoding:
+         NSUTF8StringEncoding];
+        NSURL *URL = [NSURL URLWithString:escapedUrlString];
         NSLog(@"url: %@",URL);
         NSURLRequest *request = [NSURLRequest requestWithURL:URL];
         

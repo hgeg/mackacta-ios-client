@@ -143,13 +143,14 @@
         [newView addSubview:time];
         yOffset += 34;
         
-        UILabel *stage = [[UILabel alloc] initWithFrame:CGRectMake(0, yOffset, 280, 21)];
+        UILabel *stage = [[UILabel alloc] initWithFrame:CGRectMake(5, yOffset, 270, 21)];
         stage.font = [UIFont systemFontOfSize:17];
         stage.backgroundColor = [UIColor clearColor];
         stage.textColor = [UIColor whiteColor];
         stage.textAlignment = UITextAlignmentCenter;
         stage.text = dict[@"stage"];
         [newView addSubview:stage];
+        stage.adjustsFontSizeToFitWidth = true;
         yOffset += 22;
         
         UILabel *channel = [[UILabel alloc] initWithFrame:CGRectMake(0, yOffset, 280, 21)];

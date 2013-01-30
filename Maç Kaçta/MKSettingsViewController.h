@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MKSettingsViewController : UIViewController
+@interface MKSettingsViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+
+@property (strong, nonatomic) NSArray *teams;
 
 @end

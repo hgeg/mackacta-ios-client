@@ -64,7 +64,7 @@
         NSDictionary *team = teams[indexPath.row];
         cell = [cv dequeueReusableCellWithReuseIdentifier:@"teamdata" forIndexPath:indexPath];
         ((UILabel *)[cell viewWithTag:1]).text = team[@"name"];
-        ((UIImageView *)[cell viewWithTag:10]).image = [UIImage imageNamed:[NSString stringWithFormat:@"%@-logo",team[@"name"]]];
+        ((UIImageView *)[cell viewWithTag:10]).image = [UIImage imageNamed:[NSString stringWithFormat:@"%@-logo.png",team[@"name"]]];
         ((UILabel *)[cell viewWithTag:2]).text = team[@"p"];
         ((UILabel *)[cell viewWithTag:3]).text = team[@"w"];
         ((UILabel *)[cell viewWithTag:4]).text = team[@"d"];
@@ -72,6 +72,7 @@
         ((UILabel *)[cell viewWithTag:6]).text = team[@"av"];
         ((UILabel *)[cell viewWithTag:7]).text = team[@"point"];
         ((UILabel *)[cell viewWithTag:7]).textColor = [UIColor redColor];
+        ((UILabel *)[cell viewWithTag:11]).text = [NSString stringWithFormat:@"%d.",indexPath.row+1];
     }
     return cell;
     

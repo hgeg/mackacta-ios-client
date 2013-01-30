@@ -13,6 +13,7 @@
 @end
 
 @implementation MKSettingsViewController
+@synthesize teams;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,6 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    teams = @[@"Beşiktaş", @"Galatasaray", @"Fenerbahçe", @"Trabzonspor"];
 	// Do any additional setup after loading the view.
 }
 
@@ -34,5 +36,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)thePickerView {
+    return [teams count];
+}
+
+
 
 @end
