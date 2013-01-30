@@ -8,6 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		3623C72E16B3F6F1007E5986 /* MKMatchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3623C72D16B3F6F1007E5986 /* MKMatchView.m */; };
+		DC7FE2B316B933D200C6C30A /* Akhisar Belediyespor-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7FE2A116B933D200C6C30A /* Akhisar Belediyespor-logo.png */; };
+		DC7FE2B416B933D200C6C30A /* Beşiktaş-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7FE2A216B933D200C6C30A /* Beşiktaş-logo.png */; };
+		DC7FE2B516B933D200C6C30A /* Bursaspor-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7FE2A316B933D200C6C30A /* Bursaspor-logo.png */; };
+		DC7FE2B616B933D200C6C30A /* Eskişehirspor-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7FE2A416B933D200C6C30A /* Eskişehirspor-logo.png */; };
+		DC7FE2B716B933D200C6C30A /* Fenerbahçe-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7FE2A516B933D200C6C30A /* Fenerbahçe-logo.png */; };
+		DC7FE2B816B933D200C6C30A /* Galatasaray-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7FE2A616B933D200C6C30A /* Galatasaray-logo.png */; };
+		DC7FE2B916B933D200C6C30A /* Gaziantepspor-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7FE2A716B933D200C6C30A /* Gaziantepspor-logo.png */; };
+		DC7FE2BA16B933D200C6C30A /* Gençlerbirliği-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7FE2A816B933D200C6C30A /* Gençlerbirliği-logo.png */; };
+		DC7FE2BB16B933D200C6C30A /* İstanbul BŞB-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7FE2A916B933D200C6C30A /* İstanbul BŞB-logo.png */; };
+		DC7FE2BC16B933D200C6C30A /* K.Karabükspor-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7FE2AA16B933D200C6C30A /* K.Karabükspor-logo.png */; };
+		DC7FE2BD16B933D200C6C30A /* Kasımpaşa-logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DC7FE2AB16B933D200C6C30A /* Kasımpaşa-logo.jpeg */; };
+		DC7FE2BE16B933D200C6C30A /* Kayserispor_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7FE2AC16B933D200C6C30A /* Kayserispor_logo.png */; };
+		DC7FE2BF16B933D200C6C30A /* Mersin İY-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7FE2AD16B933D200C6C30A /* Mersin İY-logo.png */; };
+		DC7FE2C016B933D200C6C30A /* MP Antalyaspor-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC7FE2AE16B933D200C6C30A /* MP Antalyaspor-logo.jpg */; };
+		DC7FE2C116B933D200C6C30A /* Orduspor-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7FE2AF16B933D200C6C30A /* Orduspor-logo.png */; };
+		DC7FE2C216B933D200C6C30A /* S.B Elazığspor.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7FE2B016B933D200C6C30A /* S.B Elazığspor.png */; };
+		DC7FE2C316B933D200C6C30A /* Sivasspor-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7FE2B116B933D200C6C30A /* Sivasspor-logo.png */; };
+		DC7FE2C416B933D200C6C30A /* Trabzonspor-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7FE2B216B933D200C6C30A /* Trabzonspor-logo.png */; };
 		DC928AA716B32274009B6014 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC928AA616B32274009B6014 /* UIKit.framework */; };
 		DC928AA916B32274009B6014 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC928AA816B32274009B6014 /* Foundation.framework */; };
 		DC928AAB16B32274009B6014 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC928AAA16B32274009B6014 /* CoreGraphics.framework */; };
@@ -26,8 +44,6 @@
 		DC928ACE16B32275009B6014 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC928ACD16B32275009B6014 /* second@2x.png */; };
 		DC928AD616B32D05009B6014 /* MKSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC928AD516B32D05009B6014 /* MKSettingsViewController.m */; };
 		DC928AD816B33BD2009B6014 /* besiktas_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC928AD716B33BD2009B6014 /* besiktas_bg.jpg */; };
-		DC928ADA16B33D9B009B6014 /* Besiktas_JK_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DC928AD916B33D9B009B6014 /* Besiktas_JK_Logo.png */; };
-		DC928ADC16B33DCC009B6014 /* Galatasaray-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DC928ADB16B33DCC009B6014 /* Galatasaray-Logo.png */; };
 		DC928ADE16B34F6E009B6014 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC928ADD16B34F6E009B6014 /* Default-568h@2x.png */; };
 		DC928AE416B35340009B6014 /* mackacta@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC928AE316B35340009B6014 /* mackacta@2x.png */; };
 		DC928AE616B35350009B6014 /* mackacta@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC928AE516B3534F009B6014 /* mackacta@2x.png */; };
@@ -39,6 +55,24 @@
 /* Begin PBXFileReference section */
 		3623C72C16B3F6F1007E5986 /* MKMatchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMatchView.h; sourceTree = "<group>"; };
 		3623C72D16B3F6F1007E5986 /* MKMatchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMatchView.m; sourceTree = "<group>"; };
+		DC7FE2A116B933D200C6C30A /* Akhisar Belediyespor-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Akhisar Belediyespor-logo.png"; sourceTree = "<group>"; };
+		DC7FE2A216B933D200C6C30A /* Beşiktaş-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Beşiktaş-logo.png"; sourceTree = "<group>"; };
+		DC7FE2A316B933D200C6C30A /* Bursaspor-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bursaspor-logo.png"; sourceTree = "<group>"; };
+		DC7FE2A416B933D200C6C30A /* Eskişehirspor-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Eskişehirspor-logo.png"; sourceTree = "<group>"; };
+		DC7FE2A516B933D200C6C30A /* Fenerbahçe-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fenerbahçe-logo.png"; sourceTree = "<group>"; };
+		DC7FE2A616B933D200C6C30A /* Galatasaray-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Galatasaray-logo.png"; sourceTree = "<group>"; };
+		DC7FE2A716B933D200C6C30A /* Gaziantepspor-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gaziantepspor-logo.png"; sourceTree = "<group>"; };
+		DC7FE2A816B933D200C6C30A /* Gençlerbirliği-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gençlerbirliği-logo.png"; sourceTree = "<group>"; };
+		DC7FE2A916B933D200C6C30A /* İstanbul BŞB-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "İstanbul BŞB-logo.png"; sourceTree = "<group>"; };
+		DC7FE2AA16B933D200C6C30A /* K.Karabükspor-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "K.Karabükspor-logo.png"; sourceTree = "<group>"; };
+		DC7FE2AB16B933D200C6C30A /* Kasımpaşa-logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Kasımpaşa-logo.jpeg"; sourceTree = "<group>"; };
+		DC7FE2AC16B933D200C6C30A /* Kayserispor_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Kayserispor_logo.png; sourceTree = "<group>"; };
+		DC7FE2AD16B933D200C6C30A /* Mersin İY-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mersin İY-logo.png"; sourceTree = "<group>"; };
+		DC7FE2AE16B933D200C6C30A /* MP Antalyaspor-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "MP Antalyaspor-logo.jpg"; sourceTree = "<group>"; };
+		DC7FE2AF16B933D200C6C30A /* Orduspor-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Orduspor-logo.png"; sourceTree = "<group>"; };
+		DC7FE2B016B933D200C6C30A /* S.B Elazığspor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S.B Elazığspor.png"; sourceTree = "<group>"; };
+		DC7FE2B116B933D200C6C30A /* Sivasspor-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sivasspor-logo.png"; sourceTree = "<group>"; };
+		DC7FE2B216B933D200C6C30A /* Trabzonspor-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Trabzonspor-logo.png"; sourceTree = "<group>"; };
 		DC928AA216B32274009B6014 /* Maç Kaçta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Maç Kaçta.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC928AA616B32274009B6014 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DC928AA816B32274009B6014 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,8 +98,6 @@
 		DC928AD416B32D05009B6014 /* MKSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSettingsViewController.h; sourceTree = "<group>"; };
 		DC928AD516B32D05009B6014 /* MKSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSettingsViewController.m; sourceTree = "<group>"; };
 		DC928AD716B33BD2009B6014 /* besiktas_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = besiktas_bg.jpg; sourceTree = "<group>"; };
-		DC928AD916B33D9B009B6014 /* Besiktas_JK_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Besiktas_JK_Logo.png; sourceTree = "<group>"; };
-		DC928ADB16B33DCC009B6014 /* Galatasaray-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Galatasaray-Logo.png"; sourceTree = "<group>"; };
 		DC928ADD16B34F6E009B6014 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DC928AE316B35340009B6014 /* mackacta@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mackacta@2x.png"; sourceTree = "<group>"; };
 		DC928AE516B3534F009B6014 /* mackacta@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mackacta@2x.png"; sourceTree = "<group>"; };
@@ -146,9 +178,25 @@
 		DC928AAD16B32274009B6014 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DC7FE2A116B933D200C6C30A /* Akhisar Belediyespor-logo.png */,
+				DC7FE2A216B933D200C6C30A /* Beşiktaş-logo.png */,
+				DC7FE2A316B933D200C6C30A /* Bursaspor-logo.png */,
+				DC7FE2A416B933D200C6C30A /* Eskişehirspor-logo.png */,
+				DC7FE2A516B933D200C6C30A /* Fenerbahçe-logo.png */,
+				DC7FE2A616B933D200C6C30A /* Galatasaray-logo.png */,
+				DC7FE2A716B933D200C6C30A /* Gaziantepspor-logo.png */,
+				DC7FE2A816B933D200C6C30A /* Gençlerbirliği-logo.png */,
+				DC7FE2A916B933D200C6C30A /* İstanbul BŞB-logo.png */,
+				DC7FE2AA16B933D200C6C30A /* K.Karabükspor-logo.png */,
+				DC7FE2AB16B933D200C6C30A /* Kasımpaşa-logo.jpeg */,
+				DC7FE2AC16B933D200C6C30A /* Kayserispor_logo.png */,
+				DC7FE2AD16B933D200C6C30A /* Mersin İY-logo.png */,
+				DC7FE2AE16B933D200C6C30A /* MP Antalyaspor-logo.jpg */,
+				DC7FE2AF16B933D200C6C30A /* Orduspor-logo.png */,
+				DC7FE2B016B933D200C6C30A /* S.B Elazığspor.png */,
+				DC7FE2B116B933D200C6C30A /* Sivasspor-logo.png */,
+				DC7FE2B216B933D200C6C30A /* Trabzonspor-logo.png */,
 				DC928AE316B35340009B6014 /* mackacta@2x.png */,
-				DC928ADB16B33DCC009B6014 /* Galatasaray-Logo.png */,
-				DC928AD916B33D9B009B6014 /* Besiktas_JK_Logo.png */,
 				DC928AD716B33BD2009B6014 /* besiktas_bg.jpg */,
 				DC928AAE16B32274009B6014 /* Maç Kaçta-Info.plist */,
 				DC928AAF16B32274009B6014 /* InfoPlist.strings */,
@@ -223,14 +271,30 @@
 				DC928ACC16B32275009B6014 /* second.png in Resources */,
 				DC928ACE16B32275009B6014 /* second@2x.png in Resources */,
 				DC928AD816B33BD2009B6014 /* besiktas_bg.jpg in Resources */,
-				DC928ADA16B33D9B009B6014 /* Besiktas_JK_Logo.png in Resources */,
-				DC928ADC16B33DCC009B6014 /* Galatasaray-Logo.png in Resources */,
 				DC928ADE16B34F6E009B6014 /* Default-568h@2x.png in Resources */,
 				DC928AE416B35340009B6014 /* mackacta@2x.png in Resources */,
 				DC928AE616B35350009B6014 /* mackacta@2x.png in Resources */,
 				DC928AE816B35377009B6014 /* mackacta.png in Resources */,
 				DC928AEA16B354D2009B6014 /* Default@2x.png in Resources */,
 				DC928AEC16B354DC009B6014 /* Default.png in Resources */,
+				DC7FE2B316B933D200C6C30A /* Akhisar Belediyespor-logo.png in Resources */,
+				DC7FE2B416B933D200C6C30A /* Beşiktaş-logo.png in Resources */,
+				DC7FE2B516B933D200C6C30A /* Bursaspor-logo.png in Resources */,
+				DC7FE2B616B933D200C6C30A /* Eskişehirspor-logo.png in Resources */,
+				DC7FE2B716B933D200C6C30A /* Fenerbahçe-logo.png in Resources */,
+				DC7FE2B816B933D200C6C30A /* Galatasaray-logo.png in Resources */,
+				DC7FE2B916B933D200C6C30A /* Gaziantepspor-logo.png in Resources */,
+				DC7FE2BA16B933D200C6C30A /* Gençlerbirliği-logo.png in Resources */,
+				DC7FE2BB16B933D200C6C30A /* İstanbul BŞB-logo.png in Resources */,
+				DC7FE2BC16B933D200C6C30A /* K.Karabükspor-logo.png in Resources */,
+				DC7FE2BD16B933D200C6C30A /* Kasımpaşa-logo.jpeg in Resources */,
+				DC7FE2BE16B933D200C6C30A /* Kayserispor_logo.png in Resources */,
+				DC7FE2BF16B933D200C6C30A /* Mersin İY-logo.png in Resources */,
+				DC7FE2C016B933D200C6C30A /* MP Antalyaspor-logo.jpg in Resources */,
+				DC7FE2C116B933D200C6C30A /* Orduspor-logo.png in Resources */,
+				DC7FE2C216B933D200C6C30A /* S.B Elazığspor.png in Resources */,
+				DC7FE2C316B933D200C6C30A /* Sivasspor-logo.png in Resources */,
+				DC7FE2C416B933D200C6C30A /* Trabzonspor-logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
