@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3623C72E16B3F6F1007E5986 /* MKMatchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3623C72D16B3F6F1007E5986 /* MKMatchView.m */; };
 		369C1AE416B9888A005AFE0E /* gnLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 369C1AE216B9876F005AFE0E /* gnLoadingView.m */; };
-		DC1DC4E216B95A5000159CB5 /* Galatasaray-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DC1DC4E116B95A5000159CB5 /* Galatasaray-logo.png */; };
+		369C1AEB16B99C91005AFE0E /* Galatasaray-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 369C1AEA16B99C91005AFE0E /* Galatasaray-logo.png */; };
 		DC1DC4E916B9644700159CB5 /* alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = DC1DC4E316B9644700159CB5 /* alarm.png */; };
 		DC1DC4EA16B9644700159CB5 /* alarm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC1DC4E416B9644700159CB5 /* alarm@2x.png */; };
 		DC1DC4EB16B9644700159CB5 /* cog_02.png in Resources */ = {isa = PBXBuildFile; fileRef = DC1DC4E516B9644700159CB5 /* cog_02.png */; };
@@ -120,7 +120,7 @@
 		3623C72D16B3F6F1007E5986 /* MKMatchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMatchView.m; sourceTree = "<group>"; };
 		369C1AE116B9876F005AFE0E /* gnLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gnLoadingView.h; sourceTree = "<group>"; };
 		369C1AE216B9876F005AFE0E /* gnLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gnLoadingView.m; sourceTree = "<group>"; };
-		DC1DC4E116B95A5000159CB5 /* Galatasaray-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Galatasaray-logo.png"; sourceTree = "<group>"; };
+		369C1AEA16B99C91005AFE0E /* Galatasaray-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Galatasaray-logo.png"; sourceTree = "<group>"; };
 		DC1DC4E316B9644700159CB5 /* alarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm.png; sourceTree = "<group>"; };
 		DC1DC4E416B9644700159CB5 /* alarm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm@2x.png"; sourceTree = "<group>"; };
 		DC1DC4E516B9644700159CB5 /* cog_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cog_02.png; sourceTree = "<group>"; };
@@ -369,7 +369,7 @@
 				DC1DC4E616B9644700159CB5 /* cog_02@2x.png */,
 				DC1DC4E716B9644700159CB5 /* graph_bar_trend.png */,
 				DC1DC4E816B9644700159CB5 /* graph_bar_trend@2x.png */,
-				DC1DC4E116B95A5000159CB5 /* Galatasaray-logo.png */,
+				369C1AEA16B99C91005AFE0E /* Galatasaray-logo.png */,
 				DC7DF06A16B9392200079BEA /* Kasımpaşa-logo.png */,
 				DC7DF06B16B9392200079BEA /* MP Antalyaspor-logo.png */,
 				DC7FE2A116B933D200C6C30A /* Akhisar Belediye-logo.png */,
@@ -485,7 +485,6 @@
 				DC7FE2C416B933D200C6C30A /* Trabzonspor-logo.png in Resources */,
 				DC7DF06C16B9392200079BEA /* Kasımpaşa-logo.png in Resources */,
 				DC7DF06D16B9392200079BEA /* MP Antalyaspor-logo.png in Resources */,
-				DC1DC4E216B95A5000159CB5 /* Galatasaray-logo.png in Resources */,
 				DC1DC4E916B9644700159CB5 /* alarm.png in Resources */,
 				DC1DC4EA16B9644700159CB5 /* alarm@2x.png in Resources */,
 				DC1DC4EB16B9644700159CB5 /* cog_02.png in Resources */,
@@ -548,6 +547,7 @@
 				DC1DC56016B987FE00159CB5 /* ust_bar.png in Resources */,
 				DC1DC56216B98D3200159CB5 /* bilgi.png in Resources */,
 				DC1DC56416B98D8900159CB5 /* cell_arkaplan.png in Resources */,
+				369C1AEB16B99C91005AFE0E /* Galatasaray-logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

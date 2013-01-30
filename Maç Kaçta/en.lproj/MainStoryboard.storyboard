@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C2034" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
         <!--Fixture Controller - First-->
@@ -246,19 +246,19 @@
                                     <segment title="Şampiyonlar Ligi"/>
                                     <segment title="Türkiye Kupası"/>
                                 </segments>
-                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.10093521897810219" alpha="1" colorSpace="calibratedWhite"/>
                             </segmentedControl>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ust_bar.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ko5-cw-WIs">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="e3b-Ng-ZSg"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" rowHeight="85" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="67y-gS-JjG">
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" rowHeight="85" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="67y-gS-JjG">
+                                <color key="backgroundColor" white="0.21384580291970803" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="414" id="npc-mZ-c4h"/>
                                 </constraints>
-                                <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="teamdata" rowHeight="85" id="P9V-Z6-zzI">
                                         <rect key="frame" x="0.0" y="22" width="320" height="85"/>
@@ -289,11 +289,7 @@
                                                         <constraint firstAttribute="width" constant="35" id="6Y9-ud-ShY"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="bilgi.png" translatesAutoresizingMaskIntoConstraints="NO" id="FRl-0U-iwY">
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="35" id="Lzn-aD-PFo"/>
-                                                    </constraints>
-                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="bilgi.png" translatesAutoresizingMaskIntoConstraints="NO" id="FRl-0U-iwY"/>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="bilgi.png" translatesAutoresizingMaskIntoConstraints="NO" id="M3w-XO-gvm">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="35" id="pfd-sH-yvA"/>
@@ -346,12 +342,12 @@
                                                         <constraint firstAttribute="width" constant="21" id="awC-dA-Nb2"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="6" contentMode="left" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVc-PU-hks">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="21" id="f5A-68-fKE"/>
+                                                        <constraint firstAttribute="width" constant="35" id="fO6-6C-GRp"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -374,11 +370,13 @@
                                             <constraint firstItem="3fE-Vr-ZIl" firstAttribute="leading" secondItem="P9V-Z6-zzI" secondAttribute="leading" constant="6" id="C2h-OS-RgB"/>
                                             <constraint firstAttribute="trailing" secondItem="pwB-xq-lPQ" secondAttribute="trailing" constant="99" id="Cbw-hZ-4Kh"/>
                                             <constraint firstItem="3fE-Vr-ZIl" firstAttribute="baseline" secondItem="S7P-f1-8Xn" secondAttribute="baseline" type="default" id="CrC-a5-SKK"/>
+                                            <constraint firstItem="M3w-XO-gvm" firstAttribute="leading" secondItem="VVc-PU-hks" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Faf-QB-Wy5"/>
                                             <constraint firstItem="S7P-f1-8Xn" firstAttribute="leading" secondItem="P9V-Z6-zzI" secondAttribute="leading" constant="26" id="IBm-RH-Q7U"/>
                                             <constraint firstItem="M3w-XO-gvm" firstAttribute="bottom" secondItem="FRl-0U-iwY" secondAttribute="bottom" type="default" id="IvL-jQ-D88"/>
                                             <constraint firstItem="M3w-XO-gvm" firstAttribute="leading" secondItem="FRl-0U-iwY" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="OBt-Pz-mur"/>
                                             <constraint firstItem="aSO-aT-9sy" firstAttribute="top" secondItem="P9V-Z6-zzI" secondAttribute="top" constant="27" id="SYW-kF-l8z"/>
                                             <constraint firstItem="3fE-Vr-ZIl" firstAttribute="top" secondItem="P9V-Z6-zzI" secondAttribute="top" constant="1" id="Sj8-Y5-2Ue"/>
+                                            <constraint firstItem="VVc-PU-hks" firstAttribute="leading" secondItem="6mq-Z7-dhP" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Sxw-Me-kYt"/>
                                             <constraint firstAttribute="trailing" secondItem="M3w-XO-gvm" secondAttribute="trailing" constant="5" id="VbS-J8-uUE"/>
                                             <constraint firstItem="9ad-bx-yBa" firstAttribute="top" secondItem="6mq-Z7-dhP" secondAttribute="top" type="default" id="Z3H-cV-WrH"/>
                                             <constraint firstItem="NIh-Jx-hlx" firstAttribute="leading" secondItem="P9V-Z6-zzI" secondAttribute="leading" constant="112" id="aBJ-uz-UVT"/>
@@ -399,7 +397,6 @@
                                             <constraint firstItem="NIh-Jx-hlx" firstAttribute="baseline" secondItem="Jlc-iJ-OGa" secondAttribute="baseline" type="default" id="ojU-rU-I4I"/>
                                             <constraint firstItem="FRl-0U-iwY" firstAttribute="leading" secondItem="6mq-Z7-dhP" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="pYL-3w-n8W"/>
                                             <constraint firstItem="E4a-Ck-M89" firstAttribute="baseline" secondItem="NIh-Jx-hlx" secondAttribute="baseline" type="default" id="pyM-75-QMC"/>
-                                            <constraint firstAttribute="trailing" secondItem="VVc-PU-hks" secondAttribute="trailing" constant="56" id="qMg-O3-B5M"/>
                                             <constraint firstItem="FRl-0U-iwY" firstAttribute="bottom" secondItem="6mq-Z7-dhP" secondAttribute="bottom" type="default" id="qSu-Df-g3N"/>
                                             <constraint firstItem="qXK-Bu-MkE" firstAttribute="bottom" secondItem="9ad-bx-yBa" secondAttribute="bottom" type="default" id="ssr-y4-Gvo"/>
                                             <constraint firstItem="VVc-PU-hks" firstAttribute="baseline" secondItem="pwB-xq-lPQ" secondAttribute="baseline" type="default" id="w8Y-Sq-XwO"/>
@@ -505,6 +502,9 @@
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NSMutableArray" superclassName="NSArray">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSMutableArray.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

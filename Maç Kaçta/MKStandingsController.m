@@ -7,6 +7,7 @@
 //
 
 #import "MKStandingsController.h"
+#import "gnLoadingView.h"
 
 @interface MKStandingsController ()
 
@@ -16,6 +17,7 @@
 
 - (void)viewDidLoad
 {
+    [gnLoadingView showOnView:self.view];
     [super viewDidLoad];
 	dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
     NSURL *URL = [NSURL URLWithString:@"http://54.235.244.172/ptable/spor-toto-super-lig/"];
@@ -37,6 +39,7 @@
     NSDictionary *params = (NSDictionary *)pobj;
     teams = params[@"data"];
     [self.table reloadData];
+    [gnLoadingView hideLoader];
 }
 
 - (void)didReceiveMemoryWarning
