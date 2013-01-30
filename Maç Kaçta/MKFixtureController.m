@@ -7,6 +7,7 @@
 //
 
 #import "MKFixtureController.h"
+#import "gnLoadingView.h"
 
 @interface MKFixtureController()
 
@@ -105,6 +106,7 @@
 }
 
 -(void) viewDidAppear:(BOOL)animated {
+    [gnLoadingView showOnView:self.view];
     if([[NSUserDefaults standardUserDefaults] valueForKey:@"invalid"] && [[NSUserDefaults standardUserDefaults] valueForKey:@"invalid"] == @"invalid") {
         [self.scroller removeFromSuperview];
         
@@ -143,7 +145,9 @@
         }];
         dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
         for (int i = 0; i<=34; i++) {
-            if(nextweek-i<1 && nextweek+i+1>34) break;
+            if(nextweek-i<1 && nextweek+i+1>34){
+                break;
+            }
             else if(nextweek-i>0){
                 NSString* escapedUrlString =
                 [[NSString stringWithFormat:@"http://54.235.244.172/match/%@/%u/", selectedTeam,nextweek-i] stringByAddingPercentEscapesUsingEncoding:
@@ -227,6 +231,7 @@
     [self.matches insertObject:newView atIndex:[params[@"i"] intValue]];
     newView.alpha=0;
     [params[@"scroller"] addSubview:newView];
+    [gnLoadingView hideLoader];
     //if(gLock>0){
         [UIView animateWithDuration:0.3 animations:^{
         newView.alpha = 1;}];

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3623C72E16B3F6F1007E5986 /* MKMatchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3623C72D16B3F6F1007E5986 /* MKMatchView.m */; };
+		369C1AE416B9888A005AFE0E /* gnLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 369C1AE216B9876F005AFE0E /* gnLoadingView.m */; };
 		DC1DC4E216B95A5000159CB5 /* Galatasaray-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DC1DC4E116B95A5000159CB5 /* Galatasaray-logo.png */; };
 		DC1DC4E916B9644700159CB5 /* alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = DC1DC4E316B9644700159CB5 /* alarm.png */; };
 		DC1DC4EA16B9644700159CB5 /* alarm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC1DC4E416B9644700159CB5 /* alarm@2x.png */; };
@@ -113,6 +114,8 @@
 /* Begin PBXFileReference section */
 		3623C72C16B3F6F1007E5986 /* MKMatchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMatchView.h; sourceTree = "<group>"; };
 		3623C72D16B3F6F1007E5986 /* MKMatchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMatchView.m; sourceTree = "<group>"; };
+		369C1AE116B9876F005AFE0E /* gnLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gnLoadingView.h; sourceTree = "<group>"; };
+		369C1AE216B9876F005AFE0E /* gnLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gnLoadingView.m; sourceTree = "<group>"; };
 		DC1DC4E116B95A5000159CB5 /* Galatasaray-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Galatasaray-logo.png"; sourceTree = "<group>"; };
 		DC1DC4E316B9644700159CB5 /* alarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm.png; sourceTree = "<group>"; };
 		DC1DC4E416B9644700159CB5 /* alarm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm@2x.png"; sourceTree = "<group>"; };
@@ -286,6 +289,8 @@
 				DC928ACD16B32275009B6014 /* second@2x.png */,
 				3623C72C16B3F6F1007E5986 /* MKMatchView.h */,
 				3623C72D16B3F6F1007E5986 /* MKMatchView.m */,
+				369C1AE116B9876F005AFE0E /* gnLoadingView.h */,
+				369C1AE216B9876F005AFE0E /* gnLoadingView.m */,
 				DC928AAD16B32274009B6014 /* Supporting Files */,
 			);
 			path = "Maç Kaçta";
@@ -537,6 +542,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				369C1AE416B9888A005AFE0E /* gnLoadingView.m in Sources */,
 				DC928AB316B32274009B6014 /* main.m in Sources */,
 				DC928AB716B32274009B6014 /* MKAppDelegate.m in Sources */,
 				DC928AC316B32275009B6014 /* MKFixtureController.m in Sources */,
