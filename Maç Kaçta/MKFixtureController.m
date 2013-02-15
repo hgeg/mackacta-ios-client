@@ -8,6 +8,7 @@
 
 #import "MKFixtureController.h"
 #import "gnLoadingView.h"
+#import "MKAppDelegate.h"
 
 @interface MKFixtureController()
 
@@ -20,8 +21,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    sliderShown = false;
-    sLock = false;
+    sliderShown = true;
+    sLock = true;
     self.sliderBar.alpha=0;
     self.sliderBar.layer.masksToBounds = true;
     self.sliderBar.layer.cornerRadius = 4.0f;
@@ -61,7 +62,7 @@
                                                      returningResponse:&response
                                                                  error:&error];
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:nil];
-        int nextweek = [json[@"week"] integerValue];
+        nextweek = [json[@"week"] integerValue];
         NSLog(@"next: %d",nextweek);
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -142,7 +143,7 @@
 
 - (void)generateView:(NSObject *)pobj {
     NSDictionary *params = (NSDictionary *)pobj;
-    MKMatchView *newView = [MKMatchView generateWithObject:params[@"json"] size:CGSizeMake([params[@"mySize"][0] floatValue], [params[@"mySize"][1] floatValue]) andOffset:[params[@"i"] intValue]];
+    MKMatchView *newView = [MKMatchView generateWithObject:params[@"json"] week:nextweek size:CGSizeMake([params[@"mySize"][0] floatValue], [params[@"mySize"][1] floatValue]) andOffset:[params[@"i"] intValue]];
     NSLog(@"at index:%@",params[@"i"]);
     newView.alpha=0;
     [params[@"scroller"] addSubview:newView];
@@ -173,6 +174,7 @@
     int index = (int)(scrollView.contentOffset.x/320);
     if (self.matches[index] == @"false") {
         [gnLoadingView showOnView:self.view];
+        if (self.matches[index] == @"true") return;
         self.matches[index] = @"true";
         NSString *selectedTeam = [[NSUserDefaults standardUserDefaults] valueForKey:@"selectedTeam"];
         CGSize mySize = self.view.frame.size;
@@ -190,7 +192,7 @@
                                                          returningResponse:&response
                                                                      error:&error];
             NSDictionary *json = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:nil];
-            [self performSelectorOnMainThread:@selector(generateView:) withObject:@{@"json":json[@"data"],@"mySize":@[[NSString stringWithFormat:@"%f",mySize.width],[NSString stringWithFormat:@"%f",mySize.height+49]],@"i":[NSString stringWithFormat:@"%d",(int)(scrollView.contentOffset.x/320)],@"scroller":scroller} waitUntilDone:NO];
+            [self performSelectorOnMainThread:@selector(generateView:) withObject:@{@"json":json[@"data"],@"mySize":@[[NSString stringWithFormat:@"%f",mySize.width],[NSString stringWithFormat:@"%f",mySize.height+49]],@"i":[NSString stringWithFormat:@"%d",index],@"scroller":scroller} waitUntilDone:NO];
         });
     }
 }

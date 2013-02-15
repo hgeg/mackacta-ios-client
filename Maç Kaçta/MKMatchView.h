@@ -12,6 +12,6 @@
 @interface MKMatchView : UIView
 
 - (MKMatchView *) clone;
-+ (MKMatchView *) generateWithObject:(NSDictionary *)dict size:(CGSize) mySize andOffset:(NSUInteger) i;
++ (MKMatchView *) generateWithObject:(NSDictionary *)dict week:(NSUInteger) week size:(CGSize) mySize andOffset:(NSUInteger) i;
 
 @end

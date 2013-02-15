@@ -26,7 +26,7 @@
     return clone;
 }
 
-+ (MKMatchView *) generateWithObject:(NSDictionary *)dict size:(CGSize) mySize andOffset:(NSUInteger) i {
++ (MKMatchView *) generateWithObject:(NSDictionary *)dict week:(NSUInteger) weekValue size:(CGSize) mySize andOffset:(NSUInteger) i {
     int yOffset = 11;
     int yhOffset = 0;
     MKMatchView * newView = [[MKMatchView alloc] initWithFrame:CGRectMake(20+i*mySize.width, 20, mySize.width-40, mySize.height-90)];
@@ -126,10 +126,15 @@
         date.textAlignment = UITextAlignmentCenter;
         date.text = dateString;
         [newView addSubview:date];
+        NSString *timeString;
+        if ([dict[@"week"] integerValue]<=weekValue) {
+            formatString = [NSDateFormatter dateFormatFromTemplate:@"HH:mm" options:0 locale:tr];
+            [dateFormatter setDateFormat:formatString];
+            timeString = [dateFormatter stringFromDate:d];
+        }else {
+            timeString = @"--:--";
+        }
         
-        formatString = [NSDateFormatter dateFormatFromTemplate:@"HH:mm" options:0 locale:tr];
-        [dateFormatter setDateFormat:formatString];
-        NSString *timeString = [dateFormatter stringFromDate:d];
         yOffset += 23;
         
         UILabel *time = [[UILabel alloc] initWithFrame:CGRectMake(0, yOffset, 280, 21)];

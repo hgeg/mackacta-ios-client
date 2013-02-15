@@ -9,14 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 #import "MKMatchView.h"
-#define weeks 22
 
 @interface MKFixtureController : UIViewController <UIScrollViewDelegate>
-
 {
     int sliderShown;
     BOOL sLock;
     int gLock;
+    int nextweek;
 }
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 @property (weak, nonatomic) IBOutlet MKMatchView *matchView;
