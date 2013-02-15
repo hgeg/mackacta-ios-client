@@ -117,7 +117,33 @@
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
         [dateFormatter setDateFormat:formatString];
-        NSString *dateString = [dateFormatter stringFromDate:d];
+        
+        NSDate * today = [NSDate date];
+        NSComparisonResult result = [today compare:d];
+        switch (result)
+        {
+            case NSOrderedAscending:
+                NSLog(@"Future Date");
+            case NSOrderedDescending:
+                NSLog(@"Earlier Date");
+            case NSOrderedSame:
+                NSLog(@"Today/Null Date Passed"); //Not sure why This is case when null/wrong date is passed
+            default: 
+                NSLog(@"Error Comparing Dates");
+        }
+        
+        NSCalendar* calendar = [NSCalendar currentCalendar];
+        NSDateComponents* comp1 = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:d]; // Get necessary date components
+        NSDateComponents* comp2 = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:[NSDate date]]; // Get necessary date components
+        
+        NSString *dateString;
+        if(comp1.year == comp2.year && comp1.month==comp2.month) {
+            if (comp1.day == comp2.day) {
+                dateString = @"Bugün";
+            }else if(comp1.day == comp2.day+1){
+                dateString = @"Yarın";
+            }else dateString = [dateFormatter stringFromDate:d];
+        }else dateString = [dateFormatter stringFromDate:d];
         
         UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(0, yOffset, 280, 21)];
         date.font = [UIFont boldSystemFontOfSize:17];
