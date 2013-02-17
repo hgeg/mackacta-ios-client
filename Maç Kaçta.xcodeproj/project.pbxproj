@@ -15,6 +15,7 @@
 		369C1AE416B9888A005AFE0E /* gnLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 369C1AE216B9876F005AFE0E /* gnLoadingView.m */; };
 		369C1AEB16B99C91005AFE0E /* Galatasaray-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 369C1AEA16B99C91005AFE0E /* Galatasaray-logo.png */; };
 		369C1AEF16B9B489005AFE0E /* cell_arkaplan_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 369C1AEE16B9B489005AFE0E /* cell_arkaplan_settings.png */; };
+		36AC455416D0AE580065D038 /* Schalke 04-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36AC455316D0AE580065D038 /* Schalke 04-logo.png */; };
 		DC1DC4E916B9644700159CB5 /* alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = DC1DC4E316B9644700159CB5 /* alarm.png */; };
 		DC1DC4EA16B9644700159CB5 /* alarm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC1DC4E416B9644700159CB5 /* alarm@2x.png */; };
 		DC1DC4EB16B9644700159CB5 /* cog_02.png in Resources */ = {isa = PBXBuildFile; fileRef = DC1DC4E516B9644700159CB5 /* cog_02.png */; };
@@ -132,6 +133,7 @@
 		369C1AEC16B9B399005AFE0E /* MyriadPro-Cond.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Cond.otf"; sourceTree = "<group>"; };
 		369C1AED16B9B399005AFE0E /* MyriadPro-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Semibold.otf"; sourceTree = "<group>"; };
 		369C1AEE16B9B489005AFE0E /* cell_arkaplan_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_arkaplan_settings.png; sourceTree = "<group>"; };
+		36AC455316D0AE580065D038 /* Schalke 04-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Schalke 04-logo.png"; sourceTree = "<group>"; };
 		DC1DC4E316B9644700159CB5 /* alarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm.png; sourceTree = "<group>"; };
 		DC1DC4E416B9644700159CB5 /* alarm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm@2x.png"; sourceTree = "<group>"; };
 		DC1DC4E516B9644700159CB5 /* cog_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cog_02.png; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 		DC928AAD16B32274009B6014 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				36AC455316D0AE580065D038 /* Schalke 04-logo.png */,
 				364AB6F516B9D8A8003E93F5 /* devam.png */,
 				364AB6F216B9D814003E93F5 /* devam@2x.png */,
 				DC1DC56516B9C67800159CB5 /* Mersin İY-bg-568h@2x.jpg */,
@@ -565,6 +568,7 @@
 				DC1DC56A16B9C67800159CB5 /* Mersin İY-bg@2x.jpg in Resources */,
 				364AB6F316B9D814003E93F5 /* devam@2x.png in Resources */,
 				364AB6F616B9D8A8003E93F5 /* devam.png in Resources */,
+				36AC455416D0AE580065D038 /* Schalke 04-logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

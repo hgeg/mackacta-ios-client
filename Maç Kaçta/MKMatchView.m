@@ -39,8 +39,11 @@
         week.font = [UIFont systemFontOfSize:17];
         week.backgroundColor = [UIColor clearColor];
         week.textColor = [UIColor whiteColor];
-        week.textAlignment = UITextAlignmentCenter;
-        week.text = [NSString stringWithFormat:@"%@. hafta",dict[@"week"]];
+        week.textAlignment = NSTextAlignmentCenter;
+        if([dict[@"league"] isEqualToString:@"sampiyonlar-ligi"])
+            week.text = @"Şampiyonlar Ligi";
+        else
+            week.text = [NSString stringWithFormat:@"%@. hafta",dict[@"week"]];
         [newView addSubview:week];
         yOffset += 35;
         if(!IPHONE_5) yhOffset = 10;
@@ -118,20 +121,6 @@
         [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
         [dateFormatter setDateFormat:formatString];
         
-        NSDate * today = [NSDate date];
-        NSComparisonResult result = [today compare:d];
-        switch (result)
-        {
-            case NSOrderedAscending:
-                NSLog(@"Future Date");
-            case NSOrderedDescending:
-                NSLog(@"Earlier Date");
-            case NSOrderedSame:
-                NSLog(@"Today/Null Date Passed"); //Not sure why This is case when null/wrong date is passed
-            default: 
-                NSLog(@"Error Comparing Dates");
-        }
-        
         NSCalendar* calendar = [NSCalendar currentCalendar];
         NSDateComponents* comp1 = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:d]; // Get necessary date components
         NSDateComponents* comp2 = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:[NSDate date]]; // Get necessary date components
@@ -150,7 +139,6 @@
         date.backgroundColor = [UIColor clearColor];
         date.textColor = [UIColor whiteColor];
         date.textAlignment = UITextAlignmentCenter;
-        date.text = dateString;
         [newView addSubview:date];
         NSString *timeString;
         if ([dict[@"week"] integerValue]<=weekValue) {
@@ -159,7 +147,10 @@
             timeString = [dateFormatter stringFromDate:d];
         }else {
             timeString = @"--:--";
+            dateString = @"Tarih belli değil";
         }
+        
+        date.text = dateString;
         
         yOffset += 23;
         
@@ -186,8 +177,11 @@
         channel.font = [UIFont systemFontOfSize:17];
         channel.backgroundColor = [UIColor clearColor];
         channel.textColor = [UIColor whiteColor];
-        channel.textAlignment = UITextAlignmentCenter;
-        channel.text = @"Lig TV";
+        channel.textAlignment = NSTextAlignmentCenter;
+        if([dict[@"league"] isEqualToString:@"sampiyonlar-ligi"])
+            channel.text = @"Star";
+        else
+            channel.text = @"Lig TV";
         [newView addSubview:channel];
         
     }

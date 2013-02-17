@@ -16,6 +16,8 @@
     BOOL sLock;
     int gLock;
     int nextweek;
+    int offset;
+    dispatch_queue_t queue;
 }
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 @property (weak, nonatomic) IBOutlet MKMatchView *matchView;

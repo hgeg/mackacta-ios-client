@@ -13,6 +13,7 @@
 {
     NSArray *teams;
     BOOL loading;
+    dispatch_queue_t queue;
 }
 @property (weak, nonatomic) IBOutlet UITableView *table;
 @end

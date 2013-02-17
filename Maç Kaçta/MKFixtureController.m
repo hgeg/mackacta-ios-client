@@ -21,6 +21,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    queue = dispatch_queue_create("com.orkestra.mackacta.fixturequeue", nil);
     sliderShown = true;
     sLock = true;
     self.sliderBar.alpha=0;
@@ -29,11 +30,13 @@
     self.sliderBar.frame = CGRectMake(68, self.view.frame.size.height-70, 196, 36);
     self.slider.value = 0;
     gLock = 2;
-   
+    offset = 0;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewDidAppear:) name:@"active" object:nil];
 }
 
 -(void) viewDidAppear:(BOOL)animated {
     if([[NSUserDefaults standardUserDefaults] valueForKey:@"flag"] != @"valid") {
+        offset = 0;
         self.matches = [[NSMutableArray alloc] initWithCapacity:34];
         for (int p=0; p<34; p++) {
             self.matches[p] = @"false";
@@ -63,7 +66,6 @@
                                                                  error:&error];
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:nil];
         nextweek = [json[@"week"] integerValue];
-        NSLog(@"next: %d",nextweek);
         
         // Do any additional setup after loading the view, typically from a nib.
         CGSize mySize = self.view.frame.size;
@@ -84,7 +86,6 @@
         self.background.alpha = 1.0;
         [UIView commitAnimations];
            
-        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
                 escapedUrlString =
                 [[NSString stringWithFormat:@"http://54.235.244.172/match/%@/%u/", selectedTeam,nextweek] stringByAddingPercentEscapesUsingEncoding:
                  NSUTF8StringEncoding];
@@ -99,8 +100,27 @@
                                                                  returningResponse:&response
                                                                              error:&error];
                     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:nil];
-                    [self performSelectorOnMainThread:@selector(generateView:) withObject:@{@"json":json[@"data"],@"mySize":@[[NSString stringWithFormat:@"%f",mySize.width],[NSString stringWithFormat:@"%f",mySize.height+49]],@"i":[NSString stringWithFormat:@"%d",nextweek-1],@"scroller":scroller} waitUntilDone:NO];
-                    NSLog(@"json:%@",json);
+                    offset = [json[@"offset"] integerValue];
+                    NSLog(@"jsonData:\n%@\n",json);
+                    if ([json[@"data"] count]==1) {
+                        NSLog(@"1 maç var");
+                        [self performSelectorOnMainThread:@selector(generateView:) withObject:@{@"json":json[@"data"][0],@"mySize":@[[NSString stringWithFormat:@"%f",mySize.width],[NSString stringWithFormat:@"%f",mySize.height+49]],@"i":[NSString stringWithFormat:@"%d",nextweek-1],@"scroller":scroller} waitUntilDone:NO];
+                    }else{
+                        NSLog(@"sıçtı");
+                        UIScrollView *inner = [[UIScrollView alloc] initWithFrame:CGRectMake((nextweek-1)*320, 0, scroller.frame.size.width, scroller.frame.size.height)];
+                        inner.pagingEnabled = true;
+                        inner.contentSize = CGSizeMake(mySize.width*[json[@"data"] count], mySize.height);
+                        inner.showsHorizontalScrollIndicator = false;
+                        inner.contentOffset = CGPointMake(offset*mySize.width,0);
+                        NSArray *data;
+                        for(int i = 0;i<[json[@"data"] count];i++){
+                            data = ((NSArray *)json[@"data"])[i];
+                            [self performSelectorOnMainThread:@selector(generateView:) withObject:@{@"json":data,@"mySize":@[[NSString stringWithFormat:@"%f",mySize.width],[NSString stringWithFormat:@"%f",mySize.height+49]],@"i":[NSString stringWithFormat:@"%d",i],@"scroller":inner} waitUntilDone:NO];
+                        }
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            [scroller addSubview:inner];
+                        });
+                    }
                 });
         [self.matchView removeFromSuperview];
         [self.view addSubview:self.scroller];
@@ -168,9 +188,6 @@
 }
 
 -(void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-    NSLog(@"pos: %f",scrollView.contentOffset.x);
-    NSLog(@"index: %d",(int)(scrollView.contentOffset.x/320));
-    NSLog(@"value: %@",self.matches[(int)(scrollView.contentOffset.x/320)]);
     int index = (int)(scrollView.contentOffset.x/320);
     if (self.matches[index] == @"false") {
         [gnLoadingView showOnView:self.view];
@@ -178,7 +195,6 @@
         self.matches[index] = @"true";
         NSString *selectedTeam = [[NSUserDefaults standardUserDefaults] valueForKey:@"selectedTeam"];
         CGSize mySize = self.view.frame.size;
-        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
         NSString *escapedUrlString = [[NSString stringWithFormat:@"http://54.235.244.172/match/%@/%u/",selectedTeam,(int)(scrollView.contentOffset.x/320)+1] stringByAddingPercentEscapesUsingEncoding:
                                       NSUTF8StringEncoding];
         NSURL *URL = [NSURL URLWithString:escapedUrlString];
@@ -192,7 +208,26 @@
                                                          returningResponse:&response
                                                                      error:&error];
             NSDictionary *json = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:nil];
-            [self performSelectorOnMainThread:@selector(generateView:) withObject:@{@"json":json[@"data"],@"mySize":@[[NSString stringWithFormat:@"%f",mySize.width],[NSString stringWithFormat:@"%f",mySize.height+49]],@"i":[NSString stringWithFormat:@"%d",index],@"scroller":scroller} waitUntilDone:NO];
+            offset = [json[@"offset"] integerValue];
+            if ([json[@"data"] count]==1) {
+                NSLog(@"1 maç var");
+                [self performSelectorOnMainThread:@selector(generateView:) withObject:@{@"json":json[@"data"][0],@"mySize":@[[NSString stringWithFormat:@"%f",mySize.width],[NSString stringWithFormat:@"%f",mySize.height+49]],@"i":[NSString stringWithFormat:@"%d",index],@"scroller":scroller} waitUntilDone:NO];
+            }else{
+                NSLog(@"sıçtı");
+                UIScrollView *inner = [[UIScrollView alloc] initWithFrame:CGRectMake(index*320, 0, scroller.frame.size.width, scroller.frame.size.height)];
+                inner.pagingEnabled = true;
+                inner.contentSize = CGSizeMake(mySize.width*[json[@"data"] count], mySize.height);
+                inner.showsHorizontalScrollIndicator = false;
+                inner.contentOffset = CGPointMake(offset*mySize.width,0);
+                NSArray *data;
+                for(int i = 0;i<[json[@"data"] count];i++){
+                    data = ((NSArray *)json[@"data"])[i];
+                    [self performSelectorOnMainThread:@selector(generateView:) withObject:@{@"json":data,@"mySize":@[[NSString stringWithFormat:@"%f",mySize.width],[NSString stringWithFormat:@"%f",mySize.height+49]],@"i":[NSString stringWithFormat:@"%d",i],@"scroller":inner} waitUntilDone:NO];
+                }
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [scroller addSubview:inner];
+                });
+            }
         });
     }
 }
