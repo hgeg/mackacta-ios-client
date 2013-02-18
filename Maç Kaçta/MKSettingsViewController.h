@@ -15,5 +15,9 @@
 @property (weak, nonatomic) IBOutlet UIView *teamView;
 @property (weak, nonatomic) IBOutlet UIView *settingsView;
 @property (weak, nonatomic) IBOutlet UIButton *devam;
+@property (weak, nonatomic) IBOutlet UISwitch *
+national;
+
+- (IBAction)showNationalMatches:(id)sender;
 
 @end

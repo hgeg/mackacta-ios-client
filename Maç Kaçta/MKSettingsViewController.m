@@ -39,8 +39,29 @@
     
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+    BOOL n = [[NSUserDefaults standardUserDefaults] boolForKey:@"national"];
+    if (n) {
+        self.national.on = true;
+    }else{
+        self.national.on = false;
+    }
+}
+
 - (void) enable {
     self.devam.enabled = true;
+}
+
+- (IBAction)showNationalMatches:(id)sender {
+    NSLog(@"Changed to");
+    if (self.national.on) {
+        NSLog(@"no");
+        [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"national"];
+    }else{
+        NSLog(@"yes");
+        [[NSUserDefaults standardUserDefaults] setBool:false forKey:@"national"];
+    }
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enable) name:@"selected" object:nil];
 }
 
 - (void)didReceiveMemoryWarning

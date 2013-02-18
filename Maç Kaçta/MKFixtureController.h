@@ -17,6 +17,7 @@
     int gLock;
     int nextweek;
     int offset;
+    int previndex;
     dispatch_queue_t queue;
 }
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;

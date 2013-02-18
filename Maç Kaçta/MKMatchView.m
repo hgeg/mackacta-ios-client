@@ -35,14 +35,22 @@
     newView.layer.cornerRadius = 4.0f;
     @try
     {
-        UILabel *week = [[UILabel alloc] initWithFrame:CGRectMake(64, 11, 151, 21)];
+        UILabel *week = [[UILabel alloc] initWithFrame:CGRectMake(0, 11, 280, 21)];
         week.font = [UIFont systemFontOfSize:17];
         week.backgroundColor = [UIColor clearColor];
         week.textColor = [UIColor whiteColor];
         week.textAlignment = NSTextAlignmentCenter;
-        if([dict[@"league"] isEqualToString:@"sampiyonlar-ligi"])
+        BOOL cert = false;
+        if([dict[@"league"] isEqualToString:@"sampiyonlar-ligi"]){
             week.text = @"Şampiyonlar Ligi";
-        else
+            cert = true;
+        }else if([dict[@"league"] isEqualToString:@"avrupa-ligi"]){
+            week.text = @"Şampiyonlar Ligi";
+            cert = true;
+        }else if([dict[@"league"] isEqualToString:@"dunya-kupasi-avrupa-elemeleri"]){
+            week.text = @"Dünya Kupası Avrupa Elemeleri";
+            cert = true;
+        }else
             week.text = [NSString stringWithFormat:@"%@. hafta",dict[@"week"]];
         [newView addSubview:week];
         yOffset += 35;
@@ -141,7 +149,7 @@
         date.textAlignment = UITextAlignmentCenter;
         [newView addSubview:date];
         NSString *timeString;
-        if ([dict[@"week"] integerValue]<=weekValue) {
+        if ([dict[@"week"] integerValue]<=weekValue || (weekValue+1==[dict[@"week"] integerValue] && i>0) || cert) {
             formatString = [NSDateFormatter dateFormatFromTemplate:@"HH:mm" options:0 locale:tr];
             [dateFormatter setDateFormat:formatString];
             timeString = [dateFormatter stringFromDate:d];
@@ -167,8 +175,15 @@
         stage.font = [UIFont systemFontOfSize:17];
         stage.backgroundColor = [UIColor clearColor];
         stage.textColor = [UIColor whiteColor];
-        stage.textAlignment = UITextAlignmentCenter;
-        stage.text = dict[@"stage"];
+        stage.textAlignment = NSTextAlignmentCenter;
+        if([dict[@"stage"] isEqualToString:@""])
+            stage.text = @"";
+        else if([dict[@"stage"] rangeOfString:@"Arena"].location == NSNotFound &&
+           [dict[@"stage"] rangeOfString:@"Stadı"].location == NSNotFound &&
+           [dict[@"stage"] rangeOfString:@"Stadyumu"].location == NSNotFound)
+            stage.text = [NSString stringWithFormat:@"%@ Stadyumu",dict[@"stage"]];
+        else
+            stage.text = dict[@"stage"];
         [newView addSubview:stage];
         stage.adjustsFontSizeToFitWidth = true;
         yOffset += 22;
@@ -179,7 +194,7 @@
         channel.textColor = [UIColor whiteColor];
         channel.textAlignment = NSTextAlignmentCenter;
         if([dict[@"league"] isEqualToString:@"sampiyonlar-ligi"])
-            channel.text = @"Star";
+            channel.text = @"Star TV";
         else
             channel.text = @"Lig TV";
         [newView addSubview:channel];

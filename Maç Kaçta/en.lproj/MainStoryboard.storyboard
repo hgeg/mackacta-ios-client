@@ -81,15 +81,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <containerView contentMode="scaleToFill" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Fpc-1d-fhD">
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" type="user" id="kVj-JJ-6gb"/>
-                                </constraints>
-                                <connections>
-                                    <segue destination="jtw-je-jVC" kind="embed" id="2fr-hC-joQ"/>
-                                </connections>
-                            </containerView>
                             <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tgs-4m-M32">
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -105,30 +96,50 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cell_arkaplan_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="oE3-Wi-ype">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="9iL-BV-zu9"/>
+                                    <constraint firstAttribute="width" constant="260" id="frb-bP-uhU"/>
+                                </constraints>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KOq-pW-fOP">
+                                <color key="onTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="showNationalMatches:" destination="LxU-aE-YqT" eventType="valueChanged" id="dKc-H1-j99"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Milli Maçları Göster" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAh-Gd-vp6">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.050638686131386862" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="KOq-pW-fOP" secondAttribute="trailing" constant="37" id="0gK-Lb-JxH"/>
                             <constraint firstItem="wSq-hf-9kq" firstAttribute="leading" secondItem="R7O-Fp-YgP" secondAttribute="leading" type="default" id="1eF-au-D6F"/>
                             <constraint firstItem="wSq-hf-9kq" firstAttribute="trailing" secondItem="R7O-Fp-YgP" secondAttribute="trailing" type="default" id="1fb-sG-ri1"/>
-                            <constraint firstItem="zEX-oJ-qxj" firstAttribute="top" secondItem="R7O-Fp-YgP" secondAttribute="top" constant="17" id="3xF-F8-kIf"/>
                             <constraint firstItem="wSq-hf-9kq" firstAttribute="bottom" secondItem="R7O-Fp-YgP" secondAttribute="bottom" type="default" id="4FK-Og-U4O"/>
-                            <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="Fpc-1d-fhD" secondAttribute="bottom" priority="1" constant="378" type="user" id="PMB-T5-mtq"/>
-                            <constraint firstItem="Fpc-1d-fhD" firstAttribute="leading" secondItem="zEX-oJ-qxj" secondAttribute="leading" type="default" id="QP7-Mw-nGh"/>
-                            <constraint firstItem="Fpc-1d-fhD" firstAttribute="trailing" secondItem="Tgs-4m-M32" secondAttribute="trailing" type="default" id="TLp-Pl-lGc"/>
-                            <constraint firstItem="Fpc-1d-fhD" firstAttribute="top" secondItem="R7O-Fp-YgP" secondAttribute="top" constant="61" type="user" id="Wl1-xi-QhZ"/>
+                            <constraint firstItem="eAh-Gd-vp6" firstAttribute="centerY" secondItem="KOq-pW-fOP" secondAttribute="centerY" type="default" id="RD1-An-toJ"/>
+                            <constraint firstItem="oE3-Wi-ype" firstAttribute="leading" secondItem="VRv-7y-U6M" secondAttribute="leading" type="default" id="Rtv-Fg-o7x"/>
+                            <constraint firstItem="zEX-oJ-qxj" firstAttribute="leading" secondItem="R7O-Fp-YgP" secondAttribute="leading" constant="31" id="VTy-z2-oEf"/>
+                            <constraint firstItem="oE3-Wi-ype" firstAttribute="top" secondItem="R7O-Fp-YgP" secondAttribute="top" constant="59" id="Wq7-ky-c0s"/>
                             <constraint firstAttribute="bottom" secondItem="Tgs-4m-M32" secondAttribute="bottom" constant="8" id="WtJ-T2-d6I"/>
+                            <constraint firstItem="Tgs-4m-M32" firstAttribute="centerX" secondItem="wSq-hf-9kq" secondAttribute="centerX" type="default" id="Z20-FF-c0y"/>
                             <constraint firstItem="wSq-hf-9kq" firstAttribute="top" secondItem="R7O-Fp-YgP" secondAttribute="top" type="default" id="a2e-Xk-ysF"/>
-                            <constraint firstItem="Fpc-1d-fhD" firstAttribute="centerX" secondItem="wSq-hf-9kq" secondAttribute="centerX" type="default" id="a4k-dj-3JW"/>
                             <constraint firstItem="VRv-7y-U6M" firstAttribute="top" secondItem="R7O-Fp-YgP" secondAttribute="top" constant="149" id="bj8-wa-Vxk"/>
-                            <constraint firstItem="zEX-oJ-qxj" firstAttribute="leading" secondItem="R7O-Fp-YgP" secondAttribute="leading" constant="31" id="gc1-UK-YGW"/>
-                            <constraint firstItem="Fpc-1d-fhD" firstAttribute="leading" secondItem="VRv-7y-U6M" secondAttribute="leading" type="default" id="pG3-F9-Igs"/>
+                            <constraint firstItem="KOq-pW-fOP" firstAttribute="top" secondItem="R7O-Fp-YgP" secondAttribute="top" constant="75" id="oe9-kv-CTu"/>
                             <constraint firstItem="Tgs-4m-M32" firstAttribute="top" secondItem="R7O-Fp-YgP" secondAttribute="top" constant="191" id="rDh-8k-y2e"/>
                             <constraint firstItem="Tgs-4m-M32" firstAttribute="leading" secondItem="VRv-7y-U6M" secondAttribute="leading" type="default" id="sOV-Md-C4b"/>
+                            <constraint firstItem="eAh-Gd-vp6" firstAttribute="leading" secondItem="R7O-Fp-YgP" secondAttribute="leading" constant="41" id="taq-bK-rJv"/>
+                            <constraint firstItem="oE3-Wi-ype" firstAttribute="leading" secondItem="zEX-oJ-qxj" secondAttribute="leading" type="default" id="weA-31-u7d"/>
+                            <constraint firstItem="zEX-oJ-qxj" firstAttribute="top" secondItem="R7O-Fp-YgP" secondAttribute="top" constant="14" id="yoE-AW-5wK"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ayarlar" image="cog_02.png" id="rKj-gZ-TLE"/>
                     <connections>
-                        <outlet property="settingsView" destination="Fpc-1d-fhD" id="7m0-Op-2hq"/>
+                        <outlet property="national" destination="KOq-pW-fOP" id="cmE-i2-JK7"/>
+                        <outlet property="settingsView" destination="oE3-Wi-ype" id="Ojc-6Z-LIh"/>
                         <outlet property="teamView" destination="Tgs-4m-M32" id="gLG-2R-WhF"/>
                     </connections>
                 </viewController>
@@ -139,57 +150,7 @@
         <!--Table View Controller-->
         <scene sceneID="sRu-4s-TkJ">
             <objects>
-                <tableViewController id="jtw-je-jVC" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="PAV-kU-Ddf">
-                        <rect key="frame" x="0.0" y="0.0" width="258" height="60"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection id="V15-cr-0Uc">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" shouldIndentWhileEditing="NO" rowHeight="60" id="ymS-u2-crc">
-                                        <rect key="frame" x="0.0" y="0.0" width="258" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="258" height="59"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cell_arkaplan_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="oE3-Wi-ype">
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="260" id="frb-bP-uhU"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KOq-pW-fOP">
-                                                    <color key="onTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </switch>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Milli Maçları Göster" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAh-Gd-vp6">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="0.050638686131386862" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="oE3-Wi-ype" firstAttribute="top" secondItem="ymS-u2-crc" secondAttribute="top" type="default" id="5f8-Dh-P4L"/>
-                                            <constraint firstAttribute="trailing" secondItem="KOq-pW-fOP" secondAttribute="trailing" constant="10" id="5yB-sZ-Z7b"/>
-                                            <constraint firstItem="eAh-Gd-vp6" firstAttribute="top" secondItem="ymS-u2-crc" secondAttribute="top" constant="20" type="default" id="8kp-2p-XaO"/>
-                                            <constraint firstItem="oE3-Wi-ype" firstAttribute="bottom" secondItem="ymS-u2-crc" secondAttribute="bottom" type="default" id="ARl-TU-hKg"/>
-                                            <constraint firstItem="oE3-Wi-ype" firstAttribute="leading" secondItem="ymS-u2-crc" secondAttribute="leading" type="default" id="JOx-vT-S43"/>
-                                            <constraint firstItem="KOq-pW-fOP" firstAttribute="centerY" secondItem="eAh-Gd-vp6" secondAttribute="centerY" type="default" id="SDc-Sk-e2H"/>
-                                            <constraint firstItem="eAh-Gd-vp6" firstAttribute="leading" secondItem="ymS-u2-crc" secondAttribute="leading" constant="10" id="wjy-hd-tGB"/>
-                                        </constraints>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="jtw-je-jVC" id="6d5-un-yUE"/>
-                            <outlet property="delegate" destination="jtw-je-jVC" id="HA9-n7-Kfb"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
+                <tableViewController id="jtw-je-jVC" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ldq-d2-m2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="481" y="1055"/>
@@ -1426,6 +1387,54 @@
         <image name="graph_bar_trend.png" width="26" height="26"/>
         <image name="ust_bar.png" width="640" height="51"/>
     </resources>
+    <classes>
+        <class className="MKFixtureController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MKFixtureController.h"/>
+            <relationships>
+                <relationship kind="action" name="lockSlider:"/>
+                <relationship kind="action" name="releaseSlider:"/>
+                <relationship kind="action" name="sliderChanged:"/>
+                <relationship kind="outlet" name="background" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="backgroundImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="matchView" candidateClass="MKMatchView"/>
+                <relationship kind="outlet" name="matches" candidateClass="NSMutableArray"/>
+                <relationship kind="outlet" name="scroller" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="slider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="sliderBar" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="MKMatchView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MKMatchView.h"/>
+        </class>
+        <class className="MKSettingsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MKSettingsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="showNationalMatches:"/>
+                <relationship kind="outlet" name="devam" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="national" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="settingsView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="teamView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="MKStandingsController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MKStandingsController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="table" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="MKTeamListController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MKTeamListController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="table" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NSMutableArray" superclassName="NSArray">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSMutableArray.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

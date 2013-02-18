@@ -44,6 +44,10 @@
         [gnLoadingView showOnView:self.view];
         [self.scroller removeFromSuperview];
         
+        NSURLResponse *response = nil;
+        NSError *error = nil;
+        BOOL n = [[NSUserDefaults standardUserDefaults] boolForKey:@"national"];
+        
         sliderShown = false;
         sLock = false;
         self.sliderBar.alpha=0;
@@ -52,8 +56,6 @@
         self.sliderBar.frame = CGRectMake(68, self.view.frame.size.height-70, 196, 36);
         self.slider.value = 0;
         
-        NSURLResponse *response = nil;
-        NSError *error = nil;
         NSString *selectedTeam = [[NSUserDefaults standardUserDefaults] valueForKey:@"selectedTeam"];
         NSString* escapedUrlString =
         [[NSString stringWithFormat:@"http://54.235.244.172/globals/%@/",selectedTeam] stringByAddingPercentEscapesUsingEncoding:
@@ -66,6 +68,7 @@
                                                                  error:&error];
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:nil];
         nextweek = [json[@"week"] integerValue];
+        previndex = nextweek;
         
         // Do any additional setup after loading the view, typically from a nib.
         CGSize mySize = self.view.frame.size;
@@ -85,10 +88,12 @@
         [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
         self.background.alpha = 1.0;
         [UIView commitAnimations];
-           
-                escapedUrlString =
-                [[NSString stringWithFormat:@"http://54.235.244.172/match/%@/%u/", selectedTeam,nextweek] stringByAddingPercentEscapesUsingEncoding:
+                if(n)
+                    escapedUrlString = [[NSString stringWithFormat:@"http://54.235.244.172/match/%@/%u/nationals:yes/", selectedTeam,nextweek] stringByAddingPercentEscapesUsingEncoding:
                  NSUTF8StringEncoding];
+                else
+                    escapedUrlString = [[NSString stringWithFormat:@"http://54.235.244.172/match/%@/%u/", selectedTeam,nextweek] stringByAddingPercentEscapesUsingEncoding:
+                                        NSUTF8StringEncoding];
                 URL = [NSURL URLWithString:escapedUrlString];
                 request = [NSURLRequest requestWithURL:URL];
                 
@@ -101,7 +106,6 @@
                                                                              error:&error];
                     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:nil];
                     offset = [json[@"offset"] integerValue];
-                    NSLog(@"jsonData:\n%@\n",json);
                     if ([json[@"data"] count]==1) {
                         NSLog(@"1 maç var");
                         [self performSelectorOnMainThread:@selector(generateView:) withObject:@{@"json":json[@"data"][0],@"mySize":@[[NSString stringWithFormat:@"%f",mySize.width],[NSString stringWithFormat:@"%f",mySize.height+49]],@"i":[NSString stringWithFormat:@"%d",nextweek-1],@"scroller":scroller} waitUntilDone:NO];
@@ -189,14 +193,23 @@
 
 -(void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     int index = (int)(scrollView.contentOffset.x/320);
+    NSLog(@"%d - %d",previndex,index);
+    int diff = previndex-index;
     if (self.matches[index] == @"false") {
         [gnLoadingView showOnView:self.view];
         if (self.matches[index] == @"true") return;
         self.matches[index] = @"true";
         NSString *selectedTeam = [[NSUserDefaults standardUserDefaults] valueForKey:@"selectedTeam"];
         CGSize mySize = self.view.frame.size;
-        NSString *escapedUrlString = [[NSString stringWithFormat:@"http://54.235.244.172/match/%@/%u/",selectedTeam,(int)(scrollView.contentOffset.x/320)+1] stringByAddingPercentEscapesUsingEncoding:
-                                      NSUTF8StringEncoding];
+        BOOL n = [[NSUserDefaults standardUserDefaults] boolForKey:@"national"];
+        NSString *escapedUrlString;
+        if(n){
+            NSLog(@"nationals");
+            escapedUrlString = [[NSString stringWithFormat:@"http://54.235.244.172/match/%@/%u/nationals:yes/", selectedTeam,index+1] stringByAddingPercentEscapesUsingEncoding:
+                                NSUTF8StringEncoding];
+        }else
+            escapedUrlString = [[NSString stringWithFormat:@"http://54.235.244.172/match/%@/%u/", selectedTeam,index+1] stringByAddingPercentEscapesUsingEncoding:
+                                NSUTF8StringEncoding];
         NSURL *URL = [NSURL URLWithString:escapedUrlString];
         NSURLRequest *request = [NSURLRequest requestWithURL:URL];
         
@@ -205,19 +218,20 @@
             NSError *error = nil;
             
             NSData *receivedData = [NSURLConnection sendSynchronousRequest:request
-                                                         returningResponse:&response
+                                returningResponse:&response
                                                                      error:&error];
             NSDictionary *json = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:nil];
-            offset = [json[@"offset"] integerValue];
+            if (diff>0) {
+                offset = [json[@"data"] count]-1;
+            }else offset = 0;
             if ([json[@"data"] count]==1) {
-                NSLog(@"1 maç var");
                 [self performSelectorOnMainThread:@selector(generateView:) withObject:@{@"json":json[@"data"][0],@"mySize":@[[NSString stringWithFormat:@"%f",mySize.width],[NSString stringWithFormat:@"%f",mySize.height+49]],@"i":[NSString stringWithFormat:@"%d",index],@"scroller":scroller} waitUntilDone:NO];
             }else{
-                NSLog(@"sıçtı");
                 UIScrollView *inner = [[UIScrollView alloc] initWithFrame:CGRectMake(index*320, 0, scroller.frame.size.width, scroller.frame.size.height)];
                 inner.pagingEnabled = true;
                 inner.contentSize = CGSizeMake(mySize.width*[json[@"data"] count], mySize.height);
                 inner.showsHorizontalScrollIndicator = false;
+                
                 inner.contentOffset = CGPointMake(offset*mySize.width,0);
                 NSArray *data;
                 for(int i = 0;i<[json[@"data"] count];i++){
@@ -230,6 +244,7 @@
             }
         });
     }
+    previndex = index;
 }
 
 @end
