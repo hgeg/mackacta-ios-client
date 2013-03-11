@@ -24,7 +24,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     NSLog(@"entered");
-    if([[NSUserDefaults standardUserDefaults] valueForKey:@"flags"] != @"valid") {
+    if([[[NSUserDefaults standardUserDefaults] valueForKey:@"flags"] isEqualToString:@"valid"]) {
         NSLog(@"invalid");
         [gnLoadingView showOnView:self.view];
         dispatch_async(queue, ^{

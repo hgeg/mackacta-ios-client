@@ -29,14 +29,14 @@
 + (MKMatchView *) generateWithObject:(NSDictionary *)dict week:(NSUInteger) weekValue size:(CGSize) mySize andOffset:(NSUInteger) i {
     int yOffset = 11;
     int yhOffset = 0;
-    MKMatchView * newView = [[MKMatchView alloc] initWithFrame:CGRectMake(20+i*mySize.width, 20, mySize.width-40, mySize.height-90)];
+    MKMatchView * newView = [[MKMatchView alloc] initWithFrame:CGRectMake(20+i*mySize.width, 20, mySize.width-40, mySize.height-40)];
     newView.backgroundColor = [UIColor colorWithRed:0.1 green:0.12 blue:0.12 alpha:0.7];
     newView.layer.masksToBounds = YES;
     newView.layer.cornerRadius = 4.0f;
     @try
     {
         UILabel *week = [[UILabel alloc] initWithFrame:CGRectMake(0, 11, 280, 21)];
-        week.font = [UIFont systemFontOfSize:17];
+        week.font = [UIFont systemFontOfSize:15];
         week.backgroundColor = [UIColor clearColor];
         week.textColor = [UIColor whiteColor];
         week.textAlignment = NSTextAlignmentCenter;
@@ -44,14 +44,14 @@
         if([dict[@"league"] isEqualToString:@"sampiyonlar-ligi"]){
             week.text = @"Şampiyonlar Ligi";
             cert = true;
-        }else if([dict[@"league"] isEqualToString:@"avrupa-ligi"]){
-            week.text = @"Şampiyonlar Ligi";
+        }else if([dict[@"league"] isEqualToString:@"uefa-avrupa-ligi"]){
+            week.text = @"UEFA Avrupa Ligi";
             cert = true;
-        }else if([dict[@"league"] isEqualToString:@"dunya-kupasi-avrupa-elemeleri"]){
-            week.text = @"Dünya Kupası Avrupa Elemeleri";
+        }else if([dict[@"league"] isEqualToString:@"dunya-kupasi-2014"]){
+            week.text = @"Dünya Kupası 2014 - Avrupa Elemeleri";
             cert = true;
         }else
-            week.text = [NSString stringWithFormat:@"%@. hafta",dict[@"week"]];
+            week.text = [NSString stringWithFormat:@"Spor Toto Süper Lig %@. hafta",dict[@"week"]];
         [newView addSubview:week];
         yOffset += 35;
         if(!IPHONE_5) yhOffset = 10;
@@ -73,7 +73,7 @@
         homeTeamName.font = [UIFont boldSystemFontOfSize:17];
         homeTeamName.backgroundColor = [UIColor clearColor];
         homeTeamName.textColor = [UIColor whiteColor];
-        homeTeamName.textAlignment = UITextAlignmentCenter;
+        homeTeamName.textAlignment = NSTextAlignmentCenter;
         homeTeamName.adjustsFontSizeToFitWidth = true;
         homeTeamName.text = dict[@"home"];
         [newView addSubview:homeTeamName];
@@ -83,7 +83,7 @@
         awayTeamName.font = [UIFont boldSystemFontOfSize:17];
         awayTeamName.backgroundColor = [UIColor clearColor];
         awayTeamName.textColor = [UIColor whiteColor];
-        awayTeamName.textAlignment = UITextAlignmentCenter;
+        awayTeamName.textAlignment = NSTextAlignmentCenter;
         awayTeamName.adjustsFontSizeToFitWidth = true;
         awayTeamName.text = dict[@"away"];
         [newView addSubview:awayTeamName];
@@ -100,7 +100,7 @@
             homeTeamScore.font = [UIFont boldSystemFontOfSize:43];
             homeTeamScore.backgroundColor = [UIColor clearColor];
             homeTeamScore.textColor = [UIColor whiteColor];
-            homeTeamScore.textAlignment = UITextAlignmentCenter;
+            homeTeamScore.textAlignment = NSTextAlignmentCenter;
             homeTeamScore.text = dict[@"sh"];
             [newView addSubview:homeTeamScore];
             
@@ -108,7 +108,7 @@
             awayTeamScore.font = [UIFont boldSystemFontOfSize:43];
             awayTeamScore.backgroundColor = [UIColor clearColor];
             awayTeamScore.textColor = [UIColor whiteColor];
-            awayTeamScore.textAlignment = UITextAlignmentCenter;
+            awayTeamScore.textAlignment = NSTextAlignmentCenter;
             awayTeamScore.text =dict[@"sa"];
             [newView addSubview:awayTeamScore];
             
@@ -116,7 +116,7 @@
             dash.font = [UIFont systemFontOfSize:45];
             dash.backgroundColor = [UIColor clearColor];
             dash.textColor = [UIColor whiteColor];
-            dash.textAlignment = UITextAlignmentCenter;
+            dash.textAlignment = NSTextAlignmentCenter;
             dash.text = @"-";
             [newView addSubview:dash];
             yOffset += 79;
@@ -146,16 +146,20 @@
         date.font = [UIFont boldSystemFontOfSize:17];
         date.backgroundColor = [UIColor clearColor];
         date.textColor = [UIColor whiteColor];
-        date.textAlignment = UITextAlignmentCenter;
+        date.textAlignment = NSTextAlignmentCenter;
         [newView addSubview:date];
         NSString *timeString;
         if ([dict[@"week"] integerValue]<=weekValue || (weekValue+1==[dict[@"week"] integerValue] && i>0) || cert) {
+            
             formatString = [NSDateFormatter dateFormatFromTemplate:@"HH:mm" options:0 locale:tr];
             [dateFormatter setDateFormat:formatString];
             timeString = [dateFormatter stringFromDate:d];
         }else {
-            timeString = @"--:--";
-            dateString = @"Tarih belli değil";
+            formatString = [NSDateFormatter dateFormatFromTemplate:@"HH:mm" options:0 locale:tr];
+            [dateFormatter setDateFormat:formatString];
+            timeString = [dateFormatter stringFromDate:d];
+            /*timeString = @"--:--";
+            dateString = @"Tarih belli değil";*/
         }
         
         date.text = dateString;
@@ -166,7 +170,7 @@
         time.font = [UIFont boldSystemFontOfSize:17];
         time.backgroundColor = [UIColor clearColor];
         time.textColor = [UIColor whiteColor];
-        time.textAlignment = UITextAlignmentCenter;
+        time.textAlignment = NSTextAlignmentCenter;
         time.text = timeString;
         [newView addSubview:time];
         yOffset += 34;

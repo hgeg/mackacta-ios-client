@@ -39,16 +39,16 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ooN-03-hN5" firstAttribute="top" secondItem="16" secondAttribute="top" constant="453" id="22E-9x-ejr"/>
                             <constraint firstItem="dkH-4a-1me" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="5Ak-el-kxn"/>
                             <constraint firstAttribute="bottom" secondItem="ooN-03-hN5" secondAttribute="bottom" priority="1" constant="10" type="user" id="7bw-o4-4b2"/>
                             <constraint firstItem="dkH-4a-1me" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="CIf-On-rCb"/>
                             <constraint firstItem="dkH-4a-1me" firstAttribute="bottom" secondItem="16" secondAttribute="bottom" type="default" id="POS-iV-6y4"/>
                             <constraint firstItem="dkH-4a-1me" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="V24-wn-2Av"/>
                             <constraint firstAttribute="trailing" secondItem="ooN-03-hN5" secondAttribute="trailing" constant="56" id="jON-ZR-a2d"/>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ooN-03-hN5" secondAttribute="bottom" constant="10" type="user" id="nXV-fn-9Ac"/>
+                            <constraint firstAttribute="bottom" secondItem="ooN-03-hN5" secondAttribute="bottom" constant="10" type="user" id="nXV-fn-9Ac"/>
                             <constraint firstItem="ooN-03-hN5" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="68" id="sAi-Jw-AWd"/>
                             <constraint firstItem="ooN-03-hN5" firstAttribute="top" relation="lessThanOrEqual" secondItem="16" secondAttribute="top" constant="453" type="user" id="uav-rG-FW0"/>
-                            <constraint firstItem="ooN-03-hN5" firstAttribute="top" secondItem="16" secondAttribute="top" priority="1" constant="453" type="user" id="wnf-9o-b2u"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Maç Kaçta" image="alarm.png" id="7"/>
@@ -146,14 +146,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gRC-Fm-xrS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-68" y="970"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="sRu-4s-TkJ">
-            <objects>
-                <tableViewController id="jtw-je-jVC" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ldq-d2-m2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="481" y="1055"/>
         </scene>
         <!--Team List Controller-->
         <scene sceneID="2Pw-9A-sc2">
@@ -1063,17 +1055,6 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hii-28-rTn"/>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5yo-Vr-5Uh">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="310" id="T8m-bc-3Iq"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="Süper Lig"/>
-                                    <segment title="Şampiyonlar Ligi"/>
-                                    <segment title="Türkiye Kupası"/>
-                                </segments>
-                                <color key="tintColor" red="0.69760443239795911" green="0.1760402905702583" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </segmentedControl>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" image="ust_bar.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ko5-cw-WIs">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="23" id="e9q-Sf-a6W"/>
@@ -1082,6 +1063,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" rowHeight="85" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="67y-gS-JjG">
                                 <color key="backgroundColor" white="0.21384580291970803" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="473" id="szo-a4-SAf"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" priority="1" constant="428" type="user" id="yut-jx-QxI"/>
                                 </constraints>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -1250,17 +1232,13 @@
                             <constraint firstItem="Hii-28-rTn" firstAttribute="bottom" secondItem="17" secondAttribute="bottom" priority="1" type="user" id="31w-LA-qN7"/>
                             <constraint firstItem="67y-gS-JjG" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" type="default" id="C9Y-kJ-61S"/>
                             <constraint firstItem="Ko5-cw-WIs" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="EuM-WA-1Ap"/>
-                            <constraint firstItem="5yo-Vr-5Uh" firstAttribute="centerX" secondItem="Ko5-cw-WIs" secondAttribute="centerX" type="default" id="OL3-x3-gar"/>
+                            <constraint firstItem="67y-gS-JjG" firstAttribute="top" secondItem="17" secondAttribute="top" constant="25" id="Qjd-7q-2Pj"/>
+                            <constraint firstItem="Ko5-cw-WIs" firstAttribute="top" secondItem="17" secondAttribute="top" type="user" id="WXc-dD-izN"/>
                             <constraint firstItem="Ko5-cw-WIs" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" type="default" id="bGQ-pa-N8M"/>
                             <constraint firstItem="Hii-28-rTn" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="cLc-iL-ouo"/>
-                            <constraint firstItem="Ko5-cw-WIs" firstAttribute="top" secondItem="5yo-Vr-5Uh" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="d2B-Qf-LIZ"/>
                             <constraint firstItem="Hii-28-rTn" firstAttribute="top" secondItem="17" secondAttribute="top" type="default" id="eee-HP-Nrv"/>
                             <constraint firstItem="Hii-28-rTn" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" type="default" id="ey8-uc-Gd3"/>
-                            <constraint firstItem="67y-gS-JjG" firstAttribute="top" secondItem="17" secondAttribute="top" constant="71" type="user" id="fmW-mL-KWV"/>
                             <constraint firstItem="67y-gS-JjG" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="j49-4V-5KL"/>
-                            <constraint firstItem="67y-gS-JjG" firstAttribute="bottom" secondItem="17" secondAttribute="bottom" type="user" id="xAw-Ik-VrY"/>
-                            <constraint firstItem="5yo-Vr-5Uh" firstAttribute="top" secondItem="17" secondAttribute="top" constant="10" type="user" id="ygb-fv-Yif"/>
-                            <constraint firstItem="5yo-Vr-5Uh" firstAttribute="top" relation="greaterThanOrEqual" secondItem="17" secondAttribute="top" constant="10" type="user" id="zMS-Qf-Djk"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Puan Durumu" image="graph_bar_trend.png" id="6"/>
@@ -1430,9 +1408,6 @@
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="NSMutableArray" superclassName="NSArray">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSMutableArray.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

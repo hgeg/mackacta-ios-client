@@ -12,6 +12,7 @@
 		364AB6ED16B9BE04003E93F5 /* MKTeamListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 364AB6EC16B9BE04003E93F5 /* MKTeamListController.m */; };
 		364AB6F316B9D814003E93F5 /* devam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 364AB6F216B9D814003E93F5 /* devam@2x.png */; };
 		364AB6F616B9D8A8003E93F5 /* devam.png in Resources */ = {isa = PBXBuildFile; fileRef = 364AB6F516B9D8A8003E93F5 /* devam.png */; };
+		3667072B16ED609200A2D26A /* Türkiye-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3667072A16ED609200A2D26A /* Türkiye-logo.png */; };
 		369C1AE416B9888A005AFE0E /* gnLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 369C1AE216B9876F005AFE0E /* gnLoadingView.m */; };
 		369C1AEB16B99C91005AFE0E /* Galatasaray-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 369C1AEA16B99C91005AFE0E /* Galatasaray-logo.png */; };
 		369C1AEF16B9B489005AFE0E /* cell_arkaplan_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 369C1AEE16B9B489005AFE0E /* cell_arkaplan_settings.png */; };
@@ -103,16 +104,12 @@
 		DC928AB116B32274009B6014 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC928AAF16B32274009B6014 /* InfoPlist.strings */; };
 		DC928AB316B32274009B6014 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC928AB216B32274009B6014 /* main.m */; };
 		DC928AB716B32274009B6014 /* MKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC928AB616B32274009B6014 /* MKAppDelegate.m */; };
-		DC928AB916B32274009B6014 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DC928AB816B32274009B6014 /* Default.png */; };
-		DC928ABB16B32274009B6014 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC928ABA16B32274009B6014 /* Default@2x.png */; };
-		DC928ABD16B32275009B6014 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC928ABC16B32275009B6014 /* Default-568h@2x.png */; };
 		DC928AC016B32275009B6014 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC928ABE16B32275009B6014 /* MainStoryboard.storyboard */; };
 		DC928AC316B32275009B6014 /* MKFixtureController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC928AC216B32275009B6014 /* MKFixtureController.m */; };
 		DC928ACA16B32275009B6014 /* MKStandingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC928AC916B32275009B6014 /* MKStandingsController.m */; };
 		DC928AD616B32D05009B6014 /* MKSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC928AD516B32D05009B6014 /* MKSettingsViewController.m */; };
 		DC928AD816B33BD2009B6014 /* besiktas_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC928AD716B33BD2009B6014 /* besiktas_bg.jpg */; };
 		DC928ADE16B34F6E009B6014 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC928ADD16B34F6E009B6014 /* Default-568h@2x.png */; };
-		DC928AE416B35340009B6014 /* mackacta@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC928AE316B35340009B6014 /* mackacta@2x.png */; };
 		DC928AE616B35350009B6014 /* mackacta@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC928AE516B3534F009B6014 /* mackacta@2x.png */; };
 		DC928AE816B35377009B6014 /* mackacta.png in Resources */ = {isa = PBXBuildFile; fileRef = DC928AE716B35377009B6014 /* mackacta.png */; };
 		DC928AEA16B354D2009B6014 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC928AE916B354D2009B6014 /* Default@2x.png */; };
@@ -127,6 +124,7 @@
 		364AB6EC16B9BE04003E93F5 /* MKTeamListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKTeamListController.m; sourceTree = "<group>"; };
 		364AB6F216B9D814003E93F5 /* devam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "devam@2x.png"; sourceTree = "<group>"; };
 		364AB6F516B9D8A8003E93F5 /* devam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = devam.png; sourceTree = "<group>"; };
+		3667072A16ED609200A2D26A /* Türkiye-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Türkiye-logo.png"; sourceTree = "<group>"; };
 		369C1AE116B9876F005AFE0E /* gnLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gnLoadingView.h; sourceTree = "<group>"; };
 		369C1AE216B9876F005AFE0E /* gnLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gnLoadingView.m; sourceTree = "<group>"; };
 		369C1AEA16B99C91005AFE0E /* Galatasaray-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Galatasaray-logo.png"; sourceTree = "<group>"; };
@@ -225,9 +223,6 @@
 		DC928AB416B32274009B6014 /* Maç Kaçta-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Maç Kaçta-Prefix.pch"; sourceTree = "<group>"; };
 		DC928AB516B32274009B6014 /* MKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKAppDelegate.h; sourceTree = "<group>"; };
 		DC928AB616B32274009B6014 /* MKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKAppDelegate.m; sourceTree = "<group>"; };
-		DC928AB816B32274009B6014 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		DC928ABA16B32274009B6014 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		DC928ABC16B32275009B6014 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DC928ABF16B32275009B6014 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		DC928AC116B32275009B6014 /* MKFixtureController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKFixtureController.h; sourceTree = "<group>"; };
 		DC928AC216B32275009B6014 /* MKFixtureController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKFixtureController.m; sourceTree = "<group>"; };
@@ -237,7 +232,6 @@
 		DC928AD516B32D05009B6014 /* MKSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSettingsViewController.m; sourceTree = "<group>"; };
 		DC928AD716B33BD2009B6014 /* besiktas_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = besiktas_bg.jpg; sourceTree = "<group>"; };
 		DC928ADD16B34F6E009B6014 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		DC928AE316B35340009B6014 /* mackacta@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mackacta@2x.png"; sourceTree = "<group>"; };
 		DC928AE516B3534F009B6014 /* mackacta@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mackacta@2x.png"; sourceTree = "<group>"; };
 		DC928AE716B35377009B6014 /* mackacta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mackacta.png; sourceTree = "<group>"; };
 		DC928AE916B354D2009B6014 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -385,6 +379,7 @@
 				DC1DC4E616B9644700159CB5 /* cog_02@2x.png */,
 				DC1DC4E716B9644700159CB5 /* graph_bar_trend.png */,
 				DC1DC4E816B9644700159CB5 /* graph_bar_trend@2x.png */,
+				3667072A16ED609200A2D26A /* Türkiye-logo.png */,
 				369C1AEA16B99C91005AFE0E /* Galatasaray-logo.png */,
 				DC7DF06A16B9392200079BEA /* Kasımpaşa-logo.png */,
 				DC7DF06B16B9392200079BEA /* MP Antalyaspor-logo.png */,
@@ -403,15 +398,11 @@
 				DC7FE2B016B933D200C6C30A /* S.B. Elazığspor-logo.png */,
 				DC7FE2B116B933D200C6C30A /* Sivasspor-logo.png */,
 				DC7FE2B216B933D200C6C30A /* Trabzonspor-logo.png */,
-				DC928AE316B35340009B6014 /* mackacta@2x.png */,
 				DC928AD716B33BD2009B6014 /* besiktas_bg.jpg */,
 				DC928AAE16B32274009B6014 /* Maç Kaçta-Info.plist */,
 				DC928AAF16B32274009B6014 /* InfoPlist.strings */,
 				DC928AB216B32274009B6014 /* main.m */,
 				DC928AB416B32274009B6014 /* Maç Kaçta-Prefix.pch */,
-				DC928AB816B32274009B6014 /* Default.png */,
-				DC928ABA16B32274009B6014 /* Default@2x.png */,
-				DC928ABC16B32275009B6014 /* Default-568h@2x.png */,
 				369C1AEC16B9B399005AFE0E /* MyriadPro-Cond.otf */,
 				369C1AED16B9B399005AFE0E /* MyriadPro-Semibold.otf */,
 			);
@@ -471,13 +462,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC928AB116B32274009B6014 /* InfoPlist.strings in Resources */,
-				DC928AB916B32274009B6014 /* Default.png in Resources */,
-				DC928ABB16B32274009B6014 /* Default@2x.png in Resources */,
-				DC928ABD16B32275009B6014 /* Default-568h@2x.png in Resources */,
 				DC928AC016B32275009B6014 /* MainStoryboard.storyboard in Resources */,
 				DC928AD816B33BD2009B6014 /* besiktas_bg.jpg in Resources */,
 				DC928ADE16B34F6E009B6014 /* Default-568h@2x.png in Resources */,
-				DC928AE416B35340009B6014 /* mackacta@2x.png in Resources */,
 				DC928AE616B35350009B6014 /* mackacta@2x.png in Resources */,
 				DC928AE816B35377009B6014 /* mackacta.png in Resources */,
 				DC928AEA16B354D2009B6014 /* Default@2x.png in Resources */,
@@ -569,6 +556,7 @@
 				364AB6F316B9D814003E93F5 /* devam@2x.png in Resources */,
 				364AB6F616B9D8A8003E93F5 /* devam.png in Resources */,
 				36AC455416D0AE580065D038 /* Schalke 04-logo.png in Resources */,
+				3667072B16ED609200A2D26A /* Türkiye-logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

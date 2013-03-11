@@ -25,14 +25,13 @@ static gnLoadingView *_default = nil;
 {
     self = [super initWithFrame:frame];
     if (self) {
-        innerFrame = [[UIView alloc] initWithFrame:CGRectMake(130, 180, 60, 60)];
+        innerFrame = [[UIView alloc] initWithFrame:CGRectMake(140, 140, 40, 40)];
         innerFrame.backgroundColor = [UIColor colorWithRed:0.25 green:0.3 blue:0.35 alpha:0.8];
         innerFrame.layer.masksToBounds = YES;
         innerFrame.layer.cornerRadius = 10.0f;
-        label = [[UILabel alloc] initWithFrame:CGRectMake(0, 35, 80, 20)];
         
-        loader = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-        loader.frame = CGRectMake(10,10,40,40);
+        loader = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+        loader.frame = CGRectMake(0,0,40,40);
         //loader.backgroundColor = [UIColor redColor];
         [loader startAnimating];
         [loader setHidesWhenStopped:NO];
@@ -44,9 +43,8 @@ static gnLoadingView *_default = nil;
 }
 
 - (void)calculateFrameWithMessage:(NSString *)message {
-    CGSize size = [message sizeWithFont:[UIFont systemFontOfSize:10] constrainedToSize:CGSizeMake(100, 20) lineBreakMode:UILineBreakModeWordWrap];
     innerFrame = [[UIView alloc] initWithFrame:CGRectMake(0, 160, 320, 60)];
-    loader.frame = CGRectMake(10,10,60,60);
+    loader.frame = CGRectMake(0,0,40,40);
 }
 
 - (void) setLabel:(NSString *)message {

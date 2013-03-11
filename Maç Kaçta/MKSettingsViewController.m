@@ -61,6 +61,7 @@
         NSLog(@"yes");
         [[NSUserDefaults standardUserDefaults] setBool:false forKey:@"national"];
     }
+    [[NSUserDefaults standardUserDefaults] setValue:@"invalid" forKey:@"flag"];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enable) name:@"selected" object:nil];
 }
 
