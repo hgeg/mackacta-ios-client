@@ -23,12 +23,10 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    NSLog(@"entered");
-    if([[[NSUserDefaults standardUserDefaults] valueForKey:@"flags"] isEqualToString:@"valid"]) {
-        NSLog(@"invalid");
+    if([[[NSUserDefaults standardUserDefaults] valueForKey:@"flags"] isEqualToString:@"invalid"]) {
         [gnLoadingView showOnView:self.view];
         dispatch_async(queue, ^{
-            NSURL *URL = [NSURL URLWithString:@"http://54.235.244.172/ptable/spor-toto-super-lig/"];
+            NSURL *URL = [NSURL URLWithString:@"http://54.235.244.172/v1_0/ptable/spor-toto-super-lig/"];
             NSURLRequest *request = [NSURLRequest requestWithURL:URL];
             NSURLResponse *response = nil;
             NSError *error = nil;

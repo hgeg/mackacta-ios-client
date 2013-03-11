@@ -36,6 +36,7 @@
 
 -(void) viewDidAppear:(BOOL)animated {
     if(![[[NSUserDefaults standardUserDefaults] valueForKey:@"flag"] isEqualToString:@"valid"]) {
+        [[NSUserDefaults standardUserDefaults] setValue:@"invalid" forKey:@"flags"];
         offset = 0;
         [gnLoadingView showOnView:self.view];
         [self.scroller removeFromSuperview];
@@ -68,9 +69,9 @@
         [UIView commitAnimations];
         NSURL *URL;
         if([[NSUserDefaults standardUserDefaults] boolForKey:@"national"])
-            URL = [NSURL URLWithString:[[NSString stringWithFormat:@"http://localhost:8086/v1_0/match/%@/nationals:yes/",myTeam] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+            URL = [NSURL URLWithString:[[NSString stringWithFormat:@"http://54.235.244.172/v1_0/match/%@/nationals:yes/",myTeam] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         else
-            URL = [NSURL URLWithString:[[NSString stringWithFormat:@"http://localhost:8086/match/%@/",myTeam] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+            URL = [NSURL URLWithString:[[NSString stringWithFormat:@"http://54.235.244.172/v1_0/match/%@/",myTeam] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         NSURLRequest *request = [NSURLRequest requestWithURL:URL];
         NSURLResponse *response = nil;
         NSError *error = nil;
