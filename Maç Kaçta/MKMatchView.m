@@ -130,8 +130,8 @@
         [dateFormatter setDateFormat:formatString];
         
         NSCalendar* calendar = [NSCalendar currentCalendar];
-        NSDateComponents* comp1 = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:d]; // Get necessary date components
-        NSDateComponents* comp2 = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:[NSDate date]]; // Get necessary date components
+        NSDateComponents* comp1 = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit|NSHourCalendarUnit|NSMinuteCalendarUnit fromDate:d]; // Get necessary date components
+        NSDateComponents* comp2 = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit|NSHourCalendarUnit|NSMinuteCalendarUnit fromDate:[NSDate date]]; // Get necessary date components
         
         NSString *dateString;
         if(comp1.year == comp2.year && comp1.month==comp2.month) {
@@ -139,8 +139,12 @@
                 dateString = @"Bugün";
             }else if(comp1.day == comp2.day+1){
                 dateString = @"Yarın";
+            }else if(comp1.day == comp2.day-1){
+                dateString = @"Dün";
             }else dateString = [dateFormatter stringFromDate:d];
         }else dateString = [dateFormatter stringFromDate:d];
+        
+        NSLog(@"%d",comp1.hour);
         
         UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(0, yOffset, 280, 21)];
         date.font = [UIFont boldSystemFontOfSize:17];
@@ -149,17 +153,10 @@
         date.textAlignment = NSTextAlignmentCenter;
         [newView addSubview:date];
         NSString *timeString;
-        if ([dict[@"week"] integerValue]<=weekValue || (weekValue+1==[dict[@"week"] integerValue] && i>0) || cert) {
-            
-            formatString = [NSDateFormatter dateFormatFromTemplate:@"HH:mm" options:0 locale:tr];
-            [dateFormatter setDateFormat:formatString];
-            timeString = [dateFormatter stringFromDate:d];
-        }else {
-            formatString = [NSDateFormatter dateFormatFromTemplate:@"HH:mm" options:0 locale:tr];
-            [dateFormatter setDateFormat:formatString];
-            timeString = [dateFormatter stringFromDate:d];
-            /*timeString = @"--:--";
-            dateString = @"Tarih belli değil";*/
+        
+        if(((comp1.hour==0 || comp1.hour==2) && comp1.minute==0)) {
+            timeString = @"--:--";
+            dateString = @"Tarih belli değil";
         }
         
         date.text = dateString;

@@ -25,7 +25,7 @@ static gnLoadingView *_default = nil;
 {
     self = [super initWithFrame:frame];
     if (self) {
-        innerFrame = [[UIView alloc] initWithFrame:CGRectMake(140, 140, 40, 40)];
+        innerFrame = [[UIView alloc] initWithFrame:CGRectMake(140, 180, 40, 40)];
         innerFrame.backgroundColor = [UIColor colorWithRed:0.25 green:0.3 blue:0.35 alpha:0.8];
         innerFrame.layer.masksToBounds = YES;
         innerFrame.layer.cornerRadius = 10.0f;
@@ -43,7 +43,7 @@ static gnLoadingView *_default = nil;
 }
 
 - (void)calculateFrameWithMessage:(NSString *)message {
-    innerFrame = [[UIView alloc] initWithFrame:CGRectMake(0, 160, 320, 60)];
+    innerFrame = [[UIView alloc] initWithFrame:CGRectMake(0, 180, 320, 60)];
     loader.frame = CGRectMake(0,0,40,40);
 }
 

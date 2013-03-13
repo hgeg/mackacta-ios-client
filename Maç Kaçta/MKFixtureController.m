@@ -87,7 +87,7 @@
             dispatch_async(queue, ^{
                 [self performSelectorOnMainThread:@selector(generateView:) withObject:@{@"json":data[i],@"mySize":@[[NSString stringWithFormat:@"%f",mySize.width],[NSString stringWithFormat:@"%f",mySize.height]],@"i":[NSString stringWithFormat:@"%d",i ],@"scroller":scroller} waitUntilDone:NO];
             });
-            if(k==0 && [[dateFormat dateFromString:data[i][@"d"]] compare:[NSDate date]]==(NSOrderedDescending|NSOrderedSame)){
+            if(k==0 && [[[dateFormat dateFromString:data[i][@"d"]] dateByAddingTimeInterval:60*100] compare:[NSDate date]]==(NSOrderedDescending|NSOrderedSame)){
                 k=i;
             }
         }
@@ -99,6 +99,7 @@
         [self.scroller addGestureRecognizer:sliderTap];
         self.scroller.showsHorizontalScrollIndicator = false;
         [[NSUserDefaults standardUserDefaults] setValue:@"valid" forKey:@"flag"];
+        self.slider.maximumValue = [data count];
         self.scroller.contentSize = CGSizeMake(mySize.width*[data count], mySize.height);
         [self.scroller setContentOffset:CGPointMake(k*320, 0)];
     }
