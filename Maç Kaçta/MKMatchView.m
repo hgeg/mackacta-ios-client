@@ -95,7 +95,7 @@
         [dateFormat setDateFormat:@"dd/MM/yy HH:mm"];
         NSDate *d = [dateFormat dateFromString:dict[@"d"]];
     
-        if([d timeIntervalSinceNow]<-5400){
+        if([d timeIntervalSinceNow]<-60){
             UILabel *homeTeamScore = [[UILabel alloc] initWithFrame:CGRectMake(43, yOffset, 37, 38)];
             homeTeamScore.font = [UIFont boldSystemFontOfSize:43];
             homeTeamScore.backgroundColor = [UIColor clearColor];
@@ -152,11 +152,15 @@
         date.textColor = [UIColor whiteColor];
         date.textAlignment = NSTextAlignmentCenter;
         [newView addSubview:date];
-        NSString *timeString;
+        
+        formatString = [NSDateFormatter dateFormatFromTemplate:@"HH:mm" options:0 locale:tr];
+        [dateFormatter setDateFormat:formatString];
+        NSString *timeString = [dateFormatter stringFromDate:d];
+        
         
         if(((comp1.hour==0 || comp1.hour==2) && comp1.minute==0)) {
             timeString = @"--:--";
-            dateString = @"Tarih belli değil";
+            //dateString = @"Tarih belli değil";
         }
         
         date.text = dateString;
@@ -194,9 +198,16 @@
         channel.backgroundColor = [UIColor clearColor];
         channel.textColor = [UIColor whiteColor];
         channel.textAlignment = NSTextAlignmentCenter;
-        if([dict[@"league"] isEqualToString:@"sampiyonlar-ligi"])
+        if([dict[@"league"] isEqualToString:@"sampiyonlar-ligi"] || [dict[@"league"] isEqualToString:@"uefa-avrupa-ligi"]){
             channel.text = @"Star TV";
-        else
+            formatString = [NSDateFormatter dateFormatFromTemplate:@"HH:mm" options:0 locale:tr];
+            [dateFormatter setDateFormat:formatString];
+            NSDateComponents *offsetComponents = [[NSDateComponents alloc] init];
+            [offsetComponents setHour:-1];
+            d = [calendar dateByAddingComponents:offsetComponents toDate:d options:0];
+            timeString = [dateFormatter stringFromDate:d];
+            time.text = timeString;
+        }else
             channel.text = @"Lig TV";
         [newView addSubview:channel];
         
