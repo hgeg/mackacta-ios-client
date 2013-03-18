@@ -21,10 +21,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [gnLoadingView showOnView:self.view];
     queue = dispatch_queue_create("com.orkestra.mackacta.fixturequeue", nil);
-    sliderShown = true;
-    sLock = true;
+    sliderShown = false;
+    sLock = false;
     self.sliderBar.alpha=0;
     self.sliderBar.layer.masksToBounds = true;
     self.sliderBar.layer.cornerRadius = 4.0f;
@@ -38,6 +37,7 @@
 -(void) preChange {
     [gnLoadingView showOnView:self.view];
     [self.scroller removeFromSuperview];
+    [self viewDidAppear:true];
 }
 
 -(void) viewDidAppear:(BOOL)animated {
@@ -107,6 +107,7 @@
         self.scroller.contentSize = CGSizeMake(mySize.width*[data count], mySize.height);
         [self.scroller setContentOffset:CGPointMake(k*320, 0)];
     }
+    [gnLoadingView hideLoader];
 }
 
 -(IBAction)sliderChanged:(id)sender {
@@ -118,7 +119,7 @@
 -(IBAction)releaseSlider:(id)sender {sLock = false;}
 
 -(void)toggleSlider {
-    if(!sliderShown) {
+    /*if(!sliderShown) {
         self.sliderBar.hidden = false;
         [UIView animateWithDuration:0.3 animations:^{
             self.sliderBar.alpha = 1;
@@ -131,7 +132,7 @@
             self.sliderBar.hidden = true;
             sliderShown = false;
         }];
-    }
+    }*/
 }
 
 - (void)generateView:(NSObject *)pobj {

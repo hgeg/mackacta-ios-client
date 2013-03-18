@@ -53,7 +53,7 @@
         }else
             week.text = [NSString stringWithFormat:@"Spor Toto Süper Lig %@. hafta",dict[@"week"]];
         [newView addSubview:week];
-        yOffset += 35;
+        yOffset += 55;
         if(!IPHONE_5) yhOffset = 10;
         
         UIImageView *homeTeamBrand = [[UIImageView alloc] initWithFrame:CGRectMake(5, yOffset, 120, 117-yhOffset)];
@@ -193,7 +193,7 @@
         stage.adjustsFontSizeToFitWidth = true;
         yOffset += 22;
         
-        UILabel *channel = [[UILabel alloc] initWithFrame:CGRectMake(0, yOffset, 280, 21)];
+        /*UILabel *channel = [[UILabel alloc] initWithFrame:CGRectMake(0, yOffset, 280, 21)];
         channel.font = [UIFont systemFontOfSize:17];
         channel.backgroundColor = [UIColor clearColor];
         channel.textColor = [UIColor whiteColor];
@@ -202,7 +202,7 @@
             channel.text = @"Star TV";
         }else
             channel.text = @"Lig TV";
-        [newView addSubview:channel];
+        [newView addSubview:channel];*/
         
     }
     @catch (NSException *exception) {NSLog(@"%@",exception);}
