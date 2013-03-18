@@ -21,7 +21,7 @@
 		360860AD16F25D30003AEC1A /* Macaristan-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3608608C16F25D2D003AEC1A /* Macaristan-logo.png */; };
 		360860AE16F25D30003AEC1A /* Internazionale-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3608608D16F25D2D003AEC1A /* Internazionale-logo.png */; };
 		360860AF16F25D30003AEC1A /* Juventus-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3608608E16F25D2D003AEC1A /* Juventus-logo.png */; };
-		360860B016F25D30003AEC1A /* Lazio Roma-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3608608F16F25D2E003AEC1A /* Lazio Roma-logo.png */; };
+		360860B016F25D30003AEC1A /* Lazio-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3608608F16F25D2E003AEC1A /* Lazio-logo.png */; };
 		360860B116F25D30003AEC1A /* Levante UD-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3608609016F25D2E003AEC1A /* Levante UD-logo.png */; };
 		360860B216F25D30003AEC1A /* Málaga CF-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3608609116F25D2E003AEC1A /* Málaga CF-logo.png */; };
 		360860B316F25D30003AEC1A /* Manchester United-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3608609216F25D2E003AEC1A /* Manchester United-logo.png */; };
@@ -41,6 +41,7 @@
 		360860C216F26005003AEC1A /* Andorra-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 360860C116F25FFF003AEC1A /* Andorra-logo.png */; };
 		360860C416F260D2003AEC1A /* Estonya-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 360860C316F260CD003AEC1A /* Estonya-logo.png */; };
 		360860C616F260E5003AEC1A /* Hollanda-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 360860C516F260E4003AEC1A /* Hollanda-logo.png */; };
+		360860CA16F79818003AEC1A /* BATE-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 360860C916F79815003AEC1A /* BATE-logo.png */; };
 		3623C72E16B3F6F1007E5986 /* MKMatchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3623C72D16B3F6F1007E5986 /* MKMatchView.m */; };
 		364AB6E916B9BC21003E93F5 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 364AB6E816B9BC21003E93F5 /* check.png */; };
 		364AB6ED16B9BE04003E93F5 /* MKTeamListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 364AB6EC16B9BE04003E93F5 /* MKTeamListController.m */; };
@@ -163,7 +164,7 @@
 		3608608C16F25D2D003AEC1A /* Macaristan-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Macaristan-logo.png"; sourceTree = "<group>"; };
 		3608608D16F25D2D003AEC1A /* Internazionale-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Internazionale-logo.png"; sourceTree = "<group>"; };
 		3608608E16F25D2D003AEC1A /* Juventus-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Juventus-logo.png"; sourceTree = "<group>"; };
-		3608608F16F25D2E003AEC1A /* Lazio Roma-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lazio Roma-logo.png"; sourceTree = "<group>"; };
+		3608608F16F25D2E003AEC1A /* Lazio-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lazio-logo.png"; sourceTree = "<group>"; };
 		3608609016F25D2E003AEC1A /* Levante UD-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Levante UD-logo.png"; sourceTree = "<group>"; };
 		3608609116F25D2E003AEC1A /* Málaga CF-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Málaga CF-logo.png"; sourceTree = "<group>"; };
 		3608609216F25D2E003AEC1A /* Manchester United-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Manchester United-logo.png"; sourceTree = "<group>"; };
@@ -183,6 +184,7 @@
 		360860C116F25FFF003AEC1A /* Andorra-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Andorra-logo.png"; sourceTree = "<group>"; };
 		360860C316F260CD003AEC1A /* Estonya-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Estonya-logo.png"; sourceTree = "<group>"; };
 		360860C516F260E4003AEC1A /* Hollanda-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hollanda-logo.png"; sourceTree = "<group>"; };
+		360860C916F79815003AEC1A /* BATE-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BATE-logo.png"; sourceTree = "<group>"; };
 		3623C72C16B3F6F1007E5986 /* MKMatchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMatchView.h; sourceTree = "<group>"; };
 		3623C72D16B3F6F1007E5986 /* MKMatchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMatchView.m; sourceTree = "<group>"; };
 		364AB6E816B9BC21003E93F5 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
@@ -463,6 +465,7 @@
 				3608607F16F25D2C003AEC1A /* Schalke 04-logo.png */,
 				3608608016F25D2C003AEC1A /* AC Milan-logo.png */,
 				3608608216F25D2C003AEC1A /* Anzhi Makhachkala-logo.png */,
+				360860C916F79815003AEC1A /* BATE-logo.png */,
 				3608608316F25D2C003AEC1A /* Benfica-logo.png */,
 				3608608416F25D2C003AEC1A /* Borussia Dortmund-logo.png */,
 				360860C116F25FFF003AEC1A /* Andorra-logo.png */,
@@ -477,7 +480,7 @@
 				3608608C16F25D2D003AEC1A /* Macaristan-logo.png */,
 				3608608D16F25D2D003AEC1A /* Internazionale-logo.png */,
 				3608608E16F25D2D003AEC1A /* Juventus-logo.png */,
-				3608608F16F25D2E003AEC1A /* Lazio Roma-logo.png */,
+				3608608F16F25D2E003AEC1A /* Lazio-logo.png */,
 				3608609016F25D2E003AEC1A /* Levante UD-logo.png */,
 				3608609116F25D2E003AEC1A /* Málaga CF-logo.png */,
 				3608609216F25D2E003AEC1A /* Manchester United-logo.png */,
@@ -665,7 +668,7 @@
 				360860AD16F25D30003AEC1A /* Macaristan-logo.png in Resources */,
 				360860AE16F25D30003AEC1A /* Internazionale-logo.png in Resources */,
 				360860AF16F25D30003AEC1A /* Juventus-logo.png in Resources */,
-				360860B016F25D30003AEC1A /* Lazio Roma-logo.png in Resources */,
+				360860B016F25D30003AEC1A /* Lazio-logo.png in Resources */,
 				360860B116F25D30003AEC1A /* Levante UD-logo.png in Resources */,
 				360860B216F25D30003AEC1A /* Málaga CF-logo.png in Resources */,
 				360860B316F25D30003AEC1A /* Manchester United-logo.png in Resources */,
@@ -685,6 +688,7 @@
 				360860C216F26005003AEC1A /* Andorra-logo.png in Resources */,
 				360860C416F260D2003AEC1A /* Estonya-logo.png in Resources */,
 				360860C616F260E5003AEC1A /* Hollanda-logo.png in Resources */,
+				360860CA16F79818003AEC1A /* BATE-logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

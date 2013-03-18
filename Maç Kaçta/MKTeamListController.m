@@ -51,6 +51,7 @@
     } completion:^(BOOL finished) {
         [self.selected viewWithTag:2].hidden = true;
         self.selected = sel;
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"active" object:nil];
     }];
     }
 }

@@ -200,13 +200,6 @@
         channel.textAlignment = NSTextAlignmentCenter;
         if([dict[@"league"] isEqualToString:@"sampiyonlar-ligi"] || [dict[@"league"] isEqualToString:@"uefa-avrupa-ligi"]){
             channel.text = @"Star TV";
-            formatString = [NSDateFormatter dateFormatFromTemplate:@"HH:mm" options:0 locale:tr];
-            [dateFormatter setDateFormat:formatString];
-            NSDateComponents *offsetComponents = [[NSDateComponents alloc] init];
-            [offsetComponents setHour:-1];
-            d = [calendar dateByAddingComponents:offsetComponents toDate:d options:0];
-            timeString = [dateFormatter stringFromDate:d];
-            time.text = timeString;
         }else
             channel.text = @"Lig TV";
         [newView addSubview:channel];

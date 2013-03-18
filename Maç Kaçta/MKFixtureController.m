@@ -21,6 +21,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [gnLoadingView showOnView:self.view];
     queue = dispatch_queue_create("com.orkestra.mackacta.fixturequeue", nil);
     sliderShown = true;
     sLock = true;
@@ -31,15 +32,18 @@
     self.slider.value = 0;
     gLock = 2;
     offset = 0;
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewDidAppear:) name:@"active" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(preChange) name:@"active" object:nil];
+}
+
+-(void) preChange {
+    [gnLoadingView showOnView:self.view];
+    [self.scroller removeFromSuperview];
 }
 
 -(void) viewDidAppear:(BOOL)animated {
     if(![[[NSUserDefaults standardUserDefaults] valueForKey:@"flag"] isEqualToString:@"valid"]) {
         [[NSUserDefaults standardUserDefaults] setValue:@"invalid" forKey:@"flags"];
         offset = 0;
-        [gnLoadingView showOnView:self.view];
-        [self.scroller removeFromSuperview];
         
         sliderShown = false;
         sLock = false;
@@ -55,17 +59,17 @@
         self.scroller.delegate = self;
         self.scroller.pagingEnabled = true;
         [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationDuration:1.0];
-        [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
-        self.background.alpha = 0.0;
+            [UIView setAnimationDuration:1.0];
+            [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+            self.background.alpha = 0.0;
         [UIView commitAnimations];
         NSString *myTeam = [[NSUserDefaults standardUserDefaults] valueForKey:@"selectedTeam"];
         
         self.background.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@-bg.jpg",myTeam]];
         [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationDuration:1.0];
-        [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
-        self.background.alpha = 1.0;
+            [UIView setAnimationDuration:1.0];
+            [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+            self.background.alpha = 1.0;
         [UIView commitAnimations];
         NSURL *URL;
         if([[NSUserDefaults standardUserDefaults] boolForKey:@"national"])

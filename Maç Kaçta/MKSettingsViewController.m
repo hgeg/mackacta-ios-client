@@ -53,15 +53,13 @@
 }
 
 - (IBAction)showNationalMatches:(id)sender {
-    NSLog(@"Changed to");
     if (self.national.on) {
-        NSLog(@"no");
         [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"national"];
     }else{
-        NSLog(@"yes");
         [[NSUserDefaults standardUserDefaults] setBool:false forKey:@"national"];
     }
     [[NSUserDefaults standardUserDefaults] setValue:@"invalid" forKey:@"flag"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"active" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enable) name:@"selected" object:nil];
 }
 
