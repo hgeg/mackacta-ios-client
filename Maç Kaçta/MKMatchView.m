@@ -144,8 +144,6 @@
             }else dateString = [dateFormatter stringFromDate:d];
         }else dateString = [dateFormatter stringFromDate:d];
         
-        NSLog(@"%d",comp1.hour);
-        
         UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(0, yOffset, 280, 21)];
         date.font = [UIFont boldSystemFontOfSize:17];
         date.backgroundColor = [UIColor clearColor];

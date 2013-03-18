@@ -49,6 +49,7 @@
     [[NSUserDefaults standardUserDefaults] setValue:@"invalid" forKey:@"flags"];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"active" object:self];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"active2" object:self];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

@@ -32,12 +32,12 @@
     gLock = 2;
     offset = 0;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(preChange) name:@"active" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewDidAppear:) name:@"active2" object:nil];
 }
 
 -(void) preChange {
     [gnLoadingView showOnView:self.view];
     [self.scroller removeFromSuperview];
-    [self viewDidAppear:true];
 }
 
 -(void) viewDidAppear:(BOOL)animated {
@@ -107,7 +107,9 @@
         self.scroller.contentSize = CGSizeMake(mySize.width*[data count], mySize.height);
         [self.scroller setContentOffset:CGPointMake(k*320, 0)];
     }
-    [gnLoadingView hideLoader];
+    dispatch_sync(queue, ^{
+     [gnLoadingView hideLoader];
+    });
 }
 
 -(IBAction)sliderChanged:(id)sender {
