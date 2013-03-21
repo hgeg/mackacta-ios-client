@@ -124,7 +124,7 @@
         if(!IPHONE_5) yOffset -= 20;
         
         NSLocale *tr = [[NSLocale alloc] initWithLocaleIdentifier:@"tr_TR"];
-        NSString *formatString = [NSDateFormatter dateFormatFromTemplate:@"EEEE, dd MMMM yyyy" options:0 locale:tr];
+        NSString *formatString = [NSDateFormatter dateFormatFromTemplate:@"EEEE, d MMMM yyyy" options:0 locale:tr];
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
         [dateFormatter setDateFormat:formatString];
@@ -158,7 +158,7 @@
         
         if(((comp1.hour==0 || comp1.hour==2) && comp1.minute==0)) {
             timeString = @"--:--";
-            //dateString = @"Tarih belli değil";
+            //dateString = [NSString stringWithFormat:@"%@ Haftası",dateString];
         }
         
         date.text = dateString;
@@ -179,7 +179,7 @@
         stage.backgroundColor = [UIColor clearColor];
         stage.textColor = [UIColor whiteColor];
         stage.textAlignment = NSTextAlignmentCenter;
-        if([dict[@"stage"] isEqualToString:@""])
+        if([dict[@"stage"] isEqualToString:@"N/A"])
             stage.text = @"";
         else if([dict[@"stage"] rangeOfString:@"Arena"].location == NSNotFound &&
            [dict[@"stage"] rangeOfString:@"Stadı"].location == NSNotFound &&

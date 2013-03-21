@@ -21,6 +21,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    _accountStore = [[ACAccountStore alloc] init];
+    
     queue = dispatch_queue_create("com.orkestra.mackacta.fixturequeue", nil);
     sliderShown = false;
     sLock = false;
@@ -44,6 +47,8 @@
     if(![[[NSUserDefaults standardUserDefaults] valueForKey:@"flag"] isEqualToString:@"valid"]) {
         [[NSUserDefaults standardUserDefaults] setValue:@"invalid" forKey:@"flags"];
         offset = 0;
+        self.fbShare.alpha = 0;
+        self.twShare.alpha = 0;
         
         sliderShown = false;
         sLock = false;
@@ -63,7 +68,7 @@
             [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
             self.background.alpha = 0.0;
         [UIView commitAnimations];
-        NSString *myTeam = [[NSUserDefaults standardUserDefaults] valueForKey:@"selectedTeam"];
+        myTeam = [[NSUserDefaults standardUserDefaults] valueForKey:@"selectedTeam"];
         
         self.background.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@-bg.jpg",myTeam]];
         [UIView beginAnimations:nil context:nil];
@@ -72,6 +77,7 @@
             self.background.alpha = 1.0;
         [UIView commitAnimations];
         NSURL *URL;
+        //54.235.244.172
         if([[NSUserDefaults standardUserDefaults] boolForKey:@"national"])
             URL = [NSURL URLWithString:[[NSString stringWithFormat:@"http://54.235.244.172/v1_0/match/%@/nationals:yes/",myTeam] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         else
@@ -106,9 +112,17 @@
         self.slider.maximumValue = [data count];
         self.scroller.contentSize = CGSizeMake(mySize.width*[data count], mySize.height);
         [self.scroller setContentOffset:CGPointMake(k*320, 0)];
+        [self.view bringSubviewToFront:self.twShare];
+        [self.view bringSubviewToFront:self.fbShare];
     }
     dispatch_sync(queue, ^{
-     [gnLoadingView hideLoader];
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:1.0];
+            self.background.alpha = 1.0;
+            self.fbShare.alpha = 1;
+            self.twShare.alpha = 1;
+        [UIView commitAnimations];
+        [gnLoadingView hideLoader];
     });
 }
 
@@ -161,4 +175,70 @@
         self.slider.value = scrollView.contentOffset.x*1.0/((34-1)*320);
     }
 }
+
+-(IBAction)twitter:(id)sender {
+    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+        SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        SLComposeViewControllerCompletionHandler myBlock = ^(SLComposeViewControllerResult result){
+            //if (result == SLComposeViewControllerResultCancelled) {} else{}
+            [controller dismissViewControllerAnimated:YES completion:^{
+                [UIView animateWithDuration:0.2 animations:^{
+                    self.fbShare.alpha = 1;
+                    self.twShare.alpha = 1;
+                }];
+            }];
+        };
+        controller.completionHandler = myBlock;
+        
+        self.fbShare.alpha = 0;
+        self.twShare.alpha = 0;
+        
+        [controller setInitialText:[NSString stringWithFormat:@"#%@ #MaçKaçta ",myTeam]];
+        //[controller addURL:[NSURL URLWithString:@"http://www.google.com"]];
+        UIGraphicsBeginImageContext(self.view.frame.size);
+        [[self.view layer] renderInContext:UIGraphicsGetCurrentContext()];
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        image = [UIImage imageWithCGImage:CGImageCreateWithImageInRect([image CGImage], CGRectMake(16, 16, 288, self.view.frame.size.height-32))];
+        UIGraphicsEndImageContext();
+        [controller addImage:image];
+        [self presentViewController:controller animated:YES completion:nil];
+    }
+}
+
+
+-(IBAction)facebook:(id)sender{
+    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+        SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        SLComposeViewControllerCompletionHandler myBlock = ^(SLComposeViewControllerResult result){
+            //if (result == SLComposeViewControllerResultCancelled) {} else{}
+            [controller dismissViewControllerAnimated:YES completion:^{
+                [controller dismissViewControllerAnimated:YES completion:^{
+                    [UIView animateWithDuration:0.2 animations:^{
+                        self.fbShare.alpha = 1;
+                        self.twShare.alpha = 1;
+                    }];
+                }];
+            }];
+        };
+        controller.completionHandler = myBlock;
+        
+        self.fbShare.alpha = 0;
+        self.twShare.alpha = 0;
+        
+        [controller setInitialText:@""];
+        //[controller addURL:[NSURL URLWithString:@"http://www.google.com"]];
+        UIGraphicsBeginImageContext(self.view.frame.size);
+        [[self.view layer] renderInContext:UIGraphicsGetCurrentContext()];
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        image = [UIImage imageWithCGImage:CGImageCreateWithImageInRect([image CGImage], CGRectMake(16, 16, 288, self.view.frame.size.height-32))];
+        UIGraphicsEndImageContext();
+        [controller addImage:image];
+        [self presentViewController:controller animated:YES completion:nil];
+    }
+}
+
+
+
+
+
 @end

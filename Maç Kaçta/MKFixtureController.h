@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 #import "MKMatchView.h"
+#import <Accounts/Accounts.h>
+#import <Twitter/Twitter.h>
 
-@interface MKFixtureController : UIViewController <UIScrollViewDelegate>
+@interface MKFixtureController : UIViewController <UIScrollViewDelegate, UIActionSheetDelegate>
 {
     int sliderShown;
     BOOL sLock;
@@ -19,7 +21,11 @@
     int offset;
     int previndex;
     dispatch_queue_t queue;
+    NSString *myTeam;
 }
+
+@property (nonatomic, strong) ACAccountStore *accountStore;
+
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 @property (weak, nonatomic) IBOutlet MKMatchView *matchView;
 @property (weak, nonatomic) IBOutlet UIView *sliderBar;
@@ -27,9 +33,14 @@
 @property (strong, nonatomic) IBOutlet UIScrollView *scroller;
 @property (strong, nonatomic) IBOutlet NSMutableArray *matches;
 @property (weak, nonatomic) IBOutlet UIImageView *background;
+@property (weak, nonatomic) IBOutlet UIButton *fbShare;
+@property (weak, nonatomic) IBOutlet UIButton *twShare;
 
 -(IBAction)sliderChanged:(id)sender;
 -(IBAction)lockSlider:(id)sender;
 -(IBAction)releaseSlider:(id)sender;
+
+-(IBAction)twitter:(id)sender;
+-(IBAction)facebook:(id)sender;
 
 @end

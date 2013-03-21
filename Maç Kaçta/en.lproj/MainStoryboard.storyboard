@@ -36,13 +36,51 @@
                                     <constraint firstItem="Wit-IN-4db" firstAttribute="centerY" secondItem="ooN-03-hN5" secondAttribute="centerY" type="default" id="gWx-yy-Sjv"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyH-ee-fQs">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="IM5-V8-vYq"/>
+                                    <constraint firstAttribute="height" constant="40" id="mYb-hg-Q5f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="facebook.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="facebook:" destination="2" eventType="touchUpInside" id="cbr-DT-Myd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwj-Ib-NB7">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Luc-V0-nr6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="twitter.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="twitter:" destination="2" eventType="touchUpInside" id="aC1-yM-Z5a"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ooN-03-hN5" firstAttribute="top" secondItem="16" secondAttribute="top" constant="453" id="22E-9x-ejr"/>
+                            <constraint firstItem="zwj-Ib-NB7" firstAttribute="trailing" secondItem="zyH-ee-fQs" secondAttribute="trailing" type="default" id="2NY-7S-3wR"/>
+                            <constraint firstAttribute="trailing" secondItem="zyH-ee-fQs" secondAttribute="trailing" constant="6" id="2Xn-LR-9ic"/>
                             <constraint firstItem="dkH-4a-1me" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="5Ak-el-kxn"/>
                             <constraint firstAttribute="bottom" secondItem="ooN-03-hN5" secondAttribute="bottom" priority="1" constant="10" type="user" id="7bw-o4-4b2"/>
                             <constraint firstItem="dkH-4a-1me" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="CIf-On-rCb"/>
+                            <constraint firstItem="zwj-Ib-NB7" firstAttribute="top" secondItem="16" secondAttribute="top" constant="44" id="DxA-hl-Zvf"/>
+                            <constraint firstItem="zyH-ee-fQs" firstAttribute="top" secondItem="16" secondAttribute="top" constant="4" id="K9M-Hj-lRb"/>
+                            <constraint firstItem="zwj-Ib-NB7" firstAttribute="leading" secondItem="zyH-ee-fQs" secondAttribute="leading" type="default" id="Lj4-cY-HVv"/>
                             <constraint firstItem="dkH-4a-1me" firstAttribute="bottom" secondItem="16" secondAttribute="bottom" type="default" id="POS-iV-6y4"/>
                             <constraint firstItem="dkH-4a-1me" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="V24-wn-2Av"/>
                             <constraint firstAttribute="trailing" secondItem="ooN-03-hN5" secondAttribute="trailing" constant="56" id="jON-ZR-a2d"/>
@@ -55,8 +93,10 @@
                     <connections>
                         <outlet property="background" destination="dkH-4a-1me" id="LnG-mg-MAc"/>
                         <outlet property="backgroundImage" destination="dkH-4a-1me" id="UhZ-h6-WDy"/>
+                        <outlet property="fbShare" destination="zyH-ee-fQs" id="5OZ-9z-J70"/>
                         <outlet property="slider" destination="Wit-IN-4db" id="JeR-Gi-zfB"/>
                         <outlet property="sliderBar" destination="ooN-03-hN5" id="46Z-6U-jBp"/>
+                        <outlet property="twShare" destination="zwj-Ib-NB7" id="pi9-OH-dgb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
@@ -1362,23 +1402,29 @@
         <image name="check.png" width="28" height="22"/>
         <image name="cog_02.png" width="26" height="26"/>
         <image name="devam.png" width="275" height="43"/>
+        <image name="facebook.png" width="32" height="32"/>
         <image name="graph_bar_trend.png" width="26" height="26"/>
+        <image name="twitter.png" width="32" height="32"/>
         <image name="ust_bar.png" width="640" height="51"/>
     </resources>
     <classes>
         <class className="MKFixtureController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MKFixtureController.h"/>
             <relationships>
+                <relationship kind="action" name="facebook:"/>
                 <relationship kind="action" name="lockSlider:"/>
                 <relationship kind="action" name="releaseSlider:"/>
                 <relationship kind="action" name="sliderChanged:"/>
+                <relationship kind="action" name="twitter:"/>
                 <relationship kind="outlet" name="background" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="backgroundImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="fbShare" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="matchView" candidateClass="MKMatchView"/>
                 <relationship kind="outlet" name="matches" candidateClass="NSMutableArray"/>
                 <relationship kind="outlet" name="scroller" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="slider" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="sliderBar" candidateClass="UIView"/>
+                <relationship kind="outlet" name="twShare" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="MKMatchView" superclassName="UIView">
