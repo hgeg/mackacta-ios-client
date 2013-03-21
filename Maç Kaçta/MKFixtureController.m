@@ -27,6 +27,7 @@
     queue = dispatch_queue_create("com.orkestra.mackacta.fixturequeue", nil);
     sliderShown = false;
     sLock = false;
+    scroller.delegate = self;
     self.sliderBar.alpha=0;
     self.sliderBar.layer.masksToBounds = true;
     self.sliderBar.layer.cornerRadius = 4.0f;
@@ -41,6 +42,8 @@
 -(void) preChange {
     [gnLoadingView showOnView:self.view];
     [self.scroller removeFromSuperview];
+    self.fbShare.alpha = 0;
+    self.twShare.alpha = 0;
 }
 
 -(void) viewDidAppear:(BOOL)animated {
@@ -89,7 +92,7 @@
                                                      returningResponse:&response
                                                                  error:&error];
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:nil];
-        NSArray *data = json[@"data"];
+        data = json[@"data"];
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
         [dateFormat setDateFormat:@"dd/MM/yy HH:mm"];
         int k = 0;
@@ -117,7 +120,7 @@
     }
     dispatch_sync(queue, ^{
         [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationDuration:1.0];
+        [UIView setAnimationDuration:0.3];
             self.background.alpha = 1.0;
             self.fbShare.alpha = 1;
             self.twShare.alpha = 1;
@@ -181,25 +184,28 @@
         SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
         SLComposeViewControllerCompletionHandler myBlock = ^(SLComposeViewControllerResult result){
             //if (result == SLComposeViewControllerResultCancelled) {} else{}
-            [controller dismissViewControllerAnimated:YES completion:^{
-                [UIView animateWithDuration:0.2 animations:^{
-                    self.fbShare.alpha = 1;
-                    self.twShare.alpha = 1;
-                }];
+            [UIView animateWithDuration:0.2 animations:^{
+                self.fbShare.alpha = 1;
+                self.twShare.alpha = 1;
             }];
+            [controller dismissViewControllerAnimated:YES completion:nil];
         };
         controller.completionHandler = myBlock;
         
         self.fbShare.alpha = 0;
         self.twShare.alpha = 0;
         
-        [controller setInitialText:[NSString stringWithFormat:@"#%@ #MaçKaçta ",myTeam]];
+        if([data[(int)(scroller.contentOffset.x/320)][@"home"] isEqualToString:@"Türkiye"] || [data[(int)(scroller.contentOffset.x/320)][@"away"] isEqualToString:@"Türkiye"])
+            [controller setInitialText:[NSString stringWithFormat:@"#Türkiyem #MaçKaçta "]];
+        else
+            [controller setInitialText:[NSString stringWithFormat:@"#%@ #MaçKaçta ",myTeam]];
         //[controller addURL:[NSURL URLWithString:@"http://www.google.com"]];
-        UIGraphicsBeginImageContext(self.view.frame.size);
+        
+        UIGraphicsBeginImageContextWithOptions(self.view.frame.size,NO,0.0);
         [[self.view layer] renderInContext:UIGraphicsGetCurrentContext()];
         UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-        image = [UIImage imageWithCGImage:CGImageCreateWithImageInRect([image CGImage], CGRectMake(16, 16, 288, self.view.frame.size.height-32))];
         UIGraphicsEndImageContext();
+        
         [controller addImage:image];
         [self presentViewController:controller animated:YES completion:nil];
     }
@@ -211,14 +217,11 @@
         SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
         SLComposeViewControllerCompletionHandler myBlock = ^(SLComposeViewControllerResult result){
             //if (result == SLComposeViewControllerResultCancelled) {} else{}
-            [controller dismissViewControllerAnimated:YES completion:^{
-                [controller dismissViewControllerAnimated:YES completion:^{
-                    [UIView animateWithDuration:0.2 animations:^{
-                        self.fbShare.alpha = 1;
-                        self.twShare.alpha = 1;
-                    }];
-                }];
+            [UIView animateWithDuration:0.2 animations:^{
+                self.fbShare.alpha = 1;
+                self.twShare.alpha = 1;
             }];
+            [controller dismissViewControllerAnimated:YES completion:nil];
         };
         controller.completionHandler = myBlock;
         
@@ -227,10 +230,10 @@
         
         [controller setInitialText:@""];
         //[controller addURL:[NSURL URLWithString:@"http://www.google.com"]];
-        UIGraphicsBeginImageContext(self.view.frame.size);
+        UIGraphicsBeginImageContextWithOptions(self.view.frame.size,NO,0.0);
         [[self.view layer] renderInContext:UIGraphicsGetCurrentContext()];
         UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-        image = [UIImage imageWithCGImage:CGImageCreateWithImageInRect([image CGImage], CGRectMake(16, 16, 288, self.view.frame.size.height-32))];
+        //image = [UIImage imageWithCGImage:CGImageCreateWithImageInRect([image CGImage], CGRectMake(16, 16, 288, self.view.frame.size.height-32))];
         UIGraphicsEndImageContext();
         [controller addImage:image];
         [self presentViewController:controller animated:YES completion:nil];

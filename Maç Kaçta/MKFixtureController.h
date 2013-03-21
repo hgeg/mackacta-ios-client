@@ -22,6 +22,7 @@
     int previndex;
     dispatch_queue_t queue;
     NSString *myTeam;
+    NSArray *data;
 }
 
 @property (nonatomic, strong) ACAccountStore *accountStore;
