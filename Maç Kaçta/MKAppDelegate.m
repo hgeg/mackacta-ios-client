@@ -14,7 +14,7 @@
 {
     // Override point for customization after application launch.
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil];
-    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"national"]){[[NSUserDefaults standardUserDefaults] setBool:false forKey:@"national"];
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"national"]){[[NSUserDefaults standardUserDefaults] setBool:true forKey:@"national"];
     }
     if(![[NSUserDefaults standardUserDefaults] valueForKey:@"selectedTeam"]){
         UIViewController* mainViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"selection"];

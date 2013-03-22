@@ -33,7 +33,6 @@
 		360860B916F25D30003AEC1A /* Shakhtar Donetsk-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3608609816F25D2E003AEC1A /* Shakhtar Donetsk-logo.png */; };
 		360860BA16F25D30003AEC1A /* Steaua Bucuresti-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3608609916F25D2F003AEC1A /* Steaua Bucuresti-logo.png */; };
 		360860BB16F25D30003AEC1A /* Tottenham Hotspur-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3608609A16F25D2F003AEC1A /* Tottenham Hotspur-logo.png */; };
-		360860BC16F25D30003AEC1A /* Turkiye-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3608609B16F25D30003AEC1A /* Turkiye-logo.png */; };
 		360860BD16F25D30003AEC1A /* Valencia-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3608609C16F25D30003AEC1A /* Valencia-logo.png */; };
 		360860BE16F25D30003AEC1A /* VfB Stuttgart-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3608609D16F25D30003AEC1A /* VfB Stuttgart-logo.png */; };
 		360860BF16F25D30003AEC1A /* Viktoria Plzen-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3608609E16F25D30003AEC1A /* Viktoria Plzen-logo.png */; };
@@ -51,6 +50,7 @@
 		3668938D16FB873E003981A0 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 3668938B16FB873E003981A0 /* facebook.png */; };
 		3668938F16FB8E96003981A0 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3668938E16FB8E96003981A0 /* Accounts.framework */; };
 		3668939116FB8E9D003981A0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3668939016FB8E9D003981A0 /* Social.framework */; };
+		3680632C16FCAAF900F040B9 /* Türkiye-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3680632B16FCAAF900F040B9 /* Türkiye-logo.png */; };
 		369C1AE416B9888A005AFE0E /* gnLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 369C1AE216B9876F005AFE0E /* gnLoadingView.m */; };
 		369C1AEB16B99C91005AFE0E /* Galatasaray-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 369C1AEA16B99C91005AFE0E /* Galatasaray-logo.png */; };
 		369C1AEF16B9B489005AFE0E /* cell_arkaplan_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 369C1AEE16B9B489005AFE0E /* cell_arkaplan_settings.png */; };
@@ -180,7 +180,6 @@
 		3608609816F25D2E003AEC1A /* Shakhtar Donetsk-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shakhtar Donetsk-logo.png"; sourceTree = "<group>"; };
 		3608609916F25D2F003AEC1A /* Steaua Bucuresti-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Steaua Bucuresti-logo.png"; sourceTree = "<group>"; };
 		3608609A16F25D2F003AEC1A /* Tottenham Hotspur-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tottenham Hotspur-logo.png"; sourceTree = "<group>"; };
-		3608609B16F25D30003AEC1A /* Turkiye-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Turkiye-logo.png"; sourceTree = "<group>"; };
 		3608609C16F25D30003AEC1A /* Valencia-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Valencia-logo.png"; sourceTree = "<group>"; };
 		3608609D16F25D30003AEC1A /* VfB Stuttgart-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VfB Stuttgart-logo.png"; sourceTree = "<group>"; };
 		3608609E16F25D30003AEC1A /* Viktoria Plzen-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viktoria Plzen-logo.png"; sourceTree = "<group>"; };
@@ -200,6 +199,7 @@
 		3668938B16FB873E003981A0 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		3668938E16FB8E96003981A0 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		3668939016FB8E9D003981A0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		3680632B16FCAAF900F040B9 /* Türkiye-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Türkiye-logo.png"; sourceTree = "<group>"; };
 		369C1AE116B9876F005AFE0E /* gnLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gnLoadingView.h; sourceTree = "<group>"; };
 		369C1AE216B9876F005AFE0E /* gnLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gnLoadingView.m; sourceTree = "<group>"; };
 		369C1AEA16B99C91005AFE0E /* Galatasaray-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Galatasaray-logo.png"; sourceTree = "<group>"; };
@@ -501,12 +501,12 @@
 				3608609316F25D2E003AEC1A /* Newcastle United-logo.png */,
 				3608609416F25D2E003AEC1A /* Paris Saint Germain-logo.png */,
 				3608609516F25D2E003AEC1A /* Real Madrid-logo.png */,
+				3680632B16FCAAF900F040B9 /* Türkiye-logo.png */,
 				3608609616F25D2E003AEC1A /* Romanya-logo.png */,
 				3608609716F25D2E003AEC1A /* Rubin Kazan-logo.png */,
 				3608609816F25D2E003AEC1A /* Shakhtar Donetsk-logo.png */,
 				3608609916F25D2F003AEC1A /* Steaua Bucuresti-logo.png */,
 				3608609A16F25D2F003AEC1A /* Tottenham Hotspur-logo.png */,
-				3608609B16F25D30003AEC1A /* Turkiye-logo.png */,
 				3608609C16F25D30003AEC1A /* Valencia-logo.png */,
 				3608609D16F25D30003AEC1A /* VfB Stuttgart-logo.png */,
 				3608609E16F25D30003AEC1A /* Viktoria Plzen-logo.png */,
@@ -694,7 +694,6 @@
 				360860B916F25D30003AEC1A /* Shakhtar Donetsk-logo.png in Resources */,
 				360860BA16F25D30003AEC1A /* Steaua Bucuresti-logo.png in Resources */,
 				360860BB16F25D30003AEC1A /* Tottenham Hotspur-logo.png in Resources */,
-				360860BC16F25D30003AEC1A /* Turkiye-logo.png in Resources */,
 				360860BD16F25D30003AEC1A /* Valencia-logo.png in Resources */,
 				360860BE16F25D30003AEC1A /* VfB Stuttgart-logo.png in Resources */,
 				360860BF16F25D30003AEC1A /* Viktoria Plzen-logo.png in Resources */,
@@ -705,6 +704,7 @@
 				360860CA16F79818003AEC1A /* BATE-logo.png in Resources */,
 				3668938C16FB873E003981A0 /* twitter.png in Resources */,
 				3668938D16FB873E003981A0 /* facebook.png in Resources */,
+				3680632C16FCAAF900F040B9 /* Türkiye-logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

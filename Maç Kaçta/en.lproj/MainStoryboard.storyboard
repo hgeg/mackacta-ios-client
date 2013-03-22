@@ -142,7 +142,7 @@
                                     <constraint firstAttribute="width" constant="260" id="frb-bP-uhU"/>
                                 </constraints>
                             </imageView>
-                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KOq-pW-fOP">
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KOq-pW-fOP">
                                 <color key="onTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="showNationalMatches:" destination="LxU-aE-YqT" eventType="valueChanged" id="dKc-H1-j99"/>
