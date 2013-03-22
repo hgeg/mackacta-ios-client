@@ -29,7 +29,7 @@
 + (MKMatchView *) generateWithObject:(NSDictionary *)dict week:(NSUInteger) weekValue size:(CGSize) mySize andOffset:(NSUInteger) i {
     int yOffset = 11;
     int yhOffset = 0;
-    MKMatchView * newView = [[MKMatchView alloc] initWithFrame:CGRectMake(20+i*mySize.width, 20, mySize.width-40, mySize.height-40)];
+    MKMatchView * newView = [[MKMatchView alloc] initWithFrame:CGRectMake(20+i*mySize.width, 20, mySize.width-40, mySize.height-70)];
     newView.backgroundColor = [UIColor colorWithRed:0.1 green:0.12 blue:0.12 alpha:0.7];
     newView.layer.masksToBounds = YES;
     newView.layer.cornerRadius = 4.0f;
@@ -53,7 +53,7 @@
         }else
             week.text = [NSString stringWithFormat:@"Spor Toto Süper Lig %@. hafta",dict[@"week"]];
         [newView addSubview:week];
-        yOffset += 55;
+        yOffset += 35;
         if(!IPHONE_5) yhOffset = 10;
         
         UIImageView *homeTeamBrand = [[UIImageView alloc] initWithFrame:CGRectMake(5, yOffset, 120, 117-yhOffset)];
@@ -87,7 +87,7 @@
         awayTeamName.adjustsFontSizeToFitWidth = true;
         awayTeamName.text = dict[@"away"];
         [newView addSubview:awayTeamName];
-        yOffset += 123;
+        yOffset += 113;
         
         if(!IPHONE_5) yOffset -= 60;
         
@@ -182,8 +182,8 @@
         if([dict[@"stage"] isEqualToString:@"N/A"])
             stage.text = @"";
         else if([dict[@"stage"] rangeOfString:@"Arena"].location == NSNotFound &&
-           [dict[@"stage"] rangeOfString:@"Stadı"].location == NSNotFound &&
-           [dict[@"stage"] rangeOfString:@"Stadyumu"].location == NSNotFound)
+           [dict[@"stage"] rangeOfString:@"stad"].location == NSNotFound &&
+           [dict[@"stage"] rangeOfString:@"Stad"].location == NSNotFound)
             stage.text = [NSString stringWithFormat:@"%@ Stadyumu",dict[@"stage"]];
         else
             stage.text = dict[@"stage"];
