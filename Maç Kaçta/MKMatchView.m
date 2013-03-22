@@ -131,11 +131,18 @@
         
         NSCalendar* calendar = [NSCalendar currentCalendar];
         NSDateComponents* comp1 = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit|NSHourCalendarUnit|NSMinuteCalendarUnit fromDate:d]; // Get necessary date components
-        NSDateComponents* comp2 = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit|NSHourCalendarUnit|NSMinuteCalendarUnit fromDate:[NSDate date]]; // Get necessary date components
+        NSDateComponents* comp2 = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit|NSHourCalendarUnit|NSMinuteCalendarUnit fromDate:[NSDate date]];
         
         NSString *dateString;
+        NSDateComponents* comp3 = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit|NSHourCalendarUnit|NSMinuteCalendarUnit|NSSecondCalendarUnit fromDate:[NSDate date]];
         if(comp1.year == comp2.year && comp1.month==comp2.month) {
             if (comp1.day == comp2.day) {
+                comp3.hour=10;
+                comp3.minute=0;
+                NSDate *alarmdate = [calendar dateFromComponents:comp3];
+                formatString = [NSDateFormatter dateFormatFromTemplate:@"HH:mm" options:0 locale:tr];
+                [dateFormatter setDateFormat:formatString];
+                [MKMatchView scheduleAlarmWithDate:alarmdate andMessage:[NSString stringWithFormat:@"%@ - %@ maçı bugün. Başlama saati: %@",homeTeamName.text,awayTeamName.text,[dateFormatter stringFromDate:d]]];
                 dateString = @"Bugün";
             }else if(comp1.day == comp2.day+1){
                 dateString = @"Yarın";
@@ -215,5 +222,24 @@
     // Drawing code
 }
 */
+
++(void) scheduleAlarmWithDate:(NSDate *)date andMessage:(NSString *)message {
+    NSLog(@"Started: %@ -> %@",date,message);
+    UILocalNotification *localNotif = [[UILocalNotification alloc] init];
+    if (localNotif == nil)
+        return;
+    localNotif.fireDate = date;// this sets when notification will be called.
+    // Notification details
+    localNotif.alertBody = message;// this shows the alert box with message.
+    // Set the action button
+    
+    localNotif.alertAction = @"View";
+    localNotif.soundName = UILocalNotificationDefaultSoundName;
+    localNotif.applicationIconBadgeNumber += 1;
+    // Schedule the notification
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
+    NSLog(@"finished: %@ -> %@",date,message);
+}
+
 
 @end

@@ -201,7 +201,7 @@
             [controller setInitialText:[NSString stringWithFormat:@"#%@ @mackactanet ",myTeam]];
         //[controller addURL:[NSURL URLWithString:@"http://www.google.com"]];
         
-        UIGraphicsBeginImageContextWithOptions(CGSizeMake(320, self.view.frame.size.height-60),NO,0.0);
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(320, self.view.frame.size.height-40),NO,0.0);
         [[self.view layer] renderInContext:UIGraphicsGetCurrentContext()];
         UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
@@ -230,7 +230,7 @@
         
         [controller setInitialText:@""];
         //[controller addURL:[NSURL URLWithString:@"http://www.google.com"]];
-        UIGraphicsBeginImageContextWithOptions(CGSizeMake(320, self.view.frame.size.height-60),NO,0.0);
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(320, self.view.frame.size.height-40),NO,0.0);
         [[self.view layer] renderInContext:UIGraphicsGetCurrentContext()];
         UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
         //image = [UIImage imageWithCGImage:CGImageCreateWithImageInRect([image CGImage], CGRectMake(16, 16, 288, self.view.frame.size.height-32))];
@@ -239,9 +239,4 @@
         [self presentViewController:controller animated:YES completion:nil];
     }
 }
-
-
-
-
-
 @end
