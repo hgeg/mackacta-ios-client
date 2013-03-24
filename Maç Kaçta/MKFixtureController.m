@@ -73,6 +73,11 @@
         [UIView commitAnimations];
         myTeam = [[NSUserDefaults standardUserDefaults] valueForKey:@"selectedTeam"];
         
+        // When users indicate they are Giants fans, we subscribe them to that channel.
+        PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+        [currentInstallation addUniqueObject:[[NSString alloc] initWithData:[myTeam dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES] encoding:NSASCIIStringEncoding] forKey:@"channels"];
+        [currentInstallation saveInBackground];
+        
         self.background.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@-bg.jpg",myTeam]];
         [UIView beginAnimations:nil context:nil];
             [UIView setAnimationDuration:1.0];
@@ -82,9 +87,9 @@
         NSURL *URL;
         //54.235.244.172
         if([[NSUserDefaults standardUserDefaults] boolForKey:@"national"])
-            URL = [NSURL URLWithString:[[NSString stringWithFormat:@"http://54.235.244.172/v1_0/match/%@/nationals:yes/",myTeam] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+            URL = [NSURL URLWithString:[[NSString stringWithFormat:@"http://54.235.244.172/api/v1_0/match/%@/nationals:yes/",myTeam] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         else
-            URL = [NSURL URLWithString:[[NSString stringWithFormat:@"http://54.235.244.172/v1_0/match/%@/",myTeam] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+            URL = [NSURL URLWithString:[[NSString stringWithFormat:@"http://54.235.244.172/api/v1_0/match/%@/",myTeam] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         NSURLRequest *request = [NSURLRequest requestWithURL:URL];
         NSURLResponse *response = nil;
         NSError *error = nil;

@@ -14,6 +14,4 @@
 - (MKMatchView *) clone;
 + (MKMatchView *) generateWithObject:(NSDictionary *)dict week:(NSUInteger) week size:(CGSize) mySize andOffset:(NSUInteger) i;
 
-+ (void) scheduleAlarmWithDate:(NSDate *)date andMessage:(NSString *)message;
-
 @end

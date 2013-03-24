@@ -7,6 +7,7 @@
 //
 
 #import "MKMatchView.h"
+#include <stdlib.h>
 #define IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
 
 @implementation MKMatchView
@@ -30,6 +31,7 @@
     int yOffset = 11;
     int yhOffset = 0;
     MKMatchView * newView = [[MKMatchView alloc] initWithFrame:CGRectMake(20+i*mySize.width, 20, mySize.width-40, mySize.height-70)];
+    newView.tag = dict[@"id"];
     newView.backgroundColor = [UIColor colorWithRed:0.1 green:0.12 blue:0.12 alpha:0.7];
     newView.layer.masksToBounds = YES;
     newView.layer.cornerRadius = 4.0f;
@@ -87,21 +89,29 @@
         awayTeamName.adjustsFontSizeToFitWidth = true;
         awayTeamName.text = dict[@"away"];
         [newView addSubview:awayTeamName];
-        yOffset += 113;
+        yOffset += 83;
         
-        if(!IPHONE_5) yOffset -= 60;
+        if(!IPHONE_5) yOffset -= 30;
         
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
         [dateFormat setDateFormat:@"dd/MM/yy HH:mm"];
         NSDate *d = [dateFormat dateFromString:dict[@"d"]];
-    
+        NSDate *c = [dateFormat dateFromString:dict[@"c"]];
+        NSLog(@"%f>?%f",[c timeIntervalSince1970],[d timeIntervalSince1970]);
+        NSString *mins = @"";
         if([d timeIntervalSinceNow]<-60){
+            if([c timeIntervalSince1970]>[d timeIntervalSince1970]){
+                if ([c timeIntervalSince1970]-[d timeIntervalSince1970]==5600) {
+                    mins = [NSString stringWithFormat:@" (dk. %d)",(int)([c timeIntervalSince1970]-[d timeIntervalSince1970])];
+                }
+            }
             UILabel *homeTeamScore = [[UILabel alloc] initWithFrame:CGRectMake(43, yOffset, 37, 38)];
             homeTeamScore.font = [UIFont boldSystemFontOfSize:43];
             homeTeamScore.backgroundColor = [UIColor clearColor];
             homeTeamScore.textColor = [UIColor whiteColor];
             homeTeamScore.textAlignment = NSTextAlignmentCenter;
             homeTeamScore.text = dict[@"sh"];
+            homeTeamScore.tag = 1;
             [newView addSubview:homeTeamScore];
             
             UILabel *awayTeamScore = [[UILabel alloc] initWithFrame:CGRectMake(196, yOffset, 37, 38)];
@@ -109,7 +119,8 @@
             awayTeamScore.backgroundColor = [UIColor clearColor];
             awayTeamScore.textColor = [UIColor whiteColor];
             awayTeamScore.textAlignment = NSTextAlignmentCenter;
-            awayTeamScore.text =dict[@"sa"];
+            awayTeamScore.text = dict[@"sa"];
+            homeTeamScore.tag = 2;
             [newView addSubview:awayTeamScore];
             
             UILabel *dash = [[UILabel alloc] initWithFrame:CGRectMake(123, yOffset-7, 34, 51)];
@@ -119,9 +130,9 @@
             dash.textAlignment = NSTextAlignmentCenter;
             dash.text = @"-";
             [newView addSubview:dash];
-            yOffset += 79;
+            yOffset += 59;
         }else if(!IPHONE_5) yOffset += 40;
-        if(!IPHONE_5) yOffset -= 20;
+        if(!IPHONE_5) yOffset -= 12;
         
         NSLocale *tr = [[NSLocale alloc] initWithLocaleIdentifier:@"tr_TR"];
         NSString *formatString = [NSDateFormatter dateFormatFromTemplate:@"EEEE, d MMMM yyyy" options:0 locale:tr];
@@ -131,18 +142,13 @@
         
         NSCalendar* calendar = [NSCalendar currentCalendar];
         NSDateComponents* comp1 = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit|NSHourCalendarUnit|NSMinuteCalendarUnit fromDate:d]; // Get necessary date components
-        NSDateComponents* comp2 = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit|NSHourCalendarUnit|NSMinuteCalendarUnit fromDate:[NSDate date]];
+        NSDateComponents* comp2 = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit|NSHourCalendarUnit|NSMinuteCalendarUnit|NSSecondCalendarUnit fromDate:[NSDate date]];
+        
+        if(IPHONE_5)yOffset += 20;
         
         NSString *dateString;
-        NSDateComponents* comp3 = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit|NSHourCalendarUnit|NSMinuteCalendarUnit|NSSecondCalendarUnit fromDate:[NSDate date]];
         if(comp1.year == comp2.year && comp1.month==comp2.month) {
             if (comp1.day == comp2.day) {
-                comp3.hour=10;
-                comp3.minute=0;
-                NSDate *alarmdate = [calendar dateFromComponents:comp3];
-                formatString = [NSDateFormatter dateFormatFromTemplate:@"HH:mm" options:0 locale:tr];
-                [dateFormatter setDateFormat:formatString];
-                [MKMatchView scheduleAlarmWithDate:alarmdate andMessage:[NSString stringWithFormat:@"%@ - %@ maçı bugün. Başlama saati: %@",homeTeamName.text,awayTeamName.text,[dateFormatter stringFromDate:d]]];
                 dateString = @"Bugün";
             }else if(comp1.day == comp2.day+1){
                 dateString = @"Yarın";
@@ -160,7 +166,7 @@
         
         formatString = [NSDateFormatter dateFormatFromTemplate:@"HH:mm" options:0 locale:tr];
         [dateFormatter setDateFormat:formatString];
-        NSString *timeString = [dateFormatter stringFromDate:d];
+        NSString *timeString = [NSString stringWithFormat:@"%@%@",[dateFormatter stringFromDate:d],mins];
         
         
         if(((comp1.hour==0 || comp1.hour==2) && comp1.minute==0)) {
@@ -178,8 +184,19 @@
         time.textColor = [UIColor whiteColor];
         time.textAlignment = NSTextAlignmentCenter;
         time.text = timeString;
+        time.tag = 3;
         [newView addSubview:time];
         yOffset += 34;
+        
+        UILabel *channel = [[UILabel alloc] initWithFrame:CGRectMake(0, yOffset, 280, 21)];
+        channel.font = [UIFont systemFontOfSize:17];
+        channel.backgroundColor = [UIColor clearColor];
+        channel.textColor = [UIColor whiteColor];
+        channel.textAlignment = NSTextAlignmentCenter;
+        channel.text = @"Lig TV";
+        [newView addSubview:channel];
+        
+        yOffset += 22;
         
         UILabel *stage = [[UILabel alloc] initWithFrame:CGRectMake(5, yOffset, 270, 21)];
         stage.font = [UIFont systemFontOfSize:17];
@@ -196,18 +213,7 @@
             stage.text = dict[@"stage"];
         [newView addSubview:stage];
         stage.adjustsFontSizeToFitWidth = true;
-        yOffset += 22;
         
-        /*UILabel *channel = [[UILabel alloc] initWithFrame:CGRectMake(0, yOffset, 280, 21)];
-        channel.font = [UIFont systemFontOfSize:17];
-        channel.backgroundColor = [UIColor clearColor];
-        channel.textColor = [UIColor whiteColor];
-        channel.textAlignment = NSTextAlignmentCenter;
-        if([dict[@"league"] isEqualToString:@"sampiyonlar-ligi"] || [dict[@"league"] isEqualToString:@"uefa-avrupa-ligi"]){
-            channel.text = @"Star TV";
-        }else
-            channel.text = @"Lig TV";
-        [newView addSubview:channel];*/
         
     }
     @catch (NSException *exception) {NSLog(@"%@",exception);}
@@ -222,24 +228,6 @@
     // Drawing code
 }
 */
-
-+(void) scheduleAlarmWithDate:(NSDate *)date andMessage:(NSString *)message {
-    NSLog(@"Started: %@ -> %@",date,message);
-    UILocalNotification *localNotif = [[UILocalNotification alloc] init];
-    if (localNotif == nil)
-        return;
-    localNotif.fireDate = date;// this sets when notification will be called.
-    // Notification details
-    localNotif.alertBody = message;// this shows the alert box with message.
-    // Set the action button
-    
-    localNotif.alertAction = @"View";
-    localNotif.soundName = UILocalNotificationDefaultSoundName;
-    localNotif.applicationIconBadgeNumber += 1;
-    // Schedule the notification
-    [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
-    NSLog(@"finished: %@ -> %@",date,message);
-}
 
 
 @end

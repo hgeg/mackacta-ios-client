@@ -33,7 +33,7 @@
                                 <color key="backgroundColor" white="0.1825672901" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Wit-IN-4db" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="br8-MT-nyH"/>
-                                    <constraint firstItem="Wit-IN-4db" firstAttribute="top" secondItem="ooN-03-hN5" secondAttribute="top" type="default" id="lNB-4v-K65"/>
+                                    <constraint firstItem="Wit-IN-4db" firstAttribute="top" secondItem="ooN-03-hN5" secondAttribute="top" constant="-1" id="vLk-Td-FsB"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyH-ee-fQs">
@@ -80,6 +80,7 @@
                             <constraint firstItem="dkH-4a-1me" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="V24-wn-2Av"/>
                             <constraint firstAttribute="trailing" secondItem="zyH-ee-fQs" secondAttribute="trailing" constant="25" id="ZCV-vD-Sie"/>
                             <constraint firstItem="ooN-03-hN5" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="289" id="edI-Lh-YB8"/>
+                            <constraint firstItem="zwj-Ib-NB7" firstAttribute="baseline" secondItem="zyH-ee-fQs" secondAttribute="baseline" type="default" id="esi-fn-oKE"/>
                             <constraint firstItem="zwj-Ib-NB7" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="25" id="fPe-uQ-DKp"/>
                             <constraint firstItem="ooN-03-hN5" firstAttribute="top" relation="lessThanOrEqual" secondItem="16" secondAttribute="top" constant="453" type="user" id="uav-rG-FW0"/>
                             <constraint firstAttribute="trailing" secondItem="ooN-03-hN5" secondAttribute="trailing" constant="-165" id="w6T-XZ-FgI"/>
@@ -1400,7 +1401,7 @@
         <image name="devam.png" width="275" height="43"/>
         <image name="facebook_share.png" width="130" height="28"/>
         <image name="graph_bar_trend.png" width="26" height="26"/>
-        <image name="twitter_share.png" width="130" height="28"/>
+        <image name="twitter_share.png" width="130" height="29"/>
         <image name="ust_bar.png" width="640" height="51"/>
     </resources>
     <classes>

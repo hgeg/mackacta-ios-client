@@ -53,10 +53,16 @@
 }
 
 - (IBAction)showNationalMatches:(id)sender {
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
     if (self.national.on) {
         [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"national"];
+        [currentInstallation setObject:@"yes" forKey:@"nationals"];
+        [currentInstallation saveInBackground];
+        
     }else{
         [[NSUserDefaults standardUserDefaults] setBool:false forKey:@"national"];
+        [currentInstallation setObject:@"no" forKey:@"nationals"];
+        [currentInstallation saveInBackground];
     }
     [[NSUserDefaults standardUserDefaults] setValue:@"invalid" forKey:@"flag"];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"active" object:nil];
