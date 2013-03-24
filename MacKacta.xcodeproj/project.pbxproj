@@ -48,11 +48,24 @@
 		364AB6F616B9D8A8003E93F5 /* devam.png in Resources */ = {isa = PBXBuildFile; fileRef = 364AB6F516B9D8A8003E93F5 /* devam.png */; };
 		3668938C16FB873E003981A0 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 3668938A16FB873E003981A0 /* twitter.png */; };
 		3668938D16FB873E003981A0 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 3668938B16FB873E003981A0 /* facebook.png */; };
-		3668938F16FB8E96003981A0 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3668938E16FB8E96003981A0 /* Accounts.framework */; };
-		3668939116FB8E9D003981A0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3668939016FB8E9D003981A0 /* Social.framework */; };
+		3668938F16FB8E96003981A0 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3668938E16FB8E96003981A0 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		3668939116FB8E9D003981A0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3668939016FB8E9D003981A0 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		366BEEE116FDFCA7007AFF56 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366BEEE016FDFCA7007AFF56 /* Parse.framework */; };
+		366BEEE316FDFCF7007AFF56 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366BEEE216FDFCF7007AFF56 /* AudioToolbox.framework */; };
+		366BEEE516FDFD02007AFF56 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366BEEE416FDFD02007AFF56 /* CFNetwork.framework */; };
+		366BEEE716FDFD20007AFF56 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366BEEE616FDFD20007AFF56 /* CoreLocation.framework */; };
+		366BEEE916FDFD2B007AFF56 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 366BEEE816FDFD2B007AFF56 /* libz.1.1.3.dylib */; };
+		366BEEEB16FDFD34007AFF56 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366BEEEA16FDFD34007AFF56 /* MobileCoreServices.framework */; };
+		366BEEED16FDFD3D007AFF56 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366BEEEC16FDFD3D007AFF56 /* QuartzCore.framework */; };
+		366BEEEF16FDFD47007AFF56 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366BEEEE16FDFD47007AFF56 /* Security.framework */; };
+		366BEEF116FDFD4F007AFF56 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366BEEF016FDFD4F007AFF56 /* StoreKit.framework */; };
+		366BEEF316FDFD56007AFF56 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366BEEF216FDFD56007AFF56 /* SystemConfiguration.framework */; };
+		366BEEF516FDFE79007AFF56 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366BEEF416FDFE79007AFF56 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		366BEEFA16FE002D007AFF56 /* twitter_share.png in Resources */ = {isa = PBXBuildFile; fileRef = 366BEEF616FE002D007AFF56 /* twitter_share.png */; };
+		366BEEFB16FE002D007AFF56 /* facebook_share.png in Resources */ = {isa = PBXBuildFile; fileRef = 366BEEF716FE002D007AFF56 /* facebook_share.png */; };
+		366BEEFC16FE002D007AFF56 /* twitter_share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 366BEEF816FE002D007AFF56 /* twitter_share@2x.png */; };
+		366BEEFD16FE002D007AFF56 /* facebook_share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 366BEEF916FE002D007AFF56 /* facebook_share@2x.png */; };
 		3680632C16FCAAF900F040B9 /* Türkiye-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3680632B16FCAAF900F040B9 /* Türkiye-logo.png */; };
-		3680633016FCED6100F040B9 /* facebook_share.png in Resources */ = {isa = PBXBuildFile; fileRef = 3680632F16FCED6100F040B9 /* facebook_share.png */; };
-		3680633816FCF0FC00F040B9 /* twitter_share.png in Resources */ = {isa = PBXBuildFile; fileRef = 3680633716FCF0FC00F040B9 /* twitter_share.png */; };
 		369C1AE416B9888A005AFE0E /* gnLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 369C1AE216B9876F005AFE0E /* gnLoadingView.m */; };
 		369C1AEB16B99C91005AFE0E /* Galatasaray-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 369C1AEA16B99C91005AFE0E /* Galatasaray-logo.png */; };
 		369C1AEF16B9B489005AFE0E /* cell_arkaplan_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 369C1AEE16B9B489005AFE0E /* cell_arkaplan_settings.png */; };
@@ -201,9 +214,22 @@
 		3668938B16FB873E003981A0 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		3668938E16FB8E96003981A0 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		3668939016FB8E9D003981A0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		366BEEE016FDFCA7007AFF56 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../../Downloads/Parse.framework; sourceTree = "<group>"; };
+		366BEEE216FDFCF7007AFF56 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		366BEEE416FDFD02007AFF56 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		366BEEE616FDFD20007AFF56 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		366BEEE816FDFD2B007AFF56 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		366BEEEA16FDFD34007AFF56 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		366BEEEC16FDFD3D007AFF56 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		366BEEEE16FDFD47007AFF56 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		366BEEF016FDFD4F007AFF56 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		366BEEF216FDFD56007AFF56 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		366BEEF416FDFE79007AFF56 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		366BEEF616FE002D007AFF56 /* twitter_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter_share.png; path = "../../../Dropbox/NetcenBiz/Mac Kacta/share icons/twitter_share.png"; sourceTree = "<group>"; };
+		366BEEF716FE002D007AFF56 /* facebook_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebook_share.png; path = "../../../Dropbox/NetcenBiz/Mac Kacta/share icons/facebook_share.png"; sourceTree = "<group>"; };
+		366BEEF816FE002D007AFF56 /* twitter_share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "twitter_share@2x.png"; path = "../../../Dropbox/NetcenBiz/Mac Kacta/share icons/twitter_share@2x.png"; sourceTree = "<group>"; };
+		366BEEF916FE002D007AFF56 /* facebook_share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "facebook_share@2x.png"; path = "../../../Dropbox/NetcenBiz/Mac Kacta/share icons/facebook_share@2x.png"; sourceTree = "<group>"; };
 		3680632B16FCAAF900F040B9 /* Türkiye-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Türkiye-logo.png"; sourceTree = "<group>"; };
-		3680632F16FCED6100F040B9 /* facebook_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook_share.png; sourceTree = "<group>"; };
-		3680633716FCF0FC00F040B9 /* twitter_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter_share.png; sourceTree = "<group>"; };
 		369C1AE116B9876F005AFE0E /* gnLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gnLoadingView.h; sourceTree = "<group>"; };
 		369C1AE216B9876F005AFE0E /* gnLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gnLoadingView.m; sourceTree = "<group>"; };
 		369C1AEA16B99C91005AFE0E /* Galatasaray-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Galatasaray-logo.png"; sourceTree = "<group>"; };
@@ -295,10 +321,10 @@
 		DC928AA616B32274009B6014 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DC928AA816B32274009B6014 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DC928AAA16B32274009B6014 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		DC928AAE16B32274009B6014 /* Maç Kaçta-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Maç Kaçta-Info.plist"; sourceTree = "<group>"; };
+		DC928AAE16B32274009B6014 /* MacKacta-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MacKacta-Info.plist"; sourceTree = "<group>"; };
 		DC928AB016B32274009B6014 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DC928AB216B32274009B6014 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DC928AB416B32274009B6014 /* Maç Kaçta-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Maç Kaçta-Prefix.pch"; sourceTree = "<group>"; };
+		DC928AB416B32274009B6014 /* MacKacta-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MacKacta-Prefix.pch"; sourceTree = "<group>"; };
 		DC928AB516B32274009B6014 /* MKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKAppDelegate.h; sourceTree = "<group>"; };
 		DC928AB616B32274009B6014 /* MKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKAppDelegate.m; sourceTree = "<group>"; };
 		DC928ABF16B32275009B6014 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
@@ -321,11 +347,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				366BEEF516FDFE79007AFF56 /* AdSupport.framework in Frameworks */,
+				366BEEF316FDFD56007AFF56 /* SystemConfiguration.framework in Frameworks */,
+				366BEEF116FDFD4F007AFF56 /* StoreKit.framework in Frameworks */,
+				366BEEEF16FDFD47007AFF56 /* Security.framework in Frameworks */,
+				366BEEED16FDFD3D007AFF56 /* QuartzCore.framework in Frameworks */,
+				366BEEEB16FDFD34007AFF56 /* MobileCoreServices.framework in Frameworks */,
+				366BEEE916FDFD2B007AFF56 /* libz.1.1.3.dylib in Frameworks */,
+				366BEEE716FDFD20007AFF56 /* CoreLocation.framework in Frameworks */,
+				366BEEE516FDFD02007AFF56 /* CFNetwork.framework in Frameworks */,
+				366BEEE316FDFCF7007AFF56 /* AudioToolbox.framework in Frameworks */,
 				3668939116FB8E9D003981A0 /* Social.framework in Frameworks */,
 				3668938F16FB8E96003981A0 /* Accounts.framework in Frameworks */,
 				DC928AA716B32274009B6014 /* UIKit.framework in Frameworks */,
 				DC928AA916B32274009B6014 /* Foundation.framework in Frameworks */,
 				DC928AAB16B32274009B6014 /* CoreGraphics.framework in Frameworks */,
+				366BEEE116FDFCA7007AFF56 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,8 +372,6 @@
 		DC928A9716B32274009B6014 = {
 			isa = PBXGroup;
 			children = (
-				3668939016FB8E9D003981A0 /* Social.framework */,
-				3668938E16FB8E96003981A0 /* Accounts.framework */,
 				DC928AEB16B354DC009B6014 /* Default.png */,
 				DC928AE916B354D2009B6014 /* Default@2x.png */,
 				DC928AE716B35377009B6014 /* mackacta.png */,
@@ -359,6 +394,19 @@
 		DC928AA516B32274009B6014 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				366BEEF416FDFE79007AFF56 /* AdSupport.framework */,
+				366BEEF216FDFD56007AFF56 /* SystemConfiguration.framework */,
+				366BEEF016FDFD4F007AFF56 /* StoreKit.framework */,
+				366BEEEE16FDFD47007AFF56 /* Security.framework */,
+				366BEEEC16FDFD3D007AFF56 /* QuartzCore.framework */,
+				366BEEEA16FDFD34007AFF56 /* MobileCoreServices.framework */,
+				366BEEE816FDFD2B007AFF56 /* libz.1.1.3.dylib */,
+				366BEEE616FDFD20007AFF56 /* CoreLocation.framework */,
+				366BEEE416FDFD02007AFF56 /* CFNetwork.framework */,
+				366BEEE216FDFCF7007AFF56 /* AudioToolbox.framework */,
+				366BEEE016FDFCA7007AFF56 /* Parse.framework */,
+				3668939016FB8E9D003981A0 /* Social.framework */,
+				3668938E16FB8E96003981A0 /* Accounts.framework */,
 				DC928AA616B32274009B6014 /* UIKit.framework */,
 				DC928AA816B32274009B6014 /* Foundation.framework */,
 				DC928AAA16B32274009B6014 /* CoreGraphics.framework */,
@@ -392,8 +440,10 @@
 		DC928AAD16B32274009B6014 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3680633716FCF0FC00F040B9 /* twitter_share.png */,
-				3680632F16FCED6100F040B9 /* facebook_share.png */,
+				366BEEF616FE002D007AFF56 /* twitter_share.png */,
+				366BEEF716FE002D007AFF56 /* facebook_share.png */,
+				366BEEF816FE002D007AFF56 /* twitter_share@2x.png */,
+				366BEEF916FE002D007AFF56 /* facebook_share@2x.png */,
 				3668938A16FB873E003981A0 /* twitter.png */,
 				3668938B16FB873E003981A0 /* facebook.png */,
 				364AB6F516B9D8A8003E93F5 /* devam.png */,
@@ -518,10 +568,10 @@
 				3608609E16F25D30003AEC1A /* Viktoria Plzen-logo.png */,
 				3608609F16F25D30003AEC1A /* Zenit St. Petersburg-logo.png */,
 				DC928AD716B33BD2009B6014 /* besiktas_bg.jpg */,
-				DC928AAE16B32274009B6014 /* Maç Kaçta-Info.plist */,
+				DC928AAE16B32274009B6014 /* MacKacta-Info.plist */,
 				DC928AAF16B32274009B6014 /* InfoPlist.strings */,
 				DC928AB216B32274009B6014 /* main.m */,
-				DC928AB416B32274009B6014 /* Maç Kaçta-Prefix.pch */,
+				DC928AB416B32274009B6014 /* MacKacta-Prefix.pch */,
 				369C1AEC16B9B399005AFE0E /* MyriadPro-Cond.otf */,
 				369C1AED16B9B399005AFE0E /* MyriadPro-Semibold.otf */,
 			);
@@ -531,9 +581,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DC928AA116B32274009B6014 /* Maç Kaçta */ = {
+		DC928AA116B32274009B6014 /* Maç Kaçta */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC928AD116B32275009B6014 /* Build configuration list for PBXNativeTarget "Maç Kaçta" */;
+			buildConfigurationList = DC928AD116B32275009B6014 /* Build configuration list for PBXNativeTarget "Maç Kaçta" */;
 			buildPhases = (
 				DC928A9E16B32274009B6014 /* Sources */,
 				DC928A9F16B32274009B6014 /* Frameworks */,
@@ -543,7 +593,7 @@
 			);
 			dependencies = (
 			);
-			name = "Maç Kaçta";
+			name = "Maç Kaçta";
 			productName = "Maç Kaçta";
 			productReference = DC928AA216B32274009B6014 /* Maç Kaçta.app */;
 			productType = "com.apple.product-type.application";
@@ -558,7 +608,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = Orkestra;
 			};
-			buildConfigurationList = DC928A9C16B32274009B6014 /* Build configuration list for PBXProject "Maç Kaçta" */;
+			buildConfigurationList = DC928A9C16B32274009B6014 /* Build configuration list for PBXProject "MacKacta" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -570,7 +620,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DC928AA116B32274009B6014 /* Maç Kaçta */,
+				DC928AA116B32274009B6014 /* Maç Kaçta */,
 			);
 		};
 /* End PBXProject section */
@@ -711,8 +761,10 @@
 				3668938C16FB873E003981A0 /* twitter.png in Resources */,
 				3668938D16FB873E003981A0 /* facebook.png in Resources */,
 				3680632C16FCAAF900F040B9 /* Türkiye-logo.png in Resources */,
-				3680633016FCED6100F040B9 /* facebook_share.png in Resources */,
-				3680633816FCF0FC00F040B9 /* twitter_share.png in Resources */,
+				366BEEFA16FE002D007AFF56 /* twitter_share.png in Resources */,
+				366BEEFB16FE002D007AFF56 /* facebook_share.png in Resources */,
+				366BEEFC16FE002D007AFF56 /* twitter_share@2x.png in Resources */,
+				366BEEFD16FE002D007AFF56 /* facebook_share@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -809,11 +861,19 @@
 		DC928AD216B32275009B6014 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Taner Yildirim (677762377T)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Taner Yildirim (677762377T)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Downloads\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Maç Kaçta/Maç Kaçta-Prefix.pch";
-				INFOPLIST_FILE = "Maç Kaçta/Maç Kaçta-Info.plist";
+				GCC_PREFIX_HEADER = "Maç Kaçta/MacKacta-Prefix.pch";
+				INFOPLIST_FILE = "Maç Kaçta/MacKacta-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Maç Kaçta";
+				PROVISIONING_PROFILE = "FC11E104-9EBF-4D7C-B9EF-CC70FFB6691D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FC11E104-9EBF-4D7C-B9EF-CC70FFB6691D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -821,11 +881,19 @@
 		DC928AD316B32275009B6014 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Taner Yildirim (677762377T)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Taner Yildirim (677762377T)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Downloads\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Maç Kaçta/Maç Kaçta-Prefix.pch";
-				INFOPLIST_FILE = "Maç Kaçta/Maç Kaçta-Info.plist";
+				GCC_PREFIX_HEADER = "Maç Kaçta/MacKacta-Prefix.pch";
+				INFOPLIST_FILE = "Maç Kaçta/MacKacta-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Maç Kaçta";
+				PROVISIONING_PROFILE = "FC11E104-9EBF-4D7C-B9EF-CC70FFB6691D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FC11E104-9EBF-4D7C-B9EF-CC70FFB6691D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -833,7 +901,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DC928A9C16B32274009B6014 /* Build configuration list for PBXProject "Maç Kaçta" */ = {
+		DC928A9C16B32274009B6014 /* Build configuration list for PBXProject "MacKacta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC928ACF16B32275009B6014 /* Debug */,
@@ -842,7 +910,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DC928AD116B32275009B6014 /* Build configuration list for PBXNativeTarget "Maç Kaçta" */ = {
+		DC928AD116B32275009B6014 /* Build configuration list for PBXNativeTarget "Maç Kaçta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC928AD216B32275009B6014 /* Debug */,
