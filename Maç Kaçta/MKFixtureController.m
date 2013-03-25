@@ -25,14 +25,8 @@
     _accountStore = [[ACAccountStore alloc] init];
     
     queue = dispatch_queue_create("com.orkestra.mackacta.fixturequeue", nil);
-    sliderShown = false;
-    sLock = false;
+    liveq = [[NSOperationQueue alloc] init];
     scroller.delegate = self;
-    self.sliderBar.alpha=0;
-    self.sliderBar.layer.masksToBounds = true;
-    self.sliderBar.layer.cornerRadius = 4.0f;
-    self.sliderBar.frame = CGRectMake(68, self.view.frame.size.height-70, 196, 36);
-    self.slider.value = 0;
     gLock = 2;
     offset = 0;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(preChange) name:@"active" object:nil];
@@ -52,14 +46,6 @@
         offset = 0;
         self.fbShare.alpha = 0;
         self.twShare.alpha = 0;
-        
-        sliderShown = false;
-        sLock = false;
-        self.sliderBar.alpha=0;
-        self.sliderBar.layer.masksToBounds = true;
-        self.sliderBar.layer.cornerRadius = 4.0f;
-        self.sliderBar.frame = CGRectMake(68, self.view.frame.size.height-70, 196, 36);
-        self.slider.value = 0;
         
         // Do any additional setup after loading the view, typically from a nib.
         CGSize mySize = self.view.frame.size;
@@ -85,7 +71,6 @@
             self.background.alpha = 1.0;
         [UIView commitAnimations];
         NSURL *URL;
-        //54.235.244.172
         if([[NSUserDefaults standardUserDefaults] boolForKey:@"national"])
             URL = [NSURL URLWithString:[[NSString stringWithFormat:@"http://54.235.244.172/api/v1_0/match/%@/nationals:yes/",myTeam] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         else
@@ -111,13 +96,8 @@
         }
         [self.matchView removeFromSuperview];
         [self.view addSubview:self.scroller];
-        [self.view bringSubviewToFront:self.sliderBar];
-        
-        UITapGestureRecognizer *sliderTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleSlider)];
-        [self.scroller addGestureRecognizer:sliderTap];
         self.scroller.showsHorizontalScrollIndicator = false;
         [[NSUserDefaults standardUserDefaults] setValue:@"valid" forKey:@"flag"];
-        self.slider.maximumValue = [data count];
         self.scroller.contentSize = CGSizeMake(mySize.width*[data count], mySize.height);
         [self.scroller setContentOffset:CGPointMake(k*320, 0)];
         [self.view bringSubviewToFront:self.twShare];
@@ -132,31 +112,10 @@
         [UIView commitAnimations];
         [gnLoadingView hideLoader];
     });
-}
-
--(IBAction)sliderChanged:(id)sender {
-    [scroller setContentOffset:CGPointMake((int)(self.slider.value*320*(33)/320)*320, 0) animated:false];
-}
-
--(IBAction)lockSlider:(id)sender {sLock = true;}
-
--(IBAction)releaseSlider:(id)sender {sLock = false;}
-
--(void)toggleSlider {
-    /*if(!sliderShown) {
-        self.sliderBar.hidden = false;
-        [UIView animateWithDuration:0.3 animations:^{
-            self.sliderBar.alpha = 1;
-        }];
-        sliderShown = true;
-    }else {
-        [UIView animateWithDuration:0.3 animations:^{
-            self.sliderBar.alpha = 0;
-        } completion:^(BOOL finished) {
-            self.sliderBar.hidden = true;
-            sliderShown = false;
-        }];
-    }*/
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self updateMatches];
+    });
 }
 
 - (void)generateView:(NSObject *)pobj {
@@ -176,12 +135,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void) scrollViewDidScroll:(UIScrollView *)scrollView {
-    if(!sLock) {
-        self.slider.value = scrollView.contentOffset.x*1.0/((34-1)*320);
-    }
 }
 
 -(IBAction)twitter:(id)sender {
@@ -244,4 +197,42 @@
         [self presentViewController:controller animated:YES completion:nil];
     }
 }
+
+- (void)updateMatches{
+    if([[NSUserDefaults standardUserDefaults] boolForKey:@"lslock"]) return;
+    __block UIActivityIndicatorView *aiw = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        aiw.frame = CGRectMake(148, 150, 20, 20);
+        [aiw startAnimating];
+        [self.view addSubview:aiw];
+    });
+    NSLog(@"update started");
+    [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"lslock"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://54.235.244.172/api/v1_0/scores:live/"]];
+    [NSURLConnection sendAsynchronousRequest:request queue:liveq completionHandler:^(NSURLResponse *response, NSData *responseData, NSError *err) {
+        if (responseData){
+            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
+            NSArray *d = json[@"data"];
+            for(int i=0;i<[d count];i++){
+                @try {
+                    [((MKMatchView *)[self.scroller viewWithTag:[d[i][@"id"] integerValue]]) updateMatchminutes:d[i][@"c"] homeScore:d[i][@"sh"] andAwayScore:d[i][@"sa"]];
+                }
+                @catch (NSException *exception) {}
+            }
+        }
+        NSLog(@"updated");
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [aiw removeFromSuperview];
+            aiw=nil;
+        });
+        [[NSUserDefaults standardUserDefaults] setBool:false forKey:@"lslock"];
+        
+        double delayInSeconds = 10.0;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+        dispatch_after(popTime, queue, ^(void){
+            [self updateMatches];
+        });
+    }];
+}
+
 @end

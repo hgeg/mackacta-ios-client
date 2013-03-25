@@ -10,8 +10,12 @@
 #import <QuartzCore/QuartzCore.h>
 
 @interface MKMatchView : UIView
-
+{
+    NSString *timeStr;
+}
 - (MKMatchView *) clone;
 + (MKMatchView *) generateWithObject:(NSDictionary *)dict week:(NSUInteger) week size:(CGSize) mySize andOffset:(NSUInteger) i;
+
+- (void) updateMatchminutes:(NSString *)mins homeScore:(NSString *)h andAwayScore:(NSString *)a;
 
 @end

@@ -31,7 +31,7 @@
     int yOffset = 11;
     int yhOffset = 0;
     MKMatchView * newView = [[MKMatchView alloc] initWithFrame:CGRectMake(20+i*mySize.width, 20, mySize.width-40, mySize.height-70)];
-    newView.tag = dict[@"id"];
+    newView.tag = [dict[@"id"] integerValue];
     newView.backgroundColor = [UIColor colorWithRed:0.1 green:0.12 blue:0.12 alpha:0.7];
     newView.layer.masksToBounds = YES;
     newView.layer.cornerRadius = 4.0f;
@@ -96,16 +96,17 @@
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
         [dateFormat setDateFormat:@"dd/MM/yy HH:mm"];
         NSDate *d = [dateFormat dateFromString:dict[@"d"]];
-        NSDate *c = [dateFormat dateFromString:dict[@"c"]];
-        NSLog(@"%f>?%f",[c timeIntervalSince1970],[d timeIntervalSince1970]);
+        int c = [dict[@"c"] integerValue];
         NSString *mins = @"";
         if([d timeIntervalSinceNow]<-60){
-            if([c timeIntervalSince1970]>[d timeIntervalSince1970]){
-                if ([c timeIntervalSince1970]-[d timeIntervalSince1970]==5600) {
-                    mins = [NSString stringWithFormat:@" (dk. %d)",(int)([c timeIntervalSince1970]-[d timeIntervalSince1970])];
-                }
+            if(c!=-1) {
+                [[NSUserDefaults standardUserDefaults] setBool:false forKey:@"lslock"];
+                if(c==-45)
+                    mins = [NSString stringWithFormat:@" (DA)"];
+                else
+                    mins = [NSString stringWithFormat:@" (dk. %d)",c];
             }
-            UILabel *homeTeamScore = [[UILabel alloc] initWithFrame:CGRectMake(43, yOffset, 37, 38)];
+            UILabel *homeTeamScore = [[UILabel alloc] initWithFrame:CGRectMake(33, yOffset, 67, 38)];
             homeTeamScore.font = [UIFont boldSystemFontOfSize:43];
             homeTeamScore.backgroundColor = [UIColor clearColor];
             homeTeamScore.textColor = [UIColor whiteColor];
@@ -114,13 +115,13 @@
             homeTeamScore.tag = 1;
             [newView addSubview:homeTeamScore];
             
-            UILabel *awayTeamScore = [[UILabel alloc] initWithFrame:CGRectMake(196, yOffset, 37, 38)];
+            UILabel *awayTeamScore = [[UILabel alloc] initWithFrame:CGRectMake(180, yOffset, 67, 38)];
             awayTeamScore.font = [UIFont boldSystemFontOfSize:43];
             awayTeamScore.backgroundColor = [UIColor clearColor];
             awayTeamScore.textColor = [UIColor whiteColor];
             awayTeamScore.textAlignment = NSTextAlignmentCenter;
             awayTeamScore.text = dict[@"sa"];
-            homeTeamScore.tag = 2;
+            awayTeamScore.tag = 2;
             [newView addSubview:awayTeamScore];
             
             UILabel *dash = [[UILabel alloc] initWithFrame:CGRectMake(123, yOffset-7, 34, 51)];
@@ -166,6 +167,7 @@
         
         formatString = [NSDateFormatter dateFormatFromTemplate:@"HH:mm" options:0 locale:tr];
         [dateFormatter setDateFormat:formatString];
+        newView->timeStr = [dateFormatter stringFromDate:d];
         NSString *timeString = [NSString stringWithFormat:@"%@%@",[dateFormatter stringFromDate:d],mins];
         
         
@@ -193,7 +195,7 @@
         channel.backgroundColor = [UIColor clearColor];
         channel.textColor = [UIColor whiteColor];
         channel.textAlignment = NSTextAlignmentCenter;
-        channel.text = @"Lig TV";
+        channel.text = dict[@"channel"];
         [newView addSubview:channel];
         
         yOffset += 22;
@@ -229,5 +231,18 @@
 }
 */
 
+- (void) updateMatchminutes:(NSString *)m homeScore:(NSString *)h andAwayScore:(NSString *)a {
+    ((UILabel *)[self viewWithTag:1]).text = h;
+    ((UILabel *)[self viewWithTag:2]).text = a;
+    NSString *mins = @"";
+    if([m integerValue]!=-1) {
+        if([m integerValue]==-45)
+            mins = [NSString stringWithFormat:@" (DA)"];
+        else
+            mins = [NSString stringWithFormat:@" (dk. %@)",m];
+    }
+    ((UILabel *)[self viewWithTag:3]).text = [NSString stringWithFormat:@"%@%@",self->timeStr,mins];
+    
+}
 
 @end

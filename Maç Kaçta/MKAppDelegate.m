@@ -20,6 +20,7 @@
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     // Override point for customization after application launch.
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil];
+    [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"lslock"];
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"national"]){[[NSUserDefaults standardUserDefaults] setBool:true forKey:@"national"];
     }
     if(![[NSUserDefaults standardUserDefaults] valueForKey:@"selectedTeam"]){

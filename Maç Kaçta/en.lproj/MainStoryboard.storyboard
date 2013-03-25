@@ -13,29 +13,6 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="dkH-4a-1me"/>
-                            <view hidden="YES" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ooN-03-hN5">
-                                <subviews>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Wit-IN-4db">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="178" id="iQK-lr-IvY"/>
-                                        </constraints>
-                                        <color key="minimumTrackTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <color key="maximumTrackTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <color key="thumbTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <action selector="lockSlider:" destination="2" eventType="touchDown" id="TDb-mg-rRd"/>
-                                            <action selector="releaseSlider:" destination="2" eventType="touchUpOutside" id="1TM-oi-uHn"/>
-                                            <action selector="releaseSlider:" destination="2" eventType="touchUpInside" id="hPa-Hm-Qks"/>
-                                            <action selector="sliderChanged:" destination="2" eventType="valueChanged" id="XeZ-iq-IBx"/>
-                                        </connections>
-                                    </slider>
-                                </subviews>
-                                <color key="backgroundColor" white="0.1825672901" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Wit-IN-4db" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="br8-MT-nyH"/>
-                                    <constraint firstItem="Wit-IN-4db" firstAttribute="top" secondItem="ooN-03-hN5" secondAttribute="top" constant="-1" id="vLk-Td-FsB"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyH-ee-fQs">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="facebook_share.png">
@@ -69,21 +46,15 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="dkH-4a-1me" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="5Ak-el-kxn"/>
-                            <constraint firstAttribute="bottom" secondItem="ooN-03-hN5" secondAttribute="bottom" priority="1" constant="10" type="user" id="7bw-o4-4b2"/>
                             <constraint firstItem="zwj-Ib-NB7" firstAttribute="top" secondItem="zyH-ee-fQs" secondAttribute="top" type="default" id="8zc-bL-x4t"/>
                             <constraint firstItem="dkH-4a-1me" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="CIf-On-rCb"/>
                             <constraint firstItem="zwj-Ib-NB7" firstAttribute="bottom" secondItem="zyH-ee-fQs" secondAttribute="bottom" type="default" id="FKU-uk-FPq"/>
                             <constraint firstAttribute="bottom" secondItem="zwj-Ib-NB7" secondAttribute="bottom" constant="10" id="GAp-yl-DGW"/>
-                            <constraint firstItem="ooN-03-hN5" firstAttribute="top" secondItem="16" secondAttribute="top" constant="269" id="Imu-p0-gSQ"/>
-                            <constraint firstAttribute="bottom" secondItem="ooN-03-hN5" secondAttribute="bottom" constant="194" id="OeG-tk-znL"/>
                             <constraint firstItem="dkH-4a-1me" firstAttribute="bottom" secondItem="16" secondAttribute="bottom" type="default" id="POS-iV-6y4"/>
                             <constraint firstItem="dkH-4a-1me" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="V24-wn-2Av"/>
                             <constraint firstAttribute="trailing" secondItem="zyH-ee-fQs" secondAttribute="trailing" constant="25" id="ZCV-vD-Sie"/>
-                            <constraint firstItem="ooN-03-hN5" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="289" id="edI-Lh-YB8"/>
                             <constraint firstItem="zwj-Ib-NB7" firstAttribute="baseline" secondItem="zyH-ee-fQs" secondAttribute="baseline" type="default" id="esi-fn-oKE"/>
                             <constraint firstItem="zwj-Ib-NB7" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="25" id="fPe-uQ-DKp"/>
-                            <constraint firstItem="ooN-03-hN5" firstAttribute="top" relation="lessThanOrEqual" secondItem="16" secondAttribute="top" constant="453" type="user" id="uav-rG-FW0"/>
-                            <constraint firstAttribute="trailing" secondItem="ooN-03-hN5" secondAttribute="trailing" constant="-165" id="w6T-XZ-FgI"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Maç Kaçta" image="alarm.png" id="7"/>
@@ -91,8 +62,6 @@
                         <outlet property="background" destination="dkH-4a-1me" id="LnG-mg-MAc"/>
                         <outlet property="backgroundImage" destination="dkH-4a-1me" id="UhZ-h6-WDy"/>
                         <outlet property="fbShare" destination="zyH-ee-fQs" id="5OZ-9z-J70"/>
-                        <outlet property="slider" destination="Wit-IN-4db" id="JeR-Gi-zfB"/>
-                        <outlet property="sliderBar" destination="ooN-03-hN5" id="46Z-6U-jBp"/>
                         <outlet property="twShare" destination="zwj-Ib-NB7" id="pi9-OH-dgb"/>
                     </connections>
                 </viewController>
@@ -1451,9 +1420,6 @@
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="NSMutableArray" superclassName="NSArray">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSMutableArray.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

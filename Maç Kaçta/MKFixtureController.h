@@ -21,6 +21,7 @@
     int offset;
     int previndex;
     dispatch_queue_t queue;
+    NSOperationQueue *liveq;
     NSString *myTeam;
     NSArray *data;
 }
@@ -29,8 +30,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 @property (weak, nonatomic) IBOutlet MKMatchView *matchView;
-@property (weak, nonatomic) IBOutlet UIView *sliderBar;
-@property (weak, nonatomic) IBOutlet UISlider *slider;
 @property (strong, nonatomic) IBOutlet UIScrollView *scroller;
 @property (strong, nonatomic) IBOutlet NSMutableArray *matches;
 @property (weak, nonatomic) IBOutlet UIImageView *background;
@@ -38,10 +37,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *twShare;
 
 -(IBAction)sliderChanged:(id)sender;
--(IBAction)lockSlider:(id)sender;
--(IBAction)releaseSlider:(id)sender;
 
 -(IBAction)twitter:(id)sender;
 -(IBAction)facebook:(id)sender;
+
+-(void)updateMatches;
 
 @end
