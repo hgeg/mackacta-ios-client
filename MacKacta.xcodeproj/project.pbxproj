@@ -317,7 +317,7 @@
 		DC7FE2B016B933D200C6C30A /* S.B. Elazığspor-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S.B. Elazığspor-logo.png"; sourceTree = "<group>"; };
 		DC7FE2B116B933D200C6C30A /* Sivasspor-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sivasspor-logo.png"; sourceTree = "<group>"; };
 		DC7FE2B216B933D200C6C30A /* Trabzonspor-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Trabzonspor-logo.png"; sourceTree = "<group>"; };
-		DC928AA216B32274009B6014 /* Maç Kaçta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Maç Kaçta.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC928AA216B32274009B6014 /* Maç Kaçta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Maç Kaçta.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC928AA616B32274009B6014 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DC928AA816B32274009B6014 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DC928AAA16B32274009B6014 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -386,7 +386,7 @@
 		DC928AA316B32274009B6014 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DC928AA216B32274009B6014 /* Maç Kaçta.app */,
+				DC928AA216B32274009B6014 /* Maç Kaçta.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -595,7 +595,7 @@
 			);
 			name = "Maç Kaçta";
 			productName = "Maç Kaçta";
-			productReference = DC928AA216B32274009B6014 /* Maç Kaçta.app */;
+			productReference = DC928AA216B32274009B6014 /* Maç Kaçta.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */

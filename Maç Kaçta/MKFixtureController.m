@@ -71,17 +71,53 @@
             self.background.alpha = 1.0;
         [UIView commitAnimations];
         NSURL *URL;
-        if([[NSUserDefaults standardUserDefaults] boolForKey:@"national"])
-            URL = [NSURL URLWithString:[[NSString stringWithFormat:@"http://54.235.244.172/api/v1_0/match/%@/nationals:yes/",myTeam] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-        else
-            URL = [NSURL URLWithString:[[NSString stringWithFormat:@"http://54.235.244.172/api/v1_0/match/%@/",myTeam] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-        NSURLRequest *request = [NSURLRequest requestWithURL:URL];
-        NSURLResponse *response = nil;
-        NSError *error = nil;
-        NSData *receivedData = [NSURLConnection sendSynchronousRequest:request
-                                                     returningResponse:&response
-                                                                 error:&error];
-        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:nil];
+        NSDictionary *json;
+        @try {
+            if([[NSUserDefaults standardUserDefaults] boolForKey:@"national"])
+                URL = [NSURL URLWithString:[[NSString stringWithFormat:@"http://54.235.244.172/api/v1_0/match/%@/nationals:yes/",myTeam] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+            else
+                URL = [NSURL URLWithString:[[NSString stringWithFormat:@"http://54.235.244.172/api/v1_0/match/%@/",myTeam] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+            NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+            NSURLResponse *response = nil;
+            NSError *error = nil;
+            NSData *receivedData = [NSURLConnection sendSynchronousRequest:request
+                                                         returningResponse:&response
+                                                                     error:&error];
+             json = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:nil];
+        }
+        @catch (NSException *exception) {
+            [gnLoadingView hideLoader];
+            UIView *newView = [[UIView alloc] initWithFrame:CGRectMake(20, 20, 280, 200)];
+            newView.backgroundColor = [UIColor colorWithRed:0.1 green:0.12 blue:0.12 alpha:0.7];
+            newView.layer.masksToBounds = YES;
+            newView.layer.cornerRadius = 4.0f;
+            UILabel *errTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, 280, 30)];
+            errTitle.text = @"Bağlantı Hatası!";
+            errTitle.textAlignment = NSTextAlignmentCenter;
+            errTitle.textColor = [UIColor whiteColor];
+            errTitle.backgroundColor = [UIColor clearColor];
+            errTitle.font = [UIFont boldSystemFontOfSize:18];
+            [newView addSubview:errTitle];
+            
+            UITextView *errMsg = [[UITextView alloc] initWithFrame:CGRectMake(10, 60, 260, 150)];
+            errMsg.text = @"Geçerli bir internet bağlantısı bulunamadı. Lütfen bağlantınızı kontrol edin.";
+            errMsg.textAlignment = NSTextAlignmentCenter;
+            errMsg.textColor = [UIColor whiteColor];
+            errMsg.backgroundColor = [UIColor clearColor];
+            errMsg.font = [UIFont systemFontOfSize:14];
+            errMsg.editable = false;
+            [newView addSubview:errMsg];
+            
+            UIButton *refButton = [[UIButton alloc] initWithFrame:CGRectMake(110, 140, 60, 30)];
+            refButton.imageView.image = [UIImage imageNamed:@"twitter_share.png"];
+            [newView addSubview:refButton];
+            
+            [scroller addSubview:newView];
+            [self.matchView removeFromSuperview];
+            [self.view addSubview:scroller];
+            return;
+        }
+       
         data = json[@"data"];
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
         [dateFormat setDateFormat:@"dd/MM/yy HH:mm"];
