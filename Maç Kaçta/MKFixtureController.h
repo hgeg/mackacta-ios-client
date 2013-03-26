@@ -12,7 +12,7 @@
 #import <Accounts/Accounts.h>
 #import <Twitter/Twitter.h>
 
-@interface MKFixtureController : UIViewController <UIScrollViewDelegate, UIActionSheetDelegate>
+@interface MKFixtureController : UIViewController
 {
     int sliderShown;
     BOOL sLock;
@@ -24,6 +24,7 @@
     NSOperationQueue *liveq;
     NSString *myTeam;
     NSArray *data;
+    __block UIActivityIndicatorView *aiw;
 }
 
 @property (nonatomic, strong) ACAccountStore *accountStore;

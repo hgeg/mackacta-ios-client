@@ -231,18 +231,22 @@
 }
 */
 
-- (void) updateMatchminutes:(NSString *)m homeScore:(NSString *)h andAwayScore:(NSString *)a {
+- (int) updateMatchminutes:(NSString *)m homeScore:(NSString *)h andAwayScore:(NSString *)a {
+    int retval = 1;
     ((UILabel *)[self viewWithTag:1]).text = h;
     ((UILabel *)[self viewWithTag:2]).text = a;
     NSString *mins = @"";
     if([m integerValue]!=-1) {
-        if([m integerValue]==-45)
-            mins = [NSString stringWithFormat:@" (DA)"];
-        else
+        if([m integerValue]==-45){
+            mins = [NSString stringWithFormat:@" (Devre Arası)"];
+            retval = 0;
+        }else{
             mins = [NSString stringWithFormat:@" (dk. %@)",m];
+            [[NSUserDefaults standardUserDefaults] setBool:false forKey:@"lslock"];
+        }
     }
     ((UILabel *)[self viewWithTag:3]).text = [NSString stringWithFormat:@"%@%@",self->timeStr,mins];
-    
+    return retval;
 }
 
 @end
