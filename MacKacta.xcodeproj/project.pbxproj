@@ -42,12 +42,15 @@
 		360860C616F260E5003AEC1A /* Hollanda-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 360860C516F260E4003AEC1A /* Hollanda-logo.png */; };
 		360860CA16F79818003AEC1A /* BATE-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 360860C916F79815003AEC1A /* BATE-logo.png */; };
 		3623C72E16B3F6F1007E5986 /* MKMatchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3623C72D16B3F6F1007E5986 /* MKMatchView.m */; };
+		363283DA17022095004DAAAB /* twitter_share.png in Resources */ = {isa = PBXBuildFile; fileRef = 363283D617022095004DAAAB /* twitter_share.png */; };
+		363283DB17022095004DAAAB /* facebook_share.png in Resources */ = {isa = PBXBuildFile; fileRef = 363283D717022095004DAAAB /* facebook_share.png */; };
+		363283DC17022095004DAAAB /* twitter_share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 363283D817022095004DAAAB /* twitter_share@2x.png */; };
+		363283DD17022095004DAAAB /* facebook_share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 363283D917022095004DAAAB /* facebook_share@2x.png */; };
+		363283DF1702209F004DAAAB /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 363283DE1702209F004DAAAB /* libsqlite3.0.dylib */; };
 		364AB6E916B9BC21003E93F5 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 364AB6E816B9BC21003E93F5 /* check.png */; };
 		364AB6ED16B9BE04003E93F5 /* MKTeamListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 364AB6EC16B9BE04003E93F5 /* MKTeamListController.m */; };
 		364AB6F316B9D814003E93F5 /* devam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 364AB6F216B9D814003E93F5 /* devam@2x.png */; };
 		364AB6F616B9D8A8003E93F5 /* devam.png in Resources */ = {isa = PBXBuildFile; fileRef = 364AB6F516B9D8A8003E93F5 /* devam.png */; };
-		3668938C16FB873E003981A0 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 3668938A16FB873E003981A0 /* twitter.png */; };
-		3668938D16FB873E003981A0 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 3668938B16FB873E003981A0 /* facebook.png */; };
 		3668938F16FB8E96003981A0 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3668938E16FB8E96003981A0 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3668939116FB8E9D003981A0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3668939016FB8E9D003981A0 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		366BEEE116FDFCA7007AFF56 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366BEEE016FDFCA7007AFF56 /* Parse.framework */; };
@@ -61,10 +64,6 @@
 		366BEEF116FDFD4F007AFF56 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366BEEF016FDFD4F007AFF56 /* StoreKit.framework */; };
 		366BEEF316FDFD56007AFF56 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366BEEF216FDFD56007AFF56 /* SystemConfiguration.framework */; };
 		366BEEF516FDFE79007AFF56 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366BEEF416FDFE79007AFF56 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		366BEEFA16FE002D007AFF56 /* twitter_share.png in Resources */ = {isa = PBXBuildFile; fileRef = 366BEEF616FE002D007AFF56 /* twitter_share.png */; };
-		366BEEFB16FE002D007AFF56 /* facebook_share.png in Resources */ = {isa = PBXBuildFile; fileRef = 366BEEF716FE002D007AFF56 /* facebook_share.png */; };
-		366BEEFC16FE002D007AFF56 /* twitter_share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 366BEEF816FE002D007AFF56 /* twitter_share@2x.png */; };
-		366BEEFD16FE002D007AFF56 /* facebook_share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 366BEEF916FE002D007AFF56 /* facebook_share@2x.png */; };
 		3680632C16FCAAF900F040B9 /* Türkiye-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3680632B16FCAAF900F040B9 /* Türkiye-logo.png */; };
 		369C1AE416B9888A005AFE0E /* gnLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 369C1AE216B9876F005AFE0E /* gnLoadingView.m */; };
 		369C1AEB16B99C91005AFE0E /* Galatasaray-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 369C1AEA16B99C91005AFE0E /* Galatasaray-logo.png */; };
@@ -205,13 +204,16 @@
 		360860C916F79815003AEC1A /* BATE-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BATE-logo.png"; sourceTree = "<group>"; };
 		3623C72C16B3F6F1007E5986 /* MKMatchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMatchView.h; sourceTree = "<group>"; };
 		3623C72D16B3F6F1007E5986 /* MKMatchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMatchView.m; sourceTree = "<group>"; };
+		363283D617022095004DAAAB /* twitter_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter_share.png; sourceTree = "<group>"; };
+		363283D717022095004DAAAB /* facebook_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook_share.png; sourceTree = "<group>"; };
+		363283D817022095004DAAAB /* twitter_share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter_share@2x.png"; sourceTree = "<group>"; };
+		363283D917022095004DAAAB /* facebook_share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook_share@2x.png"; sourceTree = "<group>"; };
+		363283DE1702209F004DAAAB /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		364AB6E816B9BC21003E93F5 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
 		364AB6EB16B9BE04003E93F5 /* MKTeamListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKTeamListController.h; sourceTree = "<group>"; };
 		364AB6EC16B9BE04003E93F5 /* MKTeamListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKTeamListController.m; sourceTree = "<group>"; };
 		364AB6F216B9D814003E93F5 /* devam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "devam@2x.png"; sourceTree = "<group>"; };
 		364AB6F516B9D8A8003E93F5 /* devam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = devam.png; sourceTree = "<group>"; };
-		3668938A16FB873E003981A0 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
-		3668938B16FB873E003981A0 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		3668938E16FB8E96003981A0 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		3668939016FB8E9D003981A0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		366BEEE016FDFCA7007AFF56 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../../Downloads/Parse.framework; sourceTree = "<group>"; };
@@ -225,10 +227,6 @@
 		366BEEF016FDFD4F007AFF56 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		366BEEF216FDFD56007AFF56 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		366BEEF416FDFE79007AFF56 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		366BEEF616FE002D007AFF56 /* twitter_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter_share.png; path = "../../../Dropbox/NetcenBiz/Mac Kacta/share icons/twitter_share.png"; sourceTree = "<group>"; };
-		366BEEF716FE002D007AFF56 /* facebook_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebook_share.png; path = "../../../Dropbox/NetcenBiz/Mac Kacta/share icons/facebook_share.png"; sourceTree = "<group>"; };
-		366BEEF816FE002D007AFF56 /* twitter_share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "twitter_share@2x.png"; path = "../../../Dropbox/NetcenBiz/Mac Kacta/share icons/twitter_share@2x.png"; sourceTree = "<group>"; };
-		366BEEF916FE002D007AFF56 /* facebook_share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "facebook_share@2x.png"; path = "../../../Dropbox/NetcenBiz/Mac Kacta/share icons/facebook_share@2x.png"; sourceTree = "<group>"; };
 		3680632B16FCAAF900F040B9 /* Türkiye-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Türkiye-logo.png"; sourceTree = "<group>"; };
 		369C1AE116B9876F005AFE0E /* gnLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gnLoadingView.h; sourceTree = "<group>"; };
 		369C1AE216B9876F005AFE0E /* gnLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gnLoadingView.m; sourceTree = "<group>"; };
@@ -347,6 +345,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				363283DF1702209F004DAAAB /* libsqlite3.0.dylib in Frameworks */,
 				366BEEF516FDFE79007AFF56 /* AdSupport.framework in Frameworks */,
 				366BEEF316FDFD56007AFF56 /* SystemConfiguration.framework in Frameworks */,
 				366BEEF116FDFD4F007AFF56 /* StoreKit.framework in Frameworks */,
@@ -372,6 +371,7 @@
 		DC928A9716B32274009B6014 = {
 			isa = PBXGroup;
 			children = (
+				363283DE1702209F004DAAAB /* libsqlite3.0.dylib */,
 				DC928AEB16B354DC009B6014 /* Default.png */,
 				DC928AE916B354D2009B6014 /* Default@2x.png */,
 				DC928AE716B35377009B6014 /* mackacta.png */,
@@ -440,12 +440,10 @@
 		DC928AAD16B32274009B6014 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				366BEEF616FE002D007AFF56 /* twitter_share.png */,
-				366BEEF716FE002D007AFF56 /* facebook_share.png */,
-				366BEEF816FE002D007AFF56 /* twitter_share@2x.png */,
-				366BEEF916FE002D007AFF56 /* facebook_share@2x.png */,
-				3668938A16FB873E003981A0 /* twitter.png */,
-				3668938B16FB873E003981A0 /* facebook.png */,
+				363283D617022095004DAAAB /* twitter_share.png */,
+				363283D717022095004DAAAB /* facebook_share.png */,
+				363283D817022095004DAAAB /* twitter_share@2x.png */,
+				363283D917022095004DAAAB /* facebook_share@2x.png */,
 				364AB6F516B9D8A8003E93F5 /* devam.png */,
 				364AB6F216B9D814003E93F5 /* devam@2x.png */,
 				DC1DC56516B9C67800159CB5 /* Mersin İY-bg-568h@2x.jpg */,
@@ -758,13 +756,11 @@
 				360860C416F260D2003AEC1A /* Estonya-logo.png in Resources */,
 				360860C616F260E5003AEC1A /* Hollanda-logo.png in Resources */,
 				360860CA16F79818003AEC1A /* BATE-logo.png in Resources */,
-				3668938C16FB873E003981A0 /* twitter.png in Resources */,
-				3668938D16FB873E003981A0 /* facebook.png in Resources */,
 				3680632C16FCAAF900F040B9 /* Türkiye-logo.png in Resources */,
-				366BEEFA16FE002D007AFF56 /* twitter_share.png in Resources */,
-				366BEEFB16FE002D007AFF56 /* facebook_share.png in Resources */,
-				366BEEFC16FE002D007AFF56 /* twitter_share@2x.png in Resources */,
-				366BEEFD16FE002D007AFF56 /* facebook_share@2x.png in Resources */,
+				363283DA17022095004DAAAB /* twitter_share.png in Resources */,
+				363283DB17022095004DAAAB /* facebook_share.png in Resources */,
+				363283DC17022095004DAAAB /* twitter_share@2x.png in Resources */,
+				363283DD17022095004DAAAB /* facebook_share@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

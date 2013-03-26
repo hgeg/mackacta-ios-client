@@ -17,7 +17,7 @@
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
      UIRemoteNotificationTypeAlert|
      UIRemoteNotificationTypeSound];
-    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    //[PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     // Override point for customization after application launch.
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil];
     [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"lslock"];
