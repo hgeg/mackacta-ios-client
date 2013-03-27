@@ -101,10 +101,6 @@
         if([d timeIntervalSinceNow]<-60){
             if(c!=-1) {
                 [[NSUserDefaults standardUserDefaults] setBool:false forKey:@"lslock"];
-                if(c==-45)
-                    mins = [NSString stringWithFormat:@" (DA)"];
-                else
-                    mins = [NSString stringWithFormat:@" (dk. %d)",c];
             }
             UILabel *homeTeamScore = [[UILabel alloc] initWithFrame:CGRectMake(33, yOffset, 67, 38)];
             homeTeamScore.font = [UIFont boldSystemFontOfSize:43];

@@ -62,7 +62,8 @@
         
         // When users indicate they are Giants fans, we subscribe them to that channel.
         PFInstallation *currentInstallation = [PFInstallation currentInstallation];
-        [currentInstallation addUniqueObject:[[NSString alloc] initWithData:[myTeam dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES] encoding:NSASCIIStringEncoding] forKey:@"channels"];
+        NSString *tchannel = [[[NSString alloc] initWithData:[myTeam dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES] encoding:NSASCIIStringEncoding] stringByReplacingOccurrencesOfString:@" " withString:@"-"];
+        [currentInstallation addUniqueObject:tchannel forKey:@"channels"];
         [currentInstallation saveInBackground];
         
         self.background.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@-bg.jpg",myTeam]];

@@ -35,7 +35,12 @@
     sel.selectionStyle = UITableViewCellSelectionStyleNone;
     if(sel != self.selected){
         [[NSNotificationCenter defaultCenter] postNotificationName:@"selected" object:nil];
-        // When users indicate they are Giants fans, we subscribe them to that channel.
+        
+        PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+        NSString *channel = [[[NSString alloc] initWithData:[((UILabel *)[self.selected viewWithTag:1]).text dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES] encoding:NSASCIIStringEncoding] stringByReplacingOccurrencesOfString:@" " withString:@"-"];
+        [currentInstallation removeObject:channel forKey:@"channels"];
+        [currentInstallation saveInBackground];
+        
         [[NSUserDefaults standardUserDefaults] setValue:((UILabel *)[sel viewWithTag:1]).text forKey:@"selectedTeam"];
         [[NSUserDefaults standardUserDefaults] setValue:@"invalid" forKey:@"flag"];
     [self.selected viewWithTag:2].alpha = 1;

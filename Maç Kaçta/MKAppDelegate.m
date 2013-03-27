@@ -30,7 +30,6 @@
         UIViewController* mainViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"main"];
         self.window.rootViewController = mainViewController;
     }
-    application.applicationIconBadgeNumber = 0;
     return YES;
 }
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -50,11 +49,6 @@
     [currentInstallation saveInBackground];
 }
 
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
 - (void)application:(UIApplication *)application
 didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
@@ -67,6 +61,16 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 - (void)application:(UIApplication *)application
 didReceiveRemoteNotification:(NSDictionary *)userInfo {
     [PFPush handlePush:userInfo];
+}
+
+- (void)application:(UIApplication *)application
+didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+    if ([error code] == 3010) {
+        NSLog(@"Push notifications don't work in the simulator!");
+    } else {
+        NSLog(@"didFailToRegisterForRemoteNotificationsWithError: %@", error);
+    }
 }
 
 @end
