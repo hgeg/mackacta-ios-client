@@ -211,7 +211,6 @@
         [aiw startAnimating];
         [self.view addSubview:aiw];
     });
-    NSLog(@"update started");
     [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"lslock"];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://54.235.244.172/api/v1_0/scores:live/"]];
     __block double delayInSeconds = 10.0;
@@ -224,12 +223,9 @@
                 @try {
                     upd += [((MKMatchView *)[self.scroller viewWithTag:[d[i][@"id"] integerValue]]) updateMatchminutes:d[i][@"c"] homeScore:d[i][@"sh"] andAwayScore:d[i][@"sa"]];
                 }@catch (NSException *exception) {}
-                if (upd==0) {
-                    delayInSeconds = 14*60;
-                }
             }
+            if (upd==0)  delayInSeconds = 14*60;
         }
-        NSLog(@"updated");
         dispatch_async(dispatch_get_main_queue(), ^{
             [aiw removeFromSuperview];
             aiw=nil;
