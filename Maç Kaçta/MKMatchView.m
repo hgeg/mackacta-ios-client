@@ -169,7 +169,10 @@
         
         if(((comp1.hour==0 || comp1.hour==2) && comp1.minute==0)) {
             timeString = @"--:--";
-            //dateString = [NSString stringWithFormat:@"%@ Haftası",dateString];
+            formatString = [NSDateFormatter dateFormatFromTemplate:@"dd MMMM yyyy" options:0 locale:tr];
+            [dateFormatter setDateFormat:formatString];
+            dateString = [dateFormatter stringFromDate:d];
+            dateString = [NSString stringWithFormat:@"%@ Haftası",dateString];
         }
         
         date.text = dateString;
