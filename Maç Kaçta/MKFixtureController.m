@@ -60,10 +60,9 @@
         [UIView commitAnimations];
         myTeam = [[NSUserDefaults standardUserDefaults] valueForKey:@"selectedTeam"];
         
-        // When users indicate they are Giants fans, we subscribe them to that channel.
         PFInstallation *currentInstallation = [PFInstallation currentInstallation];
-        NSString *tchannel = [[[NSString alloc] initWithData:[myTeam dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES] encoding:NSASCIIStringEncoding] stringByReplacingOccurrencesOfString:@" " withString:@"-"];
-        [currentInstallation addUniqueObject:tchannel forKey:@"channels"];
+        NSString *tchannel = [[[[NSString alloc] initWithData:[myTeam dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES] encoding:NSASCIIStringEncoding] stringByReplacingOccurrencesOfString:@" " withString:@"-"] stringByReplacingOccurrencesOfString:@"." withString:@"-"];
+        [currentInstallation setObject:@[tchannel] forKey:@"channels"];
         [currentInstallation saveInBackground];
         
         self.background.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@-bg.jpg",myTeam]];
