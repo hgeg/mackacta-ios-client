@@ -224,7 +224,7 @@
                     upd += [((MKMatchView *)[self.scroller viewWithTag:[d[i][@"id"] integerValue]]) updateMatchminutes:d[i][@"c"] homeScore:d[i][@"sh"] andAwayScore:d[i][@"sa"]];
                 }@catch (NSException *exception) {}
             }
-            if (upd==0)  delayInSeconds = 14*60;
+            if (upd==0)  delayInSeconds = 2*60;
         }
         dispatch_async(dispatch_get_main_queue(), ^{
             [aiw removeFromSuperview];
