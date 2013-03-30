@@ -27,7 +27,6 @@
     
     queue = dispatch_queue_create("com.orkestra.mackacta.fixturequeue", nil);
     liveq = [[NSOperationQueue alloc] init];
-    scroller.delegate = self;
     gLock = 2;
     offset = 0;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(preChange) name:@"active" object:nil];
@@ -51,7 +50,6 @@
         // Do any additional setup after loading the view, typically from a nib.
         CGSize mySize = self.view.frame.size;
         self.scroller = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, mySize.width, mySize.height)];
-        self.scroller.delegate = self;
         self.scroller.pagingEnabled = true;
         [UIView beginAnimations:nil context:nil];
             [UIView setAnimationDuration:1.0];
@@ -96,7 +94,6 @@
                 k=i;
             }
         }
-        [self.matchView removeFromSuperview];
         [self.view addSubview:self.scroller];
         self.scroller.showsHorizontalScrollIndicator = false;
         [[NSUserDefaults standardUserDefaults] setValue:@"valid" forKey:@"flag"];
@@ -105,6 +102,9 @@
         [self.view bringSubviewToFront:self.twShare];
         [self.view bringSubviewToFront:self.fbShare];
     }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self updateMatches];
+    });
     dispatch_sync(queue, ^{
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationDuration:0.3];
@@ -115,9 +115,7 @@
         [gnLoadingView hideLoader];
     });
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self updateMatches];
-    });
+    [self.view addSubview:aiw];
 }
 
 - (void)generateView:(NSObject *)pobj {
@@ -209,26 +207,27 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         aiw.frame = CGRectMake(150, 150, 20, 20);
         [aiw startAnimating];
-        [self.view addSubview:aiw];
     });
     [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"lslock"];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://54.235.244.172/api/v1_0/scores:live/"]];
-    __block double delayInSeconds = 10.0;
+    __block double delayInSeconds = 5.0;
     [NSURLConnection sendAsynchronousRequest:request queue:liveq completionHandler:^(NSURLResponse *response, NSData *responseData, NSError *err) {
         if (responseData){
             NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
             NSArray *d = json[@"data"];
-            int upd = 0;
+            __block int upd = 0;
             for(int i=0;i<[d count];i++){
                 @try {
-                    upd += [((MKMatchView *)[self.scroller viewWithTag:[d[i][@"id"] integerValue]]) updateMatchminutes:d[i][@"c"] homeScore:d[i][@"sh"] andAwayScore:d[i][@"sa"]];
+                    dispatch_sync(dispatch_get_main_queue(), ^{
+                        upd += [((MKMatchView *)[self.scroller viewWithTag:[d[i][@"id"] integerValue]]) updateMatchminutes:d[i][@"c"] homeScore:d[i][@"sh"] andAwayScore:d[i][@"sa"]];
+                    });
+                    
                 }@catch (NSException *exception) {}
             }
             if (upd==0)  delayInSeconds = 2*60;
         }
         dispatch_async(dispatch_get_main_queue(), ^{
-            [aiw removeFromSuperview];
-            aiw=nil;
+            [aiw stopAnimating];
         });
         [[NSUserDefaults standardUserDefaults] setBool:false forKey:@"lslock"];
         

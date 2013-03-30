@@ -30,7 +30,6 @@
 @property (nonatomic, strong) ACAccountStore *accountStore;
 
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
-@property (weak, nonatomic) IBOutlet MKMatchView *matchView;
 @property (strong, nonatomic) IBOutlet UIScrollView *scroller;
 @property (strong, nonatomic) IBOutlet NSMutableArray *matches;
 @property (weak, nonatomic) IBOutlet UIImageView *background;
