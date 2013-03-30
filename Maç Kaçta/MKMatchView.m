@@ -233,9 +233,7 @@
 - (int) updateMatchminutes:(NSString *)m homeScore:(NSString *)h andAwayScore:(NSString *)a {
     int retval = 1;
     ((UILabel *)[self viewWithTag:1]).text = h;
-    NSLog(@"%@",h);
     ((UILabel *)[self viewWithTag:2]).text = a;
-    NSLog(@"%@",a);
     NSString *mins = @"";
     if([m integerValue]!=-1) {
         if([m integerValue]==-45){
@@ -246,7 +244,6 @@
             [[NSUserDefaults standardUserDefaults] setBool:false forKey:@"lslock"];
         }
     }
-    NSLog(@"%@",mins);
     ((UILabel *)[self viewWithTag:3]).text = [NSString stringWithFormat:@"%@%@",self->timeStr,mins];
     return retval;
 }
