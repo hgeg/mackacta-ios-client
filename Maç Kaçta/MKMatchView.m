@@ -231,9 +231,15 @@
 */
 
 - (int) updateMatchminutes:(NSString *)m homeScore:(NSString *)h andAwayScore:(NSString *)a {
+    static int oi= 0;
     int retval = 1;
     ((UILabel *)[self viewWithTag:1]).text = h;
     ((UILabel *)[self viewWithTag:2]).text = a;
+    if (((UILabel *)[self viewWithTag:1]) == nil) {
+        [[NSUserDefaults standardUserDefaults] setValue:@"invalid" forKey:@"flag"];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"active" object:nil];
+        oi++;
+    }
     NSString *mins = @"";
     if([m integerValue]!=-1) {
         if([m integerValue]==-45){

@@ -38,10 +38,14 @@
     [self.scroller removeFromSuperview];
     self.fbShare.alpha = 0;
     self.twShare.alpha = 0;
+    [self viewDidAppear:true];
 }
 
 -(void) viewDidAppear:(BOOL)animated {
     if(![[[NSUserDefaults standardUserDefaults] valueForKey:@"flag"] isEqualToString:@"valid"]) {
+        [self.scroller removeFromSuperview];
+        self.fbShare.alpha = 0;
+        self.twShare.alpha = 0;
         [[NSUserDefaults standardUserDefaults] setValue:@"invalid" forKey:@"flags"];
         offset = 0;
         self.fbShare.alpha = 0;
