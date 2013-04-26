@@ -52,6 +52,9 @@
         }else if([dict[@"league"] isEqualToString:@"dunya-kupasi-2014"]){
             week.text = @"Dünya Kupası 2014 - Avrupa Elemeleri";
             cert = true;
+        }else if([dict[@"league"] isEqualToString:@"ziraat-turkiye-kupasi"]){
+            week.text = @"Ziraat Türkiye Kupası";
+            cert = true;
         }else
             week.text = [NSString stringWithFormat:@"Spor Toto Süper Lig %@. hafta",dict[@"week"]];
         [newView addSubview:week];

@@ -1069,8 +1069,8 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" rowHeight="85" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="67y-gS-JjG">
                                 <color key="backgroundColor" white="0.21384580291970803" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="473" id="szo-a4-SAf"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" priority="1" constant="428" type="user" id="yut-jx-QxI"/>
+                                    <constraint firstAttribute="height" priority="868" constant="474" type="user" id="HM2-Sp-Tp0"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="474" type="user" id="ksp-cp-9Wt"/>
                                 </constraints>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -1189,7 +1189,6 @@
                                             <constraint firstItem="9ad-bx-yBa" firstAttribute="bottom" secondItem="qXK-Bu-MkE" secondAttribute="bottom" type="default" id="1hb-ek-pIV"/>
                                             <constraint firstItem="Jlc-iJ-OGa" firstAttribute="centerX" secondItem="eMU-68-7gt" secondAttribute="centerX" type="default" id="2n6-N0-slE"/>
                                             <constraint firstItem="eMU-68-7gt" firstAttribute="top" secondItem="aSO-aT-9sy" secondAttribute="top" type="default" id="7oR-br-gNq"/>
-                                            <constraint firstAttribute="trailing" secondItem="VVc-PU-hks" secondAttribute="trailing" constant="49" id="Av6-Qc-5DP"/>
                                             <constraint firstItem="E4a-Ck-M89" firstAttribute="centerX" secondItem="9ad-bx-yBa" secondAttribute="centerX" type="default" id="DDd-nS-wsz"/>
                                             <constraint firstItem="djf-wb-qma" firstAttribute="centerX" secondItem="M3w-XO-gvm" secondAttribute="centerX" type="default" id="DJt-6X-pLg"/>
                                             <constraint firstItem="S7P-f1-8Xn" firstAttribute="leading" secondItem="P9V-Z6-zzI" secondAttribute="leading" constant="31" id="F6p-n0-gg9"/>
@@ -1211,6 +1210,7 @@
                                             <constraint firstItem="Jlc-iJ-OGa" firstAttribute="top" secondItem="P9V-Z6-zzI" secondAttribute="top" constant="38" id="dMK-Ct-nw0"/>
                                             <constraint firstItem="Jlc-iJ-OGa" firstAttribute="baseline" secondItem="NIh-Jx-hlx" secondAttribute="baseline" type="default" id="eIv-8D-eaO"/>
                                             <constraint firstItem="6r2-bp-VNF" firstAttribute="leading" secondItem="P9V-Z6-zzI" secondAttribute="leading" type="default" id="fEc-Qk-q2S"/>
+                                            <constraint firstAttribute="trailing" secondItem="VVc-PU-hks" secondAttribute="trailing" constant="49" id="hlJ-jD-yQX"/>
                                             <constraint firstItem="S7P-f1-8Xn" firstAttribute="baseline" secondItem="3fE-Vr-ZIl" secondAttribute="baseline" type="default" id="lNv-8N-0VU"/>
                                             <constraint firstItem="6mq-Z7-dhP" firstAttribute="top" secondItem="FRl-0U-iwY" secondAttribute="top" type="default" id="oDl-Lz-aAQ"/>
                                             <constraint firstItem="eMU-68-7gt" firstAttribute="leading" secondItem="P9V-Z6-zzI" secondAttribute="leading" constant="63" id="rJt-MA-ruT"/>
@@ -1237,14 +1237,15 @@
                         <constraints>
                             <constraint firstItem="Hii-28-rTn" firstAttribute="bottom" secondItem="17" secondAttribute="bottom" priority="1" type="user" id="31w-LA-qN7"/>
                             <constraint firstItem="67y-gS-JjG" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" type="default" id="C9Y-kJ-61S"/>
+                            <constraint firstItem="67y-gS-JjG" firstAttribute="bottom" secondItem="17" secondAttribute="bottom" type="user" id="DCE-B1-8SK"/>
                             <constraint firstItem="Ko5-cw-WIs" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="EuM-WA-1Ap"/>
-                            <constraint firstItem="67y-gS-JjG" firstAttribute="top" secondItem="17" secondAttribute="top" constant="25" id="Qjd-7q-2Pj"/>
                             <constraint firstItem="Ko5-cw-WIs" firstAttribute="top" secondItem="17" secondAttribute="top" type="user" id="WXc-dD-izN"/>
                             <constraint firstItem="Ko5-cw-WIs" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" type="default" id="bGQ-pa-N8M"/>
                             <constraint firstItem="Hii-28-rTn" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="cLc-iL-ouo"/>
                             <constraint firstItem="Hii-28-rTn" firstAttribute="top" secondItem="17" secondAttribute="top" type="default" id="eee-HP-Nrv"/>
                             <constraint firstItem="Hii-28-rTn" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" type="default" id="ey8-uc-Gd3"/>
                             <constraint firstItem="67y-gS-JjG" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="j49-4V-5KL"/>
+                            <constraint firstItem="67y-gS-JjG" firstAttribute="top" secondItem="17" secondAttribute="top" constant="25" type="user" id="zHk-RL-wZY"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Puan Durumu" image="graph_bar_trend.png" id="6"/>
@@ -1378,23 +1379,15 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MKFixtureController.h"/>
             <relationships>
                 <relationship kind="action" name="facebook:"/>
-                <relationship kind="action" name="lockSlider:"/>
-                <relationship kind="action" name="releaseSlider:"/>
                 <relationship kind="action" name="sliderChanged:"/>
                 <relationship kind="action" name="twitter:"/>
                 <relationship kind="outlet" name="background" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="backgroundImage" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="fbShare" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="matchView" candidateClass="MKMatchView"/>
                 <relationship kind="outlet" name="matches" candidateClass="NSMutableArray"/>
                 <relationship kind="outlet" name="scroller" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="slider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="sliderBar" candidateClass="UIView"/>
                 <relationship kind="outlet" name="twShare" candidateClass="UIButton"/>
             </relationships>
-        </class>
-        <class className="MKMatchView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MKMatchView.h"/>
         </class>
         <class className="MKSettingsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MKSettingsViewController.h"/>
