@@ -644,56 +644,8 @@
                                             <constraint firstItem="tVE-Bt-12a" firstAttribute="centerY" secondItem="1LL-1y-snh" secondAttribute="centerY" type="default" id="hzo-9L-Ro0"/>
                                         </constraints>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="iZn-y8-Qh4">
-                                        <rect key="frame" x="0.0" y="540" width="258" height="54"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cell_arkaplan_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="dxR-xN-GBx">
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="53" id="dJs-0M-iOv"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="İstanbul BŞB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnl-Dn-aC7">
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="185" id="B4r-V3-5bO"/>
-                                                        <constraint firstAttribute="height" constant="36" id="dHB-Fg-5au"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </label>
-                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y6S-l7-G5L">
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="32" id="rri-Kl-rgU"/>
-                                                        <constraint firstAttribute="height" constant="32" id="uKb-hX-yHb"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="İstanbul BŞB-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="EZj-BW-lpy">
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="45" id="PR0-j5-dID"/>
-                                                        <constraint firstAttribute="width" constant="50" id="pLy-qK-MvL"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="EZj-BW-lpy" firstAttribute="top" secondItem="iZn-y8-Qh4" secondAttribute="top" constant="3" id="CHd-TT-SA4"/>
-                                            <constraint firstItem="pnl-Dn-aC7" firstAttribute="centerY" secondItem="iZn-y8-Qh4" secondAttribute="centerY" type="default" id="D0C-U0-h99"/>
-                                            <constraint firstItem="Y6S-l7-G5L" firstAttribute="trailing" secondItem="pnl-Dn-aC7" secondAttribute="trailing" type="default" id="OBT-Jb-eOh"/>
-                                            <constraint firstItem="pnl-Dn-aC7" firstAttribute="leading" secondItem="iZn-y8-Qh4" secondAttribute="leading" constant="58" id="OZi-yF-NgC"/>
-                                            <constraint firstItem="pnl-Dn-aC7" firstAttribute="centerY" secondItem="Y6S-l7-G5L" secondAttribute="centerY" type="default" id="QeC-lJ-Sw6"/>
-                                            <constraint firstItem="dxR-xN-GBx" firstAttribute="trailing" secondItem="iZn-y8-Qh4" secondAttribute="trailing" type="default" id="c31-4T-oHU"/>
-                                            <constraint firstItem="dxR-xN-GBx" firstAttribute="top" secondItem="iZn-y8-Qh4" secondAttribute="top" type="default" id="cRh-UV-0Gm"/>
-                                            <constraint firstItem="dxR-xN-GBx" firstAttribute="leading" secondItem="iZn-y8-Qh4" secondAttribute="leading" type="default" id="dD9-VQ-UYg"/>
-                                            <constraint firstItem="EZj-BW-lpy" firstAttribute="leading" secondItem="iZn-y8-Qh4" secondAttribute="leading" constant="4" id="dmZ-8W-eMQ"/>
-                                        </constraints>
-                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="CoN-Kk-NAt">
-                                        <rect key="frame" x="0.0" y="594" width="258" height="54"/>
+                                        <rect key="frame" x="0.0" y="540" width="258" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
@@ -740,64 +692,56 @@
                                             <constraint firstItem="MKT-Zj-UB1" firstAttribute="centerY" secondItem="Op6-To-HYS" secondAttribute="centerY" type="default" id="ohx-NI-3t6"/>
                                         </constraints>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="Brp-VB-Iee">
-                                        <rect key="frame" x="0.0" y="648" width="258" height="54"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="iZn-y8-Qh4">
+                                        <rect key="frame" x="0.0" y="594" width="258" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cell_arkaplan_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="etS-qL-gWM">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cell_arkaplan_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="dxR-xN-GBx">
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="53" id="isK-VR-wCY"/>
+                                                        <constraint firstAttribute="height" constant="53" id="dJs-0M-iOv"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="Kasımpaşa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnF-2g-dq1">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="K.Erciyesspor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnl-Dn-aC7">
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="36" id="WU9-wM-NIF"/>
-                                                        <constraint firstAttribute="width" constant="185" id="e6R-cd-lZh"/>
+                                                        <constraint firstAttribute="width" constant="185" id="B4r-V3-5bO"/>
+                                                        <constraint firstAttribute="height" constant="36" id="dHB-Fg-5au"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="aW0-ed-J3b">
+                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y6S-l7-G5L">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="32" id="2bs-X1-jHf"/>
-                                                        <constraint firstAttribute="height" constant="32" id="U7L-6W-Nns"/>
+                                                        <constraint firstAttribute="width" constant="32" id="rri-Kl-rgU"/>
+                                                        <constraint firstAttribute="height" constant="32" id="uKb-hX-yHb"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="1bX-DH-ZpE">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="K.Erciyesspor-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="EZj-BW-lpy">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="32" id="dI7-fQ-Mij"/>
-                                                        <constraint firstAttribute="height" constant="32" id="sbJ-1U-49Z"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Kasımpaşa-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="SjM-5o-iKp">
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="4eO-hN-GX5"/>
-                                                        <constraint firstAttribute="height" constant="45" id="mO0-3X-NV0"/>
+                                                        <constraint firstAttribute="height" constant="45" id="PR0-j5-dID"/>
+                                                        <constraint firstAttribute="width" constant="50" id="pLy-qK-MvL"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="etS-qL-gWM" firstAttribute="trailing" secondItem="Brp-VB-Iee" secondAttribute="trailing" type="default" id="1bS-ZD-oc2"/>
-                                            <constraint firstItem="SjM-5o-iKp" firstAttribute="top" secondItem="Brp-VB-Iee" secondAttribute="top" constant="3" id="7OO-h1-d0g"/>
-                                            <constraint firstItem="SjM-5o-iKp" firstAttribute="leading" secondItem="Brp-VB-Iee" secondAttribute="leading" constant="4" id="Cng-yF-Iol"/>
-                                            <constraint firstItem="1bX-DH-ZpE" firstAttribute="leading" secondItem="Brp-VB-Iee" secondAttribute="leading" constant="221" id="GJN-Da-Wfh"/>
-                                            <constraint firstItem="KnF-2g-dq1" firstAttribute="centerY" secondItem="aW0-ed-J3b" secondAttribute="centerY" type="default" id="KCt-ar-nom"/>
-                                            <constraint firstItem="etS-qL-gWM" firstAttribute="leading" secondItem="Brp-VB-Iee" secondAttribute="leading" type="default" id="Ori-rn-7mD"/>
-                                            <constraint firstItem="1bX-DH-ZpE" firstAttribute="top" secondItem="Brp-VB-Iee" secondAttribute="top" constant="72" id="bLh-k9-8eu"/>
-                                            <constraint firstItem="KnF-2g-dq1" firstAttribute="trailing" secondItem="aW0-ed-J3b" secondAttribute="trailing" type="default" id="kVG-wb-EbS"/>
-                                            <constraint firstItem="etS-qL-gWM" firstAttribute="top" secondItem="Brp-VB-Iee" secondAttribute="top" type="default" id="kXW-Fj-6CB"/>
-                                            <constraint firstItem="KnF-2g-dq1" firstAttribute="leading" secondItem="Brp-VB-Iee" secondAttribute="leading" constant="58" id="lh4-Mr-nUS"/>
-                                            <constraint firstItem="KnF-2g-dq1" firstAttribute="centerY" secondItem="Brp-VB-Iee" secondAttribute="centerY" type="default" id="xdN-gH-tmj"/>
+                                            <constraint firstItem="EZj-BW-lpy" firstAttribute="top" secondItem="iZn-y8-Qh4" secondAttribute="top" constant="3" id="CHd-TT-SA4"/>
+                                            <constraint firstItem="pnl-Dn-aC7" firstAttribute="centerY" secondItem="iZn-y8-Qh4" secondAttribute="centerY" type="default" id="D0C-U0-h99"/>
+                                            <constraint firstItem="Y6S-l7-G5L" firstAttribute="trailing" secondItem="pnl-Dn-aC7" secondAttribute="trailing" type="default" id="OBT-Jb-eOh"/>
+                                            <constraint firstItem="pnl-Dn-aC7" firstAttribute="leading" secondItem="iZn-y8-Qh4" secondAttribute="leading" constant="58" id="OZi-yF-NgC"/>
+                                            <constraint firstItem="pnl-Dn-aC7" firstAttribute="centerY" secondItem="Y6S-l7-G5L" secondAttribute="centerY" type="default" id="QeC-lJ-Sw6"/>
+                                            <constraint firstItem="dxR-xN-GBx" firstAttribute="trailing" secondItem="iZn-y8-Qh4" secondAttribute="trailing" type="default" id="c31-4T-oHU"/>
+                                            <constraint firstItem="dxR-xN-GBx" firstAttribute="top" secondItem="iZn-y8-Qh4" secondAttribute="top" type="default" id="cRh-UV-0Gm"/>
+                                            <constraint firstItem="dxR-xN-GBx" firstAttribute="leading" secondItem="iZn-y8-Qh4" secondAttribute="leading" type="default" id="dD9-VQ-UYg"/>
+                                            <constraint firstItem="EZj-BW-lpy" firstAttribute="leading" secondItem="iZn-y8-Qh4" secondAttribute="leading" constant="4" id="dmZ-8W-eMQ"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="M8O-DV-WUo">
-                                        <rect key="frame" x="0.0" y="702" width="258" height="54"/>
+                                        <rect key="frame" x="0.0" y="648" width="258" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
@@ -844,56 +788,8 @@
                                             <constraint firstItem="PYQ-SK-eQ7" firstAttribute="leading" secondItem="M8O-DV-WUo" secondAttribute="leading" constant="58" id="rSg-q9-Ili"/>
                                         </constraints>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="DSz-Sz-1vb">
-                                        <rect key="frame" x="0.0" y="756" width="258" height="54"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cell_arkaplan_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="bTX-BN-kcS">
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="53" id="N4y-zZ-8Kg"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="Mersin İY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57N-HY-2GE">
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="36" id="QAv-Rm-ixH"/>
-                                                        <constraint firstAttribute="width" constant="185" id="dZP-Vx-MSS"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Mersin İY-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Aex-yy-h7C">
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="45" id="6ve-Ur-eUy"/>
-                                                        <constraint firstAttribute="width" constant="50" id="aDL-be-yza"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="koM-FX-znJ">
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="32" id="0OX-VC-zgr"/>
-                                                        <constraint firstAttribute="height" constant="32" id="qfP-jh-Mfp"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="Aex-yy-h7C" firstAttribute="top" secondItem="DSz-Sz-1vb" secondAttribute="top" constant="3" id="3vL-uS-oka"/>
-                                            <constraint firstItem="Aex-yy-h7C" firstAttribute="leading" secondItem="DSz-Sz-1vb" secondAttribute="leading" constant="4" id="4b4-B9-8fJ"/>
-                                            <constraint firstItem="57N-HY-2GE" firstAttribute="centerY" secondItem="koM-FX-znJ" secondAttribute="centerY" type="default" id="V4K-Vw-STS"/>
-                                            <constraint firstItem="57N-HY-2GE" firstAttribute="centerY" secondItem="DSz-Sz-1vb" secondAttribute="centerY" type="default" id="VED-u5-8mH"/>
-                                            <constraint firstItem="bTX-BN-kcS" firstAttribute="leading" secondItem="DSz-Sz-1vb" secondAttribute="leading" type="default" id="Z6V-f0-Py3"/>
-                                            <constraint firstItem="57N-HY-2GE" firstAttribute="trailing" secondItem="koM-FX-znJ" secondAttribute="trailing" type="default" id="cLf-i0-1sa"/>
-                                            <constraint firstItem="57N-HY-2GE" firstAttribute="leading" secondItem="DSz-Sz-1vb" secondAttribute="leading" constant="58" id="dOf-WU-ZWB"/>
-                                            <constraint firstItem="bTX-BN-kcS" firstAttribute="trailing" secondItem="DSz-Sz-1vb" secondAttribute="trailing" type="default" id="kbr-gI-K4i"/>
-                                            <constraint firstItem="bTX-BN-kcS" firstAttribute="top" secondItem="DSz-Sz-1vb" secondAttribute="top" type="default" id="t37-Lb-ZLd"/>
-                                        </constraints>
-                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="6XZ-0s-2BN">
-                                        <rect key="frame" x="0.0" y="810" width="258" height="54"/>
+                                        <rect key="frame" x="0.0" y="702" width="258" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
@@ -940,8 +836,64 @@
                                             <constraint firstItem="irb-Am-Lyf" firstAttribute="trailing" secondItem="MuI-df-52p" secondAttribute="trailing" type="default" id="v2Q-aA-lCX"/>
                                         </constraints>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="Brp-VB-Iee">
+                                        <rect key="frame" x="0.0" y="756" width="258" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cell_arkaplan_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="etS-qL-gWM">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="53" id="isK-VR-wCY"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="Ç.Rizespor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnF-2g-dq1">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="36" id="WU9-wM-NIF"/>
+                                                        <constraint firstAttribute="width" constant="185" id="e6R-cd-lZh"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="aW0-ed-J3b">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="2bs-X1-jHf"/>
+                                                        <constraint firstAttribute="height" constant="32" id="U7L-6W-Nns"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="1bX-DH-ZpE">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="dI7-fQ-Mij"/>
+                                                        <constraint firstAttribute="height" constant="32" id="sbJ-1U-49Z"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Ç.Rizespor-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="SjM-5o-iKp">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="4eO-hN-GX5"/>
+                                                        <constraint firstAttribute="height" constant="45" id="mO0-3X-NV0"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="etS-qL-gWM" firstAttribute="trailing" secondItem="Brp-VB-Iee" secondAttribute="trailing" type="default" id="1bS-ZD-oc2"/>
+                                            <constraint firstItem="SjM-5o-iKp" firstAttribute="top" secondItem="Brp-VB-Iee" secondAttribute="top" constant="3" id="7OO-h1-d0g"/>
+                                            <constraint firstItem="SjM-5o-iKp" firstAttribute="leading" secondItem="Brp-VB-Iee" secondAttribute="leading" constant="4" id="Cng-yF-Iol"/>
+                                            <constraint firstItem="1bX-DH-ZpE" firstAttribute="leading" secondItem="Brp-VB-Iee" secondAttribute="leading" constant="221" id="GJN-Da-Wfh"/>
+                                            <constraint firstItem="KnF-2g-dq1" firstAttribute="centerY" secondItem="aW0-ed-J3b" secondAttribute="centerY" type="default" id="KCt-ar-nom"/>
+                                            <constraint firstItem="etS-qL-gWM" firstAttribute="leading" secondItem="Brp-VB-Iee" secondAttribute="leading" type="default" id="Ori-rn-7mD"/>
+                                            <constraint firstItem="1bX-DH-ZpE" firstAttribute="top" secondItem="Brp-VB-Iee" secondAttribute="top" constant="72" id="bLh-k9-8eu"/>
+                                            <constraint firstItem="KnF-2g-dq1" firstAttribute="trailing" secondItem="aW0-ed-J3b" secondAttribute="trailing" type="default" id="kVG-wb-EbS"/>
+                                            <constraint firstItem="etS-qL-gWM" firstAttribute="top" secondItem="Brp-VB-Iee" secondAttribute="top" type="default" id="kXW-Fj-6CB"/>
+                                            <constraint firstItem="KnF-2g-dq1" firstAttribute="leading" secondItem="Brp-VB-Iee" secondAttribute="leading" constant="58" id="lh4-Mr-nUS"/>
+                                            <constraint firstItem="KnF-2g-dq1" firstAttribute="centerY" secondItem="Brp-VB-Iee" secondAttribute="centerY" type="default" id="xdN-gH-tmj"/>
+                                        </constraints>
+                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="XpY-RO-okO">
-                                        <rect key="frame" x="0.0" y="864" width="258" height="54"/>
+                                        <rect key="frame" x="0.0" y="810" width="258" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
@@ -986,6 +938,54 @@
                                             <constraint firstItem="bhY-xi-SMx" firstAttribute="leading" secondItem="XpY-RO-okO" secondAttribute="leading" constant="58" id="jHB-OO-rD9"/>
                                             <constraint firstItem="rBc-DM-MkM" firstAttribute="leading" secondItem="XpY-RO-okO" secondAttribute="leading" type="default" id="s6n-Zd-cba"/>
                                             <constraint firstItem="3lK-qT-5rB" firstAttribute="centerY" secondItem="rBc-DM-MkM" secondAttribute="centerY" type="default" id="t1h-WB-Vjq"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="DSz-Sz-1vb">
+                                        <rect key="frame" x="0.0" y="864" width="258" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cell_arkaplan_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="bTX-BN-kcS">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="53" id="N4y-zZ-8Kg"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="Torku Konyaspor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57N-HY-2GE">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="36" id="QAv-Rm-ixH"/>
+                                                        <constraint firstAttribute="width" constant="185" id="dZP-Vx-MSS"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Torku Konyaspor-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Aex-yy-h7C">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="6ve-Ur-eUy"/>
+                                                        <constraint firstAttribute="width" constant="50" id="aDL-be-yza"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="koM-FX-znJ">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="0OX-VC-zgr"/>
+                                                        <constraint firstAttribute="height" constant="32" id="qfP-jh-Mfp"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Aex-yy-h7C" firstAttribute="top" secondItem="DSz-Sz-1vb" secondAttribute="top" constant="3" id="3vL-uS-oka"/>
+                                            <constraint firstItem="Aex-yy-h7C" firstAttribute="leading" secondItem="DSz-Sz-1vb" secondAttribute="leading" constant="4" id="4b4-B9-8fJ"/>
+                                            <constraint firstItem="57N-HY-2GE" firstAttribute="centerY" secondItem="koM-FX-znJ" secondAttribute="centerY" type="default" id="V4K-Vw-STS"/>
+                                            <constraint firstItem="57N-HY-2GE" firstAttribute="centerY" secondItem="DSz-Sz-1vb" secondAttribute="centerY" type="default" id="VED-u5-8mH"/>
+                                            <constraint firstItem="bTX-BN-kcS" firstAttribute="leading" secondItem="DSz-Sz-1vb" secondAttribute="leading" type="default" id="Z6V-f0-Py3"/>
+                                            <constraint firstItem="57N-HY-2GE" firstAttribute="trailing" secondItem="koM-FX-znJ" secondAttribute="trailing" type="default" id="cLf-i0-1sa"/>
+                                            <constraint firstItem="57N-HY-2GE" firstAttribute="leading" secondItem="DSz-Sz-1vb" secondAttribute="leading" constant="58" id="dOf-WU-ZWB"/>
+                                            <constraint firstItem="bTX-BN-kcS" firstAttribute="trailing" secondItem="DSz-Sz-1vb" secondAttribute="trailing" type="default" id="kbr-gI-K4i"/>
+                                            <constraint firstItem="bTX-BN-kcS" firstAttribute="top" secondItem="DSz-Sz-1vb" secondAttribute="top" type="default" id="t37-Lb-ZLd"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="cCy-rG-D5y">
@@ -1346,20 +1346,20 @@
         <image name="Akhisar Belediye-logo.png" width="500" height="268"/>
         <image name="Beşiktaş-logo.png" width="500" height="500"/>
         <image name="Bursaspor-logo.png" width="500" height="500"/>
+        <image name="Ç.Rizespor-logo.png" width="400" height="400"/>
         <image name="Eskişehirspor-logo.png" width="400" height="400"/>
         <image name="Fenerbahçe-logo.png" width="400" height="400"/>
         <image name="Galatasaray-logo.png" width="300" height="374"/>
         <image name="Gaziantepspor-logo.png" width="500" height="500"/>
         <image name="Gençlerbirliği-logo.png" width="500" height="500"/>
-        <image name="İstanbul BŞB-logo.png" width="500" height="500"/>
+        <image name="K.Erciyesspor-logo.png" width="248" height="345"/>
         <image name="K.Karabükspor-logo.png" width="500" height="500"/>
-        <image name="Kasımpaşa-logo.png" width="400" height="400"/>
         <image name="Kayserispor-logo.png" width="500" height="500"/>
         <image name="MP Antalyaspor-logo.png" width="325" height="338"/>
-        <image name="Mersin İY-logo.png" width="500" height="500"/>
         <image name="Orduspor-logo.png" width="356" height="400"/>
         <image name="S.B. Elazığspor-logo.png" width="500" height="500"/>
         <image name="Sivasspor-logo.png" width="500" height="500"/>
+        <image name="Torku Konyaspor-logo.png" width="400" height="400"/>
         <image name="Trabzonspor-logo.png" width="274" height="479"/>
         <image name="alarm.png" width="26" height="26"/>
         <image name="background.png" width="640" height="1136"/>

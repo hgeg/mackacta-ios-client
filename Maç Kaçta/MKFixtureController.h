@@ -36,8 +36,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *fbShare;
 @property (weak, nonatomic) IBOutlet UIButton *twShare;
 
--(IBAction)sliderChanged:(id)sender;
-
 -(IBAction)twitter:(id)sender;
 -(IBAction)facebook:(id)sender;
 

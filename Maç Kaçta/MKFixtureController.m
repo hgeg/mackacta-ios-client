@@ -22,6 +22,9 @@
 {
     [super viewDidLoad];
     
+    UIImage* tabBarBackground = [UIImage imageNamed:@"tabbar2.png"];
+    [[UITabBar appearance] setBackgroundImage:tabBarBackground];
+    
     _accountStore = [[ACAccountStore alloc] init];
     aiw = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     
@@ -63,7 +66,9 @@
         myTeam = [[NSUserDefaults standardUserDefaults] valueForKey:@"selectedTeam"];
         
         PFInstallation *currentInstallation = [PFInstallation currentInstallation];
-        NSString *tchannel = [[[[NSString alloc] initWithData:[myTeam dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES] encoding:NSASCIIStringEncoding] stringByReplacingOccurrencesOfString:@" " withString:@"-"] stringByReplacingOccurrencesOfString:@"." withString:@"-"];
+        NSString *tchannel = [[[[NSString alloc] initWithData:[[myTeam stringByReplacingOccurrencesOfString:@"ı" withString:@"i"] dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES] encoding:NSASCIIStringEncoding]
+        stringByReplacingOccurrencesOfString:@" " withString:@"-"] stringByReplacingOccurrencesOfString:@"." withString:@"-"];
+        NSLog(@"tchannel: %@",tchannel);
         [currentInstallation setObject:@[tchannel] forKey:@"channels"];
         [currentInstallation saveInBackground];
         

@@ -65,6 +65,7 @@
         [currentInstallation saveInBackground];
     }
     [[NSUserDefaults standardUserDefaults] setValue:@"invalid" forKey:@"flag"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"active" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enable) name:@"selected" object:nil];
 }

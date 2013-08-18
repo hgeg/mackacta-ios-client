@@ -139,6 +139,7 @@
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
         [dateFormatter setDateFormat:formatString];
+        [dateFormatter setLocale:tr];
         
         NSCalendar* calendar = [NSCalendar currentCalendar];
         NSDateComponents* comp1 = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit|NSHourCalendarUnit|NSMinuteCalendarUnit fromDate:d]; // Get necessary date components
@@ -166,6 +167,7 @@
         
         formatString = [NSDateFormatter dateFormatFromTemplate:@"HH:mm" options:0 locale:tr];
         [dateFormatter setDateFormat:formatString];
+        [dateFormatter setLocale:tr];
         newView->timeStr = [dateFormatter stringFromDate:d];
         NSString *timeString = [NSString stringWithFormat:@"%@%@",[dateFormatter stringFromDate:d],mins];
         
@@ -174,6 +176,7 @@
             timeString = @"--:--";
             formatString = [NSDateFormatter dateFormatFromTemplate:@"dd MMMM yyyy" options:0 locale:tr];
             [dateFormatter setDateFormat:formatString];
+            [dateFormatter setLocale:tr];
             dateString = [dateFormatter stringFromDate:d];
             dateString = [NSString stringWithFormat:@"%@ Haftası",dateString];
         }
@@ -197,7 +200,11 @@
         channel.backgroundColor = [UIColor clearColor];
         channel.textColor = [UIColor whiteColor];
         channel.textAlignment = NSTextAlignmentCenter;
-        channel.text = dict[@"channel"];
+        if([dict[@"channel"] isEqualToString:@"N/A"])
+            channel.text = @"";
+        if([dict[@"league"] isEqualToString:@"spor-toto-super-lig"]){
+            channel.text = @"Lig TV";
+        }
         [newView addSubview:channel];
         
         yOffset += 22;
