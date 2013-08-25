@@ -11,6 +11,7 @@
 #import "MKMatchView.h"
 #import <Accounts/Accounts.h>
 #import <Twitter/Twitter.h>
+#import <iAd/iAd.h>
 
 @interface MKFixtureController : UIViewController
 {
@@ -35,6 +36,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *background;
 @property (weak, nonatomic) IBOutlet UIButton *fbShare;
 @property (weak, nonatomic) IBOutlet UIButton *twShare;
+@property (weak, nonatomic) IBOutlet ADBannerView *adView;
 
 -(IBAction)twitter:(id)sender;
 -(IBAction)facebook:(id)sender;

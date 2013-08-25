@@ -200,11 +200,12 @@
         channel.backgroundColor = [UIColor clearColor];
         channel.textColor = [UIColor whiteColor];
         channel.textAlignment = NSTextAlignmentCenter;
-        if([dict[@"channel"] isEqualToString:@"N/A"])
+        if([dict[@"channel"] isEqualToString:@"N/A"]){
             channel.text = @"";
-        if([dict[@"league"] isEqualToString:@"spor-toto-super-lig"]){
+            if([dict[@"league"] isEqualToString:@"spor-toto-super-lig"]){
             channel.text = @"Lig TV";
-        }
+            }
+        }else channel.text = dict[@"channel"];
         [newView addSubview:channel];
         
         yOffset += 22;

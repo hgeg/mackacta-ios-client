@@ -247,4 +247,8 @@
     }];
 }
 
+- (void)viewDidUnload {
+    [self setAdView:nil];
+    [super viewDidUnload];
+}
 @end
