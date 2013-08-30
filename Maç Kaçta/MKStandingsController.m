@@ -20,6 +20,7 @@
     [super viewDidLoad];
 	queue = dispatch_queue_create("com.orkestra.mackacta.standingsqueue",nil);
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewDidAppear:) name:@"active" object:nil];
+    self.adView.backgroundColor = [UIColor blackColor];
 }
 
 - (void)viewDidAppear:(BOOL)animated {

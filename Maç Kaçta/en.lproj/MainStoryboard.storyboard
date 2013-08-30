@@ -368,7 +368,7 @@
                                                         <constraint firstAttribute="height" constant="53" id="Omz-56-kJ2"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="S.B. Elazığspor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQ5-Qi-f6S">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="Elazığspor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQ5-Qi-f6S">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="36" id="Hcc-wf-vyd"/>
                                                         <constraint firstAttribute="width" constant="185" id="ge9-au-9v7"/>
@@ -383,7 +383,7 @@
                                                         <constraint firstAttribute="width" constant="32" id="pZL-d7-Lfm"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="S.B. Elazığspor-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="WG6-l6-xgC">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Elazığspor-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="WG6-l6-xgC">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="45" id="Keu-xS-TjO"/>
                                                         <constraint firstAttribute="width" constant="50" id="d4h-5X-IYt"/>
@@ -1069,9 +1069,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" rowHeight="85" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="67y-gS-JjG">
                                 <color key="backgroundColor" white="0.21384580291970803" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="424" id="Dge-UJ-HdN"/>
-                                    <constraint firstAttribute="height" priority="868" constant="474" type="user" id="HM2-Sp-Tp0"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="474" type="user" id="ksp-cp-9Wt"/>
+                                    <constraint firstAttribute="height" priority="1" constant="424" type="user" id="Tdn-m1-pM8"/>
                                 </constraints>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -1235,7 +1233,7 @@
                             </tableView>
                             <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="vNJ-DE-azz">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="5xP-gL-JQ3"/>
+                                    <constraint firstAttribute="height" constant="50" type="user" id="5xP-gL-JQ3"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="3" id="iAG-Ui-Kd9"/>
@@ -1245,7 +1243,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="vNJ-DE-azz" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="1VA-Kc-iw7"/>
-                            <constraint firstItem="vNJ-DE-azz" firstAttribute="bottom" secondItem="17" secondAttribute="bottom" type="default" id="2ab-Gl-kXR"/>
+                            <constraint firstItem="vNJ-DE-azz" firstAttribute="top" secondItem="67y-gS-JjG" secondAttribute="bottom" type="user" id="1dd-iC-bOD"/>
+                            <constraint firstItem="vNJ-DE-azz" firstAttribute="bottom" secondItem="17" secondAttribute="bottom" type="user" id="2ab-Gl-kXR"/>
                             <constraint firstItem="Hii-28-rTn" firstAttribute="bottom" secondItem="17" secondAttribute="bottom" priority="1" type="user" id="31w-LA-qN7"/>
                             <constraint firstItem="67y-gS-JjG" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" type="default" id="C9Y-kJ-61S"/>
                             <constraint firstItem="Ko5-cw-WIs" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="EuM-WA-1Ap"/>
@@ -1255,6 +1254,7 @@
                             <constraint firstItem="Hii-28-rTn" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="cLc-iL-ouo"/>
                             <constraint firstItem="Hii-28-rTn" firstAttribute="top" secondItem="17" secondAttribute="top" type="default" id="eee-HP-Nrv"/>
                             <constraint firstItem="Hii-28-rTn" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" type="default" id="ey8-uc-Gd3"/>
+                            <constraint firstItem="vNJ-DE-azz" firstAttribute="bottom" secondItem="17" secondAttribute="bottom" type="user" id="gQr-he-Xrc"/>
                             <constraint firstItem="67y-gS-JjG" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="j49-4V-5KL"/>
                             <constraint firstItem="67y-gS-JjG" firstAttribute="top" secondItem="17" secondAttribute="top" constant="25" type="user" id="zHk-RL-wZY"/>
                         </constraints>
@@ -1359,6 +1359,7 @@
         <image name="Beşiktaş-logo.png" width="500" height="500"/>
         <image name="Bursaspor-logo.png" width="500" height="500"/>
         <image name="Ç.Rizespor-logo.png" width="400" height="400"/>
+        <image name="Elazığspor-logo.png" width="500" height="500"/>
         <image name="Eskişehirspor-logo.png" width="400" height="400"/>
         <image name="Fenerbahçe-logo.png" width="400" height="400"/>
         <image name="Galatasaray-logo.png" width="300" height="374"/>
@@ -1369,7 +1370,6 @@
         <image name="Kasımpaşa-logo.png" width="400" height="400"/>
         <image name="Kayserispor-logo.png" width="500" height="500"/>
         <image name="MP Antalyaspor-logo.png" width="325" height="338"/>
-        <image name="S.B. Elazığspor-logo.png" width="500" height="500"/>
         <image name="Sivasspor-logo.png" width="500" height="500"/>
         <image name="Torku Konyaspor-logo.png" width="400" height="400"/>
         <image name="Trabzonspor-logo.png" width="274" height="479"/>
