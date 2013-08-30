@@ -214,8 +214,6 @@
 		369C1AE116B9876F005AFE0E /* gnLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gnLoadingView.h; sourceTree = "<group>"; };
 		369C1AE216B9876F005AFE0E /* gnLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gnLoadingView.m; sourceTree = "<group>"; };
 		369C1AEA16B99C91005AFE0E /* Galatasaray-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Galatasaray-logo.png"; sourceTree = "<group>"; };
-		369C1AEC16B9B399005AFE0E /* MyriadPro-Cond.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Cond.otf"; sourceTree = "<group>"; };
-		369C1AED16B9B399005AFE0E /* MyriadPro-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Semibold.otf"; sourceTree = "<group>"; };
 		369C1AEE16B9B489005AFE0E /* cell_arkaplan_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_arkaplan_settings.png; sourceTree = "<group>"; };
 		36BDCAFE17D0E27300D7B836 /* Real Sociedad-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Real Sociedad-logo.png"; sourceTree = "<group>"; };
 		36BDCAFF17D0E27300D7B836 /* Bayer Leverkusen-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bayer Leverkusen-logo.png"; sourceTree = "<group>"; };
@@ -647,8 +645,6 @@
 				DC928AAF16B32274009B6014 /* InfoPlist.strings */,
 				DC928AB216B32274009B6014 /* main.m */,
 				DC928AB416B32274009B6014 /* MacKacta-Prefix.pch */,
-				369C1AEC16B9B399005AFE0E /* MyriadPro-Cond.otf */,
-				369C1AED16B9B399005AFE0E /* MyriadPro-Semibold.otf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
