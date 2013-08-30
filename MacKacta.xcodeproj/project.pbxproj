@@ -39,6 +39,39 @@
 		369C1AE416B9888A005AFE0E /* gnLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 369C1AE216B9876F005AFE0E /* gnLoadingView.m */; };
 		369C1AEB16B99C91005AFE0E /* Galatasaray-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 369C1AEA16B99C91005AFE0E /* Galatasaray-logo.png */; };
 		369C1AEF16B9B489005AFE0E /* cell_arkaplan_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 369C1AEE16B9B489005AFE0E /* cell_arkaplan_settings.png */; };
+		36BDCB1F17D0E27300D7B836 /* Real Sociedad-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCAFE17D0E27300D7B836 /* Real Sociedad-logo.png */; };
+		36BDCB2017D0E27300D7B836 /* Bayer Leverkusen-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCAFF17D0E27300D7B836 /* Bayer Leverkusen-logo.png */; };
+		36BDCB2117D0E27300D7B836 /* Shakhtar Donetsk-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB0017D0E27300D7B836 /* Shakhtar Donetsk-logo.png */; };
+		36BDCB2217D0E27300D7B836 /* Man. United-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB0117D0E27300D7B836 /* Man. United-logo.png */; };
+		36BDCB2317D0E27300D7B836 /* Viktoria Plzen-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB0217D0E27300D7B836 /* Viktoria Plzen-logo.png */; };
+		36BDCB2417D0E27300D7B836 /* Tromso-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB0317D0E27300D7B836 /* Tromso-logo.png */; };
+		36BDCB2517D0E27300D7B836 /* Marsilya-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB0417D0E27300D7B836 /* Marsilya-logo.png */; };
+		36BDCB2617D0E27300D7B836 /* Napoli-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB0517D0E27300D7B836 /* Napoli-logo.png */; };
+		36BDCB2717D0E27300D7B836 /* Man. City-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB0617D0E27300D7B836 /* Man. City-logo.png */; };
+		36BDCB2817D0E27300D7B836 /* Zenit-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB0717D0E27300D7B836 /* Zenit-logo.png */; };
+		36BDCB2917D0E27300D7B836 /* Porto-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB0817D0E27300D7B836 /* Porto-logo.png */; };
+		36BDCB2A17D0E27300D7B836 /* CSKA Moskova-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB0917D0E27300D7B836 /* CSKA Moskova-logo.png */; };
+		36BDCB2B17D0E27300D7B836 /* PSG-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB0A17D0E27300D7B836 /* PSG-logo.png */; };
+		36BDCB2C17D0E27300D7B836 /* Copenhagen-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB0B17D0E27300D7B836 /* Copenhagen-logo.png */; };
+		36BDCB2D17D0E27300D7B836 /* Olympiakos-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB0C17D0E27300D7B836 /* Olympiakos-logo.png */; };
+		36BDCB2E17D0E27300D7B836 /* Celtic.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB0D17D0E27300D7B836 /* Celtic.png */; };
+		36BDCB2F17D0E27300D7B836 /* Basel-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB0E17D0E27300D7B836 /* Basel-logo.png */; };
+		36BDCB3017D0E27300D7B836 /* Barcelona-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB0F17D0E27300D7B836 /* Barcelona-logo.png */; };
+		36BDCB3117D0E27300D7B836 /* Arsenal-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB1017D0E27300D7B836 /* Arsenal-logo.png */; };
+		36BDCB3217D0E27300D7B836 /* Austria Wien-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB1117D0E27300D7B836 /* Austria Wien-logo.png */; };
+		36BDCB3317D0E27300D7B836 /* Ajax-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB1217D0E27300D7B836 /* Ajax-logo.png */; };
+		36BDCB3417D0E27300D7B836 /* Atletico Madrid-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB1317D0E27300D7B836 /* Atletico Madrid-logo.png */; };
+		36BDCB3517D0E27300D7B836 /* Bayern Münih-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB1417D0E27300D7B836 /* Bayern Münih-logo.png */; };
+		36BDCB3617D0E27300D7B836 /* Anderlecht-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB1517D0E27300D7B836 /* Anderlecht-logo.png */; };
+		36BDCB3717D0E27300D7B836 /* Steaua Bükreş-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB1617D0E27300D7B836 /* Steaua Bükreş-logo.png */; };
+		36BDCB3817D0E27300D7B836 /* Schalke 04-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB1717D0E27300D7B836 /* Schalke 04-logo.png */; };
+		36BDCB3917D0E27300D7B836 /* Real Madrid-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB1817D0E27300D7B836 /* Real Madrid-logo.png */; };
+		36BDCB3A17D0E27300D7B836 /* Juventus-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB1917D0E27300D7B836 /* Juventus-logo.png */; };
+		36BDCB3B17D0E27300D7B836 /* Chelsea-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB1A17D0E27300D7B836 /* Chelsea-logo.png */; };
+		36BDCB3C17D0E27300D7B836 /* Celtic-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB1B17D0E27300D7B836 /* Celtic-logo.png */; };
+		36BDCB3D17D0E27300D7B836 /* Benfica-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB1C17D0E27300D7B836 /* Benfica-logo.png */; };
+		36BDCB3E17D0E27300D7B836 /* Borussia Dortmund-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB1D17D0E27300D7B836 /* Borussia Dortmund-logo.png */; };
+		36BDCB3F17D0E27300D7B836 /* Milan-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDCB1E17D0E27300D7B836 /* Milan-logo.png */; };
 		36D83AFC17BFD5BB0033136C /* K.Erciyesspor-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D83AF917BFD5BB0033136C /* K.Erciyesspor-logo.png */; };
 		36D83AFD17BFD5BB0033136C /* Ç.Rizespor-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D83AFA17BFD5BB0033136C /* Ç.Rizespor-logo.png */; };
 		36D83AFE17BFD5BB0033136C /* Torku Konyaspor-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D83AFB17BFD5BB0033136C /* Torku Konyaspor-logo.png */; };
@@ -184,6 +217,39 @@
 		369C1AEC16B9B399005AFE0E /* MyriadPro-Cond.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Cond.otf"; sourceTree = "<group>"; };
 		369C1AED16B9B399005AFE0E /* MyriadPro-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Semibold.otf"; sourceTree = "<group>"; };
 		369C1AEE16B9B489005AFE0E /* cell_arkaplan_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_arkaplan_settings.png; sourceTree = "<group>"; };
+		36BDCAFE17D0E27300D7B836 /* Real Sociedad-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Real Sociedad-logo.png"; sourceTree = "<group>"; };
+		36BDCAFF17D0E27300D7B836 /* Bayer Leverkusen-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bayer Leverkusen-logo.png"; sourceTree = "<group>"; };
+		36BDCB0017D0E27300D7B836 /* Shakhtar Donetsk-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shakhtar Donetsk-logo.png"; sourceTree = "<group>"; };
+		36BDCB0117D0E27300D7B836 /* Man. United-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Man. United-logo.png"; sourceTree = "<group>"; };
+		36BDCB0217D0E27300D7B836 /* Viktoria Plzen-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viktoria Plzen-logo.png"; sourceTree = "<group>"; };
+		36BDCB0317D0E27300D7B836 /* Tromso-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tromso-logo.png"; sourceTree = "<group>"; };
+		36BDCB0417D0E27300D7B836 /* Marsilya-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marsilya-logo.png"; sourceTree = "<group>"; };
+		36BDCB0517D0E27300D7B836 /* Napoli-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Napoli-logo.png"; sourceTree = "<group>"; };
+		36BDCB0617D0E27300D7B836 /* Man. City-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Man. City-logo.png"; sourceTree = "<group>"; };
+		36BDCB0717D0E27300D7B836 /* Zenit-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Zenit-logo.png"; sourceTree = "<group>"; };
+		36BDCB0817D0E27300D7B836 /* Porto-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Porto-logo.png"; sourceTree = "<group>"; };
+		36BDCB0917D0E27300D7B836 /* CSKA Moskova-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CSKA Moskova-logo.png"; sourceTree = "<group>"; };
+		36BDCB0A17D0E27300D7B836 /* PSG-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PSG-logo.png"; sourceTree = "<group>"; };
+		36BDCB0B17D0E27300D7B836 /* Copenhagen-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Copenhagen-logo.png"; sourceTree = "<group>"; };
+		36BDCB0C17D0E27300D7B836 /* Olympiakos-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Olympiakos-logo.png"; sourceTree = "<group>"; };
+		36BDCB0D17D0E27300D7B836 /* Celtic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Celtic.png; sourceTree = "<group>"; };
+		36BDCB0E17D0E27300D7B836 /* Basel-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Basel-logo.png"; sourceTree = "<group>"; };
+		36BDCB0F17D0E27300D7B836 /* Barcelona-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Barcelona-logo.png"; sourceTree = "<group>"; };
+		36BDCB1017D0E27300D7B836 /* Arsenal-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arsenal-logo.png"; sourceTree = "<group>"; };
+		36BDCB1117D0E27300D7B836 /* Austria Wien-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Austria Wien-logo.png"; sourceTree = "<group>"; };
+		36BDCB1217D0E27300D7B836 /* Ajax-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ajax-logo.png"; sourceTree = "<group>"; };
+		36BDCB1317D0E27300D7B836 /* Atletico Madrid-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Atletico Madrid-logo.png"; sourceTree = "<group>"; };
+		36BDCB1417D0E27300D7B836 /* Bayern Münih-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bayern Münih-logo.png"; sourceTree = "<group>"; };
+		36BDCB1517D0E27300D7B836 /* Anderlecht-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anderlecht-logo.png"; sourceTree = "<group>"; };
+		36BDCB1617D0E27300D7B836 /* Steaua Bükreş-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Steaua Bükreş-logo.png"; sourceTree = "<group>"; };
+		36BDCB1717D0E27300D7B836 /* Schalke 04-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Schalke 04-logo.png"; sourceTree = "<group>"; };
+		36BDCB1817D0E27300D7B836 /* Real Madrid-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Real Madrid-logo.png"; sourceTree = "<group>"; };
+		36BDCB1917D0E27300D7B836 /* Juventus-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Juventus-logo.png"; sourceTree = "<group>"; };
+		36BDCB1A17D0E27300D7B836 /* Chelsea-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chelsea-logo.png"; sourceTree = "<group>"; };
+		36BDCB1B17D0E27300D7B836 /* Celtic-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Celtic-logo.png"; sourceTree = "<group>"; };
+		36BDCB1C17D0E27300D7B836 /* Benfica-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Benfica-logo.png"; sourceTree = "<group>"; };
+		36BDCB1D17D0E27300D7B836 /* Borussia Dortmund-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Borussia Dortmund-logo.png"; sourceTree = "<group>"; };
+		36BDCB1E17D0E27300D7B836 /* Milan-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Milan-logo.png"; sourceTree = "<group>"; };
 		36D83AF917BFD5BB0033136C /* K.Erciyesspor-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "K.Erciyesspor-logo.png"; sourceTree = "<group>"; };
 		36D83AFA17BFD5BB0033136C /* Ç.Rizespor-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ç.Rizespor-logo.png"; sourceTree = "<group>"; };
 		36D83AFB17BFD5BB0033136C /* Torku Konyaspor-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Torku Konyaspor-logo.png"; sourceTree = "<group>"; };
@@ -327,6 +393,178 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36BDCAFD17D0E26400D7B836 /* Gavur Takımlar Logo */ = {
+			isa = PBXGroup;
+			children = (
+				36BDCAFE17D0E27300D7B836 /* Real Sociedad-logo.png */,
+				36BDCAFF17D0E27300D7B836 /* Bayer Leverkusen-logo.png */,
+				36BDCB0017D0E27300D7B836 /* Shakhtar Donetsk-logo.png */,
+				36BDCB0117D0E27300D7B836 /* Man. United-logo.png */,
+				36BDCB0217D0E27300D7B836 /* Viktoria Plzen-logo.png */,
+				36BDCB0317D0E27300D7B836 /* Tromso-logo.png */,
+				36BDCB0417D0E27300D7B836 /* Marsilya-logo.png */,
+				36BDCB0517D0E27300D7B836 /* Napoli-logo.png */,
+				36BDCB0617D0E27300D7B836 /* Man. City-logo.png */,
+				36BDCB0717D0E27300D7B836 /* Zenit-logo.png */,
+				36BDCB0817D0E27300D7B836 /* Porto-logo.png */,
+				36BDCB0917D0E27300D7B836 /* CSKA Moskova-logo.png */,
+				36BDCB0A17D0E27300D7B836 /* PSG-logo.png */,
+				36BDCB0B17D0E27300D7B836 /* Copenhagen-logo.png */,
+				36BDCB0C17D0E27300D7B836 /* Olympiakos-logo.png */,
+				36BDCB0D17D0E27300D7B836 /* Celtic.png */,
+				36BDCB0E17D0E27300D7B836 /* Basel-logo.png */,
+				36BDCB0F17D0E27300D7B836 /* Barcelona-logo.png */,
+				36BDCB1017D0E27300D7B836 /* Arsenal-logo.png */,
+				36BDCB1117D0E27300D7B836 /* Austria Wien-logo.png */,
+				36BDCB1217D0E27300D7B836 /* Ajax-logo.png */,
+				36BDCB1317D0E27300D7B836 /* Atletico Madrid-logo.png */,
+				36BDCB1417D0E27300D7B836 /* Bayern Münih-logo.png */,
+				36BDCB1517D0E27300D7B836 /* Anderlecht-logo.png */,
+				36BDCB1617D0E27300D7B836 /* Steaua Bükreş-logo.png */,
+				36BDCB1717D0E27300D7B836 /* Schalke 04-logo.png */,
+				36BDCB1817D0E27300D7B836 /* Real Madrid-logo.png */,
+				36BDCB1917D0E27300D7B836 /* Juventus-logo.png */,
+				36BDCB1A17D0E27300D7B836 /* Chelsea-logo.png */,
+				36BDCB1B17D0E27300D7B836 /* Celtic-logo.png */,
+				36BDCB1C17D0E27300D7B836 /* Benfica-logo.png */,
+				36BDCB1D17D0E27300D7B836 /* Borussia Dortmund-logo.png */,
+				36BDCB1E17D0E27300D7B836 /* Milan-logo.png */,
+			);
+			name = "Gavur Takımlar Logo";
+			sourceTree = "<group>";
+		};
+		36BDCB4017D0E28600D7B836 /* Ivırtı */ = {
+			isa = PBXGroup;
+			children = (
+				36D83B1D17C0A3BE0033136C /* tabbar@2x.png */,
+				36D83B1F17C0A40C0033136C /* tabbar2@2x.png */,
+				DC1DC4E316B9644700159CB5 /* alarm.png */,
+				DC1DC4E416B9644700159CB5 /* alarm@2x.png */,
+				DC1DC4E516B9644700159CB5 /* cog_02.png */,
+				DC1DC4E616B9644700159CB5 /* cog_02@2x.png */,
+				DC1DC4E716B9644700159CB5 /* graph_bar_trend.png */,
+				DC1DC4E816B9644700159CB5 /* graph_bar_trend@2x.png */,
+				363283D617022095004DAAAB /* twitter_share.png */,
+				363283D717022095004DAAAB /* facebook_share.png */,
+				363283D817022095004DAAAB /* twitter_share@2x.png */,
+				363283D917022095004DAAAB /* facebook_share@2x.png */,
+				364AB6F516B9D8A8003E93F5 /* devam.png */,
+				364AB6F216B9D814003E93F5 /* devam@2x.png */,
+				364AB6E816B9BC21003E93F5 /* check.png */,
+				369C1AEE16B9B489005AFE0E /* cell_arkaplan_settings.png */,
+				DC1DC56316B98D8900159CB5 /* cell_arkaplan.png */,
+				DC1DC56116B98D3200159CB5 /* bilgi.png */,
+				DC1DC55F16B987FE00159CB5 /* ust_bar.png */,
+				DC1DC55D16B986E100159CB5 /* background.png */,
+			);
+			name = "Ivırtı";
+			sourceTree = "<group>";
+		};
+		36BDCB4117D0E2BB00D7B836 /* Beynelmilel Logo */ = {
+			isa = PBXGroup;
+			children = (
+				360860C116F25FFF003AEC1A /* Andorra-logo.png */,
+				360860C316F260CD003AEC1A /* Estonya-logo.png */,
+				360860C516F260E4003AEC1A /* Hollanda-logo.png */,
+				3608608C16F25D2D003AEC1A /* Macaristan-logo.png */,
+				3680632B16FCAAF900F040B9 /* Türkiye-logo.png */,
+				3608609616F25D2E003AEC1A /* Romanya-logo.png */,
+			);
+			name = "Beynelmilel Logo";
+			sourceTree = "<group>";
+		};
+		36BDCB4217D0E2EC00D7B836 /* Bizim Lig Logo */ = {
+			isa = PBXGroup;
+			children = (
+				369C1AEA16B99C91005AFE0E /* Galatasaray-logo.png */,
+				DC7DF06A16B9392200079BEA /* Kasımpaşa-logo.png */,
+				DC7DF06B16B9392200079BEA /* MP Antalyaspor-logo.png */,
+				DC7FE2A116B933D200C6C30A /* Akhisar Belediye-logo.png */,
+				DC7FE2A216B933D200C6C30A /* Beşiktaş-logo.png */,
+				DC7FE2A316B933D200C6C30A /* Bursaspor-logo.png */,
+				DC7FE2A416B933D200C6C30A /* Eskişehirspor-logo.png */,
+				DC7FE2A516B933D200C6C30A /* Fenerbahçe-logo.png */,
+				DC7FE2A716B933D200C6C30A /* Gaziantepspor-logo.png */,
+				DC7FE2A816B933D200C6C30A /* Gençlerbirliği-logo.png */,
+				DC7FE2A916B933D200C6C30A /* İstanbul BŞB-logo.png */,
+				DC7FE2AA16B933D200C6C30A /* K.Karabükspor-logo.png */,
+				DC7FE2AC16B933D200C6C30A /* Kayserispor-logo.png */,
+				DC7FE2AD16B933D200C6C30A /* Mersin İY-logo.png */,
+				DC7FE2AF16B933D200C6C30A /* Orduspor-logo.png */,
+				DC7FE2B016B933D200C6C30A /* Elazığspor-logo.png */,
+				DC7FE2B116B933D200C6C30A /* Sivasspor-logo.png */,
+				DC7FE2B216B933D200C6C30A /* Trabzonspor-logo.png */,
+			);
+			name = "Bizim Lig Logo";
+			sourceTree = "<group>";
+		};
+		36BDCB4317D0E30300D7B836 /* bekgrand */ = {
+			isa = PBXGroup;
+			children = (
+				DC1DC55B16B9715D00159CB5 /* Eskişehirspor-bg.jpg */,
+				DC1DC55916B9715300159CB5 /* Eskişehirspor-bg@2x.jpg */,
+				DC1DC55716B9708F00159CB5 /* Eskişehirspor-bg-568h@2x.jpg */,
+				DC1DC53516B96BAB00159CB5 /* Akhisar Belediye-bg.jpg */,
+				DC1DC53616B96BAB00159CB5 /* Beşiktaş-bg.jpg */,
+				DC1DC53716B96BAB00159CB5 /* Bursaspor-bg.jpg */,
+				DC1DC53916B96BAB00159CB5 /* Fenerbahçe-bg.jpg */,
+				DC1DC53A16B96BAB00159CB5 /* Galatasaray-bg.jpg */,
+				DC1DC53B16B96BAB00159CB5 /* Gaziantepspor-bg.jpg */,
+				DC1DC53C16B96BAB00159CB5 /* Gençlerbirliği-bg.jpg */,
+				DC1DC53E16B96BAB00159CB5 /* K.Karabükspor-bg.jpg */,
+				DC1DC53F16B96BAB00159CB5 /* Kasımpaşa-bg.jpg */,
+				DC1DC54016B96BAB00159CB5 /* Kayserispor-bg.jpg */,
+				36D83B1717BFD6950033136C /* Torku Konyaspor-bg.jpg */,
+				36D83B1817BFD6950033136C /* K.Erciyesspor-bg.jpg */,
+				36D83B1917BFD6950033136C /* Ç.Rizespor-bg.jpg */,
+				DC1DC54116B96BAB00159CB5 /* MP Antalyaspor-bg.jpg */,
+				DC1DC54216B96BAB00159CB5 /* Orduspor-bg.jpg */,
+				DC1DC54316B96BAB00159CB5 /* Elazığspor-bg.jpg */,
+				DC1DC54416B96BAB00159CB5 /* Sivasspor-bg.jpg */,
+				DC1DC54516B96BAB00159CB5 /* Trabzonspor-bg.jpg */,
+				36D83B1117BFD6870033136C /* Torku Konyaspor-bg@2x.jpg */,
+				36D83B1217BFD6870033136C /* K.Erciyesspor-bg@2x.jpg */,
+				36D83B1317BFD6870033136C /* Ç.Rizespor-bg@2x.jpg */,
+				DC1DC51316B96B9F00159CB5 /* Akhisar Belediye-bg@2x.jpg */,
+				DC1DC51416B96B9F00159CB5 /* Beşiktaş-bg@2x.jpg */,
+				DC1DC51516B96B9F00159CB5 /* Bursaspor-bg@2x.jpg */,
+				DC1DC51716B96B9F00159CB5 /* Fenerbahçe-bg@2x.jpg */,
+				DC1DC51816B96B9F00159CB5 /* Galatasaray-bg@2x.jpg */,
+				DC1DC51916B96B9F00159CB5 /* Gaziantepspor-bg@2x.jpg */,
+				36D83AF917BFD5BB0033136C /* K.Erciyesspor-logo.png */,
+				36D83AFA17BFD5BB0033136C /* Ç.Rizespor-logo.png */,
+				36D83AFB17BFD5BB0033136C /* Torku Konyaspor-logo.png */,
+				DC1DC51A16B96B9F00159CB5 /* Gençlerbirliği-bg@2x.jpg */,
+				DC1DC51C16B96B9F00159CB5 /* K.Karabükspor-bg@2x.jpg */,
+				DC1DC51D16B96B9F00159CB5 /* Kasımpaşa-bg@2x.jpg */,
+				DC1DC51E16B96B9F00159CB5 /* Kayserispor-bg@2x.jpg */,
+				DC1DC51F16B96B9F00159CB5 /* MP Antalyaspor-bg@2x.jpg */,
+				DC1DC52016B96B9F00159CB5 /* Orduspor-bg@2x.jpg */,
+				DC1DC52116B96B9F00159CB5 /* Elazığspor-bg@2x.jpg */,
+				DC1DC52216B96B9F00159CB5 /* Sivasspor-bg@2x.jpg */,
+				DC1DC52316B96B9F00159CB5 /* Trabzonspor-bg@2x.jpg */,
+				DC1DC4EF16B96B9100159CB5 /* Akhisar Belediye-bg-568h@2x.jpg */,
+				DC1DC4F016B96B9100159CB5 /* Beşiktaş-bg-568h@2x.jpg */,
+				DC1DC4F116B96B9100159CB5 /* Bursaspor-bg-568h@2x.jpg */,
+				DC1DC4F316B96B9100159CB5 /* Fenerbahçe-bg-568h@2x.jpg */,
+				DC1DC4F416B96B9100159CB5 /* Galatasaray-bg-568h@2x.jpg */,
+				DC1DC4F516B96B9100159CB5 /* Gaziantepspor-bg-568h@2x.jpg */,
+				DC1DC4F616B96B9100159CB5 /* Gençlerbirliği-bg-568h@2x.jpg */,
+				DC1DC4F816B96B9100159CB5 /* K.Karabükspor-bg-568h@2x.jpg */,
+				DC1DC4F916B96B9100159CB5 /* Kasımpaşa-bg-568h@2x.jpg */,
+				DC1DC4FA16B96B9100159CB5 /* Kayserispor-bg-568h@2x.jpg */,
+				DC1DC4FC16B96B9100159CB5 /* MP Antalyaspor-bg-568h@2x.jpg */,
+				DC1DC4FD16B96B9100159CB5 /* Orduspor-bg-568h@2x.jpg */,
+				DC1DC4FE16B96B9100159CB5 /* Elazığspor-bg-568h@2x.jpg */,
+				DC1DC4FF16B96B9200159CB5 /* Sivasspor-bg-568h@2x.jpg */,
+				DC1DC50016B96B9200159CB5 /* Trabzonspor-bg-568h@2x.jpg */,
+				36D83B0B17BFD67C0033136C /* Torku Konyaspor-bg-568h@2x.jpg */,
+				36D83B0C17BFD67C0033136C /* K.Erciyesspor-bg-568h@2x.jpg */,
+				36D83B0D17BFD67C0033136C /* Ç.Rizespor-bg-568h@2x.jpg */,
+			);
+			name = bekgrand;
+			sourceTree = "<group>";
+		};
 		DC928A9716B32274009B6014 = {
 			isa = PBXGroup;
 			children = (
@@ -400,110 +638,11 @@
 		DC928AAD16B32274009B6014 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				363283D617022095004DAAAB /* twitter_share.png */,
-				363283D717022095004DAAAB /* facebook_share.png */,
-				363283D817022095004DAAAB /* twitter_share@2x.png */,
-				363283D917022095004DAAAB /* facebook_share@2x.png */,
-				364AB6F516B9D8A8003E93F5 /* devam.png */,
-				364AB6F216B9D814003E93F5 /* devam@2x.png */,
-				364AB6E816B9BC21003E93F5 /* check.png */,
-				369C1AEE16B9B489005AFE0E /* cell_arkaplan_settings.png */,
-				DC1DC56316B98D8900159CB5 /* cell_arkaplan.png */,
-				DC1DC56116B98D3200159CB5 /* bilgi.png */,
-				DC1DC55F16B987FE00159CB5 /* ust_bar.png */,
-				DC1DC55D16B986E100159CB5 /* background.png */,
-				DC1DC55B16B9715D00159CB5 /* Eskişehirspor-bg.jpg */,
-				DC1DC55916B9715300159CB5 /* Eskişehirspor-bg@2x.jpg */,
-				DC1DC55716B9708F00159CB5 /* Eskişehirspor-bg-568h@2x.jpg */,
-				DC1DC53516B96BAB00159CB5 /* Akhisar Belediye-bg.jpg */,
-				DC1DC53616B96BAB00159CB5 /* Beşiktaş-bg.jpg */,
-				DC1DC53716B96BAB00159CB5 /* Bursaspor-bg.jpg */,
-				DC1DC53916B96BAB00159CB5 /* Fenerbahçe-bg.jpg */,
-				DC1DC53A16B96BAB00159CB5 /* Galatasaray-bg.jpg */,
-				DC1DC53B16B96BAB00159CB5 /* Gaziantepspor-bg.jpg */,
-				DC1DC53C16B96BAB00159CB5 /* Gençlerbirliği-bg.jpg */,
-				DC1DC53E16B96BAB00159CB5 /* K.Karabükspor-bg.jpg */,
-				DC1DC53F16B96BAB00159CB5 /* Kasımpaşa-bg.jpg */,
-				DC1DC54016B96BAB00159CB5 /* Kayserispor-bg.jpg */,
-				36D83B1717BFD6950033136C /* Torku Konyaspor-bg.jpg */,
-				36D83B1817BFD6950033136C /* K.Erciyesspor-bg.jpg */,
-				36D83B1917BFD6950033136C /* Ç.Rizespor-bg.jpg */,
-				DC1DC54116B96BAB00159CB5 /* MP Antalyaspor-bg.jpg */,
-				DC1DC54216B96BAB00159CB5 /* Orduspor-bg.jpg */,
-				DC1DC54316B96BAB00159CB5 /* Elazığspor-bg.jpg */,
-				DC1DC54416B96BAB00159CB5 /* Sivasspor-bg.jpg */,
-				DC1DC54516B96BAB00159CB5 /* Trabzonspor-bg.jpg */,
-				36D83B1117BFD6870033136C /* Torku Konyaspor-bg@2x.jpg */,
-				36D83B1217BFD6870033136C /* K.Erciyesspor-bg@2x.jpg */,
-				36D83B1317BFD6870033136C /* Ç.Rizespor-bg@2x.jpg */,
-				DC1DC51316B96B9F00159CB5 /* Akhisar Belediye-bg@2x.jpg */,
-				DC1DC51416B96B9F00159CB5 /* Beşiktaş-bg@2x.jpg */,
-				DC1DC51516B96B9F00159CB5 /* Bursaspor-bg@2x.jpg */,
-				DC1DC51716B96B9F00159CB5 /* Fenerbahçe-bg@2x.jpg */,
-				DC1DC51816B96B9F00159CB5 /* Galatasaray-bg@2x.jpg */,
-				DC1DC51916B96B9F00159CB5 /* Gaziantepspor-bg@2x.jpg */,
-				36D83AF917BFD5BB0033136C /* K.Erciyesspor-logo.png */,
-				36D83AFA17BFD5BB0033136C /* Ç.Rizespor-logo.png */,
-				36D83AFB17BFD5BB0033136C /* Torku Konyaspor-logo.png */,
-				DC1DC51A16B96B9F00159CB5 /* Gençlerbirliği-bg@2x.jpg */,
-				DC1DC51C16B96B9F00159CB5 /* K.Karabükspor-bg@2x.jpg */,
-				DC1DC51D16B96B9F00159CB5 /* Kasımpaşa-bg@2x.jpg */,
-				DC1DC51E16B96B9F00159CB5 /* Kayserispor-bg@2x.jpg */,
-				DC1DC51F16B96B9F00159CB5 /* MP Antalyaspor-bg@2x.jpg */,
-				DC1DC52016B96B9F00159CB5 /* Orduspor-bg@2x.jpg */,
-				DC1DC52116B96B9F00159CB5 /* Elazığspor-bg@2x.jpg */,
-				DC1DC52216B96B9F00159CB5 /* Sivasspor-bg@2x.jpg */,
-				DC1DC52316B96B9F00159CB5 /* Trabzonspor-bg@2x.jpg */,
-				DC1DC4EF16B96B9100159CB5 /* Akhisar Belediye-bg-568h@2x.jpg */,
-				DC1DC4F016B96B9100159CB5 /* Beşiktaş-bg-568h@2x.jpg */,
-				DC1DC4F116B96B9100159CB5 /* Bursaspor-bg-568h@2x.jpg */,
-				DC1DC4F316B96B9100159CB5 /* Fenerbahçe-bg-568h@2x.jpg */,
-				DC1DC4F416B96B9100159CB5 /* Galatasaray-bg-568h@2x.jpg */,
-				DC1DC4F516B96B9100159CB5 /* Gaziantepspor-bg-568h@2x.jpg */,
-				DC1DC4F616B96B9100159CB5 /* Gençlerbirliği-bg-568h@2x.jpg */,
-				DC1DC4F816B96B9100159CB5 /* K.Karabükspor-bg-568h@2x.jpg */,
-				DC1DC4F916B96B9100159CB5 /* Kasımpaşa-bg-568h@2x.jpg */,
-				DC1DC4FA16B96B9100159CB5 /* Kayserispor-bg-568h@2x.jpg */,
-				DC1DC4FC16B96B9100159CB5 /* MP Antalyaspor-bg-568h@2x.jpg */,
-				DC1DC4FD16B96B9100159CB5 /* Orduspor-bg-568h@2x.jpg */,
-				DC1DC4FE16B96B9100159CB5 /* Elazığspor-bg-568h@2x.jpg */,
-				DC1DC4FF16B96B9200159CB5 /* Sivasspor-bg-568h@2x.jpg */,
-				DC1DC50016B96B9200159CB5 /* Trabzonspor-bg-568h@2x.jpg */,
-				36D83B0B17BFD67C0033136C /* Torku Konyaspor-bg-568h@2x.jpg */,
-				36D83B0C17BFD67C0033136C /* K.Erciyesspor-bg-568h@2x.jpg */,
-				36D83B0D17BFD67C0033136C /* Ç.Rizespor-bg-568h@2x.jpg */,
-				DC1DC4E316B9644700159CB5 /* alarm.png */,
-				DC1DC4E416B9644700159CB5 /* alarm@2x.png */,
-				DC1DC4E516B9644700159CB5 /* cog_02.png */,
-				DC1DC4E616B9644700159CB5 /* cog_02@2x.png */,
-				DC1DC4E716B9644700159CB5 /* graph_bar_trend.png */,
-				DC1DC4E816B9644700159CB5 /* graph_bar_trend@2x.png */,
-				369C1AEA16B99C91005AFE0E /* Galatasaray-logo.png */,
-				DC7DF06A16B9392200079BEA /* Kasımpaşa-logo.png */,
-				DC7DF06B16B9392200079BEA /* MP Antalyaspor-logo.png */,
-				DC7FE2A116B933D200C6C30A /* Akhisar Belediye-logo.png */,
-				DC7FE2A216B933D200C6C30A /* Beşiktaş-logo.png */,
-				DC7FE2A316B933D200C6C30A /* Bursaspor-logo.png */,
-				DC7FE2A416B933D200C6C30A /* Eskişehirspor-logo.png */,
-				DC7FE2A516B933D200C6C30A /* Fenerbahçe-logo.png */,
-				DC7FE2A716B933D200C6C30A /* Gaziantepspor-logo.png */,
-				DC7FE2A816B933D200C6C30A /* Gençlerbirliği-logo.png */,
-				DC7FE2A916B933D200C6C30A /* İstanbul BŞB-logo.png */,
-				DC7FE2AA16B933D200C6C30A /* K.Karabükspor-logo.png */,
-				DC7FE2AC16B933D200C6C30A /* Kayserispor-logo.png */,
-				DC7FE2AD16B933D200C6C30A /* Mersin İY-logo.png */,
-				DC7FE2AF16B933D200C6C30A /* Orduspor-logo.png */,
-				DC7FE2B016B933D200C6C30A /* Elazığspor-logo.png */,
-				DC7FE2B116B933D200C6C30A /* Sivasspor-logo.png */,
-				DC7FE2B216B933D200C6C30A /* Trabzonspor-logo.png */,
-				360860C116F25FFF003AEC1A /* Andorra-logo.png */,
-				360860C316F260CD003AEC1A /* Estonya-logo.png */,
-				360860C516F260E4003AEC1A /* Hollanda-logo.png */,
-				3608608C16F25D2D003AEC1A /* Macaristan-logo.png */,
-				3680632B16FCAAF900F040B9 /* Türkiye-logo.png */,
-				3608609616F25D2E003AEC1A /* Romanya-logo.png */,
-				36D83B1D17C0A3BE0033136C /* tabbar@2x.png */,
-				36D83B1F17C0A40C0033136C /* tabbar2@2x.png */,
+				36BDCB4317D0E30300D7B836 /* bekgrand */,
+				36BDCB4217D0E2EC00D7B836 /* Bizim Lig Logo */,
+				36BDCB4117D0E2BB00D7B836 /* Beynelmilel Logo */,
+				36BDCB4017D0E28600D7B836 /* Ivırtı */,
+				36BDCAFD17D0E26400D7B836 /* Gavur Takımlar Logo */,
 				DC928AAE16B32274009B6014 /* MacKacta-Info.plist */,
 				DC928AAF16B32274009B6014 /* InfoPlist.strings */,
 				DC928AB216B32274009B6014 /* main.m */,
@@ -677,6 +816,39 @@
 				36D83B1C17BFD6950033136C /* Ç.Rizespor-bg.jpg in Resources */,
 				36D83B1E17C0A3BE0033136C /* tabbar@2x.png in Resources */,
 				36D83B2017C0A40C0033136C /* tabbar2@2x.png in Resources */,
+				36BDCB1F17D0E27300D7B836 /* Real Sociedad-logo.png in Resources */,
+				36BDCB2017D0E27300D7B836 /* Bayer Leverkusen-logo.png in Resources */,
+				36BDCB2117D0E27300D7B836 /* Shakhtar Donetsk-logo.png in Resources */,
+				36BDCB2217D0E27300D7B836 /* Man. United-logo.png in Resources */,
+				36BDCB2317D0E27300D7B836 /* Viktoria Plzen-logo.png in Resources */,
+				36BDCB2417D0E27300D7B836 /* Tromso-logo.png in Resources */,
+				36BDCB2517D0E27300D7B836 /* Marsilya-logo.png in Resources */,
+				36BDCB2617D0E27300D7B836 /* Napoli-logo.png in Resources */,
+				36BDCB2717D0E27300D7B836 /* Man. City-logo.png in Resources */,
+				36BDCB2817D0E27300D7B836 /* Zenit-logo.png in Resources */,
+				36BDCB2917D0E27300D7B836 /* Porto-logo.png in Resources */,
+				36BDCB2A17D0E27300D7B836 /* CSKA Moskova-logo.png in Resources */,
+				36BDCB2B17D0E27300D7B836 /* PSG-logo.png in Resources */,
+				36BDCB2C17D0E27300D7B836 /* Copenhagen-logo.png in Resources */,
+				36BDCB2D17D0E27300D7B836 /* Olympiakos-logo.png in Resources */,
+				36BDCB2E17D0E27300D7B836 /* Celtic.png in Resources */,
+				36BDCB2F17D0E27300D7B836 /* Basel-logo.png in Resources */,
+				36BDCB3017D0E27300D7B836 /* Barcelona-logo.png in Resources */,
+				36BDCB3117D0E27300D7B836 /* Arsenal-logo.png in Resources */,
+				36BDCB3217D0E27300D7B836 /* Austria Wien-logo.png in Resources */,
+				36BDCB3317D0E27300D7B836 /* Ajax-logo.png in Resources */,
+				36BDCB3417D0E27300D7B836 /* Atletico Madrid-logo.png in Resources */,
+				36BDCB3517D0E27300D7B836 /* Bayern Münih-logo.png in Resources */,
+				36BDCB3617D0E27300D7B836 /* Anderlecht-logo.png in Resources */,
+				36BDCB3717D0E27300D7B836 /* Steaua Bükreş-logo.png in Resources */,
+				36BDCB3817D0E27300D7B836 /* Schalke 04-logo.png in Resources */,
+				36BDCB3917D0E27300D7B836 /* Real Madrid-logo.png in Resources */,
+				36BDCB3A17D0E27300D7B836 /* Juventus-logo.png in Resources */,
+				36BDCB3B17D0E27300D7B836 /* Chelsea-logo.png in Resources */,
+				36BDCB3C17D0E27300D7B836 /* Celtic-logo.png in Resources */,
+				36BDCB3D17D0E27300D7B836 /* Benfica-logo.png in Resources */,
+				36BDCB3E17D0E27300D7B836 /* Borussia Dortmund-logo.png in Resources */,
+				36BDCB3F17D0E27300D7B836 /* Milan-logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

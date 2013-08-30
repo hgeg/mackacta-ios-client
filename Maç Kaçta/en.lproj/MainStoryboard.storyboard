@@ -1386,48 +1386,6 @@
         <image name="twitter_share.png" width="130" height="29"/>
         <image name="ust_bar.png" width="640" height="51"/>
     </resources>
-    <classes>
-        <class className="MKFixtureController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MKFixtureController.h"/>
-            <relationships>
-                <relationship kind="action" name="facebook:"/>
-                <relationship kind="action" name="twitter:"/>
-                <relationship kind="outlet" name="adView" candidateClass="ADBannerView"/>
-                <relationship kind="outlet" name="background" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="backgroundImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="fbShare" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="matches" candidateClass="NSMutableArray"/>
-                <relationship kind="outlet" name="scroller" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="twShare" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="MKSettingsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MKSettingsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="showNationalMatches:"/>
-                <relationship kind="outlet" name="devam" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="national" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="settingsView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="teamView" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="MKStandingsController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MKStandingsController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="adView" candidateClass="ADBannerView"/>
-                <relationship kind="outlet" name="table" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="MKTeamListController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MKTeamListController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="table" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
