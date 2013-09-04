@@ -28,6 +28,19 @@
         UIViewController* mainViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"main"];
         self.window.rootViewController = mainViewController;
     }
+    // Obtain the uid
+    CFUUIDRef uuidRef = CFUUIDCreate(kCFAllocatorDefault);
+    NSString *uuidString = (NSString *)CFBridgingRelease(CFUUIDCreateString(NULL,uuidRef));
+    CFRelease(uuidRef);
+    // Construct url
+    NSString *urlAsString = [NSString stringWithFormat:@"http://nightbla.de/appcounter/add/%@/MacKacta/",uuidString];
+    NSURL *url = [NSURL URLWithString:urlAsString];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    // Send the request asynchronously
+    [NSURLConnection
+     sendAsynchronousRequest:urlRequest
+     queue:[[NSOperationQueue alloc] init]
+     completionHandler:nil];
     return YES;
 }
 - (void)applicationWillEnterForeground:(UIApplication *)application
